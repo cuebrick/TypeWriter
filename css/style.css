@@ -37,14 +37,14 @@ h2{
 	font-size: 20px;
 }
 .example-text{
-	font-size: 4em;
+	font-size: 5vw;
 	line-height: 1.4em;
 	height: 1.4em;
 	border-bottom: 1px #fff dashed;
 	margin-bottom: 0.4em;
 }
 .input-text{
-	font-size: 4em;
+	font-size: 5vw;
 	line-height: 1.4em;
 	width: 100%;
 	height: 1.4em;
@@ -55,21 +55,40 @@ h2{
 	outline: 0;
 }
 .keyboard{
-	overflow: auto;
-	height: 20%;
+	width: 100%;
+	height: 0;
+	padding-bottom: 30%;
+	position: relative;
 }
 .keyboard .row{
+	position: absolute;
 	clear: both;
-	height: 6%;
+	width: 100%;
+	height: 19%;
+}
+.keyboard .row:nth-child(2){
+	top: 20%
+}
+.keyboard .row:nth-child(3){
+	top: 40%
+}
+.keyboard .row:nth-child(4){
+	top: 60%
+}
+.keyboard .row:nth-child(5){
+	top: 80%
 }
 .keyboard .row > div{
 	float: left;
 	border: 1px #dddddd solid;
-	border-radius: 5px;
+	border-radius: 0.2em;
 	width: 6.3%;
-	height: 4em;
+	height: 100%;
 	margin: 0.2%;
-	padding: 0.2em;
+	padding: 0 0.2em;
+	line-height: 1em;
+	font-size: 2.4vw;
+	font-weight: 100;
 }
 .keyboard .row > div.on{
 	color: #000;
@@ -95,4 +114,13 @@ h2{
 }
 .keyboard .row > div.type7{
 	width: 40.8%;
+}
+.keyboard .row > div.type1,
+.keyboard .row > div.type2,
+.keyboard .row > div.type3,
+.keyboard .row > div.type4,
+.keyboard .row > div.type5,
+.keyboard .row > div.type6,
+.keyboard .row > div.type7{
+	font-size: 1.7vw;
 }
