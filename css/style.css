@@ -1,20 +1,24 @@
+html, body{
+	height: 100%;
+}
 body{
 	margin:0;
 	color: #ddd;
-	font-family: 'malgun gothic', sans-serif;
 	font-size: 20px;
-	background: #333 url("../images/type-bg2.jpg");
+	background: #333 url("../images/type-bg2.jpg") center;
 	background-size: cover;
 }
 *{
 	box-sizing: border-box;
+	font-family: 'malgun gothic', sans-serif;
 }
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, li{
 	margin: 0;
 	padding: 0;
 }
 .wrapper{
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.8);
+	min-height: 100%;
 }
 h1{
 	font-weight: 100;
@@ -34,19 +38,61 @@ h2{
 }
 .example-text{
 	font-size: 4em;
-	line-height: 1.2em;
-	height: 1.2em;
-	border-bottom: 1px #fff solid;
-	margin-bottom: 1em;
+	line-height: 1.4em;
+	height: 1.4em;
+	border-bottom: 1px #fff dashed;
+	margin-bottom: 0.4em;
 }
 .input-text{
 	font-size: 4em;
-	line-height: 1.2em;
+	line-height: 1.4em;
 	width: 100%;
-	height: 1.2em;
+	height: 1.4em;
 	border: 0;
 	border-bottom: 1px #80b6ca solid;
 	background-color: transparent;
 	color: #ddd;
 	outline: 0;
+}
+.keyboard{
+	overflow: auto;
+	height: 20%;
+}
+.keyboard .row{
+	clear: both;
+	height: 6%;
+}
+.keyboard .row > div{
+	float: left;
+	border: 1px #dddddd solid;
+	border-radius: 5px;
+	width: 6.3%;
+	height: 4em;
+	margin: 0.2%;
+	padding: 0.2em;
+}
+.keyboard .row > div.on{
+	color: #000;
+	background-color: #fff;
+}
+.keyboard .row > div.type1{
+	width: 8%;
+}
+.keyboard .row > div.type2{
+	width: 9.4%;
+}
+.keyboard .row > div.type3{
+	width: 11.5%;
+}
+.keyboard .row > div.type4{
+	width: 12.5%;
+}
+.keyboard .row > div.type5{
+	width: 14%;
+}
+.keyboard .row > div.type6{
+	width: 18.2%;
+}
+.keyboard .row > div.type7{
+	width: 40.8%;
 }
