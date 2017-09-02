@@ -13,27 +13,59 @@ var _type = {
 	},
 	timestamps: [],
 	timer: 0,
-	data: [],
+	data: {
+		"text":[
+			'첫 번째 테스트 문장',
+			'두 번째 테스트 문장',
+			'세 번째 테스트 문장'
+		]
+	},
+	textIndex: 0,
+
 	keyData:[],
 
 	initListener: function () {
 		$(window).keyup(function (e) {
 			var code = e.keyCode;
 			console.log('keyup :', code);
-			var exampleText = $('#exampleText').text().trim();
-			var inputText = $('#inputText').val().trim();
 
 			switch (code){
 				case 13:// enter key
-					_type.pushTime();
-					clearInterval(_type.timer);
-					_type.evaluate(exampleText, inputText);
+					_type.evaluate();
+					_type.next();
+					break;
+				case 27:// ecs key
+					_type.stop();
 					break;
 				default:
 			}
 		});
-		$('#inputText').focus();
+
 		$('#startButton').click(function () {
+			_type.reset();
+			_type.next();
+		});
+	},
+
+	reset: function () {
+		_type.textIndex = 0;
+	},
+
+	stop: function () {
+		_type.pushTime();
+		clearInterval(_type.timer);
+	},
+
+	setText: function (text) {
+		$('#inputText').val('');
+		$('#exampleText').text(text);
+	},
+
+	next: function () {
+		_type.stop();
+
+		var text = _type.data.text;
+		if(_type.textIndex < text.length){
 			_type.pushTime();
 			$('#inputText').focus();
 			var count = 0;
@@ -41,7 +73,12 @@ var _type = {
 				$('#timeElapse').text((count * 0.1).toFixed(1));
 				++count;
 			}, 100);
-		});
+
+			_type.setText(text[_type.textIndex]);
+		}else{
+			_type.pushTime();
+		}
+		_type.textIndex++;
 	},
 
 	pushTime : function () {
@@ -54,9 +91,11 @@ var _type = {
 		return _type.timestamps[index];
 	},
 
-	evaluate: function (example, typing) {
-		var example = Hangul.disassemble(example, true);
-		var typing = Hangul.disassemble(typing, true);
+	evaluate: function () {
+		var exampleText = $('#exampleText').text().trim();
+		var typingText = $('#inputText').val().trim();
+		var example = Hangul.disassemble(exampleText, true);
+		var typing = Hangul.disassemble(typingText, true);
 		// 오타의 인덱스 목록
 		var missTypings = [];
 
