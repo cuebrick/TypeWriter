@@ -48,6 +48,7 @@ var _type = {
 	},
 
 	reset: function () {
+		_type.clearTime();
 		_type.textIndex = 0;
 	},
 
@@ -84,6 +85,9 @@ var _type = {
 	pushTime : function () {
 		_type.timestamps.push(new Date().getTime());
 	},
+	clearTime: function () {
+		_type.timestamps = [];
+	},
 	getTime : function (index) {
 		if(index === undefined)
 			index = 0;
@@ -119,7 +123,7 @@ var _type = {
 			}
 		});
 
-		console.log('전체 ', Hangul.disassemble(example).length, '타이핑 중 ', missTypings.length, ' 개 오타', missTypings);
-		$('#msg').text(Hangul.disassemble(example).length + '타이핑 중 ' + missTypings.length + ' 개 오타')
+		console.log('전체 ', Hangul.disassemble(exampleText).length, '타이핑 중 ', missTypings.length, ' 개 오타', missTypings);
+		$('#msg').text(Hangul.disassemble(exampleText).length + '타이핑과 ' + exampleText.length + '개의 문자중 ' + missTypings.length + ' 개 오타')
 	}
 };
