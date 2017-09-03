@@ -42,8 +42,10 @@ var _type = {
 		});
 
 		$('#startButton').click(function () {
-			_type.reset();
-			_type.next();
+			$(this).fadeOut(1000, function () {
+				_type.reset();
+				_type.next();
+			});
 		});
 	},
 
