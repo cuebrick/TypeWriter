@@ -47,6 +47,25 @@ var _type = {
 				_type.next();
 			});
 		});
+
+		$('#fingerMode').click(function () {
+			$('.word-input').hide();
+			$('.dashboard').hide();
+			$('.keyboard').show();
+		});
+		$('#wordMode').click(function () {
+			$('.word-input').show();
+			$('.dashboard').show();
+			$('.keyboard').hide();
+		});
+		$('#sentenceMode').click(function () {
+			$('.word-input').show();
+			$('.dashboard').show();
+			$('.keyboard').hide();
+		});
+		$('#practiceMode').click(function () {
+
+		});
 	},
 
 	reset: function () {

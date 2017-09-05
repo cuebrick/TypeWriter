@@ -10,10 +10,10 @@
 <div class="wrapper">
 	<nav>
 		<ul>
-			<li>손가락</li>
-			<li>단어</li>
-			<li>문장</li>
-			<li>실전</li>
+			<li id="fingerMode">손가락</li>
+			<li id="wordMode">단어</li>
+			<li id="sentenceMode">문장</li>
+			<li id="practiceMode">실전</li>
 		</ul>
 	</nav>
 	<h1>Type Writer</h1>
@@ -21,10 +21,12 @@
 	
 	<div class="flex-area">
 		
-		<div class="example-text" id="exampleText">
-			시작 버튼을 누르면 시작합니다.
+		<div class="word-input">
+			<div class="example-text" id="exampleText">
+				시작 버튼을 누르면 시작합니다.
+			</div>
+			<input type="text" class="input-text" id="inputText">
 		</div>
-		<input type="text" class="input-text" id="inputText">
 		<div class="dashboard">
 			<button id="startButton" class="btn start-btn">시작</button>
 			<span class="time-elapse" id="timeElapse">0</span>
