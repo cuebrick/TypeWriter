@@ -39,6 +39,11 @@ var _type = {
 					break;
 				default:
 			}
+			$('.keyboard .row > div[data-key='+code+']').removeClass('press');
+		}).keydown(function (e) {
+			var code = e.keyCode;
+			console.log('keyup :', code);
+			$('.keyboard .row > div[data-key='+code+']').addClass('press');
 		});
 
 		$('#startButton').click(function () {

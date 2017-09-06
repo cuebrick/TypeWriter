@@ -147,6 +147,9 @@ button.start-btn{
 	color: #000;
 	background-color: #fff;
 }
+.keyboard .row > div.press{
+	border: 3px #dd448a solid;
+}
 .keyboard .row > div.type1{
 	width: 8%;
 }
