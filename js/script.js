@@ -56,16 +56,19 @@ var _type = {
 		$('#fingerMode').click(function () {
 			$('.word-input').hide();
 			$('.dashboard').hide();
+			$('.letter-view').show();
 			$('.keyboard').show();
 		});
 		$('#wordMode').click(function () {
 			$('.word-input').show();
 			$('.dashboard').show();
+			$('.letter-view').hide();
 			$('.keyboard').hide();
 		});
 		$('#sentenceMode').click(function () {
 			$('.word-input').show();
 			$('.dashboard').show();
+			$('.letter-view').hide();
 			$('.keyboard').hide();
 		});
 		$('#practiceMode').click(function () {

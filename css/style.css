@@ -101,7 +101,20 @@ button.start-btn{
 	margin-left: -10vw;
 }
 
-
+.letter-view{
+	display: none;
+}
+.example-letter{
+	font-size: 10vw;
+	/*line-height: 1.4em;*/
+	height: 1.4em;
+	border-bottom: 1px #fff dashed;
+	margin-bottom: 0.4em;
+	text-align: center;
+}
+.example-letter > span.on{
+	color: #ff7600;
+}
 
 .keyboard{
 	width: 100%;
