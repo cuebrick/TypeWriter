@@ -163,6 +163,10 @@ button.start-btn{
 .keyboard .row > div.press{
 	border: 3px #dd448a solid;
 }
+.keyboard .row > div.disable{
+	border: 1px #555 solid;
+	color: #555;
+}
 .keyboard .row > div.type1{
 	width: 8%;
 }
