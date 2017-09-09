@@ -5,9 +5,16 @@ $(function () {
 	// POWERMODE.colorful = true ;
 	document.body.addEventListener('keyup', POWERMODE);
 	_type.initListener();
+	$('#fingerMode').trigger('click')
 });
 
 var _type = {
+	consts: {
+		FINGER_MODE: 'fingerMode',
+		WORD_MODE: 'wordMode',
+		SENTENCE_MODE: 'sentenceMode',
+		PRACTICE_MODE: 'practiceMode'
+	},
 	_props_ : {
 
 	},
@@ -24,26 +31,48 @@ var _type = {
 
 	keyData:[],
 
+	mode: {
+		selected: null,
+		GET: function () {
+			if(_type.mode.selected)
+				return _type.mode[_type.mode.selected];
+			else
+				return new Error('Mode select Error.')
+		},
+		fingerMode:{
+			keyup: function (code) {
+				console.log('finger mode', code);
+				$('.keyboard .row > div[data-key='+code+']').removeClass('press');
+			},
+			keydown: function (code) {
+				$('.keyboard .row > div[data-key='+code+']').addClass('press');
+			}
+		},
+		wordMode:{
+			keyup: function (code) {
+				console.log('word mode', code);
+				switch (code){
+					case 13:// enter key
+						_type.evaluate();
+						_type.next();
+						break;
+					case 27:// ecs key
+						_type.stop();
+						break;
+					default:
+				}
+			}
+		}
+	},
+
 	initListener: function () {
 		$(window).keyup(function (e) {
-			var code = e.keyCode;
-			console.log('keyup :', code);
+			console.log('keyup :', e.keyCode);
+			_type.mode.GET().keyup(e.keyCode);
 
-			switch (code){
-				case 13:// enter key
-					_type.evaluate();
-					_type.next();
-					break;
-				case 27:// ecs key
-					_type.stop();
-					break;
-				default:
-			}
-			$('.keyboard .row > div[data-key='+code+']').removeClass('press');
 		}).keydown(function (e) {
-			var code = e.keyCode;
-			console.log('keyup :', code);
-			$('.keyboard .row > div[data-key='+code+']').addClass('press');
+			// console.log('keydown :', code);
+			_type.mode.GET().keydown(e.keyCode);
 		});
 
 		$('#startButton').click(function () {
@@ -58,21 +87,25 @@ var _type = {
 			$('.dashboard').hide();
 			$('.letter-view').show();
 			$('.keyboard').show();
+			_type.mode.selected = _type.consts.FINGER_MODE;
 		});
 		$('#wordMode').click(function () {
 			$('.word-input').show();
 			$('.dashboard').show();
 			$('.letter-view').hide();
 			$('.keyboard').hide();
+			_type.mode.selected = _type.consts.WORD_MODE;
 		});
 		$('#sentenceMode').click(function () {
 			$('.word-input').show();
 			$('.dashboard').show();
 			$('.letter-view').hide();
 			$('.keyboard').hide();
+			_type.mode.selected = _type.consts.SENTENCE_MODE;
 		});
 		$('#practiceMode').click(function () {
 
+			_type.mode.selected = _type.consts.PRACTICE_MODE;
 		});
 	},
 
