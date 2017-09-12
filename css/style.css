@@ -153,8 +153,9 @@ button.start-btn{
 	margin: 0.2%;
 	padding: 0 0.2em;
 	line-height: 1em;
-	font-size: 2.4vw;
+	font-size: 2vw;
 	font-weight: 100;
+	position: relative;
 }
 .keyboard .row > div.on{
 	color: #000;
@@ -196,4 +197,25 @@ button.start-btn{
 .keyboard .row > div.type6,
 .keyboard .row > div.type7{
 	font-size: 1.7vw;
+}
+.keyboard .row .en,
+.keyboard .row .kr{
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+.keyboard .row .en .shift{
+	height: 50%;
+}
+.keyboard .row .kr{
+	text-align: right;
+}
+.keyboard .row .kr .shift,
+.keyboard .row .kr .normal{
+	position: absolute;
+	bottom: 0.2em;
+	width: 50%;
+}
+.keyboard .row .kr .shift{
+	top: 0.2em;
 }
