@@ -112,7 +112,10 @@ button.start-btn{
 	margin-bottom: 0.4em;
 	text-align: center;
 }
-.example-letter > span.on{
+.example-letter > span.match{
+	color: #83dfff;
+}
+.example-letter > span.miss{
 	color: #ff7600;
 }
 
