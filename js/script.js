@@ -25,11 +25,12 @@ var _type = {
 			'첫 번째 테스트 문장',
 			'두 번째 테스트 문장',
 			'세 번째 테스트 문장'
-		]
+		],
+		"letter":['ㅁ', 'ㄴ', 'ㅇ', 'ㄹ']
 	},
 	textIndex: 0,
 
-	keyData:[],
+	keymap:{},
 
 	mode: {
 		selected: null,
@@ -41,7 +42,6 @@ var _type = {
 		},
 		fingerMode:{
 			keyup: function (code) {
-				console.log('finger mode', code);
 				$('.keyboard .row > div[data-key='+code+']').removeClass('press');
 			},
 			keydown: function (code) {
@@ -50,7 +50,6 @@ var _type = {
 		},
 		wordMode:{
 			keyup: function (code) {
-				console.log('word mode', code);
 				switch (code){
 					case 13:// enter key
 						_type.evaluate();
@@ -87,6 +86,7 @@ var _type = {
 			$('.dashboard').hide();
 			$('.letter-view').show();
 			$('.keyboard').show();
+			_type.createKeyMap();
 			_type.mode.selected = _type.consts.FINGER_MODE;
 		});
 		$('#wordMode').click(function () {
@@ -106,6 +106,31 @@ var _type = {
 		$('#practiceMode').click(function () {
 
 			_type.mode.selected = _type.consts.PRACTICE_MODE;
+		});
+	},
+
+	createKeyMap: function () {
+		$('.keyboard > .row > div:not(".disable")').each(function (index, element) {
+			var key = $(this).data('key');
+			var d = {};
+
+			var krs = $(this).find('.kr > .shift');
+			if(krs.length)
+				d['krs'] = krs.text();
+
+			var krn = $(this).find('.kr > .normal');
+			if(krn.length)
+				d['krn'] = krn.text();
+
+			var ens = $(this).find('.en > .shift');
+			if(ens.length)
+				d['ens'] = ens.text();
+
+			var enn = $(this).find('.en > .normal');
+			if(enn.length)
+				d['enn'] = enn.text();
+
+			_type.keymap[key] = d;
 		});
 	},
 
