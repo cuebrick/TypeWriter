@@ -219,3 +219,6 @@ button.start-btn{
 .keyboard .row .kr .shift{
 	top: 0.2em;
 }
+.keyboard .en > *{
+	font-family: "Trebuchet MS", sans-serif;
+}
