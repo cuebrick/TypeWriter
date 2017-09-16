@@ -41,11 +41,20 @@ var _type = {
 				return new Error('Mode select Error.')
 		},
 		fingerMode:{
-			keyup: function (code) {
-				$('.keyboard .row > div[data-key='+code+']').removeClass('press');
-			},
+			index : 0,
 			keydown: function (code) {
 				$('.keyboard .row > div[data-key='+code+']').addClass('press');
+			},
+			keyup: function (code) {
+				var len = $('#exampleLetter').find('.miss, .match').length;
+				console.log(code);
+				var letter = $('#exampleLetter').find('span').eq(len);
+				if(code === letter.data('key')){
+					letter.addClass('match');
+				}else{
+					letter.addClass('miss');
+				}
+				$('.keyboard .row > div[data-key='+code+']').removeClass('press');
 			}
 		},
 		wordMode:{
