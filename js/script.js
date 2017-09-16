@@ -43,18 +43,12 @@ var _type = {
 		fingerMode:{
 			index : 0,
 			keydown: function (code) {
-				$('.keyboard .row > div[data-key='+code+']').addClass('press');
+				_type.efx.keyboardKeyDown(code);
 			},
 			keyup: function (code) {
-				var len = $('#exampleLetter').find('.miss, .match').length;
-				console.log(code);
-				var letter = $('#exampleLetter').find('span').eq(len);
-				if(code === letter.data('key')){
-					letter.addClass('match');
-				}else{
-					letter.addClass('miss');
-				}
-				$('.keyboard .row > div[data-key='+code+']').removeClass('press');
+				var result = _type.calc.fingerMatch(code);
+				_type.efx.fingerMatchDisplay(result);
+				_type.efx.keyboardKeyUp(code);
 			}
 		},
 		wordMode:{
@@ -69,6 +63,34 @@ var _type = {
 						break;
 					default:
 				}
+			}
+		}
+	},
+
+	calc: {
+		fingerMatch: function (code) {
+			var len = $('#exampleLetter').find('.miss, .match').length;
+			var letter = $('#exampleLetter').find('span').eq(len);
+			return {
+				index: len,
+				isMatch:  code === letter.data('key')
+			}
+		}
+	},
+
+	efx : {
+		keyboardKeyDown: function (code) {
+			$('.keyboard .row > div[data-key='+code+']').addClass('press');
+		},
+		keyboardKeyUp: function (code) {
+			$('.keyboard .row > div[data-key='+code+']').removeClass('press');
+		},
+		fingerMatchDisplay: function (result) {
+			var letter = $('#exampleLetter').find('span').eq(result.index);
+			if(result.isMatch){
+				letter.addClass('match');
+			}else{
+				letter.addClass('miss');
 			}
 		}
 	},
@@ -142,6 +164,8 @@ var _type = {
 			_type.keymap[key] = d;
 		});
 	},
+
+
 
 	reset: function () {
 		_type.clearTime();
