@@ -169,6 +169,7 @@ button.start-btn{
 	font-size: 2vw;
 	font-weight: 100;
 	position: relative;
+	transition: 0.5s background-color;
 }
 .keyboard .row > div.on{
 	color: #000;

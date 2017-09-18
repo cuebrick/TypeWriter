@@ -49,6 +49,15 @@ var _type = {
 				var result = _type.calc.fingerMatch(code);
 				_type.efx.fingerMatchDisplay(result);
 				_type.efx.keyboardKeyUp(code);
+				_type.mode.fingerMode.next();
+			},
+			next: function () {
+				var len = $('#exampleLetter').find('.miss, .match').length;
+
+				if(len > 0)
+					_type.efx.offKeyboard($('#exampleLetter').find('span').eq(len-1).data('key'));
+
+				_type.efx.onKeyboard($('#exampleLetter').find('span').eq(len).data('key'));
 			}
 		},
 		wordMode:{
@@ -92,6 +101,15 @@ var _type = {
 			}else{
 				letter.addClass('miss');
 			}
+		},
+		onKeyboard: function (code) {
+			$('.keyboard .row > div[data-key='+code+']').addClass('on');
+		},
+		offKeyboard: function (code) {
+			$('.keyboard .row > div[data-key='+code+']').removeClass('on');
+		},
+		offAllKeyboard: function () {
+			$('.keyboard .row > div').removeClass('on');
 		}
 	},
 
@@ -118,6 +136,7 @@ var _type = {
 			$('.letter-view').show();
 			$('.keyboard').show();
 			_type.createKeyMap();
+			_type.mode.fingerMode.next();
 			_type.mode.selected = _type.consts.FINGER_MODE;
 		});
 		$('#wordMode').click(function () {
@@ -164,8 +183,6 @@ var _type = {
 			_type.keymap[key] = d;
 		});
 	},
-
-
 
 	reset: function () {
 		_type.clearTime();
