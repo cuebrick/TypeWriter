@@ -55,9 +55,27 @@ var _type = {
 				var len = $('#exampleLetter').find('.miss, .match').length;
 
 				if(len > 0)
-					_type.efx.offKeyboard($('#exampleLetter').find('span').eq(len-1).data('key'));
+					_type.efx.offKeyboard(_type.fn.getCurrentKeyCode(len-1));
 
-				_type.efx.onKeyboard($('#exampleLetter').find('span').eq(len).data('key'));
+				var letterLength = $('#exampleLetter').find('span').length;
+				if(letterLength === len)
+					_type.mode.fingerMode.reset();
+				else
+					_type.efx.onKeyboard(_type.fn.getCurrentKeyCode(len));
+			},
+			reset: function () {
+				var letterCodes = [81, 87, 69, 82];
+				var letterObjects = {};
+				$.each(letterCodes, function (index, value) {
+					letterObjects[value] = _type.keymap[value];
+				});
+
+				var el = $('#exampleLetter').text('');
+				$.each(letterObjects, function (key, obj) {
+					el.append($('<span></span>').attr('data-key', key).text(obj.krn))
+				});
+
+				_type.mode.fingerMode.next();
 			}
 		},
 		wordMode:{
@@ -110,6 +128,12 @@ var _type = {
 		},
 		offAllKeyboard: function () {
 			$('.keyboard .row > div').removeClass('on');
+		}
+	},
+
+	fn: {
+		getCurrentKeyCode: function (index) {
+			return $('#exampleLetter').find('span').eq(index).data('key')
 		}
 	},
 
