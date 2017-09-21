@@ -43,25 +43,25 @@ var _type = {
 		fingerMode:{
 			index : 0,
 			keydown: function (code) {
-				_type.efx.keyboardKeyDown(code);
+				_type.jq.keyboardKeyDown(code);
 			},
 			keyup: function (code) {
 				var result = _type.calc.fingerMatch(code);
-				_type.efx.fingerMatchDisplay(result);
-				_type.efx.keyboardKeyUp(code);
+				_type.jq.fingerMatchDisplay(result);
+				_type.jq.keyboardKeyUp(code);
 				_type.mode.fingerMode.next();
 			},
 			next: function () {
-				var len = $('#exampleLetter').find('.miss, .match').length;
+				var idx = _type.jq.getMatchedLetterLength();
 
-				if(len > 0)
-					_type.efx.offKeyboard(_type.fn.getCurrentKeyCode(len-1));
+				if(idx > 0)
+					_type.jq.offKeyboard(_type.jq.getCurrentLetterKeyCode(idx-1));
 
-				var letterLength = $('#exampleLetter').find('span').length;
-				if(letterLength === len)
+				var letterLength = _type.jq.getAllLetterLength();
+				if(letterLength === idx)
 					_type.mode.fingerMode.reset();
 				else
-					_type.efx.onKeyboard(_type.fn.getCurrentKeyCode(len));
+					_type.jq.onKeyboard(_type.jq.getCurrentLetterKeyCode(idx));
 			},
 			reset: function () {
 				var letterCodes = [81, 87, 69, 82];
@@ -72,7 +72,7 @@ var _type = {
 
 				var el = $('#exampleLetter').text('');
 				$.each(letterObjects, function (key, obj) {
-					el.append($('<span></span>').attr('data-key', key).text(obj.krn))
+					el.append($('<span></span>').attr('data-key', key).text(obj.krn));
 				});
 
 				_type.mode.fingerMode.next();
@@ -96,16 +96,16 @@ var _type = {
 
 	calc: {
 		fingerMatch: function (code) {
-			var len = $('#exampleLetter').find('.miss, .match').length;
-			var letter = $('#exampleLetter').find('span').eq(len);
+			var idx = _type.jq.getMatchedLetterLength();
+			var letter = _type.jq.getMatchingLetter(idx);
 			return {
-				index: len,
+				index: idx,
 				isMatch:  code === letter.data('key')
 			}
 		}
 	},
 
-	efx : {
+	jq : {
 		keyboardKeyDown: function (code) {
 			$('.keyboard .row > div[data-key='+code+']').addClass('press');
 		},
@@ -128,14 +128,21 @@ var _type = {
 		},
 		offAllKeyboard: function () {
 			$('.keyboard .row > div').removeClass('on');
-		}
-	},
-
-	fn: {
-		getCurrentKeyCode: function (index) {
+		},
+		getMatchingLetter: function (index) {
+			return $('#exampleLetter').find('span').eq(index);
+		},
+		getMatchedLetterLength: function () {
+			return $('#exampleLetter').find('.miss, .match').length;
+		},
+		getAllLetterLength: function () {
+			return $('#exampleLetter').find('span').length;
+		},
+		getCurrentLetterKeyCode: function (index) {
 			return $('#exampleLetter').find('span').eq(index).data('key')
 		}
 	},
+
 
 	initListener: function () {
 		$(window).keyup(function (e) {
