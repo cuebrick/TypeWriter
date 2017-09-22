@@ -67,7 +67,7 @@ var _type = {
 				var letterCodes = [81, 87, 69, 82];
 				var letterObjects = {};
 				$.each(letterCodes, function (index, value) {
-					letterObjects[value] = _type.keymap[value];
+					letterObjects['code'+value] = _type.keymap['code'+value];
 				});
 
 				var el = $('#exampleLetter').text('');
@@ -211,7 +211,7 @@ var _type = {
 			if(enn.length)
 				d['enn'] = enn.text();
 
-			_type.keymap[key] = d;
+			_type.keymap['code'+key] = d;
 		});
 	},
 
