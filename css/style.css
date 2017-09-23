@@ -22,6 +22,7 @@ ul, ol, dl{
 .wrapper{
 	background-color: rgba(0, 0, 0, 0.9);
 	min-height: 100%;
+	padding-top: 1px;
 }
 nav{
 	position: fixed;
@@ -52,11 +53,27 @@ h1{
 	font-size: 3em;
 	text-align: center;
 	color: coral;
+	transition: 1s all;
 }
 h2{
 	font-weight: 100;
 	font-size: 1.2em;
 	text-align: center;
+	transition: 1s all;
+}
+.minimize{
+	padding-left: 10px;
+	height: 30px;
+}
+.minimize > h1{
+	float: left;
+	font-size: 1.5em;
+}
+.minimize > h2{
+	float: left;
+	font-size: 1em;
+	line-height: 2.3em;
+	margin-left: 10px;
 }
 .flex-area{
 	width: 90%;
