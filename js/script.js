@@ -26,9 +26,14 @@ var _type = {
 			'두 번째 테스트 문장',
 			'세 번째 테스트 문장'
 		],
-		"letter":['ㅁ', 'ㄴ', 'ㅇ', 'ㄹ']
+		"letter":[
+			[65, 83, 68, 70],
+			[81, 87, 69, 82],
+			[90, 88, 67, 86]
+		]
 	},
 	textIndex: 0,
+	letterIndex: 0,
 
 	keymap:{},
 
@@ -64,7 +69,7 @@ var _type = {
 					_type.jq.onKeyboard(_type.jq.getCurrentLetterKeyCode(idx));
 			},
 			reset: function () {
-				var letterCodes = [81, 87, 69, 82];
+				var letterCodes = _type.data.letter[_type.letterIndex];
 				var letterObjects = {};
 				$.each(letterCodes, function (index, value) {
 					letterObjects['code'+value] = _type.keymap['code'+value];
@@ -76,6 +81,7 @@ var _type = {
 				});
 
 				_type.mode.fingerMode.next();
+				_type.letterIndex++;
 			}
 		},
 		wordMode:{
@@ -100,7 +106,7 @@ var _type = {
 			var letter = _type.jq.getMatchingLetter(idx);
 			return {
 				index: idx,
-				isMatch:  code === letter.data('key')
+				isMatch:  'code' + code === letter.data('key')
 			}
 		}
 	},
@@ -167,7 +173,7 @@ var _type = {
 			$('.letter-view').show();
 			$('.keyboard').show();
 			_type.createKeyMap();
-			_type.mode.fingerMode.next();
+			_type.mode.fingerMode.reset();
 			_type.mode.selected = _type.consts.FINGER_MODE;
 		});
 		$('#wordMode').click(function () {
