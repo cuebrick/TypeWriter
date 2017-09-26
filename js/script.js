@@ -54,7 +54,7 @@ var _type = {
 				var result = _type.calc.fingerMatch(code);
 				_type.jq.fingerMatchDisplay(result);
 				_type.jq.keyboardKeyUp(code);
-				_type.mode.fingerMode.next();
+				setTimeout(_type.mode.fingerMode.next, 1000);
 			},
 			next: function () {
 				var idx = _type.jq.getMatchedLetterLength();
