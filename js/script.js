@@ -167,6 +167,13 @@ var _type = {
 			});
 		});
 
+		$('nav > ul > li').click(function () {
+			if(_type.mode.selected)
+				$('#' + _type.mode.selected).removeClass('select');
+
+			$(this).addClass('select');
+		});
+
 		$('#fingerMode').click(function () {
 			$('.word-input').hide();
 			$('.dashboard').hide();

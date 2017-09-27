@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
 html, body{
 	height: 100%;
 }
@@ -24,10 +26,11 @@ ul, ol, dl{
 	min-height: 100%;
 	padding-top: 1px;
 }
+
 nav{
 	position: fixed;
 	right: 10px;
-	top: 20px;
+	top: 5px;
 	font-size: 12px;
 }
 nav > ul > li{
@@ -36,18 +39,21 @@ nav > ul > li{
 	line-height: 40px;
 	/*border: 3px solid #fff;*/
 	border-radius: 40px;
-	background-color: #bcbcbc;
-	margin-bottom: 5px;
+	background-color: rgba(255, 255, 255, 0.4);
 	padding: 0;
+	margin: 1px;
 	cursor: pointer;
 	color: #000;
 	text-align: center;
+	float: left;
 }
 nav > ul > li:hover,
 nav > ul > li:active{
 	background-color: #9cddee;
 }
-
+nav > ul > li.select{
+	background-color: #9fc0cc;
+}
 h1{
 	font-weight: 100;
 	font-size: 3em;
@@ -61,19 +67,24 @@ h2{
 	text-align: center;
 	transition: 1s all;
 }
+header{
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
 .minimize{
 	padding-left: 10px;
-	height: 30px;
 }
 .minimize > h1{
 	float: left;
 	font-size: 1.5em;
+	padding-top: 3px;
 }
 .minimize > h2{
 	float: left;
 	font-size: 1em;
 	line-height: 2.3em;
 	margin-left: 10px;
+	padding-top: 5px;
 }
 .flex-area{
 	width: 90%;
@@ -187,6 +198,7 @@ button.start-btn{
 	font-weight: 100;
 	position: relative;
 	transition: 0.5s background-color;
+	color: #555;
 }
 .keyboard .row > div.on{
 	color: #000;
@@ -240,6 +252,7 @@ button.start-btn{
 }
 .keyboard .row .kr{
 	text-align: right;
+	color: #fff;
 }
 .keyboard .row .kr .shift,
 .keyboard .row .kr .normal{
@@ -251,5 +264,6 @@ button.start-btn{
 	top: 0.2em;
 }
 .keyboard .en > *{
-	font-family: "Trebuchet MS", sans-serif;
+	/*font-family: 'Droid Sans', sans-serif;*/
+	font-family: 'Noto Sans KR', sans-serif;
 }
