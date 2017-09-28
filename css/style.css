@@ -262,6 +262,13 @@ button.start-btn{
 }
 .keyboard .row .kr .shift{
 	top: 0.2em;
+	color: #777;
+}
+.keyboard .row .kr.shifted .shift{
+	color: #fff;
+}
+.keyboard .row .kr.shifted .normal{
+	color: #777;
 }
 .keyboard .en > *{
 	/*font-family: 'Droid Sans', sans-serif;*/

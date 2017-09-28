@@ -48,13 +48,27 @@ var _type = {
 		fingerMode:{
 			index : 0,
 			keydown: function (code) {
-				_type.jq.keyboardKeyDown(code);
+				switch (code){
+					case 16:// shift
+						_type.jq.keyboardShifting();
+						break;
+					default:
+						_type.jq.keyboardKeyDown(code);
+				}
 			},
 			keyup: function (code) {
-				var result = _type.calc.fingerMatch(code);
-				_type.jq.fingerMatchDisplay(result);
-				_type.jq.keyboardKeyUp(code);
-				setTimeout(_type.mode.fingerMode.next, 1000);
+
+				switch (code){
+					case 16:// shift
+						_type.jq.keyboardUnshifting();
+						break;
+					default:
+						var result = _type.calc.fingerMatch(code);
+						_type.jq.fingerMatchDisplay(result);
+						_type.jq.keyboardKeyUp(code);
+						setTimeout(_type.mode.fingerMode.next, 1000);
+				}
+
 			},
 			next: function () {
 				var idx = _type.jq.getMatchedLetterLength();
@@ -117,6 +131,12 @@ var _type = {
 		},
 		keyboardKeyUp: function (code) {
 			$('.keyboard .row > div[data-key='+code+']').removeClass('press');
+		},
+		keyboardShifting: function () {
+			$('.keyboard .row > div > .kr').addClass('shifted');
+		},
+		keyboardUnshifting: function () {
+			$('.keyboard .row > div > .kr').removeClass('shifted');
 		},
 		fingerMatchDisplay: function (result) {
 			var letter = $('#exampleLetter').find('span').eq(result.index);
