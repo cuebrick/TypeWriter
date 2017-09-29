@@ -5,7 +5,7 @@ $(function () {
 	// POWERMODE.colorful = true ;
 	document.body.addEventListener('keyup', POWERMODE);
 	_type.initListener();
-	$('#fingerMode').trigger('click')
+	_type.loadJson();
 });
 
 var _type = {
@@ -20,18 +20,7 @@ var _type = {
 	},
 	timestamps: [],
 	timer: 0,
-	data: {
-		"text":[
-			'첫 번째 테스트 문장',
-			'두 번째 테스트 문장',
-			'세 번째 테스트 문장'
-		],
-		"letter":[
-			[65, 83, 68, 70],
-			[81, 87, 69, 82],
-			[90, 88, 67, 86]
-		]
-	},
+	data: {},// json data
 	textIndex: 0,
 	letterIndex: 0,
 
@@ -98,6 +87,9 @@ var _type = {
 			},
 			reset: function () {
 				var letterCodes = _type.data.letter[_type.letterIndex];
+				if(!letterCodes)
+					return;
+
 				var letterObjects = {};
 				$.each(letterCodes, function (index, value) {
 					letterObjects['code'+value] = _type.keymap['code'+value];
@@ -234,6 +226,14 @@ var _type = {
 		$('#practiceMode').click(function () {
 
 			_type.mode.selected = _type.consts.PRACTICE_MODE;
+		});
+	},
+
+	loadJson: function () {
+		$.getJSON('json/data.json', function (d) {
+			_type.data = d;
+
+			$('#fingerMode').trigger('click');
 		});
 	},
 
