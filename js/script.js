@@ -48,24 +48,38 @@ var _type = {
 		fingerMode:{
 			index : 0,
 			keydown: function (code) {
+				_type.jq.keyboardKeyDown(code);
 				switch (code){
 					case 16:// shift
 						_type.jq.keyboardShifting();
 						break;
 					default:
-						_type.jq.keyboardKeyDown(code);
 				}
 			},
 			keyup: function (code) {
+
+				_type.jq.keyboardKeyUp(code);
 
 				switch (code){
 					case 16:// shift
 						_type.jq.keyboardUnshifting();
 						break;
+					case 13: // enter
+					case 17: // ctrl
+					case 91: // win key
+					case 18: // alt - left
+					case 32: // space
+					case 21: // alt - right
+					case 93: // context menu
+					case 25: // ctrl - right
+					case 220: // backslash
+					case 8: // backspace
+					case 20: // caps
+						// 아무것도 하지 않는 케이스들
+						break;
 					default:
 						var result = _type.calc.fingerMatch(code);
 						_type.jq.fingerMatchDisplay(result);
-						_type.jq.keyboardKeyUp(code);
 						setTimeout(_type.mode.fingerMode.next, 1000);
 				}
 
