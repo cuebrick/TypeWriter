@@ -274,3 +274,19 @@ button.start-btn{
 	/*font-family: 'Droid Sans', sans-serif;*/
 	font-family: 'Noto Sans KR', sans-serif;
 }
+
+.modaless{
+	position: absolute;
+	left: 50%;
+	top: 52px;
+	margin-left: -100px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #e0d4ad;
+	padding: 5px 20px;
+	border-radius: 50px;
+	display: none;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

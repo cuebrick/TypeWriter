@@ -310,6 +310,12 @@ var _type = {
 		return _type.timestamps[index];
 	},
 
+	modaless: function (msg, duration) {
+		var dur = (duration) ? duration : 4000;
+		var el = $('#modaless').text(msg);
+		el.dequeue().show().css('margin-left', -el.outerWidth() * 0.5).delay(dur).fadeOut(500);
+	},
+
 	evaluate: function () {
 		var exampleText = $('#exampleText').text().trim();
 		var typingText = $('#inputText').val().trim();
