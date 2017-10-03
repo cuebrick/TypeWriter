@@ -150,7 +150,7 @@ button.start-btn{
 	font-size: 10vw;
 	/*line-height: 1.4em;*/
 	height: 1.4em;
-	border-bottom: 1px #fff dashed;
+	/*border-bottom: 1px #fff dashed;*/
 	margin-bottom: 0.4em;
 	text-align: center;
 }
@@ -272,7 +272,7 @@ button.start-btn{
 .keyboard .row .kr .normal{
 	position: absolute;
 	bottom: 0.2em;
-	width: 50%;
+	width: 45%;
 }
 .keyboard .row .kr .shift{
 	top: 0.2em;
