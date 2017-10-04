@@ -93,9 +93,12 @@ var _type = {
 				var letterObjects = {};
 				$.each(letterCodes, function (index, value) {
 					letterObjects['code'+value] = _type.keymap['code'+value];
+					console.log(letterCodes);
 				});
 
 				var el = $('#exampleLetter').text('');
+				el.attr('data-num', letterCodes.length);
+
 				$.each(letterObjects, function (key, obj) {
 					el.append($('<span></span>').attr('data-key', key).text(obj.krn));
 				});
@@ -238,7 +241,7 @@ var _type = {
 	},
 
 	createKeyMap: function () {
-		$('.keyboard > .row > div:not(".disable")').each(function (index, element) {
+		$('.keyboard > .row > div:not(".disable")').each(function () {
 			var key = $(this).data('key');
 			var d = {};
 

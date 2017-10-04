@@ -170,6 +170,27 @@ button.start-btn{
 	color: #ffacae;
 	background-color: rgba(255, 82, 112, 0.8);
 }
+.example-letter[data-num="1"] > span,
+.example-letter[data-num="2"] > span,
+.example-letter[data-num="3"] > span,
+.example-letter[data-num="4"] > span{
+	font-size: 10vw;
+}
+
+.example-letter[data-num="5"] > span{
+	font-size: 9vw;
+}
+.example-letter[data-num="6"] > span{
+	font-size: 8vw;
+}
+.example-letter[data-num="7"] > span{
+	font-size: 7vw;
+}
+.example-letter[data-num="8"] > span{
+	font-size: 6vw;
+}
+
+
 
 .keyboard{
 	width: 100%;
@@ -304,3 +325,4 @@ button.start-btn{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
