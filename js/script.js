@@ -69,7 +69,7 @@ var _type = {
 					default:
 						var result = _type.calc.fingerMatch(code);
 						_type.jq.fingerMatchDisplay(result);
-						setTimeout(_type.mode.fingerMode.next, 1000);
+						_type.mode.fingerMode.next();
 				}
 
 			},
@@ -90,18 +90,15 @@ var _type = {
 				if(!letterCodes)
 					return;
 
-				var letterObjects = {};
-				$.each(letterCodes, function (index, value) {
-					letterObjects['code'+value] = _type.keymap['code'+value];
-					console.log(letterCodes);
-				});
-
 				var el = $('#exampleLetter').text('');
 				el.attr('data-num', letterCodes.length);
 
-				$.each(letterObjects, function (key, obj) {
-					el.append($('<span></span>').attr('data-key', key).text(obj.krn));
+				$.each(letterCodes, function (index, value) {
+					var key = _type.keymap['code'+value];
+					el.append($('<span></span>').attr('data-key', value).text(key.krn));
+					// console.log(value, key);
 				});
+
 
 				_type.mode.fingerMode.next();
 				_type.letterIndex++;
@@ -129,7 +126,7 @@ var _type = {
 			var letter = _type.jq.getMatchingLetter(idx);
 			return {
 				index: idx,
-				isMatch:  'code' + code === letter.data('key')
+				isMatch:  code === letter.data('key')
 			}
 		}
 	},
