@@ -286,9 +286,12 @@ button.start-btn{
 .keyboard .row .en .shift{
 	height: 50%;
 }
-.keyboard .row .kr{
+.keyboard .row > div .kr{
 	text-align: right;
 	color: #fff;
+}
+.keyboard .row > div.disable .kr{
+	color: inherit;
 }
 .keyboard .row .kr .shift,
 .keyboard .row .kr .normal{
