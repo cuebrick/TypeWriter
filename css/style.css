@@ -198,6 +198,8 @@ button.start-btn{
 	margin-top: 3vw;
 	padding-bottom: 30%;
 	position: relative;
+	cursor: default;
+	user-select: none;
 }
 .keyboard.hide{
 	display: none;
@@ -237,7 +239,7 @@ button.start-btn{
 }
 .keyboard .row > div.on{
 	color: #000;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.8);
 	transition: 0.2s background-color;
 }
 .keyboard .row > div.press{
