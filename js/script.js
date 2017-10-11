@@ -20,9 +20,12 @@ var _type = {
 	},
 	timestamps: [],
 	timer: 0,
-	data: {},// json data
+	data: {
+
+	},// json data
 	textIndex: 0,
 	letterIndex: 0,
+	// messageCodes: [],// modal, modaless 가 있는 경우 여기에 리스트업
 
 	keymap:{},
 
@@ -74,32 +77,52 @@ var _type = {
 
 			},
 			next: function () {
-				var idx = _type.jq.getMatchedLetterLength();
+				var current = _type.jq.getCurrentElement();
+				if($(current).is('.modaless-item')){
+					console.log(current);
+					_type.modaless(_type.data.modaless[$(current).text()]);
+					_type.mode.fingerMode.index++;
+					_type.mode.fingerMode.next();
+				}else{
+					var idx = _type.jq.getMatchedLetterLength();
 
-				if(idx > 0)
-					_type.jq.offKeyboard(_type.jq.getCurrentLetterKeyCode(idx-1));
+					if(idx > 0)
+						_type.jq.offKeyboard(_type.jq.getCurrentLetterKeyCode(idx-1));
 
-				var letterLength = _type.jq.getAllLetterLength();
-				if(letterLength === idx)
-					_type.mode.fingerMode.reset();
-				else
-					_type.jq.onKeyboard(_type.jq.getCurrentLetterKeyCode(idx));
+					var letterLength = _type.jq.getAllLetterLength();
+					if(letterLength === idx)
+						_type.mode.fingerMode.reset();
+					else
+						_type.jq.onKeyboard(_type.jq.getCurrentLetterKeyCode(idx));
+
+					_type.mode.fingerMode.index++;
+				}
 			},
 			reset: function () {
-				var letterCodes = _type.data.letter[_type.letterIndex];
-				if(!letterCodes)
+				var letterData = _type.data.letter[_type.letterIndex];
+				if(!letterData)
 					return;
 
-				var el = $('#exampleLetter').text('');
-				el.attr('data-num', letterCodes.length);
-
-				$.each(letterCodes, function (index, value) {
-					var key = _type.keymap['code'+value];
-					el.append($('<span></span>').attr('data-key', value).text(key.krn));
-					// console.log(value, key);
+				var codeData = [];
+				$.each(letterData, function (index, value) {
+					if($.isNumeric(value)){
+						codeData.push(value);
+					}
 				});
 
+				var el = $('#exampleLetter').text('');
+				el.attr('data-num', codeData.length);
 
+				$.each(letterData, function (index, value) {
+					if($.isNumeric(value)){
+						var key = _type.keymap['code'+value];
+						el.append($('<span></span>').attr('data-key', value).text(key.krn));
+					}else{
+						el.append($('<em></em>').addClass('modaless-item').text(value));
+					}
+				});
+
+				_type.mode.fingerMode.index = 0;
 				_type.mode.fingerMode.next();
 				_type.letterIndex++;
 			}
@@ -167,11 +190,17 @@ var _type = {
 		getMatchedLetterLength: function () {
 			return $('#exampleLetter').find('.miss, .match').length;
 		},
+		getAllLength: function () {
+			return $('#exampleLetter').children().length;
+		},
 		getAllLetterLength: function () {
 			return $('#exampleLetter').find('span').length;
 		},
 		getCurrentLetterKeyCode: function (index) {
 			return $('#exampleLetter').find('span').eq(index).data('key')
+		},
+		getCurrentElement: function () {
+			return $('#exampleLetter').children().eq(_type.mode.fingerMode.index);
 		}
 	},
 
