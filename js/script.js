@@ -3,7 +3,7 @@
  **********************************************************/
 $(function () {
 	// POWERMODE.colorful = true ;
-	document.body.addEventListener('keyup', POWERMODE);
+
 	_type.initListener();
 	_type.loadJson();
 });
@@ -28,6 +28,15 @@ var _type = {
 	// messageCodes: [],// modal, modaless 가 있는 경우 여기에 리스트업
 
 	keymap:{},
+
+	powermode: {
+		start: function () {
+			document.body.addEventListener('keyup', POWERMODE);
+		},
+		stop: function () {
+			document.body.removeEventListener('keyup', POWERMODE);
+		}
+	},
 
 	mode: {
 		selected: null,
@@ -237,6 +246,7 @@ var _type = {
 			_type.createKeyMap();
 			_type.mode.fingerMode.reset();
 			_type.mode.selected = _type.consts.FINGER_MODE;
+			_type.powermode.stop();
 		});
 		$('#wordMode').click(function () {
 			$('.word-input').show();
@@ -244,6 +254,7 @@ var _type = {
 			$('.letter-view').hide();
 			$('.keyboard').hide();
 			_type.mode.selected = _type.consts.WORD_MODE;
+			_type.powermode.start();
 		});
 		$('#sentenceMode').click(function () {
 			$('.word-input').show();
