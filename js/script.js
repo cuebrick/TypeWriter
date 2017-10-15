@@ -28,6 +28,7 @@ var _type = {
 	// messageCodes: [],// modal, modaless 가 있는 경우 여기에 리스트업
 
 	keymap:{},
+	keymapData:{},
 
 	powermode: {
 		start: function () {
@@ -283,12 +284,22 @@ var _type = {
 			var d = {};
 
 			var krs = $(this).find('.kr > .shift');
-			if(krs.length)
+			if(krs.length){
 				d['krs'] = krs.text();
+				_type.keymapData[krs.text()] = {
+					"code": key,
+					"shift" : true
+				}
+			}
 
 			var krn = $(this).find('.kr > .normal');
-			if(krn.length)
+			if(krn.length){
 				d['krn'] = krn.text();
+				_type.keymapData[krn.text()] = {
+					"code": key,
+					"shift" : false
+				}
+			}
 
 			var ens = $(this).find('.en > .shift');
 			if(ens.length)
@@ -300,6 +311,8 @@ var _type = {
 
 			_type.keymap['code'+key] = d;
 		});
+		console.log('keymapData', _type.keymapData);
+		console.log('keymap', _type.keymap);
 	},
 
 	reset: function () {
