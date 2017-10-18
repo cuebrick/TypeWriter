@@ -66,6 +66,8 @@ var _type = {
 					case 16:// shift
 						_type.jq.keyboardUnshifting();
 						break;
+
+					// 아무것도 하지 않는 케이스들
 					case 13: // enter
 					case 17: // ctrl
 					case 91: // win key
@@ -77,7 +79,6 @@ var _type = {
 					case 220: // backslash
 					case 8: // backspace
 					case 20: // caps
-						// 아무것도 하지 않는 케이스들
 						break;
 					default:
 						var result = _type.calc.fingerMatch(code);
@@ -88,8 +89,9 @@ var _type = {
 			},
 			next: function () {
 				var current = _type.jq.getCurrentElement();
+				console.log("-0-===================="+_type.mode.fingerMode.index);
 				if($(current).is('.modaless-item')){
-					console.log(current);
+					console.log(_type.mode.fingerMode.index, current);
 					_type.modaless(_type.data.modaless[$(current).text()]);
 					_type.mode.fingerMode.index++;
 					_type.mode.fingerMode.next();
@@ -99,13 +101,13 @@ var _type = {
 					if(idx > 0)
 						_type.jq.offKeyboard(_type.jq.getCurrentLetterKeyCode(idx-1));
 
+					_type.mode.fingerMode.index++;
+
 					var letterLength = _type.jq.getAllLetterLength();
 					if(letterLength === idx)
 						_type.mode.fingerMode.reset();
 					else
 						_type.jq.onKeyboard(_type.jq.getCurrentLetterKeyCode(idx));
-
-					_type.mode.fingerMode.index++;
 				}
 			},
 			reset: function () {
@@ -238,7 +240,6 @@ var _type = {
 
 			$(this).addClass('select');
 		});
-
 		$('#fingerMode').click(function () {
 			$('.word-input').hide();
 			$('.dashboard').hide();
