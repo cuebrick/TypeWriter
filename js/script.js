@@ -60,6 +60,7 @@ var _type = {
 			},
 			keyup: function (code) {
 
+				console.log(code);
 				_type.jq.keyboardKeyUp(code);
 
 				switch (code){
@@ -111,7 +112,20 @@ var _type = {
 				}
 			},
 			reset: function () {
-				var letterData = _type.data.letter[_type.letterIndex];
+				function getKeyCodeByChar(char) {
+					var codeObj = _type.keymapData[char];
+					if(codeObj)
+						return codeObj.code;
+					else
+						return {code:char};
+				}
+				var charList = _type.data.letter[_type.letterIndex];
+				var letterData = [];
+				$.each(charList, function (index, value) {
+					letterData.push(getKeyCodeByChar(value));
+				});
+				console.log(letterData);
+				// return;
 				if(!letterData)
 					return;
 
