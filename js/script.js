@@ -117,7 +117,7 @@ var _type = {
 					if(codeObj)
 						return codeObj.code;
 					else
-						return {code:char};
+						return char;
 				}
 				var charList = _type.data.letter[_type.letterIndex];
 				var letterData = [];
@@ -126,7 +126,7 @@ var _type = {
 				});
 				console.log(letterData);
 				// return;
-				if(!letterData)
+				if(!letterData || letterData.length === 0)
 					return;
 
 				var codeData = [];
