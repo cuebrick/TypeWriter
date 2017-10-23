@@ -90,7 +90,7 @@ var _type = {
 			},
 			next: function () {
 				var current = _type.jq.getCurrentElement();
-				console.log("-0-===================="+_type.mode.fingerMode.index);
+				console.log("_type.mode.fingerMode.index: "+_type.mode.fingerMode.index);
 				if($(current).is('.modaless-item')){
 					console.log(_type.mode.fingerMode.index, current);
 					_type.modaless(_type.data.modaless[$(current).text()]);
@@ -282,6 +282,10 @@ var _type = {
 		$('#practiceMode').click(function () {
 
 			_type.mode.selected = _type.consts.PRACTICE_MODE;
+		});
+
+		$('#cancel').click(function () {
+			$('#modal').fadeOut(100);
 		});
 	},
 
