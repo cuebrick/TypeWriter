@@ -20,7 +20,7 @@
   },
   "modal":{
     "MD1001": {
-      "message": "준비되면 확인 버튼을 눌러주세요."
+      "message": "준비되면 확인 버튼을 눌러주세요.",
       "confirm": true,
       "cancel": true
     }
