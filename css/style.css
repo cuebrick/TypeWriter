@@ -163,6 +163,17 @@ button.start-btn{
 	height: 1.5em;
 	transition: 0.2s all;
 }
+@keyframes current-letter{
+	from {
+		border: 5px skyblue solid;
+	}
+	to {
+		border: 5px transparent solid;
+	}
+}
+.example-letter > span.current{
+	animation: current-letter 0.5s linear infinite alternate;
+}
 .example-letter > span.match{
 	color: #d5dfff;
 	background-color: rgba(0, 164, 255, 0.8);

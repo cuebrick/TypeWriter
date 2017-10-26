@@ -49,6 +49,7 @@ var _type = {
 		},
 		fingerMode:{
 			index : 0,
+			currentLetterElement: null,
 			keydown: function (code) {
 				_type.jq.keyboardKeyDown(code);
 				switch (code){
@@ -90,13 +91,17 @@ var _type = {
 			},
 			next: function () {
 				var current = _type.jq.getCurrentElement();
-				console.log("_type.mode.fingerMode.index: "+_type.mode.fingerMode.index);
+				// console.log("_type.mode.fingerMode.index: "+_type.mode.fingerMode.index);
 				if($(current).is('.modaless-item')){
-					console.log(_type.mode.fingerMode.index, current);
+					// console.log(_type.mode.fingerMode.index, current);
 					_type.modaless(_type.data.modaless[$(current).text()]);
 					_type.mode.fingerMode.index++;
 					_type.mode.fingerMode.next();
 				}else{
+					if(_type.mode.fingerMode.currentLetterElement)
+						_type.jq.removeBlink(_type.mode.fingerMode.currentLetterElement);
+					_type.mode.fingerMode.currentLetterElement = current;
+					_type.jq.setBlinkCurrentLetter(current);
 					var idx = _type.jq.getMatchedLetterLength();
 
 					if(idx > 0)
@@ -227,6 +232,12 @@ var _type = {
 		},
 		getCurrentElement: function () {
 			return $('#exampleLetter').children().eq(_type.mode.fingerMode.index);
+		},
+		setBlinkCurrentLetter: function ($element) {
+			$element.addClass('current');
+		},
+		removeBlink:function ($element) {
+			$element.removeClass('current');
 		}
 	},
 
