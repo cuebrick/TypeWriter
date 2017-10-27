@@ -111,7 +111,7 @@ var _type = {
 
 					var letterLength = _type.jq.getAllLetterLength();
 					if(letterLength === idx)
-						_type.mode.fingerMode.reset();
+						setTimeout(_type.mode.fingerMode.reset, 2000);
 					else
 						_type.jq.onKeyboard(_type.jq.getCurrentLetterKeyCode(idx));
 				}
@@ -129,8 +129,7 @@ var _type = {
 				$.each(charList, function (index, value) {
 					letterData.push(getKeyCodeByChar(value));
 				});
-				console.log(letterData);
-				// return;
+
 				if(!letterData || letterData.length === 0)
 					return;
 
