@@ -21,7 +21,7 @@ var _type = {
 	timestamps: [],
 	timer: 0,
 	data: {
-
+		letter: null
 	},// json data
 	textIndex: 0,
 	letterIndex: 0,
@@ -117,38 +117,39 @@ var _type = {
 				}
 			},
 			reset: function () {
-				function getKeyCodeByChar(char) {
-					var codeObj = _type.keymapData[char];
-					if(codeObj)
-						return codeObj.code;
+				function getKeyDataByChar(char) {
+					var obj = _type.keymapData[char];
+					if(obj)
+						return obj;
 					else
 						return char;
 				}
 				var charList = _type.data.letter[_type.letterIndex];
 				var letterData = [];
 				$.each(charList, function (index, value) {
-					letterData.push(getKeyCodeByChar(value));
+					letterData.push(getKeyDataByChar(value));
 				});
 
 				if(!letterData || letterData.length === 0)
 					return;
 
 				var codeData = [];
-				$.each(letterData, function (index, value) {
-					if($.isNumeric(value)){
-						codeData.push(value);
+				$.each(letterData, function (index, obj) {
+					if($.isNumeric(obj.code)){
+						codeData.push(obj.code);
 					}
 				});
 
 				var el = $('#exampleLetter').text('');
 				el.attr('data-num', codeData.length);
 
-				$.each(letterData, function (index, value) {
-					if($.isNumeric(value)){
-						var key = _type.keymap['code'+value];
-						el.append($('<span></span>').attr('data-key', value).text(key.krn));
+				$.each(letterData, function (index, obj) {
+					if($.isNumeric(obj.code)){
+						var letter = $('<span></span>').attr('data-key', obj.code).text(obj.char).appendTo(el);
+						if(obj.shift === true)
+							letter.attr('data-shift', "true");
 					}else{
-						el.append($('<em></em>').addClass('modaless-item').text(value));
+						el.append($('<em></em>').addClass('modaless-item').text(obj));
 					}
 				});
 
@@ -317,6 +318,7 @@ var _type = {
 				d['krs'] = krs.text();
 				_type.keymapData[krs.text()] = {
 					"code": key,
+					"char": krs.text(),
 					"shift" : true
 				}
 			}
@@ -326,6 +328,7 @@ var _type = {
 				d['krn'] = krn.text();
 				_type.keymapData[krn.text()] = {
 					"code": key,
+					"char": krn.text(),
 					"shift" : false
 				}
 			}
