@@ -59,7 +59,7 @@ var _type = {
 					default:
 				}
 			},
-			keyup: function (code) {
+			keyup: function (code, shiftKey) {
 
 				console.log(code);
 				_type.jq.keyboardKeyUp(code);
@@ -83,7 +83,7 @@ var _type = {
 					case 20: // caps
 						break;
 					default:
-						var result = _type.calc.fingerMatch(code);
+						var result = _type.calc.fingerMatch(code, shiftKey);
 						_type.jq.fingerMatchDisplay(result);
 						_type.mode.fingerMode.next();
 				}
@@ -91,10 +91,11 @@ var _type = {
 			},
 			next: function () {
 				var current = _type.jq.getCurrentElement();
+				console.log(current);
 				// console.log("_type.mode.fingerMode.index: "+_type.mode.fingerMode.index);
 				if($(current).is('.modaless-item')){
 					// console.log(_type.mode.fingerMode.index, current);
-					_type.modaless(_type.data.modaless[$(current).text()]);
+					_type.modaless($(current).text());
 					_type.mode.fingerMode.index++;
 					_type.mode.fingerMode.next();
 				}else{
@@ -122,7 +123,7 @@ var _type = {
 					if(obj)
 						return obj;
 					else
-						return char;
+						return {code:char, char: _type.getModalessText(char)};
 				}
 				var charList = _type.data.letter[_type.letterIndex];
 				var letterData = [];
@@ -140,17 +141,14 @@ var _type = {
 					}
 				});
 
-				var el = $('#exampleLetter').text('');
-				el.attr('data-num', codeData.length);
+				var container = $('#exampleLetter').text('');
+				container.attr('data-num', codeData.length);
 
 				$.each(letterData, function (index, obj) {
-					if($.isNumeric(obj.code)){
-						var letter = $('<span></span>').attr('data-key', obj.code).text(obj.char).appendTo(el);
-						if(obj.shift === true)
-							letter.attr('data-shift', "true");
-					}else{
-						el.append($('<em></em>').addClass('modaless-item').text(obj));
-					}
+					var $element = ($.isNumeric(obj.code)) ? $('<span></span>') : $('<em></em>').addClass('modaless-item');
+					$element.attr('data-key', obj.code).text(obj.char).appendTo(container);
+					if(obj.shift === true)
+						$element.attr('data-shift', "true");
 				});
 
 				_type.mode.fingerMode.index = 0;
@@ -175,13 +173,16 @@ var _type = {
 	},
 
 	calc: {
-		fingerMatch: function (code) {
+		fingerMatch: function (code, shiftKey) {
 			var idx = _type.jq.getMatchedLetterLength();
 			var letter = _type.jq.getMatchingLetter(idx);
-			return {
-				index: idx,
-				isMatch:  code === letter.data('key')
+			var obj = {index: idx};
+			if(Boolean(letter.data('shift')) === shiftKey){
+				obj['isMatch'] = (code === letter.data('key'));
+			}else{
+				obj['isMatch'] = false;
 			}
+			return obj;
 		}
 	},
 
@@ -244,8 +245,8 @@ var _type = {
 
 	initListener: function () {
 		$(window).keyup(function (e) {
-			console.log('keyup :', e.keyCode);
-			_type.mode.GET().keyup(e.keyCode);
+			console.log('keyup :', e);
+			_type.mode.GET().keyup(e.keyCode, e.shiftKey);
 
 		}).keydown(function (e) {
 			// console.log('keydown :', code);
@@ -399,6 +400,10 @@ var _type = {
 		var dur = (duration) ? duration : 4000;
 		var el = $('#modaless').text(msg);
 		el.dequeue().show().css('margin-left', -el.outerWidth() * 0.5).delay(dur).fadeOut(500);
+	},
+
+	getModalessText: function (id) {
+		return _type.data.modaless[id]
 	},
 
 	evaluate: function () {
