@@ -163,14 +163,15 @@ button.start-btn{
 	height: 1.5em;
 	transition: 0.2s all;
 	vertical-align: middle;
-	border: 5px transparent solid;
+	border: 0.1em transparent solid;
+	line-height: 1.2em;
 }
 @keyframes current-letter{
 	from {
-		border: 5px skyblue solid;
+		border: 0.1em skyblue solid;
 	}
 	to {
-		border: 5px transparent solid;
+		border: 0.1em transparent solid;
 	}
 }
 .example-letter > span.current{
