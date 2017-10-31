@@ -49,8 +49,12 @@ var _type = {
 		},
 		fingerMode:{
 			index : 0,
+			isResetWaiting: false,
 			currentLetterElement: null,
 			keydown: function (code) {
+				if(_type.mode.fingerMode.isResetWaiting){
+					return;
+				}
 				_type.jq.keyboardKeyDown(code);
 				switch (code){
 					case 16:// shift
@@ -61,6 +65,9 @@ var _type = {
 			},
 			keyup: function (code, shiftKey) {
 
+				if(_type.mode.fingerMode.isResetWaiting){
+					return;
+				}
 				console.log(code);
 				_type.jq.keyboardKeyUp(code);
 
@@ -111,13 +118,16 @@ var _type = {
 					_type.mode.fingerMode.index++;
 
 					var letterLength = _type.jq.getAllLetterLength();
-					if(letterLength === idx)
+					if(letterLength === idx){
+						_type.mode.fingerMode.isResetWaiting = true;
 						setTimeout(_type.mode.fingerMode.reset, 2000);
-					else
+					} else {
 						_type.jq.onKeyboard(_type.jq.getCurrentLetterKeyCode(idx));
+					}
 				}
 			},
 			reset: function () {
+				_type.mode.fingerMode.isResetWaiting = false;
 				function getKeyDataByChar(char) {
 					var obj = _type.keymapData[char];
 					if(obj)
