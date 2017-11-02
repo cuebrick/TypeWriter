@@ -278,7 +278,7 @@ var _type = {
 		});
 		$('#fingerMode').click(function () {
 			$('.word-input').hide();
-			$('.dashboard').hide();
+			$('.word-msg').hide();
 			$('.letter-view').show();
 			$('.keyboard').show();
 			_type.createKeyMap();
@@ -288,7 +288,7 @@ var _type = {
 		});
 		$('#wordMode').click(function () {
 			$('.word-input').show();
-			$('.dashboard').show();
+			$('.word-msg').show();
 			$('.letter-view').hide();
 			$('.keyboard').hide();
 			_type.mode.selected = _type.consts.WORD_MODE;
@@ -296,7 +296,7 @@ var _type = {
 		});
 		$('#sentenceMode').click(function () {
 			$('.word-input').show();
-			$('.dashboard').show();
+			$('.word-msg').show();
 			$('.letter-view').hide();
 			$('.keyboard').hide();
 			_type.mode.selected = _type.consts.SENTENCE_MODE;
