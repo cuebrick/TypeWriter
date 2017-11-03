@@ -10,10 +10,10 @@ $(function () {
 
 var _type = {
 	consts: {
-		FINGER_MODE: 'fingerMode',
-		WORD_MODE: 'wordMode',
-		SENTENCE_MODE: 'sentenceMode',
-		PRACTICE_MODE: 'practiceMode'
+		FINGER_MODE: 'finger',
+		WORD_MODE: 'word',
+		SENTENCE_MODE: 'sentence',
+		PRACTICE_MODE: 'practice'
 	},
 	_props_ : {},
 	timestamps: [],
@@ -45,13 +45,13 @@ var _type = {
 				return new Error('Mode select Error.');
 		},
 
-		fingerMode:{
+		finger:{
 			index : 0,
 			letterGroupIndex: 0,
 			isResetWaiting: false,
 			currentLetterElement: null,
 			keydown: function (code) {
-				if(_type.mode.fingerMode.isResetWaiting){
+				if(_type.mode.finger.isResetWaiting){
 					return;
 				}
 				_type.jq.keyboardKeyDown(code);
@@ -64,7 +64,7 @@ var _type = {
 			},
 			keyup: function (code, shiftKey) {
 
-				if(_type.mode.fingerMode.isResetWaiting){
+				if(_type.mode.finger.isResetWaiting){
 					return;
 				}
 				console.log(code);
@@ -89,9 +89,9 @@ var _type = {
 					case 20: // caps
 						break;
 					default:
-						var result = _type.mode.fingerMode.fingerMatch(code, shiftKey);
+						var result = _type.mode.finger.fingerMatch(code, shiftKey);
 						_type.jq.fingerMatchDisplay(result);
-						_type.mode.fingerMode.next();
+						_type.mode.finger.next();
 				}
 
 			},
@@ -112,24 +112,24 @@ var _type = {
 				var current = _type.jq.getCurrentElement();
 				if($(current).is('.modaless-item')){
 					_type.modaless($(current).text());
-					_type.mode.fingerMode.index++;
-					_type.mode.fingerMode.next();
+					_type.mode.finger.index++;
+					_type.mode.finger.next();
 				}else{
-					if(_type.mode.fingerMode.currentLetterElement)
-						_type.jq.removeBlink(_type.mode.fingerMode.currentLetterElement);
-					_type.mode.fingerMode.currentLetterElement = current;
+					if(_type.mode.finger.currentLetterElement)
+						_type.jq.removeBlink(_type.mode.finger.currentLetterElement);
+					_type.mode.finger.currentLetterElement = current;
 					_type.jq.setBlinkCurrentLetter(current);
 					var idx = _type.jq.getMatchedLetterLength();
 
 					if(idx > 0)
 						_type.jq.offKeyboard(_type.jq.getCurrentLetterKeyCode(idx-1));
 
-					_type.mode.fingerMode.index++;
+					_type.mode.finger.index++;
 
 					var letterLength = _type.jq.getAllLetterLength();
 					if(letterLength === idx){
-						_type.mode.fingerMode.isResetWaiting = true;
-						setTimeout(_type.mode.fingerMode.reset, 2000);
+						_type.mode.finger.isResetWaiting = true;
+						setTimeout(_type.mode.finger.reset, 2000);
 					} else {
 						_type.jq.onKeyboard(_type.jq.getCurrentLetterKeyCode(idx));
 					}
@@ -137,7 +137,7 @@ var _type = {
 			},
 
 			reset: function () {
-				_type.mode.fingerMode.isResetWaiting = false;
+				_type.mode.finger.isResetWaiting = false;
 				function getKeyDataByChar(char) {
 					var obj = _type.keymapData[char];
 					if(obj)
@@ -145,7 +145,7 @@ var _type = {
 					else
 						return {code:char, char: _type.getModalessText(char)};
 				}
-				var charList = _type.data.letter[_type.mode.fingerMode.letterGroupIndex];
+				var charList = _type.data.letter[_type.mode.finger.letterGroupIndex];
 				var letterData = [];
 				$.each(charList, function (index, value) {
 					letterData.push(getKeyDataByChar(value));
@@ -171,35 +171,39 @@ var _type = {
 						$element.attr('data-shift', "true");
 				});
 
-				_type.mode.fingerMode.index = 0;
-				_type.mode.fingerMode.next();
-				_type.mode.fingerMode.letterGroupIndex++;
+				_type.mode.finger.index = 0;
+				_type.mode.finger.next();
+				_type.mode.finger.letterGroupIndex++;
 			}
 		},
 
-		wordMode:{
+		word:{
 
 			index: 0,
 
 			keyup: function (code) {
 				switch (code){
 					case 13:// enter key
-						_type.mode.wordMode.evaluate();
-						_type.mode.wordMode.next();
+						_type.mode.word.evaluate();
+						_type.mode.word.next();
 						break;
 					case 27:// ecs key
-						_type.mode.wordMode.stop();
+						_type.mode.word.stop();
 						break;
 					default:
 				}
 			},
 
+			keydown: function (code) {
+
+			},
+
 			next: function () {
-				_type.mode.wordMode.stop();
+				_type.mode.word.stop();
 
 				var text = _type.data.text;
-				if(_type.mode.wordMode.index < text.length){
-					_type.mode.wordMode.pushTime();
+				if(_type.mode.word.index < text.length){
+					_type.mode.word.pushTime();
 					$('#inputText').focus();
 					var count = 0;
 					_type.timer = setInterval(function () {
@@ -207,16 +211,16 @@ var _type = {
 						++count;
 					}, 100);
 
-					_type.mode.wordMode.setText(text[_type.mode.wordMode.index]);
+					_type.mode.word.setText(text[_type.mode.word.index]);
 				}else{
-					_type.mode.wordMode.pushTime();
+					_type.mode.word.pushTime();
 				}
-				_type.mode.wordMode.index++;
+				_type.mode.word.index++;
 			},
 
 			reset: function () {
-				_type.mode.wordMode.clearTime();
-				_type.mode.wordMode.index = 0;
+				_type.mode.word.clearTime();
+				_type.mode.word.index = 0;
 			},
 
 			getTime : function (index) {
@@ -227,7 +231,7 @@ var _type = {
 			},
 
 			stop: function () {
-				_type.mode.wordMode.pushTime();
+				_type.mode.word.pushTime();
 				clearInterval(_type.timer);
 			},
 
@@ -323,7 +327,7 @@ var _type = {
 			return $('#exampleLetter').find('span').eq(index).data('key')
 		},
 		getCurrentElement: function () {
-			return $('#exampleLetter').children().eq(_type.mode.fingerMode.index);
+			return $('#exampleLetter').children().eq(_type.mode.finger.index);
 		},
 		setBlinkCurrentLetter: function ($element) {
 			$element.addClass('current');
@@ -346,8 +350,8 @@ var _type = {
 
 		$('#startButton').click(function () {
 			$(this).fadeOut(1000, function () {
-				_type.reset();
-				_type.mode.wordMode.next();
+				_type.mode.word.reset();
+				_type.mode.word.next();
 			});
 		});
 
@@ -363,7 +367,7 @@ var _type = {
 			$('.letter-view').show();
 			$('.keyboard').show();
 			_type.createKeyMap();
-			_type.mode.fingerMode.reset();
+			_type.mode.finger.reset();
 			_type.mode.selected = _type.consts.FINGER_MODE;
 			_type.powermode.stop();
 		});
