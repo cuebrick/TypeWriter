@@ -15,16 +15,12 @@ var _type = {
 		SENTENCE_MODE: 'sentenceMode',
 		PRACTICE_MODE: 'practiceMode'
 	},
-	_props_ : {
-
-	},
+	_props_ : {},
 	timestamps: [],
 	timer: 0,
 	data: {
 		letter: null
 	},// json data
-	textIndex: 0,
-	letterIndex: 0,
 	// messageCodes: [],// modal, modaless 가 있는 경우 여기에 리스트업
 
 	keymap:{},
@@ -41,14 +37,17 @@ var _type = {
 
 	mode: {
 		selected: null,
+
 		GET: function () {
 			if(_type.mode.selected)
 				return _type.mode[_type.mode.selected];
 			else
-				return new Error('Mode select Error.')
+				return new Error('Mode select Error.');
 		},
+
 		fingerMode:{
 			index : 0,
+			letterGroupIndex: 0,
 			isResetWaiting: false,
 			currentLetterElement: null,
 			keydown: function (code) {
@@ -90,18 +89,28 @@ var _type = {
 					case 20: // caps
 						break;
 					default:
-						var result = _type.calc.fingerMatch(code, shiftKey);
+						var result = _type.mode.fingerMode.fingerMatch(code, shiftKey);
 						_type.jq.fingerMatchDisplay(result);
 						_type.mode.fingerMode.next();
 				}
 
 			},
+
+			fingerMatch: function (code, shiftKey) {
+				var idx = _type.jq.getMatchedLetterLength();
+				var letter = _type.jq.getMatchingLetter(idx);
+				var obj = {index: idx};
+				if(Boolean(letter.data('shift')) === shiftKey){
+					obj['isMatch'] = (code === letter.data('key'));
+				}else{
+					obj['isMatch'] = false;
+				}
+				return obj;
+			},
+
 			next: function () {
 				var current = _type.jq.getCurrentElement();
-				console.log(current);
-				// console.log("_type.mode.fingerMode.index: "+_type.mode.fingerMode.index);
 				if($(current).is('.modaless-item')){
-					// console.log(_type.mode.fingerMode.index, current);
 					_type.modaless($(current).text());
 					_type.mode.fingerMode.index++;
 					_type.mode.fingerMode.next();
@@ -126,6 +135,7 @@ var _type = {
 					}
 				}
 			},
+
 			reset: function () {
 				_type.mode.fingerMode.isResetWaiting = false;
 				function getKeyDataByChar(char) {
@@ -135,7 +145,7 @@ var _type = {
 					else
 						return {code:char, char: _type.getModalessText(char)};
 				}
-				var charList = _type.data.letter[_type.letterIndex];
+				var charList = _type.data.letter[_type.mode.fingerMode.letterGroupIndex];
 				var letterData = [];
 				$.each(charList, function (index, value) {
 					letterData.push(getKeyDataByChar(value));
@@ -163,36 +173,107 @@ var _type = {
 
 				_type.mode.fingerMode.index = 0;
 				_type.mode.fingerMode.next();
-				_type.letterIndex++;
+				_type.mode.fingerMode.letterGroupIndex++;
 			}
 		},
+
 		wordMode:{
+
+			index: 0,
+
 			keyup: function (code) {
 				switch (code){
 					case 13:// enter key
-						_type.evaluate();
-						_type.next();
+						_type.mode.wordMode.evaluate();
+						_type.mode.wordMode.next();
 						break;
 					case 27:// ecs key
-						_type.stop();
+						_type.mode.wordMode.stop();
 						break;
 					default:
 				}
-			}
-		}
-	},
+			},
 
-	calc: {
-		fingerMatch: function (code, shiftKey) {
-			var idx = _type.jq.getMatchedLetterLength();
-			var letter = _type.jq.getMatchingLetter(idx);
-			var obj = {index: idx};
-			if(Boolean(letter.data('shift')) === shiftKey){
-				obj['isMatch'] = (code === letter.data('key'));
-			}else{
-				obj['isMatch'] = false;
+			next: function () {
+				_type.mode.wordMode.stop();
+
+				var text = _type.data.text;
+				if(_type.mode.wordMode.index < text.length){
+					_type.mode.wordMode.pushTime();
+					$('#inputText').focus();
+					var count = 0;
+					_type.timer = setInterval(function () {
+						$('#timeElapse').text((count * 0.1).toFixed(1));
+						++count;
+					}, 100);
+
+					_type.mode.wordMode.setText(text[_type.mode.wordMode.index]);
+				}else{
+					_type.mode.wordMode.pushTime();
+				}
+				_type.mode.wordMode.index++;
+			},
+
+			reset: function () {
+				_type.mode.wordMode.clearTime();
+				_type.mode.wordMode.index = 0;
+			},
+
+			getTime : function (index) {
+				if(index === undefined)
+					index = 0;
+
+				return _type.timestamps[index];
+			},
+
+			stop: function () {
+				_type.mode.wordMode.pushTime();
+				clearInterval(_type.timer);
+			},
+
+			evaluate: function () {
+				var exampleText = $('#exampleText').text().trim();
+				var typingText = $('#inputText').val().trim();
+				var example = Hangul.disassemble(exampleText, true);
+				var typing = Hangul.disassemble(typingText, true);
+				// 오타의 인덱스 목록
+				var missTypings = [];
+
+				$.each(example, function (index, letter) {
+					var typingLetter = typing[index];
+					// 현재 검사하려는 문자에 해당하는 예시문장의 문자가 있는지 확인
+					if(typingLetter){
+						// 타이핑 수가 다르면 일단 오타
+						if(letter.length !== typingLetter.length){
+							missTypings.push(index);
+						}else{// 타이핑 수가 같음. 이제부터 각 타이핑이 올바로 되었는지 개별 확인함.
+							$.each(letter, function (idx, char) {
+								var typingChar = typingLetter[idx];
+								if(char !== typingChar){
+									missTypings.push(index);
+								}
+							});
+						}
+					}else{//해당 index 의 예시 문장이 없어서 오타 취급
+						missTypings.push(index);
+					}
+				});
+
+				console.log('전체 ', Hangul.disassemble(exampleText).length, '타이핑 중 ', missTypings.length, ' 개 오타', missTypings);
+				$('#msg').text(Hangul.disassemble(exampleText).length + '타이핑과 ' + exampleText.length + '개의 문자중 ' + missTypings.length + ' 개 오타')
+			},
+
+			pushTime : function () {
+				_type.timestamps.push(new Date().getTime());
+			},
+			clearTime: function () {
+				_type.timestamps = [];
+			},
+
+			setText: function (text) {
+				$('#inputText').val('');
+				$('#exampleText').text(text);
 			}
-			return obj;
 		}
 	},
 
@@ -266,7 +347,7 @@ var _type = {
 		$('#startButton').click(function () {
 			$(this).fadeOut(1000, function () {
 				_type.reset();
-				_type.next();
+				_type.mode.wordMode.next();
 			});
 		});
 
@@ -302,7 +383,6 @@ var _type = {
 			_type.mode.selected = _type.consts.SENTENCE_MODE;
 		});
 		$('#practiceMode').click(function () {
-
 			_type.mode.selected = _type.consts.PRACTICE_MODE;
 		});
 
@@ -330,7 +410,7 @@ var _type = {
 				_type.keymapData[krs.text()] = {
 					"code": key,
 					"char": krs.text(),
-					"shift" : true
+					"shift": true
 				}
 			}
 
@@ -340,7 +420,7 @@ var _type = {
 				_type.keymapData[krn.text()] = {
 					"code": key,
 					"char": krn.text(),
-					"shift" : false
+					"shift": false
 				}
 			}
 
@@ -358,54 +438,6 @@ var _type = {
 		console.log('keymap', _type.keymap);
 	},
 
-	reset: function () {
-		_type.clearTime();
-		_type.textIndex = 0;
-	},
-
-	stop: function () {
-		_type.pushTime();
-		clearInterval(_type.timer);
-	},
-
-	setText: function (text) {
-		$('#inputText').val('');
-		$('#exampleText').text(text);
-	},
-
-	next: function () {
-		_type.stop();
-
-		var text = _type.data.text;
-		if(_type.textIndex < text.length){
-			_type.pushTime();
-			$('#inputText').focus();
-			var count = 0;
-			_type.timer = setInterval(function () {
-				$('#timeElapse').text((count * 0.1).toFixed(1));
-				++count;
-			}, 100);
-
-			_type.setText(text[_type.textIndex]);
-		}else{
-			_type.pushTime();
-		}
-		_type.textIndex++;
-	},
-
-	pushTime : function () {
-		_type.timestamps.push(new Date().getTime());
-	},
-	clearTime: function () {
-		_type.timestamps = [];
-	},
-	getTime : function (index) {
-		if(index === undefined)
-			index = 0;
-
-		return _type.timestamps[index];
-	},
-
 	modaless: function (msg, duration) {
 		var dur = (duration) ? duration : 4000;
 		var el = $('#modaless').text(msg);
@@ -414,37 +446,5 @@ var _type = {
 
 	getModalessText: function (id) {
 		return _type.data.modaless[id]
-	},
-
-	evaluate: function () {
-		var exampleText = $('#exampleText').text().trim();
-		var typingText = $('#inputText').val().trim();
-		var example = Hangul.disassemble(exampleText, true);
-		var typing = Hangul.disassemble(typingText, true);
-		// 오타의 인덱스 목록
-		var missTypings = [];
-
-		$.each(example, function (index, letter) {
-			var typingLetter = typing[index];
-			// 현재 검사하려는 문자에 해당하는 예시문장의 문자가 있는지 확인
-			if(typingLetter){
-				// 타이핑 수가 다르면 일단 오타
-				if(letter.length !== typingLetter.length){
-					missTypings.push(index);
-				}else{// 타이핑 수가 같음. 이제부터 각 타이핑이 올바로 되었는지 개별 확인함.
-					$.each(letter, function (idx, char) {
-						var typingChar = typingLetter[idx];
-						if(char !== typingChar){
-							missTypings.push(index);
-						}
-					});
-				}
-			}else{//해당 index 의 예시 문장이 없어서 오타 취급
-				missTypings.push(index);
-			}
-		});
-
-		console.log('전체 ', Hangul.disassemble(exampleText).length, '타이핑 중 ', missTypings.length, ' 개 오타', missTypings);
-		$('#msg').text(Hangul.disassemble(exampleText).length + '타이핑과 ' + exampleText.length + '개의 문자중 ' + missTypings.length + ' 개 오타')
 	}
 };
