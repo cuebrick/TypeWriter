@@ -136,6 +136,19 @@ var _type = {
 				}
 			},
 
+			off: function () {
+				if(_type.mode.finger.currentLetterElement)
+					_type.jq.removeBlink(_type.mode.finger.currentLetterElement);
+
+				_type.mode.finger.currentLetterElement = null;
+				_type.jq.offAllKeyboard();
+
+				_type.mode.finger.letterGroupIndex = 0;
+				_type.mode.finger.index = 0;
+
+
+			},
+
 			reset: function () {
 				_type.mode.finger.isResetWaiting = false;
 				function getKeyDataByChar(char) {
@@ -357,7 +370,7 @@ var _type = {
 
 		$('nav > ul > li').click(function () {
 			if(_type.mode.selected)
-				$('#' + _type.mode.selected).removeClass('select');
+				$('#' + _type.mode.selected + "Mode").removeClass('select');
 
 			$(this).addClass('select');
 		});
@@ -378,6 +391,7 @@ var _type = {
 			$('.keyboard').hide();
 			_type.mode.selected = _type.consts.WORD_MODE;
 			_type.powermode.start();
+			_type.mode.finger.off();
 		});
 		$('#sentenceMode').click(function () {
 			$('.word-input').show();
