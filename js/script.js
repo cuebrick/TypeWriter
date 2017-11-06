@@ -184,9 +184,24 @@ var _type = {
 						$element.attr('data-shift', "true");
 				});
 
+				_type.mode.finger.paging(_type.mode.finger.letterGroupIndex);
+
 				_type.mode.finger.index = 0;
 				_type.mode.finger.next();
 				_type.mode.finger.letterGroupIndex++;
+			},
+
+			paging: function (page) {
+				$('.letter-paging > span.select').removeClass('select');
+				$('.letter-paging > span').eq(page).addClass('select');
+			},
+
+			createPaging: function () {
+				$('.letter-paging').text('');
+				var letterList = _type.data.letter;
+				$.each(letterList, function () {
+					$('.letter-paging').append($('<span></span>'));
+				});
 			}
 		},
 
@@ -377,9 +392,10 @@ var _type = {
 		$('#fingerMode').click(function () {
 			$('.word-input').hide();
 			$('.word-msg').hide();
-			$('.letter-view').show();
+			$('.example-letter').show();
 			$('.keyboard').show();
 			_type.createKeyMap();
+			_type.mode.finger.createPaging();
 			_type.mode.finger.reset();
 			_type.mode.selected = _type.consts.FINGER_MODE;
 			_type.powermode.stop();
@@ -387,7 +403,7 @@ var _type = {
 		$('#wordMode').click(function () {
 			$('.word-input').show();
 			$('.word-msg').show();
-			$('.letter-view').hide();
+			$('.example-letter').hide();
 			$('.keyboard').hide();
 			_type.mode.selected = _type.consts.WORD_MODE;
 			_type.powermode.start();
@@ -396,7 +412,7 @@ var _type = {
 		$('#sentenceMode').click(function () {
 			$('.word-input').show();
 			$('.word-msg').show();
-			$('.letter-view').hide();
+			$('.example-letter').hide();
 			$('.keyboard').hide();
 			_type.mode.selected = _type.consts.SENTENCE_MODE;
 		});

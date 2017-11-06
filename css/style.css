@@ -151,11 +151,11 @@ button.start-btn{
 	display: none;
 }
 .example-letter{
-	font-size: 10vw;
+	font-size: 6vw;
 	/*line-height: 1.4em;*/
-	height: 1.4em;
+	/*height: 1.4em;*/
 	/*border-bottom: 1px #fff dashed;*/
-	margin-bottom: 0.4em;
+	/*margin-bottom: 0.4em;*/
 	text-align: center;
 }
 .example-letter > span{
@@ -188,6 +188,35 @@ button.start-btn{
 	color: #ffacae;
 	background-color: rgba(255, 82, 112, 0.8);
 }
+
+.example-letter[data-num="1"],
+.example-letter[data-num="2"],
+.example-letter[data-num="3"],
+.example-letter[data-num="4"]{
+	height: 16vw;
+}
+.example-letter[data-num="5"]{
+	height: 15vw;
+}
+.example-letter[data-num="6"]{
+	height: 14vw;
+}
+.example-letter[data-num="7"]{
+	height: 13vw;
+}
+.example-letter[data-num="8"]{
+	height: 12vw;
+}
+.example-letter[data-num="9"],
+.example-letter[data-num="10"]{
+	height: 11vw;
+}
+.example-letter[data-num="11"],
+.example-letter[data-num="12"]{
+	height: 10vw;
+}
+
+/*
 .example-letter[data-num="1"] > span,
 .example-letter[data-num="2"] > span,
 .example-letter[data-num="3"] > span,
@@ -205,15 +234,47 @@ button.start-btn{
 	font-size: 7vw;
 }
 .example-letter[data-num="8"] > span{
-	font-size: 6vw;
+	height: 6vw;
 }
+.example-letter[data-num="9"] > span,
+.example-letter[data-num="10"] > span{
+	font-size: 5vw;
+}
+.example-letter[data-num="11"] > span,
+.example-letter[data-num="12"] > span{
+	font-size: 4.5vw;
+}
+*/
 
 
-
+.letter-paging{
+	height: 4vw;
+	font-size: 0;
+	text-align: center;
+}
+.letter-paging > span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	font-size: 12px;
+	background-color: #67737f;
+	border-radius: 20px;
+	margin: 0 1px;
+	transition: 0.4s all;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.letter-paging > span:hover{
+	border: 2px #00d1eb solid;
+}
+.letter-paging > span.select{
+	background-color: #64ccff;
+	width: 50px;
+}
 .keyboard{
 	width: 100%;
 	height: 0;
-	margin-top: 3vw;
+	/*margin-top: 3vw;*/
 	padding-bottom: 30%;
 	position: relative;
 	cursor: default;
