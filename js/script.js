@@ -145,8 +145,6 @@ var _type = {
 
 				_type.mode.finger.letterGroupIndex = 0;
 				_type.mode.finger.index = 0;
-
-
 			},
 
 			reset: function () {
@@ -423,6 +421,12 @@ var _type = {
 		$('#cancel').click(function () {
 			$('#modal').fadeOut(100);
 		});
+
+		$('.letter-paging').on('click', 'span', function () {
+			_type.mode.finger.off();
+			_type.mode.finger.letterGroupIndex = $(this).index();
+			_type.mode.finger.reset();
+		})
 	},
 
 	loadJson: function () {
