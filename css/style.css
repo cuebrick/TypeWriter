@@ -103,7 +103,7 @@ header{
 
 .flex-area{
 	width: 90%;
-	margin: 2em auto;
+	margin: 1em auto;
 	font-size: 20px;
 }
 .example-text{
@@ -152,18 +152,15 @@ button.start-btn{
 }
 .example-letter{
 	font-size: 6vw;
-	/*line-height: 1.4em;*/
-	/*height: 1.4em;*/
-	/*border-bottom: 1px #fff dashed;*/
-	/*margin-bottom: 0.4em;*/
+	height: 11vw;
 	text-align: center;
 }
 .example-letter > span{
 	display: inline-block;
-	border-radius: 1em;
-	background-color: rgba(255, 255, 255, 0.1);
 	width: 1.5em;
 	height: 1.5em;
+	border-radius: 1em;
+	background-color: rgba(255, 255, 255, 0.1);
 	transition: 0.2s all;
 	vertical-align: middle;
 	border: 0.1em transparent solid;
@@ -189,77 +186,21 @@ button.start-btn{
 	background-color: rgba(255, 82, 112, 0.8);
 }
 
-.example-letter[data-num="1"],
-.example-letter[data-num="2"],
-.example-letter[data-num="3"],
-.example-letter[data-num="4"]{
-	height: 16vw;
-}
-.example-letter[data-num="5"]{
-	height: 15vw;
-}
-.example-letter[data-num="6"]{
-	height: 14vw;
-}
-.example-letter[data-num="7"]{
-	height: 13vw;
-}
-.example-letter[data-num="8"]{
-	height: 12vw;
-}
-.example-letter[data-num="9"],
-.example-letter[data-num="10"]{
-	height: 11vw;
-}
-.example-letter[data-num="11"],
-.example-letter[data-num="12"]{
-	height: 10vw;
-}
-
-/*
-.example-letter[data-num="1"] > span,
-.example-letter[data-num="2"] > span,
-.example-letter[data-num="3"] > span,
-.example-letter[data-num="4"] > span{
-	font-size: 10vw;
-}
-
-.example-letter[data-num="5"] > span{
-	font-size: 9vw;
-}
-.example-letter[data-num="6"] > span{
-	font-size: 8vw;
-}
-.example-letter[data-num="7"] > span{
-	font-size: 7vw;
-}
-.example-letter[data-num="8"] > span{
-	height: 6vw;
-}
-.example-letter[data-num="9"] > span,
-.example-letter[data-num="10"] > span{
-	font-size: 5vw;
-}
-.example-letter[data-num="11"] > span,
-.example-letter[data-num="12"] > span{
-	font-size: 4.5vw;
-}
-*/
 
 
 .letter-paging{
-	height: 4vw;
+	height: 2vw;
 	font-size: 0;
 	text-align: center;
 }
 .letter-paging > span{
 	display: inline-block;
-	width: 20px;
-	height: 20px;
+	width: 1.6vw;
+	height: 1.6vw;
 	font-size: 12px;
 	background-color: #67737f;
 	border-radius: 20px;
-	margin: 0 1px;
+	margin: 0 0.1vw;
 	transition: 0.4s all;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -274,7 +215,6 @@ button.start-btn{
 .keyboard{
 	width: 100%;
 	height: 0;
-	/*margin-top: 3vw;*/
 	padding-bottom: 30%;
 	position: relative;
 	cursor: default;
@@ -391,15 +331,15 @@ button.start-btn{
 	color: #777;
 }
 .keyboard .en > *{
-	/*font-family: 'Droid Sans', sans-serif;*/
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
 .modaless{
 	position: absolute;
 	left: 50%;
-	top: 52px;
+	top: 50%;
 	margin-left: -100px;
+	margin-top: -20px;
 	background-color: rgba(255, 255, 255, 0.2);
 	color: #e0d4ad;
 	padding: 5px 20px;
