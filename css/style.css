@@ -220,9 +220,6 @@ button.start-btn{
 	cursor: default;
 	user-select: none;
 }
-.keyboard.hide{
-	display: none;
-}
 .keyboard .row{
 	position: absolute;
 	clear: both;

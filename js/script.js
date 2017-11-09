@@ -388,10 +388,8 @@ var _type = {
 			$(this).addClass('select');
 		});
 		$('#fingerMode').click(function () {
-			$('.word-input').hide();
-			$('.word-msg').hide();
-			$('.example-letter').show();
-			$('.keyboard').show();
+			$('.word-mode').hide();
+			$('.finger-mode').show();
 			_type.createKeyMap();
 			_type.mode.finger.createPaging();
 			_type.mode.finger.reset();
@@ -399,19 +397,15 @@ var _type = {
 			_type.powermode.stop();
 		});
 		$('#wordMode').click(function () {
-			$('.word-input').show();
-			$('.word-msg').show();
-			$('.example-letter').hide();
-			$('.keyboard').hide();
+			$('.word-mode').show();
+			$('.finger-mode').hide();
 			_type.mode.selected = _type.consts.WORD_MODE;
 			_type.powermode.start();
 			_type.mode.finger.off();
 		});
 		$('#sentenceMode').click(function () {
-			$('.word-input').show();
-			$('.word-msg').show();
-			$('.example-letter').hide();
-			$('.keyboard').hide();
+			$('.word-mode').show();
+			$('.finger-mode').hide();
 			_type.mode.selected = _type.consts.SENTENCE_MODE;
 		});
 		$('#practiceMode').click(function () {

@@ -23,399 +23,402 @@
 	</header>
 	
 	<div class="flex-area">
+		<div class="word-mode">
+			<div class="word-input">
+				<div class="example-text" id="exampleText">
+					시작 버튼을 누르면 시작합니다.
+				</div>
+				<input type="text" class="input-text" id="inputText">
+			</div>
+			<div class="word-msg">
+				<button id="startButton" class="btn start-btn">시작</button>
+				<span class="time-elapse" id="timeElapse">0</span>
+				<span class="msg" id="msg"></span>
+			</div>
+		</div>
 		
-		<div class="word-input">
-			<div class="example-text" id="exampleText">
-				시작 버튼을 누르면 시작합니다.
+		<div class="finger-mode">
+			<div class="example-letter" data-num="4" id="exampleLetter">
+				<span data-key="65">ㅁ</span>
+				<span data-key="83">ㄴ</span>
+				<span data-key="68">ㅇ</span>
+				<span data-key="70">ㄹ</span>
 			</div>
-			<input type="text" class="input-text" id="inputText">
-		</div>
-		<div class="word-msg">
-			<button id="startButton" class="btn start-btn">시작</button>
-			<span class="time-elapse" id="timeElapse">0</span>
-			<span class="msg" id="msg"></span>
-		</div>
-		
-		<div class="example-letter" data-num="4" id="exampleLetter">
-			<span data-key="65">ㅁ</span>
-			<span data-key="83">ㄴ</span>
-			<span data-key="68">ㅇ</span>
-			<span data-key="70">ㄹ</span>
-		</div>
-		<div class="letter-paging">
-			<span title="왼손 가운데 자리 손가락 연습"></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-		<div class="keyboard hide">
-			<div class="row">
-				<div data-key="192" class="disable">
-					<div class="en">
-						<div class="shift">~</div>
-						<div class="normal">`</div>
-					</div>
-				</div>
-				<div data-key="49" class="disable">
-					<div class="en">
-						<div class="shift">!</div>
-						<div class="normal">1</div>
-					</div>
-				</div>
-				<div data-key="50" class="disable">
-					<div class="en">
-						<div class="shift">@</div>
-						<div class="normal">2</div>
-					</div>
-				</div>
-				<div data-key="51" class="disable">
-					<div class="en">
-						<div class="shift">#</div>
-						<div class="normal">3</div>
-					</div>
-				</div>
-				<div data-key="52" class="disable">
-					<div class="en">
-						<div class="shift">$</div>
-						<div class="normal">4</div>
-					</div>
-				</div>
-				<div data-key="53" class="disable">
-					<div class="en">
-						<div class="shift">%</div>
-						<div class="normal">5</div>
-					</div>
-				</div>
-				<div data-key="54" class="disable">
-					<div class="en">
-						<div class="shift">^</div>
-						<div class="normal">6</div>
-					</div>
-				</div>
-				<div data-key="55" class="disable">
-					<div class="en">
-						<div class="shift">&amp;</div>
-						<div class="normal">7</div>
-					</div>
-				</div>
-				<div data-key="56" class="disable">
-					<div class="en">
-						<div class="shift">*</div>
-						<div class="normal">8</div>
-					</div>
-				</div>
-				<div data-key="57" class="disable">
-					<div class="en">
-						<div class="shift">(</div>
-						<div class="normal">9</div>
-					</div>
-				</div>
-				<div data-key="48" class="disable">
-					<div class="en">
-						<div class="shift">)</div>
-						<div class="normal">0</div>
-					</div>
-				</div>
-				<div data-key="189" class="disable">
-					<div class="en">
-						<div class="shift">_</div>
-						<div class="normal">-</div>
-					</div>
-				</div>
-				<div data-key="187" class="disable">
-					<div class="en">
-						<div class="shift">+</div>
-						<div class="normal">=</div>
-					</div>
-				</div>
-				<div data-key="8" class="type4 disable">back</div>
+			<div class="letter-paging">
+				<span title="왼손 가운데 자리 손가락 연습"></span>
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
-			<div class="row">
-				<div class="type2 disable">tab</div>
-				<div data-key="81">
-					<div class="en">
-						<div class="normal">Q</div>
+			<div class="keyboard">
+				<div class="row">
+					<div data-key="192" class="disable">
+						<div class="en">
+							<div class="shift">~</div>
+							<div class="normal">`</div>
+						</div>
 					</div>
-					<div class="kr">
-						<div class="shift">ㅃ</div>
-						<div class="normal">ㅂ</div>
+					<div data-key="49" class="disable">
+						<div class="en">
+							<div class="shift">!</div>
+							<div class="normal">1</div>
+						</div>
+					</div>
+					<div data-key="50" class="disable">
+						<div class="en">
+							<div class="shift">@</div>
+							<div class="normal">2</div>
+						</div>
+					</div>
+					<div data-key="51" class="disable">
+						<div class="en">
+							<div class="shift">#</div>
+							<div class="normal">3</div>
+						</div>
+					</div>
+					<div data-key="52" class="disable">
+						<div class="en">
+							<div class="shift">$</div>
+							<div class="normal">4</div>
+						</div>
+					</div>
+					<div data-key="53" class="disable">
+						<div class="en">
+							<div class="shift">%</div>
+							<div class="normal">5</div>
+						</div>
+					</div>
+					<div data-key="54" class="disable">
+						<div class="en">
+							<div class="shift">^</div>
+							<div class="normal">6</div>
+						</div>
+					</div>
+					<div data-key="55" class="disable">
+						<div class="en">
+							<div class="shift">&amp;</div>
+							<div class="normal">7</div>
+						</div>
+					</div>
+					<div data-key="56" class="disable">
+						<div class="en">
+							<div class="shift">*</div>
+							<div class="normal">8</div>
+						</div>
+					</div>
+					<div data-key="57" class="disable">
+						<div class="en">
+							<div class="shift">(</div>
+							<div class="normal">9</div>
+						</div>
+					</div>
+					<div data-key="48" class="disable">
+						<div class="en">
+							<div class="shift">)</div>
+							<div class="normal">0</div>
+						</div>
+					</div>
+					<div data-key="189" class="disable">
+						<div class="en">
+							<div class="shift">_</div>
+							<div class="normal">-</div>
+						</div>
+					</div>
+					<div data-key="187" class="disable">
+						<div class="en">
+							<div class="shift">+</div>
+							<div class="normal">=</div>
+						</div>
+					</div>
+					<div data-key="8" class="type4 disable">back</div>
+				</div>
+				<div class="row">
+					<div class="type2 disable">tab</div>
+					<div data-key="81">
+						<div class="en">
+							<div class="normal">Q</div>
+						</div>
+						<div class="kr">
+							<div class="shift">ㅃ</div>
+							<div class="normal">ㅂ</div>
+						</div>
+					</div>
+					<div data-key="87">
+						<div class="en">
+							<div class="normal">W</div>
+						</div>
+						<div class="kr">
+							<div class="shift">ㅉ</div>
+							<div class="normal">ㅈ</div>
+						</div>
+					</div>
+					<div data-key="69">
+						<div class="en">
+							<div class="normal">E</div>
+						</div>
+						<div class="kr">
+							<div class="shift">ㄸ</div>
+							<div class="normal">ㄷ</div>
+						</div>
+					</div>
+					<div data-key="82">
+						<div class="en">
+							<div class="normal">R</div>
+						</div>
+						<div class="kr">
+							<div class="shift">ㄲ</div>
+							<div class="normal">ㄱ</div>
+						</div>
+					</div>
+					<div data-key="84">
+						<div class="en">
+							<div class="normal">T</div>
+						</div>
+						<div class="kr">
+							<div class="shift">ㅆ</div>
+							<div class="normal">ㅅ</div>
+						</div>
+					</div>
+					<div data-key="89">
+						<div class="en">
+							<div class="normal">Y</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅛ</div>
+						</div>
+					</div>
+					<div data-key="85">
+						<div class="en">
+							<div class="normal">U</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅕ</div>
+						</div>
+					</div>
+					<div data-key="73">
+						<div class="en">
+							<div class="normal">I</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅑ</div>
+						</div>
+					</div>
+					<div data-key="79">
+						<div class="en">
+							<div class="normal">O</div>
+						</div>
+						<div class="kr">
+							<div class="shift">ㅒ</div>
+							<div class="normal">ㅐ</div>
+						</div>
+					</div>
+					<div data-key="80">
+						<div class="en">
+							<div class="normal">P</div>
+						</div>
+						<div class="kr">
+							<div class="shift">ㅖ</div>
+							<div class="normal">ㅔ</div>
+						</div>
+					</div>
+					<div data-key="219">
+						<div class="en">
+							<div class="shift">{</div>
+							<div class="normal">[</div>
+						</div>
+					</div>
+					<div data-key="221">
+						<div class="en">
+							<div class="shift">}</div>
+							<div class="normal">]</div>
+						</div>
+					</div>
+					<div data-key="220" class="type2 disable">
+						<div class="en">
+							<div class="shift">|</div>
+							<div class="normal">&#92;</div>
+						</div>
+						<div class="kr">
+							<div class="normal">&#8361;</div>
+						</div>
 					</div>
 				</div>
-				<div data-key="87">
-					<div class="en">
-						<div class="normal">W</div>
+				<div class="row">
+					<div data-key="20" class="type3 disable">caps</div>
+					<div data-key="65">
+						<div class="en">
+							<div class="normal">A</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅁ</div>
+						</div>
 					</div>
-					<div class="kr">
-						<div class="shift">ㅉ</div>
-						<div class="normal">ㅈ</div>
+					<div data-key="83">
+						<div class="en">
+							<div class="normal">S</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㄴ</div>
+						</div>
 					</div>
+					<div data-key="68">
+						<div class="en">
+							<div class="normal">D</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅇ</div>
+						</div>
+					</div>
+					<div data-key="70">
+						<div class="en">
+							<div class="normal">F</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㄹ</div>
+						</div>
+					</div>
+					<div data-key="71">
+						<div class="en">
+							<div class="normal">G</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅎ</div>
+						</div>
+					</div>
+					<div data-key="72">
+						<div class="en">
+							<div class="normal">H</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅗ</div>
+						</div>
+					</div>
+					<div data-key="74">
+						<div class="en">
+							<div class="normal">J</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅓ</div>
+						</div>
+					</div>
+					<div data-key="75">
+						<div class="en">
+							<div class="normal">K</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅏ</div>
+						</div>
+					</div>
+					<div data-key="76">
+						<div class="en">
+							<div class="normal">L</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅣ</div>
+						</div>
+					</div>
+					<div data-key="186">
+						<div class="en">
+							<div class="shift">:</div>
+							<div class="normal">;</div>
+						</div>
+					</div>
+					<div data-key="222">
+						<div class="en">
+							<div class="shift">"</div>
+							<div class="normal">'</div>
+						</div>
+					</div>
+					<div data-key="13" class="type5">enter</div>
 				</div>
-				<div data-key="69">
-					<div class="en">
-						<div class="normal">E</div>
+				<div class="row">
+					<div data-key="16" class="type5">shift</div>
+					<div data-key="90">
+						<div class="en">
+							<div class="normal">Z</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅋ</div>
+						</div>
 					</div>
-					<div class="kr">
-						<div class="shift">ㄸ</div>
-						<div class="normal">ㄷ</div>
+					<div data-key="88">
+						<div class="en">
+							<div class="normal">X</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅌ</div>
+						</div>
 					</div>
+					<div data-key="67">
+						<div class="en">
+							<div class="normal">C</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅊ</div>
+						</div>
+					</div>
+					<div data-key="86">
+						<div class="en">
+							<div class="normal">V</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅍ</div>
+						</div>
+					</div>
+					<div data-key="66">
+						<div class="en">
+							<div class="normal">B</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅠ</div>
+						</div>
+					</div>
+					<div data-key="78">
+						<div class="en">
+							<div class="normal">N</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅜ</div>
+						</div>
+					</div>
+					<div data-key="77">
+						<div class="en">
+							<div class="normal">M</div>
+						</div>
+						<div class="kr">
+							<div class="normal">ㅡ</div>
+						</div>
+					</div>
+					<div data-key="188">
+						<div class="en">
+							<div class="shift">&lt;</div>
+							<div class="normal">,</div>
+						</div>
+					</div>
+					<div data-key="190">
+						<div class="en">
+							<div class="shift">&gt;</div>
+							<div class="normal">.</div>
+						</div>
+					</div>
+					<div data-key="191">
+						<div class="en">
+							<div class="shift">?</div>
+							<div class="normal">/</div>
+						</div>
+					</div>
+					<div data-key="16" class="type6">shift</div>
 				</div>
-				<div data-key="82">
-					<div class="en">
-						<div class="normal">R</div>
-					</div>
-					<div class="kr">
-						<div class="shift">ㄲ</div>
-						<div class="normal">ㄱ</div>
-					</div>
+				<div class="row">
+					<div data-key="17" class="type1 disable">ctrl</div>
+					<div data-key="91" class="type1 disable">win</div>
+					<div data-key="18" class="type1 disable">alt</div>
+					<div data-key="32" class="type7">space</div>
+					<div data-key="21" class="type1 disable">alt</div>
+					<div class="type1 disable">win</div>
+					<div data-key="93" class="type1 disable">c</div>
+					<div data-key="25" class="type1 disable">ctrl</div>
 				</div>
-				<div data-key="84">
-					<div class="en">
-						<div class="normal">T</div>
-					</div>
-					<div class="kr">
-						<div class="shift">ㅆ</div>
-						<div class="normal">ㅅ</div>
-					</div>
-				</div>
-				<div data-key="89">
-					<div class="en">
-						<div class="normal">Y</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅛ</div>
-					</div>
-				</div>
-				<div data-key="85">
-					<div class="en">
-						<div class="normal">U</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅕ</div>
-					</div>
-				</div>
-				<div data-key="73">
-					<div class="en">
-						<div class="normal">I</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅑ</div>
-					</div>
-				</div>
-				<div data-key="79">
-					<div class="en">
-						<div class="normal">O</div>
-					</div>
-					<div class="kr">
-						<div class="shift">ㅒ</div>
-						<div class="normal">ㅐ</div>
-					</div>
-				</div>
-				<div data-key="80">
-					<div class="en">
-						<div class="normal">P</div>
-					</div>
-					<div class="kr">
-						<div class="shift">ㅖ</div>
-						<div class="normal">ㅔ</div>
-					</div>
-				</div>
-				<div data-key="219">
-					<div class="en">
-						<div class="shift">{</div>
-						<div class="normal">[</div>
-					</div>
-				</div>
-				<div data-key="221">
-					<div class="en">
-						<div class="shift">}</div>
-						<div class="normal">]</div>
-					</div>
-				</div>
-				<div data-key="220" class="type2 disable">
-					<div class="en">
-						<div class="shift">|</div>
-						<div class="normal">&#92;</div>
-					</div>
-					<div class="kr">
-						<div class="normal">&#8361;</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div data-key="20" class="type3 disable">caps</div>
-				<div data-key="65">
-					<div class="en">
-						<div class="normal">A</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅁ</div>
-					</div>
-				</div>
-				<div data-key="83">
-					<div class="en">
-						<div class="normal">S</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㄴ</div>
-					</div>
-				</div>
-				<div data-key="68">
-					<div class="en">
-						<div class="normal">D</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅇ</div>
-					</div>
-				</div>
-				<div data-key="70">
-					<div class="en">
-						<div class="normal">F</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㄹ</div>
-					</div>
-				</div>
-				<div data-key="71">
-					<div class="en">
-						<div class="normal">G</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅎ</div>
-					</div>
-				</div>
-				<div data-key="72">
-					<div class="en">
-						<div class="normal">H</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅗ</div>
-					</div>
-				</div>
-				<div data-key="74">
-					<div class="en">
-						<div class="normal">J</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅓ</div>
-					</div>
-				</div>
-				<div data-key="75">
-					<div class="en">
-						<div class="normal">K</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅏ</div>
-					</div>
-				</div>
-				<div data-key="76">
-					<div class="en">
-						<div class="normal">L</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅣ</div>
-					</div>
-				</div>
-				<div data-key="186">
-					<div class="en">
-						<div class="shift">:</div>
-						<div class="normal">;</div>
-					</div>
-				</div>
-				<div data-key="222">
-					<div class="en">
-						<div class="shift">"</div>
-						<div class="normal">'</div>
-					</div>
-				</div>
-				<div data-key="13" class="type5">enter</div>
-			</div>
-			<div class="row">
-				<div data-key="16" class="type5">shift</div>
-				<div data-key="90">
-					<div class="en">
-						<div class="normal">Z</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅋ</div>
-					</div>
-				</div>
-				<div data-key="88">
-					<div class="en">
-						<div class="normal">X</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅌ</div>
-					</div>
-				</div>
-				<div data-key="67">
-					<div class="en">
-						<div class="normal">C</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅊ</div>
-					</div>
-				</div>
-				<div data-key="86">
-					<div class="en">
-						<div class="normal">V</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅍ</div>
-					</div>
-				</div>
-				<div data-key="66">
-					<div class="en">
-						<div class="normal">B</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅠ</div>
-					</div>
-				</div>
-				<div data-key="78">
-					<div class="en">
-						<div class="normal">N</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅜ</div>
-					</div>
-				</div>
-				<div data-key="77">
-					<div class="en">
-						<div class="normal">M</div>
-					</div>
-					<div class="kr">
-						<div class="normal">ㅡ</div>
-					</div>
-				</div>
-				<div data-key="188">
-					<div class="en">
-						<div class="shift">&lt;</div>
-						<div class="normal">,</div>
-					</div>
-				</div>
-				<div data-key="190">
-					<div class="en">
-						<div class="shift">&gt;</div>
-						<div class="normal">.</div>
-					</div>
-				</div>
-				<div data-key="191">
-					<div class="en">
-						<div class="shift">?</div>
-						<div class="normal">/</div>
-					</div>
-				</div>
-				<div data-key="16" class="type6">shift</div>
-			</div>
-			<div class="row">
-				<div data-key="17" class="type1 disable">ctrl</div>
-				<div data-key="91" class="type1 disable">win</div>
-				<div data-key="18" class="type1 disable">alt</div>
-				<div data-key="32" class="type7">space</div>
-				<div data-key="21" class="type1 disable">alt</div>
-				<div class="type1 disable">win</div>
-				<div data-key="93" class="type1 disable">c</div>
-				<div data-key="25" class="type1 disable">ctrl</div>
 			</div>
 		</div>
 	</div>
