@@ -210,7 +210,7 @@ button.start-btn{
 }
 .letter-paging > span.select{
 	background-color: #64ccff;
-	width: 50px;
+	width: 4vw;
 }
 .keyboard{
 	width: 100%;
@@ -340,10 +340,10 @@ button.start-btn{
 	top: 50%;
 	margin-left: -100px;
 	margin-top: -20px;
-	background-color: rgba(255, 255, 255, 0.2);
-	color: #e0d4ad;
+	background-color: rgba(255, 255, 255, 0.95);
+	color: #000;
 	padding: 5px 20px;
-	border-radius: 50px;
+	border-radius: 10px;
 	display: none;
 	white-space: nowrap;
 	-webkit-box-sizing: border-box;
