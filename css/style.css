@@ -133,6 +133,12 @@ header{
 .msg{
 	font-size: 3vw;
 }
+.speed-per-minutes{
+	font-family: monospace;
+	font-size: 7vw;
+	font-weight: 100;
+	color: #ee95a0;
+}
 button.start-btn{
 	border: 0;
 	background-color: #00b5ee;

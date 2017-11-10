@@ -212,6 +212,7 @@ var _type = {
 					case 13:// enter key
 						_type.mode.word.evaluate();
 						_type.mode.word.next();
+						_type.mode.word.speedPerMinites();
 						break;
 					case 27:// ecs key
 						_type.mode.word.stop();
@@ -242,6 +243,16 @@ var _type = {
 					_type.mode.word.pushTime();
 				}
 				_type.mode.word.index++;
+			},
+
+			speedPerMinites: function () {
+				var timeElapse = Number($('#timeElapse').text());
+				var letterLength = Number($('#letterLength').text());
+				var missTypingLength = Number($('#missTypingLength').text());
+
+				console.log((letterLength - missTypingLength) * (60/timeElapse));
+
+				$('#speedPerMinutes').text((letterLength - missTypingLength) * (60/timeElapse).toFixed(1))
 			},
 
 			reset: function () {
@@ -289,8 +300,8 @@ var _type = {
 					}
 				});
 
-				console.log('전체 ', Hangul.disassemble(exampleText).length, '타이핑 중 ', missTypings.length, ' 개 오타', missTypings);
-				$('#msg').text(Hangul.disassemble(exampleText).length + '타이핑과 ' + exampleText.length + '개의 문자중 ' + missTypings.length + ' 개 오타')
+
+				$('#msg').html('<span id="letterLength">'+Hangul.disassemble(exampleText).length + '</span>타이핑과 ' + exampleText.length + '개의 문자중 <span id="missTypingLength">' + missTypings.length + '</span> 개 오타')
 			},
 
 			pushTime : function () {
@@ -427,7 +438,7 @@ var _type = {
 		$.getJSON('json/data.json', function (d) {
 			_type.data = d;
 
-			$('#fingerMode').trigger('click');
+			$('#wordMode').trigger('click');
 		});
 	},
 
