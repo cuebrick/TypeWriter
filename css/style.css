@@ -125,7 +125,7 @@ header{
 	outline: 0;
 }
 .time-elapse{
-	font-family: monospace;
+	font-family: 'Roboto Mono', monospace;
 	font-size: 7vw;
 	font-weight: 100;
 	color: #00b5ee;
@@ -134,7 +134,7 @@ header{
 	font-size: 3vw;
 }
 .speed-per-minutes{
-	font-family: monospace;
+	font-family: 'Roboto Mono', monospace;
 	font-size: 7vw;
 	font-weight: 100;
 	color: #ee95a0;
