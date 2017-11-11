@@ -252,7 +252,7 @@ var _type = {
 
 				console.log((letterLength - missTypingLength) * (60/timeElapse));
 
-				$('#speedPerMinutes').text((letterLength - missTypingLength) * (60/timeElapse).toFixed(1))
+				$('#speedPerMinutes').text(((letterLength - missTypingLength) * (60/timeElapse)).toFixed(1))
 			},
 
 			reset: function () {
