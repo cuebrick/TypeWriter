@@ -1,5 +1,24 @@
 /**********************************************************
  * Type Writer main script
+ *
+ * 작업 예정 목록
+ * - 단어모드와 문장모드와의 차이첨 구현
+ * -- 단어모드는 한 라인마다 타수를 계산해주고, 문장모드는 하나의 문장이 끝나면 계산
+ * -- 문장모드는 중간에 과정을 끝내면 정말 끝낼건지 물어보고 끝내는 것을 선택하면 타수를 계산
+ * - 손가락 모드 기능
+ * -- 손가락 모양을 키보드 위에 표현
+ * - 단어모드 기능
+ * -- 단어모드 시작 버튼
+ * - 문장모드 기능
+ * -- 문장모드일 경우 앞 뒤 문장을 표시하여 유저에게 예측을 가능하도록 함.
+ * -- 문장 수준에 맞게 선택하는 ui
+ * - 실전모드 기능
+ * -- 실전모드의 텍스트 문장을 선택하는 ui
+ * - 데이터
+ * -- json 데이터 수집하고 작성
+ * -- 단어, 문장, 실전 모드의 데이터 구분
+ * - 버그
+ * -- ie 의 경우 엔터키 오동작 수정
  **********************************************************/
 $(function () {
 	// POWERMODE.colorful = true ;
@@ -249,8 +268,6 @@ var _type = {
 				var timeElapse = Number($('#timeElapse').text());
 				var letterLength = Number($('#letterLength').text());
 				var missTypingLength = Number($('#missTypingLength').text());
-
-				console.log((letterLength - missTypingLength) * (60/timeElapse));
 
 				$('#speedPerMinutes').text(((letterLength - missTypingLength) * (60/timeElapse)).toFixed(1))
 			},
