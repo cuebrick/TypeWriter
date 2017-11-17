@@ -18,7 +18,6 @@
  * -- json 데이터 수집하고 작성
  * -- 단어, 문장, 실전 모드의 데이터 구분
  * -- 쿠키에 데이터 저장/저장된 쿠키 데이터를 가져와 현재 상태로 세팅
-
  * - 버그
  * -- ie 의 경우 엔터키 오동작 수정
  * - 컨텐츠 (다음 버전?)
@@ -181,9 +180,10 @@ var _type = {
 					else
 						return {code:char, char: _type.getModalessText(char)};
 				}
+
 				var charList = _type.data.letter[_type.mode.finger.letterGroupIndex];
 				var letterData = [];
-				$.each(charList, function (index, value) {
+				$.each(charList.data, function (index, value) {
 					letterData.push(getKeyDataByChar(value));
 				});
 
@@ -207,6 +207,7 @@ var _type = {
 						$element.attr('data-shift', "true");
 				});
 
+				_type.setTitle(charList.title);
 				_type.mode.finger.paging(_type.mode.finger.letterGroupIndex);
 
 				_type.mode.finger.index = 0;
@@ -502,6 +503,10 @@ var _type = {
 		});
 		console.log('keymapData', _type.keymapData);
 		console.log('keymap', _type.keymap);
+	},
+
+	setTitle: function (text) {
+		$('#phaseTitle').text(text);
 	},
 
 	modaless: function (msg, duration) {
