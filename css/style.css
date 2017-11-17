@@ -59,12 +59,15 @@ h1{
 	font-weight: 100;
 	font-size: 3em;
 	color: coral;
-	transition: 1s all;
 }
 h2{
 	font-weight: 100;
 	font-size: 1.2em;
-	transition: 1s all;
+}
+h3{
+	font-weight: 100;
+	color: #b6e9ee;
+	padding: 0.4em 0;
 }
 header{
 	height: 50px;
