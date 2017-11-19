@@ -275,10 +275,11 @@ var _type = {
 
 			speedPerMinites: function () {
 				var timeElapse = Number($('#timeElapse').text());
-				var letterLength = Number($('#letterLength').text());
+				var typingLength = Number($('#typingLength').text());
 				var missTypingLength = Number($('#missTypingLength').text());
 
-				$('#speedPerMinutes').text(((letterLength - missTypingLength) * (60/timeElapse)).toFixed(1))
+				// console.log(typingLength, missTypingLength, timeElapse);
+				$('#speedPerMinutes').text(((typingLength - missTypingLength) * (60/timeElapse)).toFixed(1))
 			},
 
 			reset: function () {
@@ -327,7 +328,7 @@ var _type = {
 				});
 
 
-				$('#msg').html('<span id="letterLength">'+Hangul.disassemble(exampleText).length + '</span>타이핑과 ' + exampleText.length + '개의 문자중 <span id="missTypingLength">' + missTypings.length + '</span> 개 오타')
+				$('#msg').html('<span id="letterLength">'+Hangul.disassemble(exampleText).length + '</span>타이핑과 <span id="typingLength">' + exampleText.length + '</span>개의 문자중 <span id="missTypingLength">' + missTypings.length + '</span> 개 오타')
 			},
 
 			pushTime : function () {
@@ -403,7 +404,7 @@ var _type = {
 
 	initListener: function () {
 		$(window).keyup(function (e) {
-			console.log('keyup :', e);
+			// console.log('keyup :', e);
 			_type.mode.GET().keyup(e.keyCode, e.shiftKey);
 
 		}).keydown(function (e) {
