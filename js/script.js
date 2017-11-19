@@ -254,8 +254,8 @@ var _type = {
 			next: function () {
 				_type.mode.word.stop();
 
-				var text = _type.data.text;
-				if(_type.mode.word.index < text.length){
+				var list = _type.data.text;
+				if(_type.mode.word.index < list.length){
 					_type.mode.word.pushTime();
 					$('#inputText').focus();
 					var count = 0;
@@ -264,7 +264,9 @@ var _type = {
 						++count;
 					}, 100);
 
-					_type.mode.word.setText(text[_type.mode.word.index]);
+					var item = list[_type.mode.word.index];
+					_type.setTitle(item.title);
+					_type.mode.word.setText(item.data);
 				}else{
 					_type.mode.word.pushTime();
 				}
