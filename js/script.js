@@ -236,6 +236,7 @@ var _type = {
 			keyup: function (code) {
 				switch (code){
 					case 13:// enter key
+						_type.mode.word.timerStop();
 						_type.mode.word.evaluate();
 						_type.mode.word.next();
 						_type.mode.word.speedPerMinites();
@@ -244,6 +245,7 @@ var _type = {
 						_type.mode.word.stop();
 						break;
 					default:
+						_type.mode.word.timeStart();
 				}
 			},
 
@@ -251,25 +253,36 @@ var _type = {
 
 			},
 
+			timeStart: function () {
+				if(_type.timer)
+					return;
+
+				_type.mode.word.pushTime();
+				var count = 0;
+				_type.timer = setInterval(function () {
+					$('#timeElapse').text((count * 0.1).toFixed(1));
+					++count;
+				}, 100);
+			},
+
+			timerStop: function () {
+				clearInterval(_type.timer);
+				_type.timer = null;
+			},
+
 			next: function () {
 				_type.mode.word.stop();
 
 				var list = _type.data.text;
 				if(_type.mode.word.index < list.length){
-					_type.mode.word.pushTime();
 					$('#inputText').focus();
-					var count = 0;
-					_type.timer = setInterval(function () {
-						$('#timeElapse').text((count * 0.1).toFixed(1));
-						++count;
-					}, 100);
 
 					var item = list[_type.mode.word.index];
 					_type.setTitle(item.title);
 					_type.mode.word.setText(item.data);
-				}else{
-					_type.mode.word.pushTime();
 				}
+
+				console.log(_type.timestamps);
 				_type.mode.word.index++;
 			},
 
@@ -296,7 +309,6 @@ var _type = {
 
 			stop: function () {
 				_type.mode.word.pushTime();
-				clearInterval(_type.timer);
 			},
 
 			evaluate: function () {
