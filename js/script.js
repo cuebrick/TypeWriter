@@ -59,6 +59,33 @@ var _type = {
 		}
 	},
 
+	cookie: {
+		setCookie: function (cookieName, value, exdays) {
+			var exdate = new Date();
+			exdate.setDate(exdate.getDate() + exdays);
+			var cookieValue = escape(value) + ((exdays===null) ? "" : "; expires=" + exdate.toGMTString());
+			document.cookie = cookieName + "=" + cookieValue;
+		},
+		getCookie: function (cookieName) {
+			cookieName = cookieName + '=';
+			var cookieData = document.cookie;
+			var start = cookieData.indexOf(cookieName);
+			var cookieValue = '';
+			if(start !== -1){
+				start += cookieName.length;
+				var end = cookieData.indexOf(';', start);
+				if(end === -1)end = cookieData.length;
+				cookieValue = cookieData.substring(start, end);
+			}
+			return unescape(cookieValue);
+		},
+		deleteCookie: function (cookieName) {
+			var expireDate = new Date();
+			expireDate.setDate(expireDate.getDate() - 1);
+			document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
+		}
+	},
+
 	mode: {
 		selected: null,
 
@@ -316,31 +343,21 @@ var _type = {
 				var typingText = $('#inputText').val().trim();
 				var example = Hangul.disassemble(exampleText, true);
 				var typing = Hangul.disassemble(typingText, true);
-				// 오타의 인덱스 목록
-				var missTypings = [];
 
-				$.each(example, function (index, letter) {
+				var missCount = 0;
+				$.each(example, function (index, exampleLetter) {
 					var typingLetter = typing[index];
-					// 현재 검사하려는 문자에 해당하는 예시문장의 문자가 있는지 확인
 					if(typingLetter){
-						// 타이핑 수가 다르면 일단 오타
-						if(letter.length !== typingLetter.length){
-							missTypings.push(index);
-						}else{// 타이핑 수가 같음. 이제부터 각 타이핑이 올바로 되었는지 개별 확인함.
-							$.each(letter, function (idx, char) {
-								var typingChar = typingLetter[idx];
-								if(char !== typingChar){
-									missTypings.push(index);
-								}
-							});
-						}
-					}else{//해당 index 의 예시 문장이 없어서 오타 취급
-						missTypings.push(index);
+						$.each(exampleLetter, function (idx, exampleChar) {
+							var typingChar = typingLetter[idx];
+							if(typingChar !== exampleChar){
+								missCount++;
+							}
+						})
 					}
 				});
 
-
-				$('#msg').html('<span id="letterLength">'+Hangul.disassemble(exampleText).length + '</span>타이핑과 <span id="typingLength">' + exampleText.length + '</span>개의 문자중 <span id="missTypingLength">' + missTypings.length + '</span> 개 오타')
+				$('#msg').html( '<span id="letterLength">' + example.length + '</span>개의 문자, <span id="typingLength">'+Hangul.disassemble(exampleText).length + '</span>타이핑과 <span id="missTypingLength">' + missCount + '</span> 개 오타')
 			},
 
 			pushTime : function () {
