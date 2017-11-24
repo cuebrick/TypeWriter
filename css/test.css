@@ -117,9 +117,25 @@ header{
 .letter > .text{
 	background-color: rgba(255, 255, 255, 0.2);
 	padding: 0.1em;
-	border-radius: 0.1em;
-	border-bottom: 0.1em solid #8ba5b2;
+	height: 1.4em;
+	min-width: 0.8em;
+	border-radius: 0.05em 0.05em 0 0;
+	border-bottom: 0.05em solid #8ba5b2;
 }
 .letter > .typing{
 	padding: 0.1em;
+	height: 1.4em;
+	min-width: 0.8em;
+}
+.letter.active > .typing{
+	border-bottom: 0.05em solid #444;
+	animation: blink 0.5s linear infinite alternate;
+}
+@keyframes blink {
+	from {
+		border-bottom-color: #444;
+	}
+	to {
+		border-bottom-color: #0cf;
+	}
 }
