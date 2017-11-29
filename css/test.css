@@ -131,6 +131,12 @@ header{
 	border-bottom: 0.05em solid #444;
 	animation: blink 0.5s linear infinite alternate;
 }
+.letter.corrected > .text{
+	border-bottom: 0.05em solid #006aeb;
+}
+.letter.incorrected > .text{
+	border-bottom: 0.05em solid #eb005a;
+}
 @keyframes blink {
 	from {
 		border-bottom-color: #444;

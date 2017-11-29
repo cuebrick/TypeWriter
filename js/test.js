@@ -27,66 +27,110 @@ var _play = {
 	initListener: function () {
 		$(window).keydown(function (e) {
 			var code = e.keyCode;
-			var buffer = _play.level.keyBuffer;
 			switch (code){
-				case 8: // backspace
-					buffer.pop();
-					break;
 
 				// 아무것도 하지 않는 케이스들
+				case 9:// tab
+					e.preventDefault();
+					break;
 				case 16:// shift
 				case 13: // enter
 				case 17: // ctrl
 				case 91: // win key
 				case 18: // alt - left
-				case 32: // space
 				case 21: // alt - right
 				case 93: // context menu
 				case 25: // ctrl - right
 				case 220: // backslash
 				case 20: // caps
 					break;
+
+				case 8: // backspace
+					if(_play.level.keyBuffer.length){
+						_play.level.keyBuffer.pop();
+						evaluate();
+					}else{
+						removeEvaluate();
+						setPrevIndex();
+					}
+
+					updateDisplay(_play.level.keyBuffer);
+					evaluate();
+					break;
+
+				case 32: // space
+
+					evaluate();
+					setNextIndex();
+					if(_play.level.keyBuffer.length){
+						evaluate();
+						setNextIndex();
+					}
+					clearBuffer();
+					break;
+
 				default:
 
 					var lang = _play.level.language;
 					var shiftKey = (e.shiftKey) ? "s" : "n";
 					var char = _play.keymap['code'+ code][lang + shiftKey];
 
-					// 모음일경우 계속 추가(예외: 모음이 이미 하나 이상 있고 종성도 있는 경우)
-					// 초성일 경우 계속 추가(버퍼에 종성이 이미 있는 경우 다음 인덱스로 이동하고 새로 추가)
-					// 종성일 경우
-
-					if(buffer.length === 0){
-						addBuffer(char);
-					}else{
-						if(Hangul.a(buffer.concat(char)).length <= 1 && Hangul.isComplete(Hangul.a(buffer.concat(char)))){
-							addBuffer(char);
-							console.log('나온다?');
-						}else{
-							setNextIndex();
-							var poped = buffer.pop();
-							$('#letterList').find('.active').find('.typing').text(Hangul.assemble(buffer));
-							_play.level.keyBuffer = [];
-							// console.log('dasdfasdf', buffer, char);
-							addBuffer(poped);
-							addBuffer(char);
-						}
+					addBuffer(char);
+					var letter = Hangul.a(_play.level.keyBuffer);
+					if(letter.length > 1){
+						var letters = Hangul.d(letter, true);
+						updateDisplay(letters.shift());
+						evaluate();
+						_play.level.keyBuffer = letters[0];
+						setNextIndex();
 					}
+
+					updateDisplay(_play.level.keyBuffer);
+					evaluate();
 			}
 
+			console.log(_play.level.keyBuffer);
+
+			function removeEvaluate() {
+				$('#letterList').find('.active').removeClass('incorrected').removeClass('corrected');
+			}
+			function evaluate() {
+				var letter = $('#letterList').find('.active');
+				var text = letter.find('.text').text().trim();
+				var typing = letter.find('.typing').text().trim();
+				console.log(text === typing, text, typing);
+				if(text === typing){
+					letter.removeClass('incorrected');
+					letter.addClass('corrected');
+				}else{
+					letter.removeClass('corrected');
+					letter.addClass('incorrected');
+				}
+			}
+			function updateDisplay(charArray) {
+				$('#letterList').find('.active').find('.typing').text(Hangul.a(charArray));
+			}
 			function setNextIndex() {
-				// _play.level.index = index;
 				var active = $('#letterList').find('.active');
-				active.next().addClass('active');
-				active.removeClass('active');
+				var next = active.next().addClass('active');
+				if(next.length)
+					active.removeClass('active');
+			}
+			function setPrevIndex() {
+				var active = $('#letterList').find('.active');
+				var prev = active.prev().addClass('active');
+				if(prev.length)
+					active.removeClass('active');
+			}
+
+			function clearBuffer() {
+				_play.level.keyBuffer = [];
 			}
 
 			function addBuffer(char) {
 				_play.level.keyBuffer.push(char);
 			}
 
-			console.log(_play.level.keyBuffer);
-			$('#letterList').find('.active').find('.typing').text(Hangul.assemble(buffer))
 		});
 	},
 	setLevelText: function (text) {
@@ -104,7 +148,7 @@ var _play = {
 	},
 	getNewLevelObject: function () {
 		return {
-			text : "세계의 끝과 하드보일드 원더랜드 입니다.!",
+			text : "동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.",
 			language: "kr",
 			index: 0,
 			keyBuffer: [],
