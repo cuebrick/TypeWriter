@@ -137,6 +137,9 @@ header{
 .letter.incorrected > .text{
 	border-bottom: 0.05em solid #eb005a;
 }
+#msg{
+	clear: both;
+}
 @keyframes blink {
 	from {
 		border-bottom-color: #444;
