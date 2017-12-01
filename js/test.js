@@ -5,14 +5,31 @@ $(function () {
 
 var _play = {
 	keymap: undefined,
+	data: undefined,
 	level: undefined,
 
 	loadKeyMap: function (url) {
 		$.getJSON(url, function (d) {
 			_play.keymap = d;
+			_play.loadLevelData('json/level-data.json');
+		});
+	},
+	loadLevelData: function (url) {
+		$.getJSON(url, function (d) {
+			_play.data = d;
+			_play.createLevel();
 			_play.initListener();
 			_play.init();
 		});
+	},
+	createLevel: function () {
+		var container = $('#levelList').text('');
+		$.each(_play.data.sentence, function (key, value) {
+			$('<div></div>').addClass('level-item')
+				.append($('<div></div>').addClass('level-title').text(value.title))
+				.appendTo(container);
+		});
+
 	},
 	init: function () {
 		_play.level = _play.getNewLevelObject();
@@ -89,6 +106,7 @@ var _play = {
 					updateDisplay(_play.level.keyBuffer);
 					evaluate();
 
+					// 숫자, 기호 입력 케이스(숫자, 기호 입력은 입력 즉시 다음 칸으로 움직이고 한글 도깨비불 현상이 없음)
 					switch (code){
 						case 32:
 						case 48: // 0
