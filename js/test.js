@@ -19,7 +19,7 @@ var _play = {
 			_play.data = d;
 			_play.createLevel();
 			_play.initListener();
-			_play.init();
+			// _play.init();
 		});
 	},
 	createLevel: function () {
@@ -27,16 +27,26 @@ var _play = {
 		$.each(_play.data.sentence, function (key, value) {
 			$('<div></div>').addClass('level-item')
 				.append($('<div></div>').addClass('level-title').text(value.title))
+				.attr('data-id', key)
 				.appendTo(container);
 		});
 
 	},
-	init: function () {
-		_play.level = _play.getNewLevelObject();
+	reset: function (id) {
+		var level = _play.getNewLevelObject();
+		var levelData = _play.data.sentence[id];
+		level.title = levelData.title;
+		level.text = levelData.text;
+		level.language = levelData.language;
+		_play.level = level;
 		_play.setLevelTitle(_play.level.title);
 		_play.setLevelText(_play.level.text);
 	},
 	initListener: function () {
+		$('#levelList').on('click', '.level-item', function () {
+			var id = $(this).data('id');
+			_play.reset(id);
+		});
 		$(window).keydown(function (e) {
 			var code = e.keyCode;
 			// console.log(code);
@@ -49,7 +59,6 @@ var _play = {
 					e.preventDefault();
 					break;
 				case 16: // shift
-				case 13: // enter
 				case 17: // ctrl
 				case 93: // context menu
 				case 25: // ctrl - right
@@ -108,6 +117,7 @@ var _play = {
 
 					// 숫자, 기호 입력 케이스(숫자, 기호 입력은 입력 즉시 다음 칸으로 움직이고 한글 도깨비불 현상이 없음)
 					switch (code){
+						case 13: // enter
 						case 32:
 						case 48: // 0
 						case 49: // 1
@@ -233,12 +243,19 @@ var _play = {
 	setLevelText: function (text) {
 		var container = $('#letterList').text('');
 
+		var letter = '';
 		for(var i = 0; i < text.length; ++i){
+
+			letter = text[i];
+
 			var letterElement = $('<div></div>').addClass('letter')
-				.append($('<div></div>').addClass('text').text(text[i]))
+				.append($('<div></div>').addClass('text').text(letter))
 				.append($('<div></div>').addClass('typing').text(''))
 				.appendTo(container);
 
+			if(letter === '⏎'){
+				letterElement.addClass('enter-key')
+			}
 			if(i === 0)
 				letterElement.addClass('active');
 		}

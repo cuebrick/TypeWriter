@@ -137,6 +137,11 @@ header{
 .letter.incorrected > .text{
 	border-bottom: 0.05em solid #eb005a;
 }
+.letter.enter-key + .letter{
+	clear: left;
+}
+
+
 #msg{
 	clear: both;
 }
