@@ -50,6 +50,6 @@
   "code221":{"code": 221, "enn": "]", "ens": "}", "krn": "]", "krs": "}"},
   "code222":{"code": 222, "enn": "'", "ens": "\"", "krn": "'", "krs": "\""},
 
-  "code13":{"code": 13, "enn": "⏎", "ens": "⏎", "krn": "⏎", "krs": "⏎"},
+  "code13":{"code": 13, "enn": "↩", "ens": "↩", "krn": "↩", "krs": "↩"},
   "code32":{"code": 32, "enn": " ", "ens": " ", "krn": " ", "krs": " "}
 }

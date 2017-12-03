@@ -253,7 +253,7 @@ var _play = {
 				.append($('<div></div>').addClass('typing').text(''))
 				.appendTo(container);
 
-			if(letter === '⏎'){
+			if(letter === '↩'){
 				letterElement.addClass('enter-key')
 			}
 			if(i === 0)
