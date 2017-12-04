@@ -37,14 +37,13 @@
   "code56":{"code": 56, "enn": "8", "ens": "*", "krn": "8", "krs": "*"},
   "code57":{"code": 57, "enn": "9", "ens": "(", "krn": "9", "krs": "("},
 
-  "code189":{"code": 189, "enn": "-", "ens": "_", "krn": "-", "krs": "_"},
-  "code187":{"code": 187, "enn": "=", "ens": "+", "krn": "=", "krs": "+"},
-  "code192":{"code": 192, "enn": "`", "ens": "~", "krn": "`", "krs": "~"},
-
   "code186":{"code": 186, "enn": ";", "ens": ":", "krn": ";", "krs": ":"},
+  "code187":{"code": 187, "enn": "=", "ens": "+", "krn": "=", "krs": "+"},
   "code188":{"code": 188, "enn": ",", "ens": "<", "krn": ",", "krs": "<"},
+  "code189":{"code": 189, "enn": "-", "ens": "_", "krn": "-", "krs": "_"},
   "code190":{"code": 190, "enn": ".", "ens": ">", "krn": ".", "krs": ">"},
   "code191":{"code": 191, "enn": "/", "ens": "?", "krn": "/", "krs": "?"},
+  "code192":{"code": 192, "enn": "`", "ens": "~", "krn": "`", "krs": "~"},
   "code219":{"code": 219, "enn": "[", "ens": "{", "krn": "[", "krs": "{"},
   "code220":{"code": 220, "enn": "\\", "ens": "|", "krn": "\\", "krs": "|"},
   "code221":{"code": 221, "enn": "]", "ens": "}", "krn": "]", "krs": "}"},

@@ -84,6 +84,7 @@ var _play = {
 
 				case 8: // backspace
 					recordKey(e);
+
 					if(_play.level.keyBuffer.length){
 						_play.level.keyBuffer.pop();
 						evaluate();
@@ -96,55 +97,95 @@ var _play = {
 					evaluate();
 					break;
 
+				// 한글, 영문 입력 a~z, A~Z, ㄱ~ㅎ, ㅏ~ㅣ
+				case 65:
+				case 66:
+				case 67:
+				case 68:
+				case 69:
+				case 70:
+				case 71:
+				case 72:
+				case 73:
+				case 74:
+				case 75:
+				case 76:
+				case 77:
+				case 78:
+				case 79:
+				case 80:
+				case 81:
+				case 82:
+				case 83:
+				case 84:
+				case 85:
+				case 86:
+				case 87:
+				case 88:
+				case 89:
+				case 90:
+					inputLetter(e);
+					break;
+
+				// 엔터키의 경우 개행이 있는 문장에서는 개행하고, 없는 문장에서는 레벨을 끝내려는 유저의 의도로 판단함
+				// 개행문장의 경우 개행이 아직 아닌데 엔터키를 누르면 개행전까지의 타이핑을 전부 오타처리하고 개행부터 다시 판단.
+				case 13: // enter
+					e.preventDefault();
+					inputLetter(e);
+					enterKeyLoop();
+					break;
+
+				// 숫자, 기호 입력 케이스(숫자, 기호 입력은 입력 즉시 다음 칸으로 움직이고 한글 도깨비불 현상이 없음)
+				case 32: // space bar
+				case 48: // 0
+				case 49: // 1
+				case 50: // 2
+				case 51: // 3
+				case 52: // 4
+				case 53: // 5
+				case 54: // 6
+				case 55: // 7
+				case 56: // 8
+				case 57: // 9
+				case 186: // ;
+				case 187: // =
+				case 188: // ,
+				case 189: // -
+				case 190: // .
+				case 191: // slash
+				case 192: // `
+				case 219: // [
+				case 220: // backslash
+				case 221: // ]
+				case 222: // '
+					e.preventDefault();
+					inputLetter(e);
+					setNextIndex();
+					clearBuffer();
+					break;
+
 				default:
-					recordKey(e);
-					var lang = _play.level.language;
-					var shiftKey = (e.shiftKey) ? "s" : "n";
-					var char = _play.keymap['code'+ code][lang + shiftKey];
 
-					addBuffer(char);
-					var letter = Hangul.a(_play.level.keyBuffer);
-					if(letter.length > 1){
-						var letters = Hangul.d(letter, true);
-						updateDisplay(letters.shift());
-						evaluate();
-						setNextIndex();
-						_play.level.keyBuffer = letters[0];
-					}
+			}
 
-					updateDisplay(_play.level.keyBuffer);
+			function inputLetter(e) {
+				recordKey(e);
+				var lang = _play.level.language;
+				var shiftKey = (e.shiftKey) ? "s" : "n";
+				var char = _play.keymap['code'+ code][lang + shiftKey];
+
+				addBuffer(char);
+				var letter = Hangul.a(_play.level.keyBuffer);
+				if(letter.length > 1){
+					var letters = Hangul.d(letter, true);
+					updateDisplay(letters.shift());
 					evaluate();
+					setNextIndex();
+					_play.level.keyBuffer = letters[0];
+				}
 
-					// 숫자, 기호 입력 케이스(숫자, 기호 입력은 입력 즉시 다음 칸으로 움직이고 한글 도깨비불 현상이 없음)
-					switch (code){
-						case 13: // enter
-						case 32:
-						case 48: // 0
-						case 49: // 1
-						case 50: // 2
-						case 51: // 3
-						case 52: // 4
-						case 53: // 5
-						case 54: // 6
-						case 55: // 7
-						case 56: // 8
-						case 57: // 9
-						case 186: // ;
-						case 187: // =
-						case 188: // ,
-						case 189: // -
-						case 190: // .
-						case 191: // slash
-						case 192: // `
-						case 219: // [
-						case 220: // backslash
-						case 221: // ]
-						case 222: // '
-							setNextIndex();
-							clearBuffer();
-							break;
-						default:
-					}
+				updateDisplay(_play.level.keyBuffer);
+				evaluate();
 			}
 
 			// console.log(_play.level.keyBuffer);
@@ -167,6 +208,9 @@ var _play = {
 			}
 			function evaluate() {
 				var letter = $('#letterList').find('.active');
+				if(letter.length === 0)
+					return;
+
 				var text = letter.find('.text').text();
 				var typing = letter.find('.typing').text();
 
@@ -180,6 +224,8 @@ var _play = {
 					letter.removeClass('corrected');
 					letter.addClass('incorrected');
 				}
+
+				return bool;
 				if(letter.next().length === 0 && bool){
 					setNextIndex();
 					finish();
@@ -196,9 +242,35 @@ var _play = {
 			}
 			function setNextIndex() {
 				var active = $('#letterList').find('.active');
+				if(active.length === 0)
+					return;
+
 				var next = active.next().addClass('active');
+				// var top = next.offset().top;
+				// $('.letter-list').scrollTop(top)
+
 				// if(next.length)
 				active.removeClass('active');
+			}
+			function enterKeyLoop() {
+				if($('#letterList').find('.active').length === 0)
+					return;
+
+				if(isEnterKey()){
+					evaluate();
+					setNextIndex();
+					clearBuffer();
+				}else{
+					evaluate();
+					setNextIndex();
+					enterKeyLoop();
+				}
+			}
+			function isEnterKey() {
+				var active = $('#letterList').find('.active');
+				if(active && active.length === 0)
+					return false;
+				return (active.hasClass('enter-key'));
 			}
 			function clearBuffer() {
 				_play.level.keyBuffer = [];
@@ -262,8 +334,8 @@ var _play = {
 	},
 	getNewLevelObject: function () {
 		return {
-			title: "애국가",
-			text : "동해물과, 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.",
+			title: "-",
+			text : "세계의 끝과 하드보일드 원더랜드",
 			language: "kr",
 			index: 0,
 			keyBuffer: [],

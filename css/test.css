@@ -9,7 +9,7 @@ body{
 	font-size: 20px;
 	background: #333 url("../images/type-bg2.jpg") center;
 	background-size: cover;
-	overflow-y: hidden;
+	/*overflow-y: hidden;*/
 }
 *{
 	box-sizing: border-box;
@@ -106,6 +106,11 @@ header{
 
 .sentence-area, .level-list-area{
 	padding: 0.5em;
+}
+.letter-list{
+	position: relative;
+	height: 512px;
+	overflow-y: auto;
 }
 .letter{
 	float: left;
