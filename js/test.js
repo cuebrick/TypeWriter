@@ -227,11 +227,6 @@ var _play = {
 				}
 
 				return bool;
-
-				/*if(letter.next().length === 0 && bool){
-					setNextIndex();
-					finish();
-				}*/
 			}
 			function updateDisplay(charArray) {
 				$('#letterList').find('.active').find('.typing').text(Hangul.a(charArray));
@@ -239,8 +234,10 @@ var _play = {
 			function setPrevIndex() {
 				var active = $('#letterList').find('.active');
 				var prev = active.prev().addClass('active');
-				if(prev.length)
+				if(prev.length){
 					active.removeClass('active');
+					setScroll(prev);
+				}
 			}
 			function setNextIndex() {
 				var active = $('#letterList').find('.active');
@@ -248,15 +245,19 @@ var _play = {
 					return false;
 
 				var next = active.next().addClass('active');
-
-				// var top = next.offset().top;
-				// $('.letter-list').scrollTop(top)
-
-				// if(next.length)
+				setScroll(next);
 				active.removeClass('active');
 
 				if (next.length === 0)
 					finish();
+			}
+			function setScroll(element) {
+				if(!element || element.length === 0)
+					return;
+
+				var container = $('#letterList');
+				var sc = element.position().top + container.scrollTop();
+				container.stop().animate({scrollTop: sc});
 			}
 			function enterKeyLoop() {
 				if($('#letterList').find('.active').length === 0)
