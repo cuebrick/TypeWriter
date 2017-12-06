@@ -1,5 +1,6 @@
 $(function () {
 	_play.loadKeyMap('json/keymap.json');
+	// document.body.addEventListener('keyup', POWERMODE);
 });
 
 
@@ -247,6 +248,7 @@ var _play = {
 					return false;
 
 				var next = active.next().addClass('active');
+
 				// var top = next.offset().top;
 				// $('.letter-list').scrollTop(top)
 
@@ -285,31 +287,40 @@ var _play = {
 			function finish() {
 				console.log('finish!!!');
 				clearInterval(_play.level.interval);
-				console.log(Hangul.d(_play.level.text).length, 60 / _play.level.timeCount);
-				var str = '';
-				$('#letterList').find('.letter').find('.typing').each(function (index, value) {
-					str += $(value).text();
-				});
+				// console.log(Hangul.d(_play.level.text).length, 60 / _play.level.timeCount);
 
-				console.log(_play.level.text, str, _play.level.text === str);
+				// 총 n 개의 글자 중 n 개의 오탈자, 총 m 개의 타이핑 중 m 개의 오타, 분당 k 타
+				// 정확도 %, 타이핑과 타이핑의 평균 속도
 
-				var example = Hangul.disassemble(_play.level.text, true);
-				var typing = Hangul.disassemble(str, true);
+				var totalLetterLength = String(_play.level.text).length;
+				var totalCharLength = Hangul.d(_play.level.text).length;
+				var incorrectedLetters = $('#letterList').find('.letter.incorrected');
+				var incorrectedLetterLength = incorrectedLetters.length;
+				var elapseTime = (_play.level.timeCount * 0.01).toFixed(1);
 
-				var missCount = 0;
-				$.each(example, function (index, exampleLetter) {
-					var typingLetter = typing[index];
-					if(typingLetter){
-						$.each(exampleLetter, function (idx, exampleChar) {
-							var typingChar = typingLetter[idx];
-							if(typingChar !== exampleChar){
-								missCount++;
-							}
-						})
+				var incorrectedCharLength = 0;
+				$.each(incorrectedLetters, function (index, value) {
+					var text = Hangul.d($(value).find('.text').text());
+					var typing = Hangul.d($(value).find('.typing').text());
+
+					for(var i = 0; i < text.length; i++){
+						if(text[i] !== typing[i]){
+							incorrectedCharLength++;
+						}
+					}
+					if(text.length < typing.length){
+						incorrectedCharLength += typing.length - text.length;
 					}
 				});
 
-				$('#msg').html( '<span id="letterLength">' + example.length + '</span>개의 문자, <span id="typingLength">'+Hangul.d(_play.level.text).length + '</span>타이핑과 <span id="missTypingLength">' + missCount + '</span> 개 오타')
+				var accuracy = (((totalCharLength - incorrectedCharLength) / totalCharLength) * 100).toFixed(1);
+				var speedPerMin = ((totalCharLength - incorrectedCharLength ) * (60 / elapseTime)).toFixed(1);
+
+
+				$('#msg').html('총 글자수: ' + totalLetterLength + '중 ' + incorrectedLetterLength + '글자 오탈자.<br>총 입력해야할 타이핑 수 : ' + totalCharLength + '개중 ' + incorrectedCharLength + '개의 오타<br>총 시간 : ' + elapseTime + '초<br>정확도 : ' + accuracy + '%<br>분당 타수 : ' + speedPerMin + '타');
+
+
+				// $('#msg').html( '<span id="letterLength">' + example.length + '</span>개의 문자, <span id="typingLength">'+Hangul.d(_play.level.text).length + '</span>타이핑과 <span id="missTypingLength">' + missCount + '</span> 개 오타')
 			}
 		});
 	},
