@@ -39,6 +39,7 @@ var _play = {
 		level.title = levelData.title;
 		level.text = levelData.text;
 		level.language = levelData.language;
+		level.type = levelData.type;
 		_play.level = level;
 		_play.setLevelTitle(_play.level.title);
 		_play.setLevelText(_play.level.text);
@@ -175,18 +176,24 @@ var _play = {
 				var shiftKey = (e.shiftKey) ? "s" : "n";
 				var char = _play.keymap['code'+ code][lang + shiftKey];
 
-				addBuffer(char);
-				var letter = Hangul.a(_play.level.keyBuffer);
-				if(letter.length > 1){
-					var letters = Hangul.d(letter, true);
-					updateDisplay(letters.shift());
+				if(_play.level.type === 'character'){
+					updateDisplay([char]);
 					evaluate();
 					setNextIndex();
-					_play.level.keyBuffer = letters[0];
+					clearBuffer();
+				}else{
+					addBuffer(char);
+					var letter = Hangul.a(_play.level.keyBuffer);
+					if(letter.length > 1){
+						var letters = Hangul.d(letter, true);
+						updateDisplay(letters.shift());
+						evaluate();
+						setNextIndex();
+						_play.level.keyBuffer = letters[0];
+					}
+					updateDisplay(_play.level.keyBuffer);
+					evaluate();
 				}
-
-				updateDisplay(_play.level.keyBuffer);
-				evaluate();
 			}
 
 			// console.log(_play.level.keyBuffer);
