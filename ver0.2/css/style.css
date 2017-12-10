@@ -151,7 +151,7 @@ header{
 }
 
 
-#msg{
+#typingResult{
 	clear: both;
 }
 @keyframes blink {
@@ -164,7 +164,9 @@ header{
 }
 
 
-
+.typing-result{
+	display: none;
+}
 
 
 

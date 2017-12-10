@@ -43,6 +43,7 @@ var _play = {
 		_play.level = level;
 		_play.setLevelTitle(_play.level.title);
 		_play.setLevelText(_play.level.text);
+		$('#typingResult').slideUp();
 	},
 	initListener: function () {
 		$('#levelList').on('click', '.level-item', function () {
@@ -324,11 +325,9 @@ var _play = {
 				var accuracy = (((totalCharLength - incorrectedCharLength) / totalCharLength) * 100).toFixed(1);
 				var speedPerMin = ((totalCharLength - incorrectedCharLength ) * (60 / elapseTime)).toFixed(1);
 
-
-				$('#msg').html('총 글자수: ' + totalLetterLength + '중 ' + incorrectedLetterLength + '글자 오탈자.<br>총 입력해야할 타이핑 수 : ' + totalCharLength + '개중 ' + incorrectedCharLength + '개의 오타<br>총 시간 : ' + elapseTime + '초<br>정확도 : ' + accuracy + '%<br>분당 타수 : ' + speedPerMin + '타');
-
-
-				// $('#msg').html( '<span id="letterLength">' + example.length + '</span>개의 문자, <span id="typingLength">'+Hangul.d(_play.level.text).length + '</span>타이핑과 <span id="missTypingLength">' + missCount + '</span> 개 오타')
+				$('#typingResult')
+					.html('총 글자수: ' + totalLetterLength + '중 ' + incorrectedLetterLength + '글자 오탈자.<br>총 입력해야할 타이핑 수 : ' + totalCharLength + '개중 ' + incorrectedCharLength + '개의 오타<br>총 시간 : ' + elapseTime + '초<br>정확도 : ' + accuracy + '%<br>분당 타수 : ' + speedPerMin + '타')
+					.slideDown();
 			}
 		});
 	},

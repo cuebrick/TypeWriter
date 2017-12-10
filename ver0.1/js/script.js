@@ -357,7 +357,7 @@ var _type = {
 					}
 				});
 
-				$('#msg').html( '<span id="letterLength">' + example.length + '</span>개의 문자, <span id="typingLength">'+Hangul.disassemble(exampleText).length + '</span>타이핑과 <span id="missTypingLength">' + missCount + '</span> 개 오타')
+				$('#typingResult').html( '<span id="letterLength">' + example.length + '</span>개의 문자, <span id="typingLength">'+Hangul.disassemble(exampleText).length + '</span>타이핑과 <span id="missTypingLength">' + missCount + '</span> 개 오타')
 			},
 
 			pushTime : function () {
