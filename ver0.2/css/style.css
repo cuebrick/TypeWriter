@@ -193,13 +193,24 @@ header{
 	background-color: rgba(255, 147, 183, 0.11);
 	border: 3px solid #bfa589;
 	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 8px;
+}
+.badge-title{
+	float: left;
+	margin-right: 10px;
+}
+.stars{
+	float: left;
+	font-size: 0;
 }
 .stars > .star{
 	display: inline-block;
-	width: 20px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
 	background-image: url(../images/star.png);
+	background-size: 25px;
 }
-.stars > .star.half{
+.stars > .star.incomplete{
 	background-image: url(../images/star-half.png);
 }
