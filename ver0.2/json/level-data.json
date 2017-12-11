@@ -5,7 +5,7 @@
       "difficulty": 1,
       "type": "character",
       "language": "kr",
-      "title": "왼손 가운데 자리 연습 1",
+      "title": "왼손 가운데 자리 1",
       "text" : "ㅁㄴㅇㄹㅁㄴㅇㄹ"
     },
     "c0102": {
@@ -13,7 +13,7 @@
       "difficulty": 1,
       "type": "character",
       "language": "kr",
-      "title": "왼손 가운데 자리 연습 2",
+      "title": "왼손 가운데 자리 2",
       "text" : "ㄹㅇㄴㅁㄹㅇㄴㅁ"
     },
     "c0103": {
@@ -21,8 +21,40 @@
       "difficulty": 1,
       "type": "character",
       "language": "kr",
-      "title": "왼손 가운데 자리 전체 연습 1",
+      "title": "왼손 가운데 자리 전체 1",
       "text" : "ㅁㄴㅇㄹㅎㅁㄴㅇㄹㅎ"
+    },
+    "c0201": {
+      "grade": 0,
+      "difficulty": 1,
+      "type": "character",
+      "language": "kr",
+      "title": "오른손 가운데 자리 1",
+      "text" : "ㅓㅏㅣㅓㅏㅣ"
+    },
+    "c0202": {
+      "grade": 0,
+      "difficulty": 1,
+      "type": "character",
+      "language": "kr",
+      "title": "오른손 가운데 자리 2",
+      "text" : "ㅣㅏㅓㅣㅏㅓ"
+    },
+    "c0203": {
+      "grade": 0,
+      "difficulty": 1,
+      "type": "character",
+      "language": "kr",
+      "title": "오른손 가운데 자리 전체 1",
+      "text" : "ㅗㅓㅏㅣㅗㅓㅏㅣ"
+    },
+    "c0301": {
+      "grade": 0,
+      "difficulty": 1,
+      "type": "sentence",
+      "language": "kr",
+      "title": "가운데 자리 단어",
+      "text" : "어머니 어머니 엄마 엄마"
     },
 
 
