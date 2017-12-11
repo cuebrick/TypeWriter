@@ -1,13 +1,34 @@
 {
   "sentence": {
-    "s0": {
+    "c0101": {
+      "grade": 0,
       "difficulty": 1,
       "type": "character",
       "language": "kr",
-      "title": "가운데 자리 연습",
-      "text" : "ㅁㄴㅇㄹㅎㅗㅓㅏㅣ;"
+      "title": "왼손 가운데 자리 연습 1",
+      "text" : "ㅁㄴㅇㄹㅁㄴㅇㄹ"
     },
+    "c0102": {
+      "grade": 0,
+      "difficulty": 1,
+      "type": "character",
+      "language": "kr",
+      "title": "왼손 가운데 자리 연습 2",
+      "text" : "ㄹㅇㄴㅁㄹㅇㄴㅁ"
+    },
+    "c0103": {
+      "grade": 0,
+      "difficulty": 1,
+      "type": "character",
+      "language": "kr",
+      "title": "왼손 가운데 자리 전체 연습 1",
+      "text" : "ㅁㄴㅇㄹㅎㅁㄴㅇㄹㅎ"
+    },
+
+
+
     "s1": {
+      "grade": 2,
       "difficulty": 2,
       "type": "sentence",
       "language": "kr",
@@ -15,6 +36,7 @@
       "text" : "동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."
     },
     "s2": {
+      "grade": 2,
       "difficulty": 2,
       "type": "sentence",
       "language": "kr",
@@ -22,6 +44,7 @@
       "text" : "남산 위에 저 소나무 철갑을 두른 듯 바람서리 불변함은 우리 기상일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."
     },
     "s3": {
+      "grade": 2,
       "difficulty": 2,
       "type": "sentence",
       "language": "kr",
@@ -29,13 +52,18 @@
       "text" : "가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."
     },
     "s4": {
+      "grade": 2,
       "difficulty": 2,
       "type": "sentence",
       "language": "kr",
       "title": "애국가 (4절)",
       "text" : "이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."
     },
+
+
+
     "s5": {
+      "grade": 4,
       "difficulty": 4,
       "type": "sentence",
       "language": "kr",

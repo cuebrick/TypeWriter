@@ -34,21 +34,29 @@ var _play = {
 
 	},
 	reset: function (id) {
-		var level = _play.getNewLevelObject();
-		var levelData = _play.data.sentence[id];
-		level.title = levelData.title;
-		level.text = levelData.text;
-		level.language = levelData.language;
-		level.type = levelData.type;
-		_play.level = level;
-		_play.setLevelTitle(_play.level.title);
-		_play.setLevelText(_play.level.text);
+		var levelData = JSON.parse(JSON.stringify(_play.data.sentence[id]));
+		levelData['keyBuffer'] = [];
+		levelData['record'] = [];
+		levelData['interval'] = null;
+		levelData['timeCount'] = 0;
+		_play.setLevelTitle(levelData.title);
+		_play.setLevelText(levelData.text);
+		_play.level = levelData;
 		$('#typingResult').slideUp();
 	},
 	initListener: function () {
 		$('#levelList').on('click', '.level-item', function () {
 			var id = $(this).data('id');
 			_play.reset(id);
+			$('#letterList').stop().animate({scrollTop: 0}, 1000);
+			$('.level-list-area').hide();
+			$('.sentence-area').show();
+		});
+		$('#goLevelListButton').click(function () {
+			_play.hideBadge();
+
+			$('.level-list-area').show();
+			$('.sentence-area').hide();
 		});
 		$(window).keydown(function (e) {
 			var code = e.keyCode;
@@ -296,10 +304,6 @@ var _play = {
 			function finish() {
 				console.log('finish!!!');
 				clearInterval(_play.level.interval);
-				// console.log(Hangul.d(_play.level.text).length, 60 / _play.level.timeCount);
-
-				// 총 n 개의 글자 중 n 개의 오탈자, 총 m 개의 타이핑 중 m 개의 오타, 분당 k 타
-				// 정확도 %, 타이핑과 타이핑의 평균 속도
 
 				var totalLetterLength = String(_play.level.text).length;
 				var totalCharLength = Hangul.d(_play.level.text).length;
@@ -326,10 +330,19 @@ var _play = {
 				var speedPerMin = ((totalCharLength - incorrectedCharLength ) * (60 / elapseTime)).toFixed(1);
 
 				$('#typingResult')
-					.html('총 글자수: ' + totalLetterLength + '중 ' + incorrectedLetterLength + '글자 오탈자.<br>총 입력해야할 타이핑 수 : ' + totalCharLength + '개중 ' + incorrectedCharLength + '개의 오타<br>총 시간 : ' + elapseTime + '초<br>정확도 : ' + accuracy + '%<br>분당 타수 : ' + speedPerMin + '타')
-					.slideDown();
+					.slideDown()
+					.find('.msg').html('총 글자수: ' + totalLetterLength + '중 ' + incorrectedLetterLength + '글자 오탈자.<br>총 입력해야할 타이핑 수 : ' + totalCharLength + '개중 ' + incorrectedCharLength + '개의 오타<br>총 시간 : ' + elapseTime + '초<br>정확도 : ' + accuracy + '%<br>분당 타수 : ' + speedPerMin + '타');
+
+				_play.showBadge();
 			}
 		});
+	},
+
+	showBadge: function () {
+		$('.badge').animate({right: 10}, 200);
+	},
+	hideBadge: function () {
+		$('.badge').animate({right: -310});
 	},
 	setLevelTitle: function (title) {
 		$('#levelTitle').text(title);
