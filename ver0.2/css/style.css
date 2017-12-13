@@ -250,3 +250,128 @@ header{
 .button-ui > button{
 	width: 100%;
 }
+
+
+
+
+
+
+
+.keyboard{
+	width: 100%;
+	height: 0;
+	padding-bottom: 30%;
+	position: relative;
+	cursor: default;
+	user-select: none;
+}
+.keyboard .row{
+	position: absolute;
+	clear: both;
+	width: 100%;
+	height: 19%;
+}
+.keyboard .row:nth-child(2){
+	top: 20%
+}
+.keyboard .row:nth-child(3){
+	top: 40%
+}
+.keyboard .row:nth-child(4){
+	top: 60%
+}
+.keyboard .row:nth-child(5){
+	top: 80%
+}
+.keyboard .row > div{
+	float: left;
+	border: 1px #dddddd solid;
+	border-radius: 0.2em;
+	width: 6.3%;
+	height: 100%;
+	margin: 0.2%;
+	padding: 0 0.2em;
+	line-height: 1em;
+	font-size: 2vw;
+	font-weight: 100;
+	position: relative;
+	transition: 1s background-color;
+	color: #555;
+}
+.keyboard .row > div.on{
+	color: #000;
+	background-color: rgba(255, 255, 255, 0.8);
+	transition: 0.2s background-color;
+}
+.keyboard .row > div.press{
+	border: 3px #dd448a solid;
+}
+.keyboard .row > div.disable{
+	border: 1px #555 solid;
+	color: #555;
+}
+.keyboard .row > div.type1{
+	width: 8%;
+}
+.keyboard .row > div.type2{
+	width: 9.4%;
+}
+.keyboard .row > div.type3{
+	width: 11.5%;
+}
+.keyboard .row > div.type4{
+	width: 12.5%;
+}
+.keyboard .row > div.type5{
+	width: 14%;
+}
+.keyboard .row > div.type6{
+	width: 18.2%;
+}
+.keyboard .row > div.type7{
+	width: 40.8%;
+}
+.keyboard .row > div.type1,
+.keyboard .row > div.type2,
+.keyboard .row > div.type3,
+.keyboard .row > div.type4,
+.keyboard .row > div.type5,
+.keyboard .row > div.type6,
+.keyboard .row > div.type7{
+	font-size: 1.7vw;
+}
+.keyboard .row .en,
+.keyboard .row .kr{
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+.keyboard .row .en .shift{
+	height: 50%;
+}
+.keyboard .row > div .kr{
+	text-align: right;
+	color: #fff;
+}
+.keyboard .row > div.disable .kr{
+	color: inherit;
+}
+.keyboard .row .kr .shift,
+.keyboard .row .kr .normal{
+	position: absolute;
+	bottom: 0.2em;
+	width: 45%;
+}
+.keyboard .row .kr .shift{
+	top: 0.2em;
+	color: #777;
+}
+.keyboard .row .kr.shifted .shift{
+	color: #fff;
+}
+.keyboard .row .kr.shifted .normal{
+	color: #777;
+}
+.keyboard .en > *{
+	font-family: 'Noto Sans KR', sans-serif;
+}
