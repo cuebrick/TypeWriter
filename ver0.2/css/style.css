@@ -126,7 +126,8 @@ header{
 }
 .letter-list{
 	position: relative;
-	height: 512px;
+	min-height: 128px;
+	max-height: 384px;
 	overflow-y: auto;
 }
 .letter{

@@ -61,6 +61,7 @@ var _play = {
 		$(window).keydown(function (e) {
 			var code = e.keyCode;
 			// console.log(code);
+			_play.keyboard.keyDown(code);
 
 			switch (code){
 				// 아무것도 하지 않는 케이스들
@@ -70,6 +71,8 @@ var _play = {
 					e.preventDefault();
 					break;
 				case 16: // shift
+					_play.keyboard.shifting();
+					break;
 				case 17: // ctrl
 				case 93: // context menu
 				case 25: // ctrl - right
@@ -178,6 +181,7 @@ var _play = {
 				default:
 
 			}
+
 
 			function inputLetter(e) {
 				recordKey(e);
@@ -335,7 +339,30 @@ var _play = {
 
 				_play.showBadge();
 			}
+		}).keyup(function (e) {
+			var code = e.keyCode;
+			_play.keyboard.keyUp(code);
+			switch (code) {
+				case 16: // shift
+					_play.keyboard.unshifting();
+					break;
+			}
 		});
+	},
+
+	keyboard: {
+		keyDown: function (code) {
+			$('.keyboard .row > div[data-key='+code+']').addClass('press');
+		},
+		keyUp: function (code) {
+			$('.keyboard .row > div[data-key='+code+']').removeClass('press');
+		},
+		shifting: function () {
+			$('.keyboard .row > div > .kr').addClass('shifted');
+		},
+		unshifting: function () {
+			$('.keyboard .row > div > .kr').removeClass('shifted');
+		}
 	},
 
 	showBadge: function () {
