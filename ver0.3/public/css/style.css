@@ -1,0 +1,379 @@
+/*@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+*/
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+html, body, #root{
+	height: 100%;
+}
+body{
+	margin:0;
+	color: #ddd;
+	font-size: 20px;
+	background: #333 url("../images/type-bg2.jpg") center;
+	background-size: cover;
+	/*overflow-y: hidden;*/
+}
+*{
+	box-sizing: border-box;
+	font-family: 'malgun gothic', sans-serif;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, li{
+	margin: 0;
+	padding: 0;
+}
+ul, ol, dl{
+	list-style: none;
+}
+button{
+	background-color: #0080ae;
+	border-radius: 4px;
+	padding: 5px 10px;
+	color: #c5eaff;
+	border: 0;
+	font-size: 1em;
+}
+button:hover{
+	background-color: #00aae7;
+}
+.wrapper{
+	background-color: rgba(0, 0, 0, 0.9);
+	min-height: 100%;
+	padding-top: 1px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+nav{
+	position: fixed;
+	right: 10px;
+	top: 5px;
+	font-size: 12px;
+}
+nav > ul > li{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	/*border: 3px solid #fff;*/
+	border-radius: 40px;
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 0;
+	margin: 1px;
+	cursor: pointer;
+	color: #000;
+	text-align: center;
+	float: left;
+}
+nav > ul > li:hover,
+nav > ul > li:active{
+	background-color: #9cddee;
+}
+nav > ul > li.select{
+	background-color: #9fc0cc;
+}
+h1{
+	font-weight: 100;
+	font-size: 3em;
+	color: coral;
+}
+h2{
+	font-weight: 100;
+	font-size: 1.2em;
+	height: 50px;
+}
+h3{
+	font-weight: 100;
+	color: #b6e9ee;
+	padding: 0.4em 0;
+}
+header{
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.minimize{
+	padding-left: 10px;
+}
+.minimize > h1{
+	float: left;
+	font-size: 1.5em;
+	padding-top: 3px;
+}
+.minimize > h2{
+	float: left;
+	font-size: 1em;
+	line-height: 2.3em;
+	margin-left: 10px;
+	padding-top: 5px;
+}
+@media (max-width: 599px) {
+	.minimize > h1{
+		float: none;
+		line-height: 1.2em;
+		font-size: 1em;
+		padding-top: 3px;
+	}
+	.minimize > h2{
+		font-size: 0.65em;
+		line-height: 1em;
+		padding-top: 2px;
+		margin-left: 0;
+	}
+}
+
+.sentence-area, .level-list-area{
+	padding: 0.5em;
+	position: relative;
+}
+.sentence-area{
+	display: none;
+}
+.letter-list{
+	position: relative;
+	min-height: 128px;
+	max-height: 384px;
+	overflow-y: auto;
+}
+.letter{
+	float: left;
+	margin-right: 0.1em;
+	margin-bottom: 0.4em;
+	font-size: 2em;
+	line-height: 1em;
+}
+.letter > .text{
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 0.1em;
+	height: 1.4em;
+	min-width: 0.8em;
+	border-radius: 0.05em 0.05em 0 0;
+	border-bottom: 0.05em solid #8ba5b2;
+}
+.letter > .typing{
+	padding: 0.1em;
+	height: 1.4em;
+	min-width: 0.8em;
+}
+.letter.active > .typing{
+	border-bottom: 0.05em solid #444;
+	animation: blink 0.5s linear infinite alternate;
+}
+.letter.corrected > .text{
+	border-bottom: 0.05em solid #006aeb;
+}
+.letter.incorrected > .text{
+	border-bottom: 0.05em solid #eb005a;
+}
+.letter.enter-key{
+	color: #888;
+}
+.letter.enter-key + .letter{
+	clear: left;
+}
+
+
+#typingResult{
+	clear: both;
+}
+@keyframes blink {
+	from {
+		border-bottom-color: #444;
+	}
+	to {
+		border-bottom-color: #0cf;
+	}
+}
+
+
+.typing-result{
+	display: none;
+}
+
+
+
+.level-list{
+	font-size: 16px;
+	overflow: auto;
+}
+
+.level-item{
+	width: 200px;
+	float: left;
+	box-sizing: border-box;
+	padding: 10px;
+	background-color: rgba(151, 206, 255, 0.1);
+	border-radius: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	transition: 0.4s all;
+	font-size: 0.9em;
+}
+.level-item .level-title{
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+.level-item:hover{
+	background-color: rgba(151, 206, 255, 0.4);
+}
+
+.badge{
+	position: absolute;
+	top: 55px;
+	right: -310px;
+	min-width: 300px;
+	height: 50px;
+	background-color: rgba(255, 147, 183, 0.11);
+	border: 3px solid #bfa589;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 8px;
+}
+.badge-title{
+	float: left;
+	margin-right: 10px;
+}
+.stars{
+	float: left;
+	font-size: 0;
+}
+.stars > .star{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-image: url(../images/star.png);
+	background-size: 25px;
+}
+.stars > .star.incomplete{
+	background-image: url(../images/star-half.png);
+}
+
+.button-ui{
+	padding: 20px 0;
+}
+.button-ui > button{
+	width: 100%;
+}
+
+
+
+
+
+
+
+.keyboard{
+	width: 100%;
+	height: 0;
+	padding-bottom: 30%;
+	position: relative;
+	cursor: default;
+	user-select: none;
+}
+.keyboard .row{
+	position: absolute;
+	clear: both;
+	width: 100%;
+	height: 19%;
+}
+.keyboard .row:nth-child(2){
+	top: 20%
+}
+.keyboard .row:nth-child(3){
+	top: 40%
+}
+.keyboard .row:nth-child(4){
+	top: 60%
+}
+.keyboard .row:nth-child(5){
+	top: 80%
+}
+.keyboard .row > div{
+	float: left;
+	border: 1px #dddddd solid;
+	border-radius: 0.2em;
+	width: 6.3%;
+	height: 100%;
+	margin: 0.2%;
+	padding: 0 0.2em;
+	line-height: 1em;
+	font-size: 2vw;
+	font-weight: 100;
+	position: relative;
+	transition: 1s background-color;
+	color: #555;
+}
+.keyboard .row > div.on{
+	color: #000;
+	background-color: rgba(255, 255, 255, 0.8);
+	transition: 0.2s background-color;
+}
+.keyboard .row > div.press{
+	border: 3px #dd448a solid;
+}
+.keyboard .row > div.disable{
+	border: 1px #555 solid;
+	color: #555;
+}
+.keyboard .row > div.type1{
+	width: 8%;
+}
+.keyboard .row > div.type2{
+	width: 9.4%;
+}
+.keyboard .row > div.type3{
+	width: 11.5%;
+}
+.keyboard .row > div.type4{
+	width: 12.5%;
+}
+.keyboard .row > div.type5{
+	width: 14%;
+}
+.keyboard .row > div.type6{
+	width: 18.2%;
+}
+.keyboard .row > div.type7{
+	width: 40.8%;
+}
+.keyboard .row > div.type1,
+.keyboard .row > div.type2,
+.keyboard .row > div.type3,
+.keyboard .row > div.type4,
+.keyboard .row > div.type5,
+.keyboard .row > div.type6,
+.keyboard .row > div.type7{
+	font-size: 1.7vw;
+}
+.keyboard .row .en,
+.keyboard .row .kr{
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+.keyboard .row .en .shift{
+	height: 50%;
+}
+.keyboard .row > div .kr{
+	text-align: right;
+	color: #fff;
+}
+.keyboard .row > div.disable .kr{
+	color: inherit;
+}
+.keyboard .row .kr .shift,
+.keyboard .row .kr .normal{
+	position: absolute;
+	bottom: 0.2em;
+	width: 45%;
+}
+.keyboard .row .kr .shift{
+	top: 0.2em;
+	color: #777;
+}
+.keyboard .row .kr.shifted .shift{
+	color: #fff;
+}
+.keyboard .row .kr.shifted .normal{
+	color: #777;
+}
+.keyboard .en > *{
+	font-family: 'Noto Sans KR', sans-serif;
+}
