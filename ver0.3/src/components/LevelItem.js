@@ -1,9 +1,18 @@
 import React from 'react';
 
 class LevelItem extends React.Component{
+	constructor(props){
+		super(props);
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	handleClick(e){
+		this.props.handleClick(this.props.dataId)
+	}
+
 	render(){
 		return(
-			<div className="level-item">
+			<div onClick={this.handleClick} className="level-item" data-id={this.props.dataId}>
 				<div className="level-title">{this.props.title}</div>
 			</div>
 		)

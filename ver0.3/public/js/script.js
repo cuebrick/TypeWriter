@@ -1,5 +1,5 @@
 $(function () {
-	_play.loadKeyMap('json/keymap.json');
+	// _play.loadKeyMap('json/keymap.json');
 	// document.body.addEventListener('keyup', POWERMODE);
 });
 
