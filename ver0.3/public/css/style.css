@@ -34,6 +34,15 @@ button{
 button:hover{
 	background-color: #00aae7;
 }
+
+.hide{
+	display: none !important;
+}
+.show{
+	display: block !important;
+}
+
+
 .wrapper{
 	background-color: rgba(0, 0, 0, 0.9);
 	min-height: 100%;

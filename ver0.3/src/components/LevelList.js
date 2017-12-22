@@ -1,20 +1,48 @@
 import React from 'react';
 import LevelItem from './LevelItem';
 import LevelData from '../json/level-data';
+import PlayManager from './PlayManager';
 
 class LevelList extends React.Component{
 	constructor(props){
 		super(props);
 		this.handleItemClick = this.handleItemClick.bind(this);
+		this.state = {
+			isShow: true,
+			levelId: 0
+		}
+	}
+
+	componentDidMount() {
+		console.log('componentDidMount', this);
+		this.props.onRef(this)
 	}
 
 	handleItemClick(id){
-		console.log('handleItemClick:>>>>', id);
+		// this.props.levelId = id;
+		// console.log('handleItemClick:>>>>', id);
+		// PlayManager.selectLevel(id);
+		this.props.selectLevel(id);
+		// this.hide();
+		// this.child.run();
 	}
+
+	show(){
+		this.setState({isShow: true});
+	}
+
+	hide(){
+		this.setState({isShow: false});
+	}
+
+	/*hide = () => {
+		this.setState({isShow: false});
+	};*/
+
 
 	render(){
 		return(
-			<div className="level-list-area">
+			<div className={"level-list-area " + (this.state.isShow ? 'show' : 'hide')}>
 				<h3>단계 목록</h3>
 				<div id="levelList" className="level-list">
 					{
