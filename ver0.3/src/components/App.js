@@ -17,18 +17,18 @@ class App extends React.Component{
 	constructor(props){
 		super(props);
 
+		this.state = {
+			level : '-------'
+		};
 		// this.playManager = new PlayManager();
 		this.comps = {
 			header: <Header/>,
 			levelList: <LevelList selectLevel={this.selectedLevel}/>,
 			badge: <Badge/>,
-			sentenceArea: <SentenceArea level={this.level}/>
+			sentenceArea: <SentenceArea level={this.state.level}/>
 			// playManager: new PlayManager()
 		};
 
-		/*this.state = {
-			comps : comps
-		};*/
 	}
 
 	// level(text){
@@ -42,8 +42,8 @@ class App extends React.Component{
 			return (item.id === id);
 		});
 
-		console.log(Object.isExtensible(this.level));
-		this.level = level;
+		// console.log(Object.isExtensible(this.level));
+		this.setState({level: level})
 	}
 
 	render(){

@@ -9,9 +9,9 @@ class SentenceArea extends React.Component{
 		console.log('selectLevel :":::::', id);
 	}
 
-	/*componentDidUpdate (){
+	componentDidUpdate (){
 		console.log('componentWillReceiveProps :', this.props.level);
-	}*/
+	}
 
 	/*componentDidMount(){
 		this.props.onRef(this);
