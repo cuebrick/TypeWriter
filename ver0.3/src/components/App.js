@@ -4,6 +4,8 @@ import LevelList from './LevelList';
 import Badge from './Badge';
 import SentenceArea from './SentenceArea';
 import PlayManager from './PlayManager';
+import Level from './Level';
+import PropTypes from 'prop-types';
 
 import LevelData from '../json/level-data';
 
@@ -17,9 +19,12 @@ class App extends React.Component{
 	constructor(props){
 		super(props);
 
+		this.selectedLevel = this.selectedLevel.bind(this);
+
 		this.state = {
-			level : '-------'
+			level : undefined
 		};
+
 		// this.playManager = new PlayManager();
 		this.comps = {
 			header: <Header/>,
@@ -28,23 +33,22 @@ class App extends React.Component{
 			sentenceArea: <SentenceArea level={this.state.level}/>
 			// playManager: new PlayManager()
 		};
-
 	}
 
-	// level(text){
-	// 	return text;
-	// }
+	componentDidUpdate(){
+		console.log('App.componentDidUpdate() : ', this.state.level);
+	}
 
 	selectedLevel(id){
 		console.log('App.selectedLevel() : >>>', id);
 
-		let level = LevelData.find(function(item){
+		let data = LevelData.find(function(item){
 			return (item.id === id);
 		});
 
-		// console.log(Object.isExtensible(this.level));
-		this.setState({level: level})
-	}
+		this.setState({level:new Level(data)});
+		// console.log('level.id: ', this.level.id);
+	};
 
 	render(){
 		return(
