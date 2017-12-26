@@ -1,16 +1,20 @@
 import React from 'react';
 import KeyboardLayout from './KeyboardLayout';
 import LetterList from './LetterList';
-import LevelData from '../json/level-data';
 
 class SentenceArea extends React.Component{
+	constructor(props){
+		super(props);
 
-	level(id){
-		console.log('selectLevel :":::::', id);
+		console.log("SentenceArea.constructor", props);
 	}
 
+	/*level(id){
+		console.log('selectLevel :":::::', id);
+	}*/
+
 	componentDidUpdate (){
-		console.log('componentWillReceiveProps :', this.props.level);
+		console.log('componentDidUpdate :', this.props);
 	}
 
 	/*componentDidMount(){
@@ -23,7 +27,7 @@ class SentenceArea extends React.Component{
 			<div className="sentence-area">
 				<h3 id="levelTitle">문장연습</h3>
 
-				<LetterList letterList={"테스트 문장입니다."}/>
+				<LetterList level={this.props.level}/>
 
 				<div className="button-ui">
 					<button id="goLevelListButton">목록으로</button>

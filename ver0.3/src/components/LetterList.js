@@ -5,11 +5,10 @@ class LetterList extends React.Component{
 
 	constructor(props){
 		super(props);
-		// console.log(LevelData.sentence.s5);
-		console.log(this.props.letterList);
 	}
 
 	render(){
+		console.log('LetterList.render:>>', this.props.level);
 		return(
 			<div id="letterList" className="letter-list">
 

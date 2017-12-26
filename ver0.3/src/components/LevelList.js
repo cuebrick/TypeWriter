@@ -42,7 +42,7 @@ class LevelList extends React.Component{
 
 
 	render(){
-		console.log('LevelList.constructor: ', this.props.level);
+		console.log('LevelList.render() : ', this.props.level);
 		return(
 			<div className={"level-list-area " + (this.state.isShow ? 'show' : 'hide')}>
 				<h3>단계 목록</h3>

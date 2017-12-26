@@ -26,53 +26,39 @@ class App extends React.Component{
 		};
 
 		// this.playManager = new PlayManager();
-		this.comps = {
+		/*this.comps = {
 			header: <Header/>,
 			levelList: <LevelList selectLevel={this.selectedLevel}/>,
 			badge: <Badge/>,
 			sentenceArea: <SentenceArea level={this.state.level}/>
 			// playManager: new PlayManager()
-		};
+		};*/
 	}
 
-	componentDidUpdate(){
-		console.log('App.componentDidUpdate() : ', this.state.level);
+	componentWillReceiveProps(nextProps) {
+		this.setState({ level: nextProps.level });
 	}
 
 	selectedLevel(id){
-		console.log('App.selectedLevel() : >>>', id);
+		console.log('App.selectedLevel() : ', id);
 
 		let data = LevelData.find(function(item){
 			return (item.id === id);
 		});
 
 		this.setState({level:new Level(data)});
-		// console.log('level.id: ', this.level.id);
 	};
 
 	render(){
 		return(
 			<div className="wrapper">
-				{this.comps.header}
-				{this.comps.levelList}
-				{this.comps.badge}
-				{this.comps.sentenceArea}
-			</div>
-		);
-	}
-
-	/*render(){
-		return(
-			<div className="wrapper">
 				<Header/>
 				<Badge/>
-				<LevelList onRef={(ref) => {this.child = ref}} selectLevel={this.selectedLevel}/>
-				<SentenceArea selectLevelId={"s5"}/>
+				<LevelList selectLevel={this.selectedLevel}/>
+				<SentenceArea level={this.state.level}/>
 			</div>
 		)
-	}*/
-
-
+	}
 }
 
 export default App;
