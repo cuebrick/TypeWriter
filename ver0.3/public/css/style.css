@@ -131,9 +131,9 @@ header{
 	padding: 0.5em;
 	position: relative;
 }
-.sentence-area{
+/*.sentence-area{
 	display: none;
-}
+}*/
 .letter-list{
 	position: relative;
 	min-height: 128px;

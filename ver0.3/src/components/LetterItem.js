@@ -6,10 +6,12 @@ class LetterItem extends React.Component{
 		super(props);
 	}
 	render(){
+		let enterKeyClassName = (this.props.char === '↩') ? ' enter-key' : '';
+
 		return(
-			<div className="letter">
-				<div className="text">{this.props.text}</div>
-				<div className="typing">{this.props.typing}</div>
+			<div className={"letter" + enterKeyClassName}>
+				<div className="text">{this.props.char}</div>
+				<div className="typing"></div>
 			</div>
 		)
 	}

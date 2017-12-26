@@ -5,24 +5,15 @@ import LetterList from './LetterList';
 class SentenceArea extends React.Component{
 	constructor(props){
 		super(props);
-
-		console.log("SentenceArea.constructor", props);
+		this.goLevelList = this.goLevelList.bind(this);
 	}
 
-	/*level(id){
-		console.log('selectLevel :":::::', id);
-	}*/
-
-	componentDidUpdate (){
-		console.log('componentDidUpdate :', this.props);
+	goLevelList(){
+		this.props.goLevelList();
 	}
-
-	/*componentDidMount(){
-		this.props.onRef(this);
-	}*/
 
 	render(){
-		console.log('render :', this.props.level);
+		// console.log('SentenceArea.render() :', this.props.level);
 		return(
 			<div className="sentence-area">
 				<h3 id="levelTitle">문장연습</h3>
@@ -30,7 +21,7 @@ class SentenceArea extends React.Component{
 				<LetterList level={this.props.level}/>
 
 				<div className="button-ui">
-					<button id="goLevelListButton">목록으로</button>
+					<button id="goLevelListButton" onClick={this.goLevelList}>목록으로</button>
 				</div>
 
 				<KeyboardLayout/>
