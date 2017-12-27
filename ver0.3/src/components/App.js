@@ -5,19 +5,17 @@ import Badge from './Badge';
 import SentenceArea from './SentenceArea';
 import PlayManager from './PlayManager';
 import Level from './Level';
-
 import LevelData from '../json/level-data';
 
 class App extends React.Component{
-	// playManager;
 
-	// static LIST_MODE = 'listMode';
-	// static TYPING_MODE = 'typingMode';
 
-	comps;
-	selectLevel;
-	level;
-	child;
+	static get LIST_MODE(){
+		return 'listMode';
+	}
+	static get TYPING_MODE(){
+		return 'typingMode';
+	}
 
 	constructor(props){
 		super(props);
@@ -27,7 +25,7 @@ class App extends React.Component{
 
 		this.state = {
 			level : undefined,
-			mode : 'LIST_MODE'
+			mode : App.LIST_MODE
 		};
 
 		// this.playManager = new PlayManager();
@@ -49,20 +47,20 @@ class App extends React.Component{
 
 		this.setState({
 			level: new Level(data),
-			mode: 'TYPING_MODE'
+			mode: App.TYPING_MODE
 		});
 	};
 
 	goLevelList(){
 		this.setState({
 			level: null,
-			mode: 'LIST_MODE'
+			mode: App.LIST_MODE
 		});
 	}
 
 	render(){
-		let levelList = (this.state.mode === 'LIST_MODE') ? <LevelList selectLevel={this.selectedLevel}/> : null;
-		let sentenceArea = (this.state.mode === 'TYPING_MODE') ? <SentenceArea level={this.state.level} goLevelList={this.goLevelList}/> : null;
+		let levelList = (this.state.mode === App.LIST_MODE) ? <LevelList selectLevel={this.selectedLevel}/> : null;
+		let sentenceArea = (this.state.mode === App.TYPING_MODE) ? <SentenceArea level={this.state.level} goLevelList={this.goLevelList}/> : null;
 
 		return(
 			<div className="wrapper">

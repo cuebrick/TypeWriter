@@ -16,7 +16,7 @@ class SentenceArea extends React.Component{
 		// console.log('SentenceArea.render() :', this.props.level);
 		return(
 			<div className="sentence-area">
-				<h3 id="levelTitle">{this.props.level.title}</h3>
+				<h3>{this.props.level.title}</h3>
 
 				<LetterList level={this.props.level}/>
 
