@@ -16,12 +16,12 @@ class SentenceArea extends React.Component{
 		// console.log('SentenceArea.render() :', this.props.level);
 		return(
 			<div className="sentence-area">
-				<h3 id="levelTitle">문장연습</h3>
+				<h3 id="levelTitle">{this.props.level.title}</h3>
 
 				<LetterList level={this.props.level}/>
 
 				<div className="button-ui">
-					<button id="goLevelListButton" onClick={this.goLevelList}>목록으로</button>
+					<button onClick={this.goLevelList}>목록으로</button>
 				</div>
 
 				<KeyboardLayout/>

@@ -44,7 +44,7 @@ class LevelList extends React.Component{
 	render(){
 		// console.log('LevelList.render() : ', this.props.level);
 		return(
-			<div className={"level-list-area " + (this.state.isShow ? 'show' : 'hide')}>
+			<div className="level-list-area">
 				<h3>단계 목록</h3>
 				<div id="levelList" className="level-list">
 					{
