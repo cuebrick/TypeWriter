@@ -74,15 +74,15 @@ class LetterList extends React.Component{
 			case 8: // backspace
 				// recordKey(e);
 				//
-				// if(_play.level.keyBuffer.length){
-				// 	_play.level.keyBuffer.pop();
+				if(this.props.level.buffer.length){
+					this.props.level.buffer.pop();
 				// 	evaluate();
-				// }else{
+				}else{
 				// 	removeEvaluate();
-				// 	setPrevIndex();
-				// }
+					this.setPrevIndex();
+				}
 				//
-				// updateDisplay(_play.level.keyBuffer);
+				this.updateDisplay(this.props.level.buffer);
 				// evaluate();
 				break;
 
@@ -192,6 +192,9 @@ class LetterList extends React.Component{
 		this.props.level.buffer.push(char);
 	}
 
+	setPrevIndex(){
+		this.props.level.index--;
+	}
 	setNextIndex(){
 		// this.setState({index: this.state.index++});
 		this.props.level.index++;
