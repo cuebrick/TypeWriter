@@ -6,7 +6,6 @@ import Hangul from '../lib/hangul';
 
 class LetterList extends React.Component{
 
-
 	constructor(props){
 		super(props);
 
@@ -19,6 +18,7 @@ class LetterList extends React.Component{
 
 	componentDidMount(){
 		this.addKeyboardEvent();
+		this.getCurrentItem().setActive(true);// 첫 글자 아이템에 active 처리
 	}
 
 	componentWillUnmount(){
@@ -121,7 +121,7 @@ class LetterList extends React.Component{
 			case 13: // enter
 				e.preventDefault();
 				this.inputLetter(e);
-				// enterKeyLoop();
+				this.enterKeyLoop();
 				break;
 
 			// 숫자, 기호 입력 케이스(숫자, 기호 입력은 입력 즉시 다음 칸으로 움직이고 한글 도깨비불 현상이 없음)
@@ -176,12 +176,10 @@ class LetterList extends React.Component{
 			if(letter.length > 1){
 				let letters = Hangul.d(letter, true);
 				this.updateDisplay(letters.shift());
-				// this.evaluate();
 				this.setNextIndex();
 				level.buffer = letters[0];
 			}
 			this.updateDisplay(level.buffer);
-			// this.evaluate();
 		}
 	}
 
@@ -192,25 +190,41 @@ class LetterList extends React.Component{
 		this.props.level.buffer.push(char);
 	}
 
-	setPrevIndex(){
-		this.props.level.index--;
-	}
-	setNextIndex(){
-		// this.setState({index: this.state.index++});
-		this.props.level.index++;
+	enterKeyLoop(){
+		if(this.props.level.text.length > this.level.index){
+			return;
+		}
+
 	}
 
+	setPrevIndex(){
+		this.getCurrentItem().setActive(false);
+		this.props.level.index--;
+		let item = this.getCurrentItem();
+		if(item)
+			item.setActive(true);
+	}
+	setNextIndex(){
+		this.getCurrentItem().setActive(false);
+		this.props.level.index++;
+		let item = this.getCurrentItem();
+		if(item)
+			item.setActive(true);
+	}
 	updateDisplay(charArray){
-		// this.setState({typing: Hangul.a(charArray)});
-		let item = this.refs['letterItem'+this.props.level.index];
-		item.input(Hangul.a(charArray));
+		this.getCurrentItem().input(Hangul.a(charArray));
+	}
+
+	getCurrentItem(){
+		return this.refs['letterItem'+this.props.level.index];
 	}
 
 	render(){
 		// console.log('LetterList.render:>>');
 		let letters = [];
-		if(this.props.level){
-			letters = this.props.level.text.split('');
+		let level = this.props.level;
+		if(level){
+			letters = level.text.split('');
 		}
 
 		let letterItems = letters.map((letter, i) => {
