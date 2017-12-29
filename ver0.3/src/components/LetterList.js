@@ -191,10 +191,17 @@ class LetterList extends React.Component{
 	}
 
 	enterKeyLoop(){
-		if(this.props.level.text.length > this.level.index){
+		if(this.props.level.text.length === this.props.level.index){
 			return;
 		}
 
+		let item = this.getCurrentItem();
+		this.setNextIndex();
+		if(item.props.char === '↩'){
+			this.clearBuffer();
+		}else{
+			this.enterKeyLoop();
+		}
 	}
 
 	setPrevIndex(){
