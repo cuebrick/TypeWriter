@@ -1,6 +1,28 @@
 import React from 'react';
 
 class KeyboardLayout extends React.Component{
+
+	componentDidMount(){
+		this.addKeyboardEvent();
+	}
+
+	componentWillUnmount(){
+		this.removeKeyboardEvent();
+	}
+
+	addKeyboardEvent(){
+		window.addEventListener('keydown', this.handleKeyDown);
+	}
+
+	removeKeyboardEvent(){
+		window.removeEventListener('keydown', this.handleKeyDown);
+	}
+
+	handleKeyDown(e){
+		// console.log('KeyboardLayout.keydown: ', e.keyCode);
+	}
+
+
 	render(){
 		return(
 			<div className="keyboard">
