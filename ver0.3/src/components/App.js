@@ -5,6 +5,7 @@ import Badge from './Badge';
 import SentenceArea from './SentenceArea';
 import PlayManager from './PlayManager';
 import Level from './Level';
+import User from './User';
 import LevelData from '../json/level-data';
 
 class App extends React.Component{
@@ -58,6 +59,11 @@ class App extends React.Component{
 		});
 	}
 
+	componentDidMount(){
+		let user = new User();
+		user.setBadge(this.refs.badge);
+	}
+
 	render(){
 		let levelList = (this.state.mode === App.LIST_MODE) ? <LevelList selectLevel={this.selectedLevel}/> : null;
 		let sentenceArea = (this.state.mode === App.TYPING_MODE) ? <SentenceArea level={this.state.level} goLevelList={this.goLevelList}/> : null;
@@ -65,7 +71,7 @@ class App extends React.Component{
 		return(
 			<div className="wrapper">
 				<Header/>
-				<Badge/>
+				<Badge ref={"badge"}/>
 				{levelList}
 				{sentenceArea}
 			</div>

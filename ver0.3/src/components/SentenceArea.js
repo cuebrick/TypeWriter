@@ -1,6 +1,7 @@
 import React from 'react';
 import KeyboardLayout from './KeyboardLayout';
 import LetterList from './LetterList';
+import User from './User';
 
 class SentenceArea extends React.Component{
 	constructor(props){
@@ -10,6 +11,7 @@ class SentenceArea extends React.Component{
 
 	goLevelList(){
 		this.props.goLevelList();
+		User.getInstance().report('from : SentenceArea.goLevelList()')
 	}
 
 	render(){

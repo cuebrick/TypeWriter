@@ -16,7 +16,10 @@ class User{
 
 	setBadge(badge){
 		this._badge = badge;
-		console.log('badge: ', badge);
+	}
+
+	report(obj){
+		this._badge.show();
 	}
 }
 
