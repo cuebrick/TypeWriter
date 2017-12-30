@@ -1,6 +1,6 @@
 class User{
 	static _instance;
-	static get getInstance(){
+	static getInstance(){
 		return this._instance;
 	}
 
