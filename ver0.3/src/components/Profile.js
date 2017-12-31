@@ -8,7 +8,7 @@ class Profile extends React.Component{
 					<img src={"/images/icon/profile-icon-1.svg"}/>
 				</div>
 				<div className="user-info">
-					<div className="user-level">수련생</div>
+					<div className="user-grade">수련생</div>
 					<div className="user-name">세계의끝</div>
 				</div>
 			</div>
