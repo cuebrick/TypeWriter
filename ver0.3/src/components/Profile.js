@@ -1,4 +1,5 @@
 import React from 'react';
+import UserList from './UserList';
 
 class Profile extends React.Component{
 	constructor(props){
@@ -16,8 +17,8 @@ class Profile extends React.Component{
 	render(){
 		let layerShowClassName = (this.state.isShowUserLayer) ? ' show' : ' hide';
 		return(
-			<div className="profile" onClick={this.toggleUserLayer}>
-				<div className="profile-image">
+			<div className="profile">
+				<div className="profile-image" onClick={this.toggleUserLayer}>
 					<img src={"/images/icon/profile-icon-1.svg"}/>
 				</div>
 				<div className="user-info">
@@ -25,7 +26,7 @@ class Profile extends React.Component{
 					<div className="user-name">세계의끝</div>
 				</div>
 				<div className={"user-layer" + layerShowClassName}>
-					<button>새로운 사용자</button>
+					<UserList/>
 				</div>
 			</div>
 		)
