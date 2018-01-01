@@ -23,12 +23,18 @@ class Profile extends React.Component{
 						<img src={"/images/icon/profile-icon-1.svg"}/>
 					</div>
 					<div className="user-description">
-						<div className="user-grade">수련생</div>
-						<div className="user-name">세계의끝</div>
+						<div className="user-grade">{/*{this.props.userInfo.grade}*/}</div>
+						<div className="user-name">{/*{this.props.userInfo.name}*/}</div>
 					</div>
 				</div>
 				<div className="user-layer">
 					<UserList/>
+					<button className="add-user">
+						<div className="user-image">
+							새로운 수련생 추가
+							<img src={"/images/icon/profile-icon-0.svg"}/>
+						</div>
+					</button>
 				</div>
 			</div>
 		)

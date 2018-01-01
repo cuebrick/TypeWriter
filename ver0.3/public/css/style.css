@@ -319,10 +319,10 @@ header{
 	background-color: #515460;
 	overflow-y: auto;
 }
-.profile > .user-layer > .user-list{
+.profile > .user-layer .user-list{
 	padding: 5px;
 }
-.profile > .user-layer > .user-list > li{
+.profile > .user-layer .user-list > li{
 	height: 40px;
 	padding: 5px;
 	margin-bottom: 5px;
@@ -330,20 +330,31 @@ header{
 	cursor: pointer;
 	border-radius: 4px;
 }
-.profile > .user-layer > .user-list > li:hover{
+.profile > .user-layer .user-list > li:hover{
 	background-color: rgba(255, 255, 255, 0.2);
 }
-.profile > .user-layer > .user-list .user-image{
+.profile > .user-layer .user-list .user-image{
 	float: right;
 	margin-left: 5px;
 }
-.profile > .user-layer > .user-list .user-image > img{
+.profile > .user-layer .user-list .user-image > img{
 	width: 30px;
 }
 .user-grade{
 	font-size: 11px;
 	color: #6ac1e2;
 }
+.profile .add-user{
+	width: 100%;
+}
+.profile .add-user .user-image{
+	text-align: center;
+}
+.profile .add-user .user-image > img{
+	height: 20px;
+	vertical-align: -5px;
+}
+
 
 
 .keyboard{
