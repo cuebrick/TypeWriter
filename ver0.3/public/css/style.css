@@ -270,11 +270,26 @@ header{
 
 .profile{
 	float: right;
-	width: 150px;
+	width: 200px;
+	height: 100%;
+	box-sizing: border-box;
 	padding: 5px;
 	position: relative;
 }
-.profile > .user-info{
+.profile.active{
+	background-color: #474954;
+}
+.profile .user-layer{
+	display: none;
+}
+.profile.active .user-layer{
+	display: block;
+}
+.profile .user-info{
+	height: 100%;
+	cursor: pointer;
+}
+.profile .user-description{
 	float: right;
 	font-size: 14px;
 	padding-right: 5px;
@@ -298,7 +313,7 @@ header{
 	z-index: 100;
 	top: 50px;
 	right: 0;
-	width: 200px;
+	width: 100%;
 	min-height: 50px;
 	max-height: 300px;
 	background-color: #515460;
