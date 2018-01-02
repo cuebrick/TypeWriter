@@ -1,4 +1,5 @@
 import React from 'react';
+import User from './User';
 import UserList from './UserList';
 
 class Profile extends React.Component{
@@ -6,8 +7,11 @@ class Profile extends React.Component{
 		super(props);
 		this.toggleUserLayer = this.toggleUserLayer.bind(this);
 		this.state = {
+			profile : User.getInstance().profile,
 			isShowUserLayer : false
-		}
+		};
+
+		console.log('User.getInstance(): ', User.getInstance());
 	}
 
 	toggleUserLayer(){
@@ -23,8 +27,8 @@ class Profile extends React.Component{
 						<img src={"/images/icon/profile-icon-1.svg"}/>
 					</div>
 					<div className="user-description">
-						<div className="user-grade">{/*{this.props.userInfo.grade}*/}</div>
-						<div className="user-name">{/*{this.props.userInfo.name}*/}</div>
+						<div className="user-grade">{this.state.profile.grade}</div>
+						<div className="user-name">{this.state.profile.name}</div>
 					</div>
 				</div>
 				<div className="user-layer">
