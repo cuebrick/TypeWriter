@@ -47,7 +47,7 @@ class User{
 	get grade(){
 		return this._data.grade;
 	}
-	get image(){
+	get icon(){
 		return this._data.icon;
 	}
 	get level(){
@@ -56,11 +56,13 @@ class User{
 
 	setBadge(badge){
 		this._badge = badge;
+		console.log('this._badge>>>>', this._badge);
 	}
 
 	initUser(){
 		if (typeof(Storage) !== "undefined") {
 			this._users = this.getUserList();
+
 			let currentUserId = this.getCurrentUserId();
 			let currentUserData = this._users[currentUserId];
 			if(!currentUserData)
@@ -68,15 +70,6 @@ class User{
 
 			this._profile = new UserProfile(currentUserData);
 
-
-			// console.log('this._profile: ', this._profile);
-			// let currentUserId = this.getCurrentUserId();
-			// if(!currentUserId)
-			// 	currentUserId = this.getNewUserId();
-			//
-			// let profile = userList[currentUserId];
-			// if(profile)
-			// 	this.setUserProfile(profile);
 		} else {
 			// TODO: No Web Storage support..
 		}
@@ -97,22 +90,22 @@ class User{
 		// TODO:
 		return {
 			id: 'user' + Math.floor((1 + Math.random()) * 0x100000000).toString(16).substring(1),
-			name: "이름 없는 사용자",
+			name: "이름없는 사용자",
 			grade: "수련생",
 			level: 1,
 			icon: 0
 		};
 	}
 
-	setUserProfile(userId){
+	saveUser(profile){
+		let p = (profile) ? profile : this._profile;
 
-	}
-
-	saveUser(userData){
-
+		this._users[p.id] = p;
+		localStorage.setItem('users', JSON.stringify(this._users));
 	}
 
 	report(obj){
+		console.log('this._badge>>>>', this._badge);
 		this._badge.show();
 	}
 }

@@ -27,6 +27,10 @@ class UserProfile{
 	get icon(){
 		return this._data.icon;
 	}
+
+	toString(){
+		return JSON.stringify(this._data);
+	}
 }
 
 export default UserProfile;
