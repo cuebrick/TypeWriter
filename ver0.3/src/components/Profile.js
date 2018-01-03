@@ -1,6 +1,7 @@
 import React from 'react';
 import User from './User';
 import UserList from './UserList';
+import UserProfile from './UserProfile';
 
 class Profile extends React.Component{
 
@@ -17,8 +18,10 @@ class Profile extends React.Component{
 		this._user = User.getInstance();
 		this.state = {
 			profile : this._user.profile,
+			users: this._user.users,
 			isShowUserLayer : false,
-			isShowAddUserView : false
+			isShowAddUserView : false,
+			inputNewUserName: ''
 		};
 
 		console.log('User.getInstance(): ', this._user.profile.toString());
@@ -33,11 +36,22 @@ class Profile extends React.Component{
 	}
 
 	handleCreateUser(){
+		// 먼저 현재 사용자를 저장
+		this._user.saveUser();
+		this._user.reloadUserList();
+		this.setState({users: this._user.users});
 
+		// 새로운 사용자를 생성하고 세팅
+		let profile = new UserProfile(null);
+		profile.rename(this.state.inputNewUserName);
+		profile.changeIcon(3);
+		this._user.setUserProfile(profile);
+		this.setState({profile: profile});
+		this.toggleAddUserView();
 	}
 
 	inputUserName(e){
-		console.log(e.target.value);
+		this.setState({inputNewUserName: e.target.value});
 	}
 
 	handleInputFocus(e){
@@ -87,7 +101,7 @@ class Profile extends React.Component{
 					}
 				</div>
 				<div className="user-layer">
-					<UserList/>
+					<UserList users={this.state.users}/>
 				</div>
 			</div>
 		)

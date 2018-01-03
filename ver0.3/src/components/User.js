@@ -12,7 +12,10 @@ class User{
 	_data;
 	_users;
 	_profile;
+
+	// components
 	_badge;
+	_userList;
 
 	constructor(){
 		if(!User._instance){
@@ -34,6 +37,9 @@ class User{
 
 	get data(){
 		return this._data;
+	}
+	get users(){
+		return this._users;
 	}
 	get profile(){
 		return this._profile;
@@ -59,23 +65,36 @@ class User{
 		console.log('this._badge>>>>', this._badge);
 	}
 
+	setUserList(userList){
+		this._userList = userList;
+	}
+
 	initUser(){
+		// localStorage.clear();
 		if (typeof(Storage) !== "undefined") {
-			this._users = this.getUserList();
+			this.reloadUserList();
 
 			let currentUserId = this.getCurrentUserId();
 			let currentUserData = this._users[currentUserId];
-			if(!currentUserData)
-				currentUserData = this.getNewUserData();
+			// if(!currentUserData)
+			// 	currentUserData = this.getNewUserData();
 
-			this._profile = new UserProfile(currentUserData);
-
+			this.setUserProfile(new UserProfile(currentUserData));
 		} else {
 			// TODO: No Web Storage support..
 		}
 	}
 
-	getUserList(){
+	setUserProfile(profile){
+		this._profile = profile;
+		this.saveUser(profile);
+	}
+
+	reloadUserList(){
+		this._users = this.getUserListData();
+	}
+
+	getUserListData(){
 		let users = JSON.parse(localStorage.getItem('users'));
 		if(!users)
 			users = {};
@@ -86,22 +105,11 @@ class User{
 		return localStorage.getItem('currentUser');
 	}
 
-	getNewUserData(){
-		// TODO:
-		return {
-			id: 'user' + Math.floor((1 + Math.random()) * 0x100000000).toString(16).substring(1),
-			name: "이름없는 사용자",
-			grade: "수련생",
-			level: 1,
-			icon: 0
-		};
-	}
-
 	saveUser(profile){
 		let p = (profile) ? profile : this._profile;
-
-		this._users[p.id] = p;
+		this._users[p.id] = p.data;
 		localStorage.setItem('users', JSON.stringify(this._users));
+		localStorage.setItem('currentUser', p.id);
 	}
 
 	report(obj){

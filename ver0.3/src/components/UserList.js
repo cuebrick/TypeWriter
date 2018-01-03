@@ -3,9 +3,28 @@ import React from 'react';
 class UserList extends React.Component{
 
 	render(){
+		let userList = Object.keys(this.props.users).map((key, index) => {
+			return this.props.users[key];
+		});
+
+		// console.log('UserList: >>>', userList);
+
 		return(
 			<ul className="user-list">
-				<li>
+				{
+					userList.map((userData) => {
+						return(
+							<li key={userData.id}>
+								<div className="user-image">
+									<img src={"/images/icon/profile-icon-"+ userData.icon +".svg"}/>
+								</div>
+								<div className="user-grade">{userData.grade}</div>
+								<div className="user-name">{userData.name}</div>
+							</li>
+						)
+					})
+				}
+				{/*<li>
 					<div className="user-image">
 						<img src={"/images/icon/profile-icon-2.svg"}/>
 					</div>
@@ -60,7 +79,7 @@ class UserList extends React.Component{
 					</div>
 					<div className="user-grade">수련생</div>
 					<div className="user-name">익명의 홍길동</div>
-				</li>
+				</li>*/}
 			</ul>
 		)
 	}
