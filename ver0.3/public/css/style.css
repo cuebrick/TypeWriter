@@ -276,13 +276,13 @@ header{
 	padding: 5px;
 	position: relative;
 }
-.profile.active{
+.profile.user-layer-mode{
 	background-color: #474954;
 }
 .profile .user-layer{
 	display: none;
 }
-.profile.active .user-layer{
+.profile.user-layer-mode .user-layer{
 	display: block;
 }
 .profile .user-info{
@@ -290,10 +290,21 @@ header{
 	cursor: pointer;
 }
 .profile .user-description{
-	float: right;
+	position: absolute;
+	z-index: 99;
+	width: 160px;
 	font-size: 14px;
-	padding-right: 5px;
+	right: 40px;
 	text-align: right;
+	transition: 0.4s right;
+}
+.profile.user-layer-mode .user-description{
+	right: 0;
+	z-index: 97;
+}
+.profile.add-user-mode .user-description{
+	right: 80px;
+	z-index: 97;
 }
 
 .profile-image{
@@ -302,6 +313,7 @@ header{
 	height: 38px;
 	border-radius: 19px;
 	overflow: hidden;
+	margin-left: 5px;
 }
 .profile-image > img{
 	width: 100%;
@@ -344,16 +356,39 @@ header{
 	font-size: 11px;
 	color: #6ac1e2;
 }
-.profile .add-user{
-	width: 100%;
+.profile .profile-buttons{
+	width: 80px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 98;
+	text-align: right;
 }
-.profile .add-user .user-image{
-	text-align: center;
+.profile .profile-buttons button{
+	width: 40px;
+	height: 50px;
+	border-radius: 0;
+	font-size: 12px;
+	outline: none;
+	padding: 0;
 }
-.profile .add-user .user-image > img{
-	height: 20px;
-	vertical-align: -5px;
+.profile .user-name > input[type=text]{
+	width: 110px;
+	font-size: 14px;
+	padding: 0 0 2px 0;
+	text-align: right;
+	animation: blink 0.5s linear infinite alternate;
 }
+input[type=text]{
+	color: #fff;;
+	border: 0;
+	border-bottom: 1px solid #6ac1e2;
+	background-color: transparent;
+	outline: none;
+}
+
+
+
 
 
 
