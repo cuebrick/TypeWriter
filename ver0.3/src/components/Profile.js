@@ -101,7 +101,7 @@ class Profile extends React.Component{
 					}
 				</div>
 				<div className="user-layer">
-					<UserList users={this.state.users}/>
+					<UserList users={this.state.users} currentUserId={this.state.profile.id}/>
 				</div>
 			</div>
 		)

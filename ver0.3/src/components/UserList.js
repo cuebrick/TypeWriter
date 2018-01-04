@@ -3,7 +3,7 @@ import React from 'react';
 class UserList extends React.Component{
 
 	render(){
-		let userList = Object.keys(this.props.users).map((key, index) => {
+		let userList = Object.keys(this.props.users).map((key) => {
 			return this.props.users[key];
 		});
 
@@ -12,14 +12,19 @@ class UserList extends React.Component{
 		return(
 			<ul className="user-list">
 				{
-					userList.map((userData) => {
+					userList.map((data) => {
+						let isCurrentUser = (this.props.currentUserId === data.id);
 						return(
-							<li key={userData.id}>
+							<li key={data.id}>
+								{
+									isCurrentUser &&
+									<img src={"/images/checked.svg"} className="checked" width="15" />
+								}
 								<div className="user-image">
-									<img src={"/images/icon/profile-icon-"+ userData.icon +".svg"}/>
+									<img src={"/images/icon/profile-icon-"+ data.icon +".svg"}/>
 								</div>
-								<div className="user-grade">{userData.grade}</div>
-								<div className="user-name">{userData.name}</div>
+								<div className="user-grade">{data.grade}</div>
+								<div className="user-name">{data.name}</div>
 							</li>
 						)
 					})
