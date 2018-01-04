@@ -3,7 +3,6 @@ import React from 'react';
 class Keycap extends React.Component{
 	render(){
 		let shiftingClassName = (this.props.isShifting) ? ' shifted' : '';
-		console.log(shiftingClassName);
 		return(
 			<div data-key={this.props.keyCode} className={this.props.keyType}>
 				<div className={"en" + shiftingClassName}>

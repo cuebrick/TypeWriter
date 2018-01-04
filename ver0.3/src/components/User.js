@@ -65,10 +65,6 @@ class User{
 		console.log('this._badge>>>>', this._badge);
 	}
 
-	setUserList(userList){
-		this._userList = userList;
-	}
-
 	initUser(){
 		// localStorage.clear();
 		if (typeof(Storage) !== "undefined") {
@@ -76,8 +72,6 @@ class User{
 
 			let currentUserId = this.getCurrentUserId();
 			let currentUserData = this._users[currentUserId];
-			// if(!currentUserData)
-			// 	currentUserData = this.getNewUserData();
 
 			this.setUserProfile(new UserProfile(currentUserData));
 		} else {

@@ -17,7 +17,6 @@ class Profile extends React.Component{
 		this.toggleProfileIcon = this.toggleProfileIcon.bind(this);
 		this.selectedUser = this.selectedUser.bind(this);
 		this.deletedUser = this.deletedUser.bind(this);
-		// this.handleIconSelect = this.handleIconSelect.bind(this);
 
 		this._user = User.getInstance();
 		this.state = {
@@ -56,7 +55,6 @@ class Profile extends React.Component{
 	handleCreateUser(){
 		// 먼저 현재 사용자를 저장
 		this._user.saveUser();
-		// this.setState({users: this._user.users});
 
 		// 새로운 사용자를 생성하고 세팅
 		let profile = new UserProfile(null);
@@ -65,7 +63,6 @@ class Profile extends React.Component{
 		profile.changeIcon(this.state.selectIconIndex);
 		this._user.setUserProfile(profile);
 		this.setState({profile: profile});
-		// this.toggleAddUserView();
 		this.setState({isShowAddUserView: false});
 		this.setState({users: this._user.reloadUserList()});
 	}

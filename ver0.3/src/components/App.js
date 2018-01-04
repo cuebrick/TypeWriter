@@ -60,8 +60,7 @@ class App extends React.Component{
 	}
 
 	componentDidMount(){
-		let user = new User();
-		user.setBadge(this.refs.badge);
+		User.getInstance().setBadge(this.refs.badge);
 	}
 
 	render(){
