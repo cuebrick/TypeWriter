@@ -342,11 +342,14 @@ header{
 	cursor: pointer;
 	border-radius: 4px;
 }
+.profile > .user-layer .user-list > li.current-user{
+	cursor: default;
+}
 .profile > .user-layer .user-list > li > img.checked{
 	float: left;
 	margin-top: 8px;
 }
-.profile > .user-layer .user-list > li:hover{
+.profile > .user-layer .user-list > li:hover:not(.current-user){
 	background-color: rgba(255, 255, 255, 0.2);
 }
 .profile > .user-layer .user-list .user-image{
