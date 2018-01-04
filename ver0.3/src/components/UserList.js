@@ -2,6 +2,10 @@ import React from 'react';
 
 class UserList extends React.Component{
 
+	handleItemClick(userId){
+		this.props.selectUser(userId);
+	}
+
 	render(){
 		let userList = Object.keys(this.props.users).map((key) => {
 			return this.props.users[key];
@@ -27,7 +31,7 @@ class UserList extends React.Component{
 							)
 						} else {
 							return(
-								<li key={data.id}>
+								<li key={data.id} onClick={() => this.handleItemClick(data.id)}>
 									<div className="user-image">
 										<img src={"/images/icon/profile-icon-"+ data.icon +".svg"}/>
 									</div>

@@ -85,6 +85,12 @@ class User{
 		}
 	}
 
+	changeUser(id){
+		localStorage.setItem('currentUser', id);
+		this.initUser();
+		return this.profile;
+	}
+
 	setUserProfile(profile){
 		this._profile = profile;
 		this.saveUser(profile);
