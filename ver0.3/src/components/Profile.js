@@ -16,6 +16,7 @@ class Profile extends React.Component{
 		this.handleCreateUser = this.handleCreateUser.bind(this);
 		this.toggleProfileIcon = this.toggleProfileIcon.bind(this);
 		this.selectedUser = this.selectedUser.bind(this);
+		this.deletedUser = this.deletedUser.bind(this);
 		// this.handleIconSelect = this.handleIconSelect.bind(this);
 
 		this._user = User.getInstance();
@@ -33,12 +34,12 @@ class Profile extends React.Component{
 	}
 
 	toggleUserLayer(){
-		this.setState({"isShowUserLayer": !this.state.isShowUserLayer});
+		this.setState({isShowUserLayer: !this.state.isShowUserLayer});
 	}
 
 	toggleProfileIcon(e){
 		console.log(this.state.isShowProfileIconSelector);
-		this.setState({"isShowProfileIconSelector": !this.state.isShowProfileIconSelector});
+		this.setState({isShowProfileIconSelector: !this.state.isShowProfileIconSelector});
 	}
 
 	handleIconSelect(index){
@@ -47,7 +48,9 @@ class Profile extends React.Component{
 	}
 
 	toggleAddUserView(){
-		this.setState({"isShowAddUserView": !this.state.isShowAddUserView});
+		this.setState({inputNewUserName: "이름없는 사용자"});
+		this.setState({selectIconIndex: 0});
+		this.setState({isShowAddUserView: !this.state.isShowAddUserView});
 	}
 
 	handleCreateUser(){
@@ -62,8 +65,9 @@ class Profile extends React.Component{
 		profile.changeIcon(this.state.selectIconIndex);
 		this._user.setUserProfile(profile);
 		this.setState({profile: profile});
-		this.toggleAddUserView();
-		this._user.reloadUserList();
+		// this.toggleAddUserView();
+		this.setState({isShowAddUserView: false});
+		this.setState({users: this._user.reloadUserList()});
 	}
 
 	selectedUser(userId){
@@ -71,6 +75,11 @@ class Profile extends React.Component{
 		this.setState({profile: profile});
 		this.toggleUserLayer();
 		this._user.reloadUserList();
+	}
+
+	deletedUser(userId){
+		let users = User.getInstance().requestDeleteUser(userId);
+		this.setState({users: users});
 	}
 
 	inputUserName(e){
@@ -132,7 +141,7 @@ class Profile extends React.Component{
 					}
 				</div>
 				<div className="user-layer">
-					<UserList users={this.state.users} currentUserId={this.state.profile.id} selectUser={this.selectedUser}/>
+					<UserList users={this.state.users} currentUserId={this.state.profile.id} selectUser={this.selectedUser} deleteUser={this.deletedUser}/>
 				</div>
 			</div>
 		)

@@ -294,16 +294,17 @@ header{
 	z-index: 99;
 	width: 160px;
 	font-size: 14px;
-	right: 40px;
+	right: 45px;
 	text-align: right;
-	transition: 0.4s right;
+	transition: 0.4s all;
 }
 .profile.user-layer-mode .user-description{
-	right: 0;
+	right: 5px;
 	z-index: 97;
+	width: 190px;
 }
 .profile.add-user-mode .user-description{
-	right: 80px;
+	right: 85px;
 	z-index: 97;
 }
 .profile .user-description .icon-selector{
@@ -352,20 +353,28 @@ header{
 }
 .profile > .user-layer .user-list > li{
 	height: 40px;
-	padding: 5px;
 	margin-bottom: 5px;
 	text-align: right;
-	cursor: pointer;
-	border-radius: 4px;
 }
-.profile > .user-layer .user-list > li.current-user{
+.profile > .user-layer .user-list > li > .user-inner{
+	padding: 5px;
+	border-radius: 4px;
+	margin-left: 30px;
+	cursor: pointer;
+}
+.profile > .user-layer .user-list > li.current-user > .user-inner{
 	cursor: default;
 }
+.profile > .user-layer .user-list > li > img.delete,
 .profile > .user-layer .user-list > li > img.checked{
 	float: left;
-	margin-top: 8px;
+	margin-top: 13px;
+	margin-left: 5px;
 }
-.profile > .user-layer .user-list > li:hover:not(.current-user){
+.profile > .user-layer .user-list > li > img.delete{
+	cursor: pointer;
+}
+.profile > .user-layer .user-list > li:not(.current-user) > .user-inner:hover{
 	background-color: rgba(255, 255, 255, 0.2);
 }
 .profile > .user-layer .user-list .user-image{
@@ -394,6 +403,11 @@ header{
 	font-size: 12px;
 	outline: none;
 	padding: 0;
+}
+.profile .user-name{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .profile .user-name > input[type=text]{
 	width: 110px;

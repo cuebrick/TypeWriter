@@ -97,7 +97,16 @@ class User{
 	}
 
 	reloadUserList(){
-		this._users = this.getUserListData();
+		return this._users = this.getUserListData();
+	}
+
+	requestDeleteUser(id){
+		console.log('requestDeleteUser: >>', id);
+		this.reloadUserList();
+		delete this._users[id];
+		localStorage.setItem('users', JSON.stringify(this._users));
+		this.reloadUserList();
+		return this._users;
 	}
 
 	getUserListData(){
