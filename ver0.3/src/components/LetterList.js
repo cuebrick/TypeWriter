@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import LetterItem from './LetterItem';
 import Keymap from '../json/keymap';
 import Level from './Level';
@@ -215,8 +216,14 @@ class LetterList extends React.Component{
 		this.getCurrentItem().setActive(false);
 		this.props.level.index++;
 		let item = this.getCurrentItem();
-		if(item)
+		if(item){
+			let itemNode = ReactDOM.findDOMNode(item);
+			let listNode = ReactDOM.findDOMNode(this);
+			let itemRect = itemNode.getBoundingClientRect();
+			listNode.scrollTop = itemRect.y + listNode.scrollTop - itemRect.height;
+			
 			item.setActive(true);
+		}
 	}
 	updateDisplay(charArray){
 		this.getCurrentItem().input(Hangul.a(charArray));
