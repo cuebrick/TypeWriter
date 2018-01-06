@@ -50,6 +50,8 @@ class App extends React.Component{
 			level: new Level(data),
 			mode: App.TYPING_MODE
 		});
+
+		this.refs.badge.hide();
 	};
 
 	goLevelList(){
