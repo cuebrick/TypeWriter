@@ -12,9 +12,9 @@ class LetterList extends React.Component{
 
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 
-		this.state = {
+		/*this.state = {
 			typing: []
-		}
+		}*/
 	}
 
 	componentDidMount(){
@@ -209,22 +209,29 @@ class LetterList extends React.Component{
 		this.getCurrentItem().setActive(false);
 		this.props.level.index--;
 		let item = this.getCurrentItem();
-		if(item)
+		if(item){
+			this.scroll(item);
 			item.setActive(true);
+		}
 	}
 	setNextIndex(){
 		this.getCurrentItem().setActive(false);
 		this.props.level.index++;
 		let item = this.getCurrentItem();
 		if(item){
-			let itemNode = ReactDOM.findDOMNode(item);
-			let listNode = ReactDOM.findDOMNode(this);
-			let itemRect = itemNode.getBoundingClientRect();
-			listNode.scrollTop = itemRect.y + listNode.scrollTop - itemRect.height;
-			
+			this.scroll(item);
 			item.setActive(true);
 		}
 	}
+	scroll(itemComponent){
+		let itemNode = ReactDOM.findDOMNode(itemComponent);
+		let listNode = ReactDOM.findDOMNode(this);
+		let itemRect = itemNode.getBoundingClientRect();
+		let st = Math.round(itemRect.y + listNode.scrollTop - itemRect.height);
+		// listNode.scrollTop = st;
+		$(listNode).stop().animate({scrollTop: st}, 250);
+	}
+
 	updateDisplay(charArray){
 		this.getCurrentItem().input(Hangul.a(charArray));
 	}
