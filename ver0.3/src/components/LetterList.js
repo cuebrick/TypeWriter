@@ -4,6 +4,7 @@ import LetterItem from './LetterItem';
 import Keymap from '../json/keymap';
 import Level from './Level';
 import Hangul from '../lib/hangul';
+import User from "./User";
 
 class LetterList extends React.Component{
 
@@ -82,8 +83,8 @@ class LetterList extends React.Component{
 				// 	removeEvaluate();
 					this.setPrevIndex();
 				}
-				//
 				this.updateDisplay(this.props.level.buffer);
+
 				// evaluate();
 				break;
 
@@ -206,22 +207,40 @@ class LetterList extends React.Component{
 	}
 
 	setPrevIndex(){
-		this.getCurrentItem().setActive(false);
-		this.props.level.index--;
 		let item = this.getCurrentItem();
+		if(item)
+			item.setActive(false);
+
+		this.props.level.index--;
+		item = this.getCurrentItem();
 		if(item){
 			this.scroll(item);
 			item.setActive(true);
 		}
 	}
 	setNextIndex(){
-		this.getCurrentItem().setActive(false);
-		this.props.level.index++;
+		// current LetterItem
 		let item = this.getCurrentItem();
+		if(item)
+			item.setActive(false);
+
+		// next LetterItem
+		this.props.level.index++;
+		item = this.getCurrentItem();
 		if(item){
 			this.scroll(item);
 			item.setActive(true);
+		} else {
+			this.finish();
 		}
+	}
+	finish(){
+		console.log('finish():>>>>');
+		let result = Object.keys(this.refs).map((key) => {
+			return this.refs[key].getData();
+		});
+		console.log(result);
+		User.getInstance().report('from : LetterList.finish()', result)
 	}
 	scroll(itemComponent){
 		let itemNode = ReactDOM.findDOMNode(itemComponent);
@@ -233,7 +252,9 @@ class LetterList extends React.Component{
 	}
 
 	updateDisplay(charArray){
-		this.getCurrentItem().input(Hangul.a(charArray));
+		let item = this.getCurrentItem();
+		if(item)
+			item.input(Hangul.a(charArray));
 	}
 
 	getCurrentItem(){

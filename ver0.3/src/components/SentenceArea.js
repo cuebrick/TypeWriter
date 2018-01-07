@@ -11,7 +11,6 @@ class SentenceArea extends React.Component{
 
 	goLevelList(){
 		this.props.goLevelList();
-		User.getInstance().report('from : SentenceArea.goLevelList()')
 	}
 
 	render(){

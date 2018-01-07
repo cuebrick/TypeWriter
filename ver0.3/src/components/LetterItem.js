@@ -21,6 +21,13 @@ class LetterItem extends React.Component{
 		this.setState({isCorrected: (this.props.char === this.state.input)})
 	}
 
+	getData(){
+		return {
+			text: this.props.char,
+			typing: this.state.input
+		}
+	}
+
 	render(){
 		let enterKeyClassName = (this.props.char === '↩') ? ' enter-key' : '';
 
