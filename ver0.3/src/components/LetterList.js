@@ -5,13 +5,20 @@ import Keymap from '../json/keymap';
 import Level from './Level';
 import Hangul from '../lib/hangul';
 import User from "./User";
+import Reporter from './Reporter';
 
 class LetterList extends React.Component{
+
+
+	// object
+	_reporter;
 
 	constructor(props){
 		super(props);
 
 		this.handleKeyDown = this.handleKeyDown.bind(this);
+
+		this._reporter = new Reporter();
 
 		/*this.state = {
 			typing: []
@@ -236,11 +243,13 @@ class LetterList extends React.Component{
 	}
 	finish(){
 		console.log('finish():>>>>');
-		let result = Object.keys(this.refs).map((key) => {
+		let data = Object.keys(this.refs).map((key) => {
 			return this.refs[key].getData();
 		});
 		// console.log(result);
-		User.getInstance().report(result)
+
+		this.props.level.result = this._reporter.getResult(data);
+		User.getInstance().report();
 	}
 	scroll(itemComponent){
 		let itemNode = ReactDOM.findDOMNode(itemComponent);

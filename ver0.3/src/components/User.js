@@ -1,5 +1,4 @@
 import UserProfile from './UserProfile';
-import Reporter from './Reporter';
 
 class User{
 	static _instance;
@@ -14,9 +13,6 @@ class User{
 	_users;
 	_profile;
 	_level;
-
-	// object
-	_reporter;
 
 	// components
 	_badge;
@@ -37,7 +33,6 @@ class User{
 			level: undefined
 		};
 
-		this._reporter = new Reporter();
 		this.initUser();
 	}
 
@@ -131,8 +126,7 @@ class User{
 		localStorage.setItem('currentUser', p.id);
 	}
 
-	report(data){
-		this._level.result = this._reporter.getResult(data);
+	report(){
 		this._badge.show(this._level);
 	}
 }
