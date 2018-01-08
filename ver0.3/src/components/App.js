@@ -46,10 +46,13 @@ class App extends React.Component{
 			return (item.id === id);
 		});
 
+		let level = new Level(data);
 		this.setState({
-			level: new Level(data),
+			level: level,
 			mode: App.TYPING_MODE
 		});
+
+		User.getInstance().setLevel(level);
 
 		this.refs.badge.hide();
 	};

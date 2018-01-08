@@ -18,6 +18,8 @@ class Level{
 	intervalId;
 	buffer;
 
+	result;
+
 	constructor(props){
 		// super(props);
 
@@ -31,6 +33,7 @@ class Level{
 		this.index = 0;
 		this.intervalId = undefined;
 		this.buffer = [];
+		this.result = [];
 
 		/*this.state = {
 			id: this.props.id,

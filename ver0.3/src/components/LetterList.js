@@ -239,8 +239,8 @@ class LetterList extends React.Component{
 		let result = Object.keys(this.refs).map((key) => {
 			return this.refs[key].getData();
 		});
-		console.log(result);
-		User.getInstance().report('from : LetterList.finish()', result)
+		// console.log(result);
+		User.getInstance().report(result)
 	}
 	scroll(itemComponent){
 		let itemNode = ReactDOM.findDOMNode(itemComponent);

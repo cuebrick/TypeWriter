@@ -8,7 +8,8 @@ class Badge extends React.Component{
 			isShow: false
 		}
 	}
-	show(){
+	show(level){
+		console.log('Badge.show(): ', level);
 		this.setState({isShow: true})
 	}
 	hide(){
