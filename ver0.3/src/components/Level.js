@@ -16,6 +16,8 @@ class Level{
 
 	index;
 	intervalId;
+	timeCount;
+	timeRecord;
 	buffer;
 
 	result;
@@ -32,6 +34,8 @@ class Level{
 
 		this.index = 0;
 		this.intervalId = undefined;
+		this.timeCount = 0;
+		this.timeRecord = [];
 		this.buffer = [];
 		this.result = [];
 

@@ -45,6 +45,9 @@ class LetterList extends React.Component{
 	handleKeyDown(e){
 		// console.log('LetterList.keydown: ', this, e.keyCode);
 		let code = e.keyCode;
+
+		this.recordKey(e);
+
 		switch (code){
 			// 아무것도 하지 않는 케이스 + 기본 키 입력도 막아야 하는 케이스
 			case 9: // tab
@@ -170,7 +173,6 @@ class LetterList extends React.Component{
 		let level = this.props.level;
 		let code = e.keyCode;
 
-		// this.recordKey(e);
 		let lang = level.language;
 		let shiftKey = (e.shiftKey) ? 's' : 'n';
 		let char = Keymap['code' + code][lang + shiftKey];
@@ -190,6 +192,21 @@ class LetterList extends React.Component{
 			}
 			this.updateDisplay(level.buffer);
 		}
+	}
+
+	recordKey(e){
+		let level = this.props.level;
+		if(!level.intervalId){
+			level.intervalId = setInterval(function () {
+				level.timeCount++;
+			}, 10);
+		}
+
+		level.timeRecord.push({
+			timestamp: level.timeCount,
+			keyCode: e.keyCode,
+			shiftKey: e.shiftKey
+		});
 	}
 
 	clearBuffer(){
@@ -246,10 +263,15 @@ class LetterList extends React.Component{
 		let data = Object.keys(this.refs).map((key) => {
 			return this.refs[key].getData();
 		});
-		// console.log(result);
-
+		this.stopCount();
 		this.props.level.result = this._reporter.getResult(data);
 		User.getInstance().report();
+	}
+	stopCount(){
+		let level = this.props.level;
+		if(level.intervalId){
+			clearInterval(level.intervalId);
+		}
 	}
 	scroll(itemComponent){
 		let itemNode = ReactDOM.findDOMNode(itemComponent);
