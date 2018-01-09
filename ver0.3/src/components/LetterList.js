@@ -264,7 +264,7 @@ class LetterList extends React.Component{
 			return this.refs[key].getData();
 		});
 		this.stopCount();
-		this.props.level.result = this._reporter.getResult(data);
+		this._reporter.saveResultAtLevel(this.props.level, data);
 		User.getInstance().report();
 	}
 	stopCount(){
