@@ -53,8 +53,6 @@ class App extends React.Component{
 		});
 
 		User.getInstance().setLevel(level);
-
-		this.refs.badge.hide();
 	};
 
 	goLevelList(){
@@ -62,6 +60,7 @@ class App extends React.Component{
 			level: null,
 			mode: App.LIST_MODE
 		});
+		this.refs.badge.hide();
 	}
 
 	componentDidMount(){
