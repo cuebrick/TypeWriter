@@ -5,12 +5,16 @@ class Badge extends React.Component{
 		super(props);
 
 		this.state = {
-			isShow: false
+			isShow: false,
+			star: 0
 		}
 	}
 	show(level){
-		console.log('Badge.show(): ', level);
-		this.setState({isShow: true})
+		// console.log('Badge.show(): ', level.result.star);
+		this.setState({
+			isShow: true,
+			level: level
+		});
 	}
 	hide(){
 		this.setState({isShow: false})
@@ -18,11 +22,21 @@ class Badge extends React.Component{
 
 	render(){
 		let isShowClassName = (this.state.isShow) ? ' show' : '';
+
 		return(
 			<div className={"badge" + isShowClassName}>
-				<div className="badge-title">견습 마법사 등급</div>
+				<div className="badge-title">{this.state.level && this.state.level.title}</div>
 				<div className="stars">
-					<span className="star"></span><span className="star"></span><span className="star incomplete"></span>
+					{
+						this.state.level &&
+						[...Array(3)].map((v, i) => {
+							if(i < Number(this.state.level.result.star)){
+								return <span key={"key"+i} className="star" />
+							} else {
+								return <span key={"key"+i} className="star incomplete" />
+							}
+						})
+					}
 				</div>
 				<div className="description"></div>
 			</div>

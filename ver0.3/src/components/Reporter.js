@@ -30,6 +30,17 @@ class Reporter{
 		let accuracy = (((totalCharLen - missCount) / totalCharLen) * 100).toFixed(1);
 		let elapseTime = (level.timeCount * 0.01).toFixed(1);
 		let speedPerMin = ((totalCharLen - missCount) * (60 / elapseTime)).toFixed(1);
+		let star = 0;
+		if(level.grade === 0){
+			if(Number(missLetterCount) === 0)
+				star++;
+
+			if(Number(missCount) === 0)
+				star++;
+
+			if(Number(speedPerMin) > 100)
+				star++;
+		}
 
 		level.result = {
 			totalLetterLen : data.length,
@@ -38,7 +49,8 @@ class Reporter{
 			missCount : missCount,
 			elapseTime : elapseTime,
 			speedPerMin : speedPerMin,
-			accuracy : accuracy
+			accuracy : accuracy,
+			star : star
 		};
 		return level;
 	}
