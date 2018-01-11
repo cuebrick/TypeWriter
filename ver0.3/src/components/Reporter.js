@@ -31,16 +31,15 @@ class Reporter{
 		let elapseTime = (level.timeCount * 0.01).toFixed(1);
 		let speedPerMin = ((totalCharLen - missCount) * (60 / elapseTime)).toFixed(1);
 		let star = 0;
-		if(level.grade === 0){
-			if(Number(missLetterCount) === 0)
-				star++;
 
-			if(Number(missCount) === 0)
-				star++;
+		if(Number(missLetterCount) === 0)
+			star++;
 
-			if(Number(speedPerMin) > 100)
-				star++;
-		}
+		if(Number(missCount) === 0)
+			star++;
+
+		if(Number(speedPerMin) > 100)
+			star++;
 
 		level.result = {
 			totalLetterLen : data.length,

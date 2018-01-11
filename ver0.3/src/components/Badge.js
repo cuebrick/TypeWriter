@@ -10,7 +10,6 @@ class Badge extends React.Component{
 		}
 	}
 	show(level){
-		// console.log('Badge.show(): ', level.result.star);
 		this.setState({
 			isShow: true,
 			level: level

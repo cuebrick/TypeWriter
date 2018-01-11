@@ -4,7 +4,6 @@ class LevelItem extends React.Component{
 	constructor(props){
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
-		// console.log(this.key);
 	}
 
 	run(){

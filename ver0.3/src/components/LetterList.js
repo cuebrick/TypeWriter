@@ -9,7 +9,6 @@ import Reporter from './Reporter';
 
 class LetterList extends React.Component{
 
-
 	// object
 	_reporter;
 
@@ -19,10 +18,6 @@ class LetterList extends React.Component{
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 
 		this._reporter = new Reporter();
-
-		/*this.state = {
-			typing: []
-		}*/
 	}
 
 	componentDidMount(){
@@ -57,9 +52,6 @@ class LetterList extends React.Component{
 				break;
 
 			case 16: // shift
-				// _play.keyboard.shifting();
-				break;
-
 			case 17: // ctrl
 			case 93: // context menu
 			case 25: // ctrl - right
@@ -84,18 +76,12 @@ class LetterList extends React.Component{
 				break;
 
 			case 8: // backspace
-				// recordKey(e);
-				//
 				if(this.props.level.buffer.length){
 					this.props.level.buffer.pop();
-				// 	evaluate();
 				}else{
-				// 	removeEvaluate();
 					this.setPrevIndex();
 				}
 				this.updateDisplay(this.props.level.buffer);
-
-				// evaluate();
 				break;
 
 			// 한글, 영문 입력 a~z, A~Z, ㄱ~ㅎ, ㅏ~ㅣ
@@ -304,16 +290,6 @@ class LetterList extends React.Component{
 			return(
 				<LetterItem ref={'letterItem'+i} char={letter} key={i}/>
 			)
-
-			/*if(i === this.props.level.index){
-				return(
-					<LetterItem ref={'letterItem'+i} char={letter} key={i} typing={this.state.typing}/>
-				)
-			}else{
-				return(
-					<LetterItem ref={'letterItem'+i} char={letter} key={i}/>
-				);
-			}*/
 		});
 
 		return(

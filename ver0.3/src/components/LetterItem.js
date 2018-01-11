@@ -16,7 +16,7 @@ class LetterItem extends React.Component{
 	}
 
 	input(char){
-		console.log('LetterItem.input(): ', char);
+		// console.log('LetterItem.input(): ', char);
 		this.setState({input: char});
 		this.setState({isCorrected: (this.props.char === this.state.input)})
 	}

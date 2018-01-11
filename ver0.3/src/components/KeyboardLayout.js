@@ -33,7 +33,7 @@ class KeyboardLayout extends React.Component{
 	}
 
 	handleKeyDown(e){
-		console.log('KeyboardLayout.keydown: ', e.keyCode);
+		// console.log('KeyboardLayout.keydown: ', e.keyCode);
 		if(e.keyCode === 16){
 			this.shifting();
 		}

@@ -28,20 +28,9 @@ class App extends React.Component{
 			level : undefined,
 			mode : App.LIST_MODE
 		};
-
-		// this.playManager = new PlayManager();
-		/*this.comps = {
-			header: <Header/>,
-			levelList: <LevelList selectLevel={this.selectedLevel}/>,
-			badge: <Badge/>,
-			sentenceArea: <SentenceArea level={this.state.level}/>
-			// playManager: new PlayManager()
-		};*/
 	}
 
 	selectedLevel(id){
-		// console.log('App.selectedLevel() : ', id);
-
 		let data = LevelData.find(function(item){
 			return (item.id === id);
 		});

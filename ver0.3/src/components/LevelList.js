@@ -14,18 +14,8 @@ class LevelList extends React.Component{
 
 	}
 
-	/*componentDidMount() {
-		console.log('componentDidMount', this);
-		this.props.onRef(this)
-	}*/
-
 	handleItemClick(id){
-		// this.props.levelId = id;
-		// console.log('handleItemClick:>>>>', id);
-		// PlayManager.selectLevel(id);
 		this.props.selectLevel(id);
-		// this.hide();
-		// this.child.run();
 	}
 
 	show(){
@@ -36,13 +26,7 @@ class LevelList extends React.Component{
 		this.setState({isShow: false});
 	}
 
-	/*hide = () => {
-		this.setState({isShow: false});
-	};*/
-
-
 	render(){
-		// console.log('LevelList.render() : ', this.props.level);
 		return(
 			<div className="level-list-area">
 				<h3>단계 목록</h3>

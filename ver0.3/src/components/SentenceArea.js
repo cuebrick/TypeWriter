@@ -1,7 +1,6 @@
 import React from 'react';
 import KeyboardLayout from './KeyboardLayout';
 import LetterList from './LetterList';
-import User from './User';
 
 class SentenceArea extends React.Component{
 	constructor(props){
@@ -14,7 +13,6 @@ class SentenceArea extends React.Component{
 	}
 
 	render(){
-		// console.log('SentenceArea.render() :', this.props.level);
 		return(
 			<div className="sentence-area">
 				<h3>{this.props.level.title}</h3>
