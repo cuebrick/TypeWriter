@@ -9,7 +9,6 @@ class User{
 			return new User();
 	}
 
-	_data;
 	_users;
 	_info;
 	_level;
@@ -24,20 +23,9 @@ class User{
 			new Error('User is Singlton class !!')
 		}
 
-		this._data = {
-			id: undefined,
-			name: undefined,
-			grade: undefined,
-			icon: undefined,
-			level: undefined
-		};
-
 		this.initUser();
 	}
 
-	get data(){
-		return this._data;
-	}
 	get users(){
 		return this._users;
 	}
@@ -46,25 +34,8 @@ class User{
 	}
 
 
-	get id(){
-		return this._data.id;
-	}
-	get name(){
-		return this._data.name;
-	}
-	get grade(){
-		return this._data.grade;
-	}
-	get icon(){
-		return this._data.icon;
-	}
-	get level(){
-		return this._data.level;
-	}
-
 	setBadge(badge){
 		this._badge = badge;
-		console.log('this._badge>>>>', this._badge);
 	}
 
 	setLevel(level){
@@ -78,6 +49,7 @@ class User{
 
 			let data = this.getCurrentUserInfo();
 
+			// data 가 undefined 라면 UserInfo 에서 이름없는 사용자를 자동으로 만들어줌.
 			this.setUserInfo(new UserInfo(data));
 		} else {
 			// TODO: No Web Storage support..
@@ -87,7 +59,7 @@ class User{
 	changeUser(id){
 		localStorage.setItem('currentUser', id);
 		this.initUser();
-		return this.info;
+		return this._info;
 	}
 
 	setUserInfo(userInfo){
@@ -101,11 +73,10 @@ class User{
 
 	requestDeleteUser(id){
 		console.log('requestDeleteUser: >>', id);
-		this.reloadUserList();
+		// this.reloadUserList();
 		delete this._users[id];
-		localStorage.setItem('users', JSON.stringify(this._users));
-		this.reloadUserList();
-		return this._users;
+		this.saveUsers();
+		return this.reloadUserList();
 	}
 
 	getUserListData(){
@@ -124,11 +95,19 @@ class User{
 		return this._users[currentUserId];
 	}
 
+	saveCurrentUserId(id){
+		localStorage.setItem('currentUser', id);
+	}
+
 	saveUser(userInfo){
 		let info = (userInfo) ? userInfo : this._info;
 		this._users[info.id] = info.data;
+		this.saveUsers();
+		this.saveCurrentUserId(info.id);
+	}
+
+	saveUsers(){
 		localStorage.setItem('users', JSON.stringify(this._users));
-		localStorage.setItem('currentUser', info.id);
 	}
 
 	saveLevelData(level){
@@ -137,8 +116,8 @@ class User{
 		let p = this._info;
 		p.data.level[level.id] = info;
 		this._users[p.id] = p.data;
-		localStorage.setItem('users', JSON.stringify(this._users));
-		console.log('saveLevelData() :', this.reloadUserList());
+		this.saveUsers();
+		// console.log('saveLevelData() :', this.reloadUserList());
 	}
 
 	report(){
