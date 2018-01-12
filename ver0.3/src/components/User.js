@@ -1,4 +1,4 @@
-import UserProfile from './UserProfile';
+import UserInfo from './UserInfo';
 
 class User{
 	static _instance;
@@ -11,12 +11,11 @@ class User{
 
 	_data;
 	_users;
-	_profile;
+	_info;
 	_level;
 
 	// components
 	_badge;
-	_userList;
 
 	constructor(){
 		if(!User._instance){
@@ -42,9 +41,11 @@ class User{
 	get users(){
 		return this._users;
 	}
-	get profile(){
-		return this._profile;
+	get info(){
+		return this._info;
 	}
+
+
 	get id(){
 		return this._data.id;
 	}
@@ -75,10 +76,9 @@ class User{
 		if (typeof(Storage) !== "undefined") {
 			this.reloadUserList();
 
-			let currentUserId = this.getCurrentUserId();
-			let currentUserData = this._users[currentUserId];
+			let data = this.getCurrentUserInfo();
 
-			this.setUserProfile(new UserProfile(currentUserData));
+			this.setUserInfo(new UserInfo(data));
 		} else {
 			// TODO: No Web Storage support..
 		}
@@ -87,12 +87,12 @@ class User{
 	changeUser(id){
 		localStorage.setItem('currentUser', id);
 		this.initUser();
-		return this.profile;
+		return this.info;
 	}
 
-	setUserProfile(profile){
-		this._profile = profile;
-		this.saveUser(profile);
+	setUserInfo(userInfo){
+		this._info = userInfo;
+		this.saveUser(userInfo);
 	}
 
 	reloadUserList(){
@@ -119,14 +119,30 @@ class User{
 		return localStorage.getItem('currentUser');
 	}
 
-	saveUser(profile){
-		let p = (profile) ? profile : this._profile;
+	getCurrentUserInfo(){
+		let currentUserId = this.getCurrentUserId();
+		return this._users[currentUserId];
+	}
+
+	saveUser(userInfo){
+		let info = (userInfo) ? userInfo : this._info;
+		this._users[info.id] = info.data;
+		localStorage.setItem('users', JSON.stringify(this._users));
+		localStorage.setItem('currentUser', info.id);
+	}
+
+	saveLevelData(level){
+		let info = this.getCurrentUserInfo();
+		info.level[level.id] = level;
+		let p = this._info;
+		p.data.level[level.id] = info;
 		this._users[p.id] = p.data;
 		localStorage.setItem('users', JSON.stringify(this._users));
-		localStorage.setItem('currentUser', p.id);
+		console.log('saveLevelData() :', this.reloadUserList());
 	}
 
 	report(){
+		this.saveLevelData(this._level);
 		this._badge.show(this._level);
 	}
 }

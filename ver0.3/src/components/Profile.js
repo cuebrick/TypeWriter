@@ -1,7 +1,7 @@
 import React from 'react';
 import User from './User';
 import UserList from './UserList';
-import UserProfile from './UserProfile';
+import UserInfo from './UserInfo';
 
 class Profile extends React.Component{
 
@@ -20,7 +20,7 @@ class Profile extends React.Component{
 
 		this._user = User.getInstance();
 		this.state = {
-			profile : this._user.profile,
+			info : this._user.info,
 			users: this._user.users,
 			isShowUserLayer : false,
 			isShowAddUserView : false,
@@ -29,7 +29,7 @@ class Profile extends React.Component{
 			selectIconIndex: 0
 		};
 
-		console.log('User.getInstance(): ', this._user.profile.toString());
+		console.log('User.getInstance(): ', this._user.info.toString());
 	}
 
 	toggleUserLayer(){
@@ -57,19 +57,19 @@ class Profile extends React.Component{
 		this._user.saveUser();
 
 		// 새로운 사용자를 생성하고 세팅
-		let profile = new UserProfile(null);
-		console.log('new UserProfile: ', this.state.inputNewUserName, this.state.selectIconIndex);
-		profile.rename(this.state.inputNewUserName);
-		profile.changeIcon(this.state.selectIconIndex);
-		this._user.setUserProfile(profile);
-		this.setState({profile: profile});
+		let userInfo = new UserInfo(null);
+		console.log('new UserInfo: ', this.state.inputNewUserName, this.state.selectIconIndex);
+		userInfo.rename(this.state.inputNewUserName);
+		userInfo.changeIcon(this.state.selectIconIndex);
+		this._user.setUserInfo(userInfo);
+		this.setState({info: userInfo});
 		this.setState({isShowAddUserView: false});
 		this.setState({users: this._user.reloadUserList()});
 	}
 
 	selectedUser(userId){
-		let profile = User.getInstance().changeUser(userId);
-		this.setState({profile: profile});
+		let userInfo = User.getInstance().changeUser(userId);
+		this.setState({info: userInfo});
 		this.toggleUserLayer();
 		this._user.reloadUserList();
 	}
@@ -116,10 +116,10 @@ class Profile extends React.Component{
 						<div className="user-description" onClick={this.toggleUserLayer}>
 
 							<div className="profile-image">
-								<img src={"/images/icon/profile-icon-"+ this.state.profile.icon +".svg"}/>
+								<img src={"/images/icon/profile-icon-"+ this.state.info.icon +".svg"}/>
 							</div>
-							<div className="user-grade">{this.state.profile.grade}</div>
-							<div className="user-name">{this.state.profile.name}</div>
+							<div className="user-grade">{this.state.info.grade}</div>
+							<div className="user-name">{this.state.info.name}</div>
 						</div>
 					}
 				</div>
@@ -138,7 +138,7 @@ class Profile extends React.Component{
 					}
 				</div>
 				<div className="user-layer">
-					<UserList users={this.state.users} currentUserId={this.state.profile.id} selectUser={this.selectedUser} deleteUser={this.deletedUser}/>
+					<UserList users={this.state.users} currentUserId={this.state.info.id} selectUser={this.selectedUser} deleteUser={this.deletedUser}/>
 				</div>
 			</div>
 		)

@@ -1,4 +1,4 @@
-class UserProfile{
+class UserInfo{
 
 	_data;
 
@@ -16,7 +16,7 @@ class UserProfile{
 				id: 'user' + Math.floor((1 + Math.random()) * 0x100000000).toString(16).substring(1),
 				name: "이름없는 사용자",
 				grade: "수련생",
-				level: 1,
+				level: [],
 				icon: 0
 			}
 		}
@@ -54,4 +54,4 @@ class UserProfile{
 	}
 }
 
-export default UserProfile;
+export default UserInfo;
