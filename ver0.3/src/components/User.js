@@ -111,13 +111,9 @@ class User{
 	}
 
 	saveLevelData(level){
-		let info = this.getCurrentUserInfo();
-		info.level[level.id] = level;
-		let p = this._info;
-		p.data.level[level.id] = info;
-		this._users[p.id] = p.data;
+		this._info.level[level.id] = level.result.star;
+		this._users[this._info.id] = this._info.data;
 		this.saveUsers();
-		// console.log('saveLevelData() :', this.reloadUserList());
 	}
 
 	report(){

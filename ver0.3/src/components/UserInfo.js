@@ -16,7 +16,7 @@ class UserInfo{
 				id: 'user' + Math.floor((1 + Math.random()) * 0x100000000).toString(16).substring(1),
 				name: "이름없는 사용자",
 				grade: "수련생",
-				level: [],
+				level: {},
 				icon: 0
 			}
 		}
