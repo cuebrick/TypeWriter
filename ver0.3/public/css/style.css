@@ -139,6 +139,9 @@ header{
 	min-height: 128px;
 	max-height: 320px;
 	overflow-y: auto;
+	background-color: #20202c;
+	padding: 10px;
+	border-radius: 5px;
 }
 .letter{
 	float: left;

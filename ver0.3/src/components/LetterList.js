@@ -263,7 +263,7 @@ class LetterList extends React.Component{
 		let itemNode = ReactDOM.findDOMNode(itemComponent);
 		let listNode = ReactDOM.findDOMNode(this);
 		let itemRect = itemNode.getBoundingClientRect();
-		let st = Math.round(itemRect.y + listNode.scrollTop - itemRect.height);
+		let st = Math.round(itemRect.y + listNode.scrollTop - itemRect.height) - 10;
 		// listNode.scrollTop = st;
 		$(listNode).stop().animate({scrollTop: st}, 250);
 	}
