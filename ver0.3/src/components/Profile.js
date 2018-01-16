@@ -22,18 +22,20 @@ class Profile extends React.Component{
 		this.state = {
 			info : this._user.info,
 			users: this._user.users,
-			isShowUserLayer : false,
+			isDisableProfile: false,
+			isShowUserListLayer : false,
 			isShowAddUserView : false,
 			isShowProfileIconSelector: false,
 			inputNewUserName: '',
 			selectIconIndex: 0
 		};
 
-		console.log('User.getInstance(): ', this._user.info.toString());
+		// console.log('User.getInstance(): ', this._user.info.toString());
 	}
 
 	toggleUserLayer(){
-		this.setState({isShowUserLayer: !this.state.isShowUserLayer});
+		this.setState({isShowUserListLayer: !this.state.isShowUserListLayer});
+		this.setState({isDisableProfile: !this.state.isDisableProfile});
 	}
 
 	toggleProfileIcon(e){
@@ -50,6 +52,12 @@ class Profile extends React.Component{
 		this.setState({inputNewUserName: "이름없는 사용자"});
 		this.setState({selectIconIndex: 0});
 		this.setState({isShowAddUserView: !this.state.isShowAddUserView});
+	}
+
+	toggleTypingMode(bool){
+		this.setState({isDisableProfile: bool});
+		// this.setState({isShowProfileIconSelector: !bool});
+		// this.setState({isShowAddUserView: bool});
 	}
 
 	handleCreateUser(){
@@ -88,13 +96,15 @@ class Profile extends React.Component{
 	}
 
 	render(){
-		let profileActiveClassName = (this.state.isShowUserLayer) ? ' user-layer-mode' : '';
+		let disableProfileClassName = (this.state.isDisableProfile) ? ' disable-profile-mode' : '';
+		let userListModeClassName = (this.state.isShowUserListLayer) ? ' user-list-layer-mode' : '';
 		let addUserModeClassName = (this.state.isShowAddUserView) ? ' add-user-mode' : '';
 
 		return(
-			<div className={"profile" + profileActiveClassName + addUserModeClassName}>
+			<div className={"profile" + userListModeClassName + addUserModeClassName + disableProfileClassName}>
 				<div className="user-info">
-					{this.state.isShowAddUserView ?
+					{
+						this.state.isShowAddUserView ?
 						<div className="user-description">
 							<div className="profile-image" onClick={this.toggleProfileIcon}>
 								<img src={"/images/icon/profile-icon-" + this.state.selectIconIndex + ".svg"}/>
@@ -113,7 +123,7 @@ class Profile extends React.Component{
 							}
 						</div>
 						:
-						<div className="user-description" onClick={this.toggleUserLayer}>
+						<div className="user-description" onClick={this.state.isDisableProfile ? null :  this.toggleUserLayer}>
 
 							<div className="profile-image">
 								<img src={"/images/icon/profile-icon-"+ this.state.info.icon +".svg"}/>
@@ -131,7 +141,7 @@ class Profile extends React.Component{
 						</div>
 						:
 						<div>
-							{this.state.isShowUserLayer === false &&
+							{this.state.isDisableProfile === false &&
 								<button className="" onClick={this.toggleAddUserView}>+</button>
 							}
 						</div>

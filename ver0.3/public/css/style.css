@@ -279,13 +279,14 @@ header{
 	padding: 5px;
 	position: relative;
 }
-.profile.user-layer-mode{
+.profile.user-list-layer-mode{
 	background-color: #474954;
 }
-.profile .user-layer{
+.profile .user-layer,
+.profile.disable-profile-mode.user-list-layer-mode .user-layer{
 	display: none;
 }
-.profile.user-layer-mode .user-layer{
+.profile.user-list-layer-mode .user-layer{
 	display: block;
 }
 .profile .user-info{
@@ -301,7 +302,7 @@ header{
 	text-align: right;
 	transition: 0.4s all;
 }
-.profile.user-layer-mode .user-description{
+.profile.disable-profile-mode .user-description{
 	right: 5px;
 	z-index: 97;
 	width: 190px;

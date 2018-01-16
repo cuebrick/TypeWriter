@@ -41,7 +41,9 @@ class App extends React.Component{
 			mode: App.TYPING_MODE
 		});
 
-		User.getInstance().setLevel(level);
+		let user = User.getInstance();
+		user.setLevel(level);
+		user.getProfile().toggleTypingMode(true);
 	};
 
 	goLevelList(){
@@ -50,6 +52,7 @@ class App extends React.Component{
 			mode: App.LIST_MODE
 		});
 		this.refs.badge.hide();
+		User.getInstance().getProfile().toggleTypingMode(false);
 	}
 
 	componentDidMount(){

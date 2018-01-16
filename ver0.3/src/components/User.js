@@ -15,6 +15,7 @@ class User{
 
 	// components
 	_badge;
+	_profile;
 
 	constructor(){
 		if(!User._instance){
@@ -36,6 +37,14 @@ class User{
 
 	setBadge(badge){
 		this._badge = badge;
+	}
+
+	setProfile(profile){
+		this._profile = profile;
+	}
+
+	getProfile(){
+		return this._profile;
 	}
 
 	setLevel(level){
