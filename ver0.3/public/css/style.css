@@ -282,6 +282,9 @@ header{
 .profile.user-layer-mode{
 	background-color: #474954;
 }
+.profile.typing-mode.user-layer-mode{
+	background-color: transparent;
+}
 .profile .user-layer,
 .profile.typing-mode.user-layer-mode .user-layer{
 	display: none;
