@@ -48,9 +48,11 @@ class Profile extends React.Component{
 	}
 
 	toggleAddUserView(){
-		this.setState({inputNewUserName: "이름없는 사용자"});
-		this.setState({selectIconIndex: 0});
-		this.setState({isShowAddUserView: !this.state.isShowAddUserView});
+		this.setState({
+			inputNewUserName: "이름없는 사용자",
+			selectIconIndex: 0,
+			isShowAddUserView: !this.state.isShowAddUserView
+		});
 	}
 
 	toggleTypingMode(bool){
@@ -67,9 +69,11 @@ class Profile extends React.Component{
 		userInfo.rename(this.state.inputNewUserName);
 		userInfo.changeIcon(this.state.selectIconIndex);
 		this._user.setUserInfo(userInfo);
-		this.setState({info: userInfo});
-		this.setState({isShowAddUserView: false});
-		this.setState({users: this._user.reloadUserList()});
+		this.setState({
+			info: userInfo,
+			isShowAddUserView: false,
+			users: this._user.reloadUserList()
+		});
 	}
 
 	selectedUser(userId){
