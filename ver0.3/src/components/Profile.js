@@ -22,20 +22,19 @@ class Profile extends React.Component{
 		this.state = {
 			info : this._user.info,
 			users: this._user.users,
-			isDisableProfile: false,
-			isShowUserListLayer : false,
+			isTypingMode: false,
+			isShowUserLayer : false,
 			isShowAddUserView : false,
 			isShowProfileIconSelector: false,
 			inputNewUserName: '',
 			selectIconIndex: 0
 		};
 
-		// console.log('User.getInstance(): ', this._user.info.toString());
+		console.log('User.getInstance(): ', this._user.info.toString());
 	}
 
 	toggleUserLayer(){
-		this.setState({isShowUserListLayer: !this.state.isShowUserListLayer});
-		this.setState({isDisableProfile: !this.state.isDisableProfile});
+		this.setState({isShowUserLayer: !this.state.isShowUserLayer});
 	}
 
 	toggleProfileIcon(e){
@@ -55,9 +54,7 @@ class Profile extends React.Component{
 	}
 
 	toggleTypingMode(bool){
-		this.setState({isDisableProfile: bool});
-		// this.setState({isShowProfileIconSelector: !bool});
-		// this.setState({isShowAddUserView: bool});
+		this.setState({isTypingMode: bool});
 	}
 
 	handleCreateUser(){
@@ -96,15 +93,14 @@ class Profile extends React.Component{
 	}
 
 	render(){
-		let disableProfileClassName = (this.state.isDisableProfile) ? ' disable-profile-mode' : '';
-		let userListModeClassName = (this.state.isShowUserListLayer) ? ' user-list-layer-mode' : '';
+		let typingModeClassName = (this.state.isTypingMode) ? ' typing-mode' : '';
+		let profileActiveClassName = (this.state.isShowUserLayer) ? ' user-layer-mode' : '';
 		let addUserModeClassName = (this.state.isShowAddUserView) ? ' add-user-mode' : '';
 
 		return(
-			<div className={"profile" + userListModeClassName + addUserModeClassName + disableProfileClassName}>
+			<div className={"profile" + profileActiveClassName + addUserModeClassName + typingModeClassName}>
 				<div className="user-info">
-					{
-						this.state.isShowAddUserView ?
+					{this.state.isShowAddUserView ?
 						<div className="user-description">
 							<div className="profile-image" onClick={this.toggleProfileIcon}>
 								<img src={"/images/icon/profile-icon-" + this.state.selectIconIndex + ".svg"}/>
@@ -123,7 +119,7 @@ class Profile extends React.Component{
 							}
 						</div>
 						:
-						<div className="user-description" onClick={this.state.isDisableProfile ? null :  this.toggleUserLayer}>
+						<div className="user-description" onClick={this.state.isTypingMode ? null : this.toggleUserLayer}>
 
 							<div className="profile-image">
 								<img src={"/images/icon/profile-icon-"+ this.state.info.icon +".svg"}/>
@@ -133,20 +129,23 @@ class Profile extends React.Component{
 						</div>
 					}
 				</div>
-				<div className="profile-buttons">
-					{this.state.isShowAddUserView ?
-						<div>
-							<button className="" onClick={this.handleCreateUser}>등록</button>
-							<button className="" onClick={this.toggleAddUserView}>취소</button>
-						</div>
-						:
-						<div>
-							{this.state.isDisableProfile === false &&
+				{this.state.isTypingMode === false &&
+					<div className="profile-buttons">
+						{this.state.isShowAddUserView ?
+							<div>
+								<button className="" onClick={this.handleCreateUser}>등록</button>
+								<button className="" onClick={this.toggleAddUserView}>취소</button>
+							</div>
+							:
+							<div>
+								{this.state.isShowUserLayer === false &&
 								<button className="" onClick={this.toggleAddUserView}>+</button>
-							}
-						</div>
-					}
-				</div>
+								}
+							</div>
+						}
+					</div>
+				}
+
 				<div className="user-layer">
 					<UserList users={this.state.users} currentUserId={this.state.info.id} selectUser={this.selectedUser} deleteUser={this.deletedUser}/>
 				</div>
