@@ -51,11 +51,15 @@ class Profile extends React.Component{
 		this.setState({
 			inputNewUserName: "이름없는 사용자",
 			selectIconIndex: 0,
-			isShowAddUserView: !this.state.isShowAddUserView
+			isShowAddUserView: !this.state.isShowAddUserView,
+			isShowProfileIconSelector: true
 		});
 	}
 
 	toggleTypingMode(bool){
+		if(bool && this.state.isShowAddUserView){
+			this.toggleAddUserView();
+		}
 		this.setState({isTypingMode: bool});
 	}
 
