@@ -60,7 +60,12 @@ class App extends React.Component{
 	}
 
 	render(){
-		let levelList = (this.state.mode === App.LIST_MODE) ? <LevelList selectLevel={this.selectedLevel}/> : null;
+
+		let levelList = null;
+		if(this.state.mode === App.LIST_MODE){
+			let levelData = User.getInstance().getCurrentUserInfo().level;
+			levelList = <LevelList levelData={levelData} selectLevel={this.selectedLevel}/>;
+		}
 		let sentenceArea = (this.state.mode === App.TYPING_MODE) ? <SentenceArea level={this.state.level} goLevelList={this.goLevelList}/> : null;
 
 		return(

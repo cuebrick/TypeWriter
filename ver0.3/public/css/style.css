@@ -218,6 +218,17 @@ header{
 	transition: 0.4s all;
 	font-size: 0.9em;
 }
+.level-item .status{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/status.svg);
+	background-size: 100%;
+	margin-right: 5px;
+}
+.level-item .status.unlock{
+	background-image: url(../images/status-unlock.svg);
+}
 .level-item .level-title{
 	white-space: nowrap;
 	overflow-x: hidden;
