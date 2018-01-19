@@ -23,9 +23,11 @@ class App extends React.Component{
 
 		this.selectedLevel = this.selectedLevel.bind(this);
 		this.goLevelList = this.goLevelList.bind(this);
+		this.refreshLevelList = this.refreshLevelList.bind(this);
 
 		this.state = {
 			level : undefined,
+			levelListData : {},
 			mode : App.LIST_MODE
 		};
 	}
@@ -53,27 +55,34 @@ class App extends React.Component{
 		});
 		this.refs.badge.hide();
 		User.getInstance().getProfile().toggleTypingMode(false);
+		this.refreshLevelList();
+	}
+
+	refreshLevelList(){
+		let levelListData = User.getInstance().getCurrentUserInfo().level;
+		this.setState({levelListData: levelListData});
 	}
 
 	componentDidMount(){
-		User.getInstance().setBadge(this.refs.badge);
+		let user = User.getInstance();
+		user.setBadge(this.refs.badge);
+		user.getProfile().setRefreshLevelListCallback(this.refreshLevelList);
+		this.refreshLevelList();
 	}
 
 	render(){
-
-		let levelList = null;
-		if(this.state.mode === App.LIST_MODE){
-			let levelData = User.getInstance().getCurrentUserInfo().level;
-			levelList = <LevelList levelData={levelData} selectLevel={this.selectedLevel}/>;
-		}
-		let sentenceArea = (this.state.mode === App.TYPING_MODE) ? <SentenceArea level={this.state.level} goLevelList={this.goLevelList}/> : null;
-
 		return(
 			<div className="wrapper">
 				<Header/>
 				<Badge ref={"badge"}/>
-				{levelList}
-				{sentenceArea}
+				{
+					this.state.mode === App.LIST_MODE &&
+					<LevelList levelListData={this.state.levelListData} selectLevel={this.selectedLevel}/>
+				}
+				{
+					this.state.mode === App.TYPING_MODE &&
+					<SentenceArea level={this.state.level} goLevelList={this.goLevelList}/>
+				}
 			</div>
 		)
 	}

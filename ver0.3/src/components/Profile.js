@@ -6,6 +6,7 @@ import UserInfo from './UserInfo';
 class Profile extends React.Component{
 
 	_user;
+	_refreshLevelListCallback
 
 	constructor(props){
 		super(props);
@@ -85,6 +86,7 @@ class Profile extends React.Component{
 		this.setState({info: userInfo});
 		this.toggleUserLayer();
 		this._user.reloadUserList();
+		this._refreshLevelListCallback();
 	}
 
 	deletedUser(userId){
@@ -98,6 +100,10 @@ class Profile extends React.Component{
 
 	handleInputFocus(e){
 		e.target.select();
+	}
+
+	setRefreshLevelListCallback(callback){
+		this._refreshLevelListCallback = callback;
 	}
 
 	render(){
