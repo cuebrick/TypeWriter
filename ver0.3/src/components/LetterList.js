@@ -76,6 +76,7 @@ class LetterList extends React.Component{
 				break;
 
 			case 8: // backspace
+				e.preventDefault();
 				if(this.props.level.buffer.length){
 					this.props.level.buffer.pop();
 				}else{
