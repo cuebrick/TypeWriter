@@ -275,11 +275,22 @@ header{
 
 .button-ui{
 	padding: 20px 0;
+	font-size: 15px;
 }
 .button-ui > button{
-	width: 100%;
+	padding: 10px 20px;
+	width: auto;
+	margin: 0 1px;
 }
+.button-ui .list-btn{
+	background-color: #445263;
+}
+.button-ui .list-btn:hover{
+	background-color: #56687d;
+}
+.button-ui .next-btn{
 
+}
 
 
 .profile{

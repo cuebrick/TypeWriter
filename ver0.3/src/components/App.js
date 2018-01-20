@@ -23,6 +23,7 @@ class App extends React.Component{
 
 		this.selectedLevel = this.selectedLevel.bind(this);
 		this.goLevelList = this.goLevelList.bind(this);
+		this.goNextLevel = this.goNextLevel.bind(this);
 		this.refreshLevelList = this.refreshLevelList.bind(this);
 
 		this.state = {
@@ -58,6 +59,11 @@ class App extends React.Component{
 		this.refreshLevelList();
 	}
 
+	goNextLevel(){
+		console.log('next!!');
+		this.selectedLevel('s5');
+	}
+
 	refreshLevelList(){
 		let levelListData = User.getInstance().getCurrentUserInfo().level;
 		this.setState({levelListData: levelListData});
@@ -81,7 +87,7 @@ class App extends React.Component{
 				}
 				{
 					this.state.mode === App.TYPING_MODE &&
-					<SentenceArea level={this.state.level} goLevelList={this.goLevelList}/>
+					<SentenceArea level={this.state.level} goLevelList={this.goLevelList} goNextLevel={this.goNextLevel}/>
 				}
 			</div>
 		)

@@ -6,10 +6,15 @@ class SentenceArea extends React.Component{
 	constructor(props){
 		super(props);
 		this.goLevelList = this.goLevelList.bind(this);
+		this.goNextLevel = this.goNextLevel.bind(this);
 	}
 
 	goLevelList(){
 		this.props.goLevelList();
+	}
+
+	goNextLevel(){
+		this.props.goNextLevel();
 	}
 
 	render(){
@@ -20,7 +25,8 @@ class SentenceArea extends React.Component{
 				<LetterList level={this.props.level}/>
 
 				<div className="button-ui">
-					<button onClick={this.goLevelList}>목록으로</button>
+					<button onClick={this.goLevelList} className="list-btn">목록으로</button>
+					<button onClick={this.goNextLevel} className="next-btn">다음단계</button>
 				</div>
 
 				<KeyboardLayout/>
