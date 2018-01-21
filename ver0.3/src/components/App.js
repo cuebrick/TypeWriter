@@ -34,9 +34,7 @@ class App extends React.Component{
 	}
 
 	selectedLevel(id){
-		let data = LevelData.find(function(item){
-			return (item.id === id);
-		});
+		let data = this.getLevelDataById(id);
 
 		let level = new Level(data);
 		this.setState({
@@ -48,6 +46,12 @@ class App extends React.Component{
 		user.setLevel(level);
 		user.getProfile().toggleTypingMode(true);
 	};
+	
+	getLevelDataById(id){
+		return LevelData.find(function(item){
+			return (item.id === id);
+		});
+	}
 
 	goLevelList(){
 		this.setState({
@@ -61,7 +65,11 @@ class App extends React.Component{
 
 	goNextLevel(){
 		console.log('next!!');
-		this.selectedLevel('s5');
+		let id = this.state.level.id;
+		let data = this.getLevelDataById(id);
+		let index = LevelData.indexOf(data);
+		let nextId = LevelData[index + 1].id;
+		this.selectedLevel(nextId);
 	}
 
 	refreshLevelList(){
