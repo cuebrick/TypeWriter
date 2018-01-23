@@ -18,14 +18,20 @@ class LetterList extends React.Component{
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 
 		this._reporter = new Reporter();
+
+		this.state = {
+			isFinished: false
+		}
 	}
 
 	componentDidMount(){
+		console.log('!!!mount-----');
 		this.addKeyboardEvent();
 		this.getCurrentItem().setActive(true);// 첫 글자 아이템에 active 처리
 	}
 
 	componentWillUnmount(){
+		console.log('unmount-----');
 		this.removeKeyboardEvent();
 	}
 
@@ -36,6 +42,10 @@ class LetterList extends React.Component{
 	removeKeyboardEvent(){
 		window.removeEventListener('keydown', this.handleKeyDown);
 	}
+
+	/*componentDidUpdate(){
+		console.log('componentDidUpdate-----------');
+	}*/
 
 	handleKeyDown(e){
 		// console.log('LetterList.keydown: ', this, e.keyCode);
@@ -250,9 +260,14 @@ class LetterList extends React.Component{
 		let data = Object.keys(this.refs).map((key) => {
 			return this.refs[key].getData();
 		});
+
+		this.clearBuffer();
 		this.stopCount();
 		this._reporter.saveResultAtLevel(this.props.level, data);
 		User.getInstance().report();
+
+		this.setState({isFinished: true});
+		this.props.typingFinished();
 	}
 	stopCount(){
 		let level = this.props.level;
