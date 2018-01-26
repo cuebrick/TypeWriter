@@ -7,11 +7,16 @@ import PlayManager from './PlayManager';
 import Level from './Level';
 import User from './User';
 import LevelData from '../json/level-data';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Main from '../pages/Main';
+import Levels from '../pages/Levels';
+import Typing from '../pages/Typing';
+import NotFound from "../pages/NotFound";
 
 class App extends React.Component{
 
 
-	static get LIST_MODE(){
+	/*static get LIST_MODE(){
 		return 'listMode';
 	}
 	static get TYPING_MODE(){
@@ -31,9 +36,9 @@ class App extends React.Component{
 			levelListData : {},
 			mode : App.LIST_MODE
 		};
-	}
+	}*/
 
-	selectedLevel(id){
+	/*selectedLevel(id){
 		let data = this.getLevelDataById(id);
 
 		let level = new Level(data);
@@ -82,22 +87,22 @@ class App extends React.Component{
 		user.setBadge(this.refs.badge);
 		user.getProfile().setRefreshLevelListCallback(this.refreshLevelList);
 		this.refreshLevelList();
-	}
+	}*/
 
 	render(){
 		return(
-			<div className="wrapper">
-				<Header/>
-				<Badge ref={"badge"}/>
-				{
-					this.state.mode === App.LIST_MODE &&
-					<LevelList levelListData={this.state.levelListData} selectLevel={this.selectedLevel}/>
-				}
-				{
-					this.state.mode === App.TYPING_MODE &&
-					<SentenceArea level={this.state.level} goLevelList={this.goLevelList} goNextLevel={this.goNextLevel}/>
-				}
-			</div>
+			<Router>
+				<div className="wrapper">
+					<Header/>
+					<Badge ref={"badge"}/>
+					<Switch>
+						<Route exact path="/" component={Main}/>
+						<Route path="/levels" component={Levels}/>
+						<Route path="/typing/:id" component={Typing}/>
+						<Route component={NotFound}/>
+					</Switch>
+				</div>
+			</Router>
 		)
 	}
 }

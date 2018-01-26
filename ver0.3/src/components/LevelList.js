@@ -1,20 +1,21 @@
 import React from 'react';
 import LevelItem from './LevelItem';
 import LevelData from '../json/level-data';
+import { Link } from 'react-router-dom';
 
 class LevelList extends React.Component{
 	constructor(props){
 		super(props);
-		this.handleItemClick = this.handleItemClick.bind(this);
+		// this.handleItemClick = this.handleItemClick.bind(this);
 		this.state = {
 			isShow: true,
 			levelId: 0
 		}
 	}
 
-	handleItemClick(id){
+	/*handleItemClick(id){
 		this.props.selectLevel(id);
-	}
+	}*/
 
 	show(){
 		this.setState({isShow: true});
@@ -26,23 +27,22 @@ class LevelList extends React.Component{
 
 	render(){
 		return(
-			<div className="level-list-area">
-				<h3>단계 목록</h3>
-				<div id="levelList" className="level-list">
-					{
-						LevelData.map( (obj) => {
-							return (
+
+			<div id="levelList" className="level-list">
+				{
+					LevelData.map( (obj) => {
+						return (
+							<Link to={'/typing/'+ obj.id} key={obj.id}>
 								<LevelItem
-									key={obj.id}
 									dataId={obj.id}
 									title={obj.title}
-									handleClick={this.handleItemClick}
-									levelData={this.props.levelListData[obj.id]}
+									// handleClick={this.handleItemClick}
+									// levelData={this.props.levelListData[obj.id]}
 								/>
-							);
-						})
-					}
-				</div>
+							</Link>
+						);
+					})
+				}
 			</div>
 		)
 	}
