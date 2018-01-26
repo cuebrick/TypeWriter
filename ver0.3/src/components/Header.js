@@ -1,6 +1,7 @@
 import React from 'react';
 import Profile from './Profile';
 import User from "./User";
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component{
 	componentDidMount(){
@@ -10,7 +11,7 @@ class Header extends React.Component{
 	render(){
 		return(
 			<header className="minimize">
-				<h1>Typing Play</h1>
+				<h1><Link to="/">Typing Play</Link></h1>
 				<h2>Typing exercise for beginner</h2>
 				<Profile ref={"profile"}/>
 			</header>
