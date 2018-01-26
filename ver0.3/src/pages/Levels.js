@@ -5,16 +5,11 @@ import LevelList from "../components/LevelList";
 class Levels extends React.Component{
 	constructor(props){
 		super(props);
-		this.selectedLevel = this.selectedLevel.bind(this);
 		this._pm = PlayManager.getInstance();
 		this._pm.setLevels(this);
 	}
 
 	_pm;
-
-	selectedLevel(id){
-		this._pm.selectedLevel(id);
-	};
 
 	render(){
 		return(

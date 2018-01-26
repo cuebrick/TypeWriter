@@ -6,28 +6,10 @@ import { Link } from 'react-router-dom';
 class LevelList extends React.Component{
 	constructor(props){
 		super(props);
-		// this.handleItemClick = this.handleItemClick.bind(this);
-		this.state = {
-			isShow: true,
-			levelId: 0
-		}
-	}
-
-	/*handleItemClick(id){
-		this.props.selectLevel(id);
-	}*/
-
-	show(){
-		this.setState({isShow: true});
-	}
-
-	hide(){
-		this.setState({isShow: false});
 	}
 
 	render(){
 		return(
-
 			<div id="levelList" className="level-list">
 				{
 					LevelData.map( (obj) => {

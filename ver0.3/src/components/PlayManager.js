@@ -1,3 +1,4 @@
+import LevelData from '../json/level-data';
 
 class PlayManager {
 
@@ -30,6 +31,13 @@ class PlayManager {
 	}
 
 
+
+
+	getLevelDataById(id){
+		return LevelData.find(function(item){
+			return (item.id === id);
+		});
+	}
 
 
 	selectedLevel(id){
