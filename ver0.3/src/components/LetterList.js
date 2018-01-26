@@ -19,9 +19,9 @@ class LetterList extends React.Component{
 
 		this._reporter = new Reporter();
 
-		this.state = {
+		/*this.state = {
 			isFinished: false
-		}
+		}*/
 	}
 
 	componentDidMount(){
@@ -264,9 +264,9 @@ class LetterList extends React.Component{
 		this.clearBuffer();
 		this.stopCount();
 		this._reporter.saveResultAtLevel(this.props.level, data);
-		User.getInstance().report();
+		// User.getInstance().report();
 
-		this.setState({isFinished: true});
+		// this.setState({isFinished: true});
 		this.props.typingFinished();
 	}
 	stopCount(){
