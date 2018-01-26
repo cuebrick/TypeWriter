@@ -34,6 +34,10 @@ button{
 button:hover{
 	background-color: #00aae7;
 }
+a{
+	color: #a7cddd;
+}
+
 
 .hide{
 	display: none !important;
@@ -277,7 +281,7 @@ header{
 	padding: 20px 0;
 	font-size: 15px;
 }
-.button-ui > button{
+.button-ui button{
 	padding: 10px 20px;
 	width: auto;
 	margin: 0 1px;
