@@ -18,12 +18,14 @@ class Typing extends React.Component{
 		let data = this._pm.getLevelDataById(this.props.match.params.id);
 		let level = new Level(data);
 		this.state = {
-			level: level
+			level: level,
+			isFinished: false
 		}
 	}
 
 	typingFinished(){
 		console.log('Typing.finished() : ', this.state.level);
+		this.setState({isFinished: true});
 	}
 
 	render(){
@@ -39,8 +41,10 @@ class Typing extends React.Component{
 				</div>
 
 				<KeyboardLayout/>
-
-				<ReportView/>
+				{
+					this.state.isFinished &&
+					<ReportView level={this.state.level}/>
+				}
 			</div>
 		)
 	}
