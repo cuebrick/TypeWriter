@@ -4,6 +4,7 @@ import KeyboardLayout from '../components/KeyboardLayout';
 import { Link } from 'react-router-dom';
 import LetterList from "../components/LetterList";
 import Level from "../components/Level";
+import ReportView from "../components/ReportView";
 
 class Typing extends React.Component{
 
@@ -39,6 +40,7 @@ class Typing extends React.Component{
 
 				<KeyboardLayout/>
 
+				<ReportView/>
 			</div>
 		)
 	}
