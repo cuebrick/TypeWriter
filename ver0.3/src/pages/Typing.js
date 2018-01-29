@@ -1,7 +1,7 @@
 import React from 'react';
 import PlayManager from "../components/PlayManager";
 import KeyboardLayout from '../components/KeyboardLayout';
-import { Link } from 'react-router-dom';
+import { Router, Link } from 'react-router-dom';
 import LetterList from "../components/LetterList";
 import Level from "../components/Level";
 import ReportView from "../components/ReportView";
@@ -15,17 +15,23 @@ class Typing extends React.Component{
 		this.typingFinished = this.typingFinished.bind(this);
 		this._pm = PlayManager.getInstance();
 		this._pm.setTyping(this);
-		let data = this._pm.getLevelDataById(this.props.match.params.id);
-		let level = new Level(data);
+		let level = this._pm.getLevelObject(this.props.match.params.id);
+
 		this.state = {
 			level: level,
+			nextLevel: null,
 			isFinished: false
 		}
 	}
 
 	typingFinished(){
 		console.log('Typing.finished() : ', this.state.level);
-		this.setState({isFinished: true});
+		let nextId = this._pm.getNextLevelId(this.state.level.id);
+		let level = this._pm.getLevelObject(nextId);
+		this.setState({
+			isFinished: true,
+			nextLevel: level
+		});
 	}
 
 	render(){
@@ -37,7 +43,10 @@ class Typing extends React.Component{
 
 				<div className="button-ui">
 					<Link to="/levels"><button className="list-btn">목록으로(esc)</button></Link>
-					<Link to="/typing/s5"><button className="next-btn">다음단계(enter)</button></Link>
+					{
+						this.state.isFinished &&
+						<Link to={"/typing/" + this.state.nextLevel.id}><button className="next-btn">다음단계(enter)</button></Link>
+					}
 				</div>
 
 				<KeyboardLayout/>

@@ -12,7 +12,8 @@ module.exports = {
 		inline: true,
 		port: 7777,
 		contentBase: __dirname + '/public/',
-		historyApiFallback: true
+		historyApiFallback: true,
+		hot: true
 	},
 
 	module: {

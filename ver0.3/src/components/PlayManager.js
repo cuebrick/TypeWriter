@@ -1,4 +1,5 @@
 import LevelData from '../json/level-data';
+import Level from "./Level";
 
 class PlayManager {
 
@@ -31,7 +32,9 @@ class PlayManager {
 	}
 
 
-
+	getLevelObject(id){
+		return new Level(this.getLevelDataById(id));
+	}
 
 	getLevelDataById(id){
 		return LevelData.find(function(item){
@@ -39,21 +42,10 @@ class PlayManager {
 		});
 	}
 
-
-	selectedLevel(id){
-		console.log('PlayManager.selectedLevel() : ', id);
-		this._typing.display(id);
-		// let data = this.getLevelDataById(id);
-		//
-		// let level = new Level(data);
-		// this.setState({
-		// 	level: level,
-		// 	mode: App.TYPING_MODE
-		// });
-		//
-		// let user = User.getInstance();
-		// user.setLevel(level);
-		// user.getProfile().toggleTypingMode(true);
+	getNextLevelId(id){
+		let data = this.getLevelDataById(id);
+		let index = LevelData.indexOf(data);
+		return LevelData[index + 1].id;
 	}
 }
 

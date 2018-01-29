@@ -2,7 +2,6 @@ import React from 'react';
 
 class ReportView extends React.Component{
 	render(){
-		console.log("Level: " , this.props.level);
 		return(
 			<div className="report-view">
 				<div className="report-view-inner">
