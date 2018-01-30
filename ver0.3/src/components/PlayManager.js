@@ -22,6 +22,7 @@ class PlayManager {
 
 	_levels;
 	_typing;
+	_profile;
 
 	setLevels(levels){
 		this._levels = levels;
@@ -29,6 +30,10 @@ class PlayManager {
 
 	setTyping(typing){
 		this._typing = typing;
+	}
+
+	setProfile(profile){
+		this._profile = profile;
 	}
 
 

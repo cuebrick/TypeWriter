@@ -2,11 +2,13 @@ import React from 'react';
 import User from './User';
 import UserList from './UserList';
 import UserInfo from './UserInfo';
+import PlayManager from "../components/PlayManager";
 
 class Profile extends React.Component{
 
 	_user;
-	_refreshLevelListCallback
+	_refreshLevelListCallback;
+	_pm;
 
 	constructor(props){
 		super(props);
@@ -30,6 +32,10 @@ class Profile extends React.Component{
 			inputNewUserName: '',
 			selectIconIndex: 0
 		};
+
+
+		this._pm = PlayManager.getInstance();
+		this._pm.setProfile(this);
 
 		console.log('User.getInstance(): ', this._user.info.toString());
 	}
