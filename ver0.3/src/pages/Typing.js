@@ -33,6 +33,11 @@ class Typing extends React.Component{
 	}
 
 	render(){
+		// TODO: 새로고침 이외의 방법 확인 필요
+		if(this.state.level.id !== this.props.match.params.id){
+			window.location.reload();
+		}
+
 		return(
 			<div className="sentence-area">
 				<h3>{this.state.level.title}</h3>
