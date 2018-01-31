@@ -3,31 +3,28 @@ class UserInfo{
 	_data;
 
 	constructor(props){
+
+		let id = 'user' + Math.floor((1 + Math.random()) * 0x100000000).toString(16).substring(1);
+		let name = "이름없는 사용자";
+		let grade = "수련생";
+		let level = {};
+		let icon = 0;
+
 		if(props){
-			this._data = {
-				id: props.id,
-				name: props.name,
-				grade: props.grade,
-				level: props.level,
-				icon: props.icon
-			}
-		} else {
-			this._data = {
-				id: 'user' + Math.floor((1 + Math.random()) * 0x100000000).toString(16).substring(1),
-				name: "이름없는 사용자",
-				grade: "수련생",
-				level: {},
-				icon: 0
-			}
+			id = (props.id) ? props.id : id;
+			name = (props.name) ? props.name : name;
+			grade = (props.grade) ? props.grade : grade;
+			level = (props.level) ? props.level : level;
+			icon = (props.icon) ? props.icon : icon;
 		}
-	}
 
-	rename(name){
-		this._data.name = name;
-	}
-
-	changeIcon(num){
-		this._data.icon = num;
+		this._data = {
+			id: id,
+			name: name,
+			grade: grade,
+			level: level,
+			icon: icon
+		}
 	}
 
 	get data(){
