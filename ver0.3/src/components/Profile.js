@@ -1,6 +1,5 @@
 import React from 'react';
 import UserList from './UserList';
-import PlayManager from "../components/PlayManager";
 import UserManager from "./UserManager";
 
 class Profile extends React.Component{
@@ -34,10 +33,16 @@ class Profile extends React.Component{
 		};
 	}
 
+	/**
+	 * 유저 목록 보임 토글
+	 */
 	toggleUserLayer(){
 		this.setState({isShowUserLayer: !this.state.isShowUserLayer});
 	}
 
+	/**
+	 * 새로운 사용자 추가
+	 */
 	toggleAddUserView(){
 		this.setState({
 			inputNewUserName: "이름없는 사용자",
@@ -47,10 +52,18 @@ class Profile extends React.Component{
 		});
 	}
 
+	/**
+	 * 새로운 사용자 추가 상태에서 icon 선택 레이어 보임 토글
+	 * @param e
+	 */
 	toggleProfileIcon(e){
 		this.setState({isShowProfileIconSelector: !this.state.isShowProfileIconSelector});
 	}
 
+	/**
+	 * 유저 목록에서 유저를 선택
+	 * @param userId
+	 */
 	selectedUser(userId){
 		let info = this._um.changeUser(userId);
 		this.setState({info: info});
@@ -67,8 +80,6 @@ class Profile extends React.Component{
 		}
 		this.setState({isTypingMode: bool});
 	}*/
-
-
 
 	/**
 	 * 사용자 입력에 클릭하면 작성되어 있는 모든 텍스트를 선택

@@ -4,7 +4,6 @@ import LetterItem from './LetterItem';
 import Keymap from '../json/keymap';
 import Level from './Level';
 import Hangul from '../lib/hangul';
-import User from "./User";
 import Reporter from './Reporter';
 
 class LetterList extends React.Component{
@@ -18,10 +17,6 @@ class LetterList extends React.Component{
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 
 		this._reporter = new Reporter();
-
-		/*this.state = {
-			isFinished: false
-		}*/
 	}
 
 	componentDidMount(){
@@ -42,10 +37,6 @@ class LetterList extends React.Component{
 	removeKeyboardEvent(){
 		window.removeEventListener('keydown', this.handleKeyDown);
 	}
-
-	/*componentDidUpdate(){
-		console.log('componentDidUpdate-----------');
-	}*/
 
 	handleKeyDown(e){
 		// console.log('LetterList.keydown: ', this, e.keyCode);
@@ -266,7 +257,6 @@ class LetterList extends React.Component{
 		this._reporter.saveResultAtLevel(this.props.level, data);
 		// User.getInstance().report();
 
-		// this.setState({isFinished: true});
 		this.props.typingFinished();
 	}
 	stopCount(){

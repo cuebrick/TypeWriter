@@ -1,9 +1,8 @@
 import React from 'react';
 import PlayManager from "../components/PlayManager";
 import KeyboardLayout from '../components/KeyboardLayout';
-import { Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LetterList from "../components/LetterList";
-import Level from "../components/Level";
 import ReportView from "../components/ReportView";
 
 class Typing extends React.Component{
@@ -25,7 +24,6 @@ class Typing extends React.Component{
 	}
 
 	typingFinished(){
-		console.log('Typing.finished() : ', this.state.level);
 		let nextId = this._pm.getNextLevelId(this.state.level.id);
 		let level = this._pm.getLevelObject(nextId);
 		this.setState({

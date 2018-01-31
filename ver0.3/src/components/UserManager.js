@@ -84,7 +84,6 @@ class UserManager{
 	}
 
 	createNewUser(options){
-		// let userInfo = new UserInfo(options);
 		this._info = new UserInfo(options);
 		this.saveUser();
 	}
@@ -97,7 +96,6 @@ class UserManager{
 
 	requestDeleteUser(id){
 		console.log('requestDeleteUser: >>', id);
-		// this.reloadUserList();
 		delete this._users[id];
 		this.saveUsers();
 		return this.reloadUserList();
