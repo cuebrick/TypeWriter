@@ -1,8 +1,12 @@
 import LevelData from '../json/level-data';
 import Level from "./Level";
+import UserManager from "./UserManager";
 
 class PlayManager {
 
+	/****************************************************
+	 * static
+	 ****************************************************/
 	static _instance;
 
 	static getInstance() {
@@ -12,18 +16,34 @@ class PlayManager {
 			return new PlayManager();
 	}
 
+
+	/****************************************************
+	 * instance variables (private)
+	 ****************************************************/
+	// components
+	_levels;
+	_typing;
+	_profile;
+
+	// commons
+	_um;
+
+	/****************************************************
+	 * instance method
+	 ****************************************************/
 	constructor() {
 		if (!PlayManager._instance) {
 			PlayManager._instance = this;
 		} else {
 			new Error('PlayManager is Singlton class !!');
 		}
+
+		this._um = UserManager.getInstance();
 	}
 
-	_levels;
-	_typing;
-	_profile;
-
+	/****************************************************
+	 * SET methods
+	 ****************************************************/
 	setLevels(levels){
 		this._levels = levels;
 	}
@@ -36,7 +56,9 @@ class PlayManager {
 		this._profile = profile;
 	}
 
-
+	/****************************************************
+	 * GET methods
+	 ****************************************************/
 	getLevelObject(id){
 		return new Level(this.getLevelDataById(id));
 	}

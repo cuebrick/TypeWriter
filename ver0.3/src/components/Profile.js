@@ -1,17 +1,18 @@
 import React from 'react';
-import User from './User';
 import UserList from './UserList';
-import UserInfo from './UserInfo';
 import PlayManager from "../components/PlayManager";
+import UserManager from "./UserManager";
 
 class Profile extends React.Component{
 
-	_user;
-	_refreshLevelListCallback;
-	_pm;
+	// _refreshLevelListCallback;
+	_um;
 
 	constructor(props){
 		super(props);
+
+		this._um = UserManager.getInstance();
+
 		this.toggleUserLayer = this.toggleUserLayer.bind(this);
 		this.toggleAddUserView = this.toggleAddUserView.bind(this);
 		this.inputUserName = this.inputUserName.bind(this);
@@ -21,37 +22,20 @@ class Profile extends React.Component{
 		this.selectedUser = this.selectedUser.bind(this);
 		this.deletedUser = this.deletedUser.bind(this);
 
-		this._user = User.getInstance();
 		this.state = {
-			info : this._user.info,
-			users: this._user.users,
+			info : this._um.info,
+			users: this._um.users,
 			isTypingMode: false,
-			isShowUserLayer : false,
+			isShowUserLayer: false,
 			isShowAddUserView : false,
 			isShowProfileIconSelector: false,
 			inputNewUserName: '',
 			selectIconIndex: 0
 		};
-
-
-		this._pm = PlayManager.getInstance();
-		this._pm.setProfile(this);
-
-		console.log('User.getInstance(): ', this._user.info.toString());
 	}
 
 	toggleUserLayer(){
 		this.setState({isShowUserLayer: !this.state.isShowUserLayer});
-	}
-
-	toggleProfileIcon(e){
-		console.log(this.state.isShowProfileIconSelector);
-		this.setState({isShowProfileIconSelector: !this.state.isShowProfileIconSelector});
-	}
-
-	handleIconSelect(index){
-		console.log(index);
-		this.setState({selectIconIndex: index});
 	}
 
 	toggleAddUserView(){
@@ -63,54 +47,86 @@ class Profile extends React.Component{
 		});
 	}
 
-	toggleTypingMode(bool){
+	toggleProfileIcon(e){
+		this.setState({isShowProfileIconSelector: !this.state.isShowProfileIconSelector});
+	}
+
+	selectedUser(userId){
+		let info = this._um.changeUser(userId);
+		this.setState({info: info});
+		this.toggleUserLayer();
+		this.setState({
+			users: this._um.reloadUserList()
+		});
+		// this._refreshLevelListCallback();
+	}
+
+	/*toggleTypingMode(bool){
 		if(bool && this.state.isShowAddUserView){
 			this.toggleAddUserView();
 		}
 		this.setState({isTypingMode: bool});
-	}
+	}*/
 
-	handleCreateUser(){
-		// 먼저 현재 사용자를 저장
-		this._user.saveUser();
 
-		// 새로운 사용자를 생성하고 세팅
-		let userInfo = new UserInfo(null);
-		console.log('new UserInfo: ', this.state.inputNewUserName, this.state.selectIconIndex);
-		userInfo.rename(this.state.inputNewUserName);
-		userInfo.changeIcon(this.state.selectIconIndex);
-		this._user.setUserInfo(userInfo);
-		this.setState({
-			info: userInfo,
-			isShowAddUserView: false,
-			users: this._user.reloadUserList()
-		});
-	}
 
-	selectedUser(userId){
-		let userInfo = User.getInstance().changeUser(userId);
-		this.setState({info: userInfo});
-		this.toggleUserLayer();
-		this._user.reloadUserList();
-		this._refreshLevelListCallback();
-	}
-
-	deletedUser(userId){
-		let users = User.getInstance().requestDeleteUser(userId);
-		this.setState({users: users});
-	}
-
-	inputUserName(e){
-		this.setState({inputNewUserName: e.target.value});
-	}
-
+	/**
+	 * 사용자 입력에 클릭하면 작성되어 있는 모든 텍스트를 선택
+	 * @param e
+	 */
 	handleInputFocus(e){
 		e.target.select();
 	}
 
-	setRefreshLevelListCallback(callback){
-		this._refreshLevelListCallback = callback;
+	/**
+	 * 사용자 이름 입력
+	 * @param e
+	 */
+	inputUserName(e){
+		this.setState({inputNewUserName: e.target.value});
 	}
+
+	/**
+	 * 새로운 사용자를 추가하는 과정에서 아이콘을 선택함
+	 * @param index
+	 */
+	handleIconSelect(index){
+		this.setState({selectIconIndex: index});
+	}
+
+	/**
+	 * 새로운 사용자의 결정사항들을 결정
+	 */
+	handleCreateUser(){
+		// 먼저 현재 사용자를 저장
+		this._um.saveUser();
+
+		// 새로운 사용자를 생성하고 세팅
+		this._um.createNewUser({
+			name: this.state.inputNewUserName,
+			icon: this.state.selectIconIndex
+		});
+
+		this.setState({
+			info: this._um.info,
+			isShowAddUserView: false,
+			users: this._um.reloadUserList()
+		});
+	}
+
+	/**
+	 * 유저 목록에서 삭제할 유저를 선택
+	 * @param userId
+	 */
+	deletedUser(userId){
+		let users = this._um.requestDeleteUser(userId);
+		this.setState({users: users});
+	}
+
+
+
+
+
 
 	render(){
 		let typingModeClassName = (this.state.isTypingMode) ? ' typing-mode' : '';
@@ -120,46 +136,53 @@ class Profile extends React.Component{
 		return(
 			<div className={"profile" + profileActiveClassName + addUserModeClassName + typingModeClassName}>
 				<div className="user-info">
-					{this.state.isShowAddUserView ?
+					{
+						this.state.isShowAddUserView ?
 						<div className="user-description">
 							<div className="profile-image" onClick={this.toggleProfileIcon}>
 								<img src={"/images/icon/profile-icon-" + this.state.selectIconIndex + ".svg"}/>
 							</div>
 							<div className="user-grade">새로운 수련생 등록</div>
 							<div className="user-name">
-								<input type="text" defaultValue="이름없는 사용자" onChange={this.inputUserName} onFocus={this.handleInputFocus}/>
+								<input type="text" defaultValue="이름없는 사용자" onChange={this.inputUserName}
+								       onFocus={this.handleInputFocus}/>
 							</div>
 
-							{this.state.isShowProfileIconSelector &&
+							{
+								this.state.isShowProfileIconSelector &&
 								<div className="icon-selector">
 									{[...Array(10)].map((x, i) =>
-										<img key={i} src={"/images/icon/profile-icon-" + i + ".svg"} onClick={() => this.handleIconSelect(i)}/>
+										<img key={i} src={"/images/icon/profile-icon-" + i + ".svg"}
+										     onClick={() => this.handleIconSelect(i)}/>
 									)}
 								</div>
 							}
 						</div>
 						:
-						<div className="user-description" onClick={this.state.isTypingMode ? null : this.toggleUserLayer}>
-
+						<div className="user-description"
+						     onClick={this.state.isTypingMode ? null : this.toggleUserLayer}>
 							<div className="profile-image">
-								<img src={"/images/icon/profile-icon-"+ this.state.info.icon +".svg"}/>
+								<img src={"/images/icon/profile-icon-" + this.state.info.icon + ".svg"}/>
 							</div>
 							<div className="user-grade">{this.state.info.grade}</div>
 							<div className="user-name">{this.state.info.name}</div>
 						</div>
 					}
 				</div>
-				{this.state.isTypingMode === false &&
+				{
+					this.state.isTypingMode === false &&
 					<div className="profile-buttons">
-						{this.state.isShowAddUserView ?
+						{
+							this.state.isShowAddUserView ?
 							<div>
 								<button className="" onClick={this.handleCreateUser}>등록</button>
 								<button className="" onClick={this.toggleAddUserView}>취소</button>
 							</div>
 							:
 							<div>
-								{this.state.isShowUserLayer === false &&
-								<button className="" onClick={this.toggleAddUserView}>+</button>
+								{
+									this.state.isShowUserLayer === false &&
+									<button className="" onClick={this.toggleAddUserView}>+</button>
 								}
 							</div>
 						}
