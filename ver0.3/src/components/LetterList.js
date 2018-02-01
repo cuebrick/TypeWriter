@@ -210,6 +210,9 @@ class LetterList extends React.Component{
 		}
 
 		let item = this.getCurrentItem();
+		if(!item)
+			return;
+
 		this.setNextIndex();
 		if(item.props.char === '↩'){
 			this.clearBuffer();

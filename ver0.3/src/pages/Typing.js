@@ -11,15 +11,29 @@ class Typing extends React.Component{
 	
 	constructor(props){
 		super(props);
+
 		this.typingFinished = this.typingFinished.bind(this);
+		this.onKeydown = this.onKeydown.bind(this);
+
 		this._pm = PlayManager.getInstance();
 		this._pm.setTyping(this);
 		let level = this._pm.getLevelObject(this.props.match.params.id);
+
+		window.addEventListener('keydown', this.onKeydown);
 
 		this.state = {
 			level: level,
 			nextLevel: null,
 			isFinished: false
+		}
+	}
+
+	onKeydown(e){
+		let code = e.keyCode;
+		if(code === 27){
+			window.location.href = '/levels';
+		} else if (code === 13 && this.state.isFinished){
+			window.location.href = '/typing/'+ this.state.nextLevel.id;
 		}
 	}
 
