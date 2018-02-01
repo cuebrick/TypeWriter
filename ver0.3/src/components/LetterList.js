@@ -19,17 +19,6 @@ class LetterList extends React.Component{
 		this._reporter = new Reporter();
 	}
 
-	componentDidMount(){
-		console.log('!!!mount-----');
-		this.addKeyboardEvent();
-		this.getCurrentItem().setActive(true);// 첫 글자 아이템에 active 처리
-	}
-
-	componentWillUnmount(){
-		console.log('unmount-----');
-		this.removeKeyboardEvent();
-	}
-
 	addKeyboardEvent(){
 		window.addEventListener('keydown', this.handleKeyDown);
 	}
@@ -285,6 +274,22 @@ class LetterList extends React.Component{
 
 	getCurrentItem(){
 		return this.refs['letterItem'+this.props.level.index];
+	}
+
+
+
+
+
+
+	componentDidMount(){
+		console.log('!!!mount-----');
+		this.addKeyboardEvent();
+		this.getCurrentItem().setActive(true);// 첫 글자 아이템에 active 처리
+	}
+
+	componentWillUnmount(){
+		console.log('unmount-----');
+		this.removeKeyboardEvent();
 	}
 
 	render(){

@@ -4,7 +4,7 @@ class Reporter{
 
 
 	saveResultAtLevel(level, data){
-		console.log('Reporter.saveResult(): ',level,  data);
+		// console.log('Reporter.saveResult(): ',level,  data);
 
 		let missCount = 0;
 		let missLetterCount = 0;
