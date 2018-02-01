@@ -41,15 +41,18 @@ class PlayManager {
 		this._um = UserManager.getInstance();
 	}
 
+
 	/****************************************************
 	 * SET methods
 	 ****************************************************/
 	setLevels(levels){
 		this._levels = levels;
+		this._profile.toggleTypingMode(false);
 	}
 
 	setTyping(typing){
 		this._typing = typing;
+		this._profile.toggleTypingMode(true);
 	}
 
 	setProfile(profile){

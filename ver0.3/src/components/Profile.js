@@ -1,6 +1,7 @@
 import React from 'react';
 import UserList from './UserList';
 import UserManager from "./UserManager";
+import PlayManager from "./PlayManager";
 
 class Profile extends React.Component{
 
@@ -11,6 +12,8 @@ class Profile extends React.Component{
 		super(props);
 
 		this._um = UserManager.getInstance();
+		this._pm = PlayManager.getInstance();
+		this._pm.setProfile(this);
 
 		this.toggleUserLayer = this.toggleUserLayer.bind(this);
 		this.toggleAddUserView = this.toggleAddUserView.bind(this);
@@ -74,12 +77,17 @@ class Profile extends React.Component{
 		// this._refreshLevelListCallback();
 	}
 
-	/*toggleTypingMode(bool){
+	/**
+	 * 타이핑 상태로 설정하면 유저를 변경할 수 없도록 상태 변경 토글
+	 * @param bool
+	 */
+	toggleTypingMode(bool){
 		if(bool && this.state.isShowAddUserView){
 			this.toggleAddUserView();
 		}
-		this.setState({isTypingMode: bool});
-	}*/
+		let b = (bool === undefined) ? !this.state.isTypingMode : bool;
+		this.setState({isTypingMode: b});
+	}
 
 	/**
 	 * 사용자 입력에 클릭하면 작성되어 있는 모든 텍스트를 선택
