@@ -4,19 +4,13 @@ import LetterItem from './LetterItem';
 import Keymap from '../json/keymap';
 import Level from './Level';
 import Hangul from '../lib/hangul';
-import Reporter from './Reporter';
 
 class LetterList extends React.Component{
-
-	// object
-	_reporter;
 
 	constructor(props){
 		super(props);
 
 		this.handleKeyDown = this.handleKeyDown.bind(this);
-
-		this._reporter = new Reporter();
 	}
 
 	addKeyboardEvent(){
@@ -275,10 +269,9 @@ class LetterList extends React.Component{
 	}
 
 
-
-
-
-
+	/****************************************************
+	 * React Lifecycle Method
+	 ****************************************************/
 	componentDidMount(){
 		console.log('!!!mount-----');
 		this.addKeyboardEvent();

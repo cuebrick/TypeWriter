@@ -163,16 +163,14 @@ class Profile extends React.Component{
 							</div>
 							<div className="user-grade">새로운 수련생 등록</div>
 							<div className="user-name">
-								<input type="text" defaultValue="이름없는 사용자" onChange={this.inputUserName}
-								       onFocus={this.handleInputFocus}/>
+								<input type="text" defaultValue="이름없는 사용자" onChange={this.inputUserName} onFocus={this.handleInputFocus}/>
 							</div>
 
 							{
 								this.state.isShowProfileIconSelector &&
 								<div className="icon-selector">
 									{[...Array(10)].map((x, i) =>
-										<img key={i} src={"/images/icon/profile-icon-" + i + ".svg"}
-										     onClick={() => this.handleIconSelect(i)}/>
+										<img key={i} src={"/images/icon/profile-icon-" + i + ".svg"} onClick={() => this.handleIconSelect(i)}/>
 									)}
 								</div>
 							}

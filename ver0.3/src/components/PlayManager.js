@@ -28,6 +28,7 @@ class PlayManager {
 
 	// commons
 	_um;
+	_reporter;
 
 	/****************************************************
 	 * instance method

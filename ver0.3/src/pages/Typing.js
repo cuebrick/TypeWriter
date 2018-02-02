@@ -38,8 +38,10 @@ class Typing extends React.Component{
 	}
 
 	typingFinished(typingData){
+		// Send data to PlayManager
 		this._pm.typingFinished(this.state.level, typingData);
 
+		// Next Level setting
 		let nextId = this._pm.getNextLevelId(this.state.level.id);
 		let level = this._pm.getLevelObject(nextId);
 		this.setState({
