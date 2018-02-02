@@ -2,6 +2,7 @@ import React from 'react';
 import PlayManager from "../components/PlayManager";
 import KeyboardLayout from '../components/KeyboardLayout';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import LetterList from "../components/LetterList";
 import ReportView from "../components/ReportView";
 
@@ -31,9 +32,9 @@ class Typing extends React.Component{
 	onKeydown(e){
 		let code = e.keyCode;
 		if(code === 27){
-			window.location.href = '/levels';
+			this.props.history.push('/levels');
 		} else if (code === 13 && this.state.isFinished){
-			window.location.href = '/typing/'+ this.state.nextLevel.id;
+			this.props.history.push('/typing/'+ this.state.nextLevel.id);
 		}
 	}
 
