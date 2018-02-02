@@ -37,7 +37,9 @@ class Typing extends React.Component{
 		}
 	}
 
-	typingFinished(){
+	typingFinished(typingData){
+		this._pm.typingFinished(this.state.level, typingData);
+
 		let nextId = this._pm.getNextLevelId(this.state.level.id);
 		let level = this._pm.getLevelObject(nextId);
 		this.setState({

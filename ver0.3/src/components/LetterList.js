@@ -246,10 +246,8 @@ class LetterList extends React.Component{
 
 		this.clearBuffer();
 		this.stopCount();
-		this._reporter.saveResultAtLevel(this.props.level, data);
-		// User.getInstance().report();
 
-		this.props.typingFinished();
+		this.props.typingFinished(data);// to parent
 	}
 	stopCount(){
 		let level = this.props.level;

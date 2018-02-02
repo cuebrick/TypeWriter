@@ -1,6 +1,7 @@
 import LevelData from '../json/level-data';
 import Level from "./Level";
 import UserManager from "./UserManager";
+import Reporter from "./Reporter";
 
 class PlayManager {
 
@@ -39,8 +40,12 @@ class PlayManager {
 		}
 
 		this._um = UserManager.getInstance();
+		this._reporter = new Reporter();
 	}
 
+	typingFinished(level, data){
+		this._reporter.saveResultAtLevel(level, data);
+	}
 
 	/****************************************************
 	 * SET methods
