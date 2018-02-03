@@ -162,7 +162,35 @@ class LetterList extends React.Component{
 				level.buffer = letters[0];
 			}
 			this.updateDisplay(level.buffer);
+			this.dispatchNextCode();
 		}
+	}
+
+	dispatchNextCode(){
+		let currentItem = this.getCurrentItem();
+		if(!currentItem)
+			return;
+
+		let nextItem = this.getNextItem();
+		let text = currentItem.getData().text;
+		text += (nextItem) ? nextItem.getData().text : '';
+
+		// console.log('---------------------------');
+		// console.log(Hangul.d(text));
+		// console.log(this.props.level.buffer);
+		// console.log('---------------------------');
+
+		let len = this.props.level.buffer.length;
+		let char = Hangul.d(text)[len];
+		let code;
+		for(let key in Keymap){
+			if(Keymap[key].krn === char){
+				code = Keymap[key].code;
+				break;
+			}
+		}
+
+		this.props.nextCode(code);
 	}
 
 	recordKey(e){
@@ -268,6 +296,10 @@ class LetterList extends React.Component{
 		return this.refs['letterItem'+this.props.level.index];
 	}
 
+	getNextItem(){
+		return this.refs['letterItem'+ (this.props.level.index+1)];
+	}
+
 
 	/****************************************************
 	 * React Lifecycle Method
@@ -276,6 +308,7 @@ class LetterList extends React.Component{
 		console.log('!!!mount-----');
 		this.addKeyboardEvent();
 		this.getCurrentItem().setActive(true);// 첫 글자 아이템에 active 처리
+		this.dispatchNextCode();
 	}
 
 	componentWillUnmount(){

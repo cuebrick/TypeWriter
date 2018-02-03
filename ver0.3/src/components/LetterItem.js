@@ -28,6 +28,10 @@ class LetterItem extends React.Component{
 		}
 	}
 
+	getTyping(){
+		return this.state.input;
+	}
+
 	render(){
 		let enterKeyClassName = (this.props.char === '↩') ? ' enter-key' : '';
 

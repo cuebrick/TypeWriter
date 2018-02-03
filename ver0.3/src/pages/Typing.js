@@ -2,7 +2,6 @@ import React from 'react';
 import PlayManager from "../components/PlayManager";
 import KeyboardLayout from '../components/KeyboardLayout';
 import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
 import LetterList from "../components/LetterList";
 import ReportView from "../components/ReportView";
 
@@ -14,6 +13,7 @@ class Typing extends React.Component{
 		super(props);
 
 		this.typingFinished = this.typingFinished.bind(this);
+		this.nextCode = this.nextCode.bind(this);
 		this.onKeydown = this.onKeydown.bind(this);
 
 		this._pm = PlayManager.getInstance();
@@ -25,6 +25,7 @@ class Typing extends React.Component{
 		this.state = {
 			level: level,
 			nextLevel: null,
+			nextCode: null,
 			isFinished: false
 		}
 	}
@@ -36,6 +37,11 @@ class Typing extends React.Component{
 		} else if (code === 13 && this.state.isFinished){
 			this.props.history.push('/typing/'+ this.state.nextLevel.id);
 		}
+	}
+
+	nextCode(code){
+		console.log('currentLetter: must>', code);
+		this.setState({nextCode: code})
 	}
 
 	typingFinished(typingData){
@@ -61,7 +67,7 @@ class Typing extends React.Component{
 			<div className="sentence-area">
 				<h3>{this.state.level.title}</h3>
 
-				<LetterList level={this.state.level} typingFinished={this.typingFinished}/>
+				<LetterList level={this.state.level} nextCode={this.nextCode} typingFinished={this.typingFinished}/>
 
 				<div className="button-ui">
 					<Link to="/levels"><button className="list-btn">목록으로(esc)</button></Link>
@@ -71,7 +77,7 @@ class Typing extends React.Component{
 					}
 				</div>
 
-				<KeyboardLayout/>
+				<KeyboardLayout nextCode={this.state.nextCode}/>
 				{
 					this.state.isFinished &&
 					<ReportView level={this.state.level}/>
