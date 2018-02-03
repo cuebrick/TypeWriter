@@ -67,6 +67,7 @@ class LetterList extends React.Component{
 					this.setPrevIndex();
 				}
 				this.updateDisplay(this.props.level.buffer);
+				this.dispatchNextCode();
 				break;
 
 			// 한글, 영문 입력 a~z, A~Z, ㄱ~ㅎ, ㅏ~ㅣ
@@ -174,11 +175,6 @@ class LetterList extends React.Component{
 		let nextItem = this.getNextItem();
 		let text = currentItem.getData().text;
 		text += (nextItem) ? nextItem.getData().text : '';
-
-		// console.log('---------------------------');
-		// console.log(Hangul.d(text));
-		// console.log(this.props.level.buffer);
-		// console.log('---------------------------');
 
 		let len = this.props.level.buffer.length;
 		let char = Hangul.d(text)[len];
