@@ -284,6 +284,37 @@ header{
 	background-image: url(../images/star-half.png);
 }
 
+/*report-view*/
+.report-view{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+}
+.report-view .stars{
+	height: 40px;
+}
+.report-view .description{
+	clear: both;
+}
+.report-view .description dl > dt{
+	float: left;
+	width: 150px;
+	clear: both;
+}
+.report-view .description dl > dd{
+	float: left;
+}
+.report-view .report-view-msg{
+	clear: both;
+	padding-top: 30px;
+	color: #c0967c;
+}
+
 .button-ui{
 	padding: 20px 0;
 	font-size: 15px;
