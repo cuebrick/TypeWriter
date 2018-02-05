@@ -15,7 +15,7 @@ class UserManager{
 
 
 	/****************************************************
-	 * instance variables
+	 * private instance variables
 	 ****************************************************/
 	_info;
 	_users;
@@ -32,7 +32,33 @@ class UserManager{
 
 		this.initUser();
 	}
+	
+	reloadUserList(){
+		return this._users = this.getUserListData();
+	}
 
+	createNewUser(options){
+		this._info = new UserInfo(options);
+		this.saveUser();
+	}
+
+	changeUser(id){
+		localStorage.setItem('currentUser', id);
+		this.initUser();
+		return this._info;
+	}
+
+	requestDeleteUser(id){
+		console.log('requestDeleteUser: >>', id);
+		delete this._users[id];
+		this.saveUsers();
+		return this.reloadUserList();
+	}
+
+
+	/****************************************************
+	 * private method
+	 ****************************************************/
 	initUser(){
 		// localStorage.clear();
 		if (typeof(Storage) !== "undefined") {
@@ -45,10 +71,6 @@ class UserManager{
 		} else {
 			// TODO: No Web Storage support..
 		}
-	}
-
-	reloadUserList(){
-		return this._users = this.getUserListData();
 	}
 
 	getUserListData(){
@@ -81,24 +103,6 @@ class UserManager{
 
 	saveCurrentUserId(id){
 		localStorage.setItem('currentUser', id);
-	}
-
-	createNewUser(options){
-		this._info = new UserInfo(options);
-		this.saveUser();
-	}
-
-	changeUser(id){
-		localStorage.setItem('currentUser', id);
-		this.initUser();
-		return this._info;
-	}
-
-	requestDeleteUser(id){
-		console.log('requestDeleteUser: >>', id);
-		delete this._users[id];
-		this.saveUsers();
-		return this.reloadUserList();
 	}
 
 	/****************************************************
