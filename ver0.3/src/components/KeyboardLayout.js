@@ -54,7 +54,6 @@ class KeyboardLayout extends React.Component{
 	}
 
 	render(){
-		console.log('KeyboardLayout.render(): ', this.props.nextCode);
 		return(
 			<div className="keyboard">
 				<div className="row">

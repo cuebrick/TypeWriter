@@ -40,7 +40,6 @@ class Typing extends React.Component{
 	}
 
 	nextCode(code){
-		console.log('currentLetter: must>', code);
 		this.setState({nextCode: code})
 	}
 

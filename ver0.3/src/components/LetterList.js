@@ -163,8 +163,8 @@ class LetterList extends React.Component{
 				level.buffer = letters[0];
 			}
 			this.updateDisplay(level.buffer);
-			this.dispatchNextCode();
 		}
+		this.dispatchNextCode();
 	}
 
 	dispatchNextCode(){
@@ -172,18 +172,28 @@ class LetterList extends React.Component{
 		if(!currentItem)
 			return;
 
+		let code; // return value
+		let level = this.props.level;
 		let nextItem = this.getNextItem();
 		let text = currentItem.getData().text;
+
 		text += (nextItem) ? nextItem.getData().text : '';
 
-		let len = this.props.level.buffer.length;
-		let char = Hangul.d(text)[len];
-		let code;
-		for(let key in Keymap){
-			if(Keymap[key].krn === char){
-				code = Keymap[key].code;
-				break;
+		if(level.type === Level.CHARACTER_TYPE){
+			code = getCode(currentItem.getData().text);
+		}else{
+			let len = this.props.level.buffer.length;
+			let char = Hangul.d(text)[len];
+			code = getCode(char);
+		}
+
+		function getCode(character) {
+			for(let key in Keymap){
+				if(Keymap[key].krn === character){
+					return Keymap[key].code;
+				}
 			}
+			return '';
 		}
 
 		this.props.nextCode(code);
