@@ -18,8 +18,7 @@ class LevelList extends React.Component{
 								<LevelItem
 									dataId={obj.id}
 									title={obj.title}
-									// handleClick={this.handleItemClick}
-									// levelData={this.props.levelListData[obj.id]}
+									saveData={this.props.saveData[obj.id]}
 								/>
 							</Link>
 						);

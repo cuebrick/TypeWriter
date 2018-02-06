@@ -26,7 +26,7 @@ class Profile extends React.Component{
 
 		this.state = {
 			info : this._um.info,
-			users: this._um.users,
+			users: this._um.reloadUserList(),
 			isTypingMode: false,
 			isShowUserLayer: false,
 			isShowAddUserView : false,

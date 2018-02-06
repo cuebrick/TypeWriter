@@ -20,6 +20,8 @@ class UserManager{
 	_info;
 	_users;
 
+	_reloadLevelsCallback;
+
 	/****************************************************
 	 * instance method
 	 ****************************************************/
@@ -32,7 +34,7 @@ class UserManager{
 
 		this.initUser();
 	}
-	
+
 	reloadUserList(){
 		return this._users = this.getUserListData();
 	}
@@ -45,14 +47,25 @@ class UserManager{
 	changeUser(id){
 		localStorage.setItem('currentUser', id);
 		this.initUser();
+		this.getUserListData();
+		this._reloadLevelsCallback();
 		return this._info;
 	}
 
 	requestDeleteUser(id){
 		console.log('requestDeleteUser: >>', id);
 		delete this._users[id];
-		this.saveUsers();
+		localStorage.removeItem(id);
 		return this.reloadUserList();
+	}
+
+	saveLevelData(level){
+		this._info.saveData[level.id] = level.result;
+		this.saveUser(this._info);
+	}
+
+	setReloadLevelsCallback(callback){
+		this._reloadLevelsCallback = callback;
 	}
 
 
@@ -67,38 +80,45 @@ class UserManager{
 			let data = this.getCurrentUserInfo();
 
 			// data 가 undefined 라면 UserInfo 에서 이름없는 사용자를 자동으로 만들어줌.
-			this.setUserInfo(new UserInfo(data));
+			this._info = new UserInfo(data);
+			this.saveUser(this._info);
+
 		} else {
 			// TODO: No Web Storage support..
 		}
 	}
 
 	getUserListData(){
-		let users = JSON.parse(localStorage.getItem('users'));
-		if(!users)
-			users = {};
-		return users;
+		if(!this._users)
+			this._users = {};
+
+		for(let uid in localStorage){
+			if(uid.substr(0, 6) === '_USER_'){
+				this._users[uid] = this.getUserInfo(uid);
+			}
+		}
+		return this._users;
+	}
+
+	getUserInfo(id){
+		return JSON.parse(localStorage.getItem(id));
 	}
 
 	getCurrentUserInfo(){
 		let currentUserId = localStorage.getItem('currentUser');
-		return this._users[currentUserId];
-	}
-
-	setUserInfo(userInfo){
-		this._info = userInfo;
-		this.saveUser(userInfo);
+		// return this._users[currentUserId];
+		return this.getUserInfo(currentUserId);
 	}
 
 	saveUser(userInfo){
 		let info = (userInfo) ? userInfo : this._info;
-		this._users[info.id] = info.data;
-		this.saveUsers();
+		// this._users[info.id] = info.data;
+		// this.saveUsers();
 		this.saveCurrentUserId(info.id);
-	}
 
-	saveUsers(){
-		localStorage.setItem('users', JSON.stringify(this._users));
+		localStorage.setItem(info.id, JSON.stringify(info.data));
+
+		console.log('localStorage:>', localStorage);
 	}
 
 	saveCurrentUserId(id){

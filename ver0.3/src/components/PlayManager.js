@@ -46,6 +46,7 @@ class PlayManager {
 
 	typingFinished(level, data){
 		this._reporter.saveResultAtLevel(level, data);
+		this._um.saveLevelData(level)
 	}
 
 	/****************************************************

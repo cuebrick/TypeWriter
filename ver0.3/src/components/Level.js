@@ -37,7 +37,7 @@ class Level{
 		this.timeCount = 0;
 		this.timeRecord = [];
 		this.buffer = [];
-		this.result = [];
+		this.result = {};
 
 		/*this.state = {
 			id: this.props.id,

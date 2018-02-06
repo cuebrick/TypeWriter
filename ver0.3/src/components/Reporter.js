@@ -42,6 +42,7 @@ class Reporter{
 			star++;
 
 		level.result = {
+			id: level.id,
 			totalLetterLen : data.length,
 			totalCharLen : totalCharLen,
 			missLetterCount : missLetterCount,

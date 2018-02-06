@@ -4,27 +4,31 @@ class UserInfo{
 
 	constructor(props){
 
-		let id = 'user' + Math.floor((1 + Math.random()) * 0x100000000).toString(16).substring(1);
+		let id = '_USER_' + Math.floor((1 + Math.random()) * 0x100000000).toString(16).substring(1);
 		let name = "이름없는 사용자";
 		let grade = "수련생";
-		let level = {};
+		let saveData = {};
 		let icon = 0;
 
 		if(props){
 			id = (props.id) ? props.id : id;
 			name = (props.name) ? props.name : name;
 			grade = (props.grade) ? props.grade : grade;
-			level = (props.level) ? props.level : level;
 			icon = (props.icon) ? props.icon : icon;
+			saveData = (props.saveData) ? props.saveData : saveData;
 		}
 
 		this._data = {
 			id: id,
 			name: name,
 			grade: grade,
-			level: level,
-			icon: icon
+			icon: icon,
+			saveData: saveData
 		}
+	}
+
+	saveLevel(levelData){
+		this._data.saveData[levelData.id] = JSON.stringify(levelData);
 	}
 
 	get data(){
@@ -39,11 +43,11 @@ class UserInfo{
 	get grade(){
 		return this._data.grade;
 	}
-	get level(){
-		return this._data.level;
-	}
 	get icon(){
 		return this._data.icon;
+	}
+	get saveData(){
+		return this._data.saveData;
 	}
 
 	toString(){
