@@ -22,7 +22,6 @@ class LetterList extends React.Component{
 	}
 
 	handleKeyDown(e){
-		// console.log('LetterList.keydown: ', this, e.keyCode);
 		let code = e.keyCode;
 
 		this.recordKey(e);
@@ -267,7 +266,6 @@ class LetterList extends React.Component{
 		}
 	}
 	finish(){
-		console.log('finish():>>>>');
 		let data = Object.keys(this.refs).map((key) => {
 			return this.refs[key].getData();
 		});
@@ -288,7 +286,6 @@ class LetterList extends React.Component{
 		let listNode = ReactDOM.findDOMNode(this);
 		let itemRect = itemNode.getBoundingClientRect();
 		let st = Math.round(itemRect.y + listNode.scrollTop - itemRect.height) - 10;
-		// listNode.scrollTop = st;
 		$(listNode).stop().animate({scrollTop: st}, 250);
 	}
 
@@ -311,19 +308,16 @@ class LetterList extends React.Component{
 	 * React Lifecycle Method
 	 ****************************************************/
 	componentDidMount(){
-		console.log('!!!mount-----');
 		this.addKeyboardEvent();
 		this.getCurrentItem().setActive(true);// 첫 글자 아이템에 active 처리
 		this.dispatchNextCode();
 	}
 
 	componentWillUnmount(){
-		console.log('unmount-----');
 		this.removeKeyboardEvent();
 	}
 
 	render(){
-		// console.log('LetterList.render:>>');
 		let letters = [];
 		let level = this.props.level;
 		if(level){

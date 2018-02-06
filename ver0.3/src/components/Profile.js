@@ -5,7 +5,6 @@ import PlayManager from "./PlayManager";
 
 class Profile extends React.Component{
 
-	// _refreshLevelListCallback;
 	_um;
 
 	constructor(props){
@@ -74,7 +73,6 @@ class Profile extends React.Component{
 		this.setState({
 			users: this._um.reloadUserList()
 		});
-		// this._refreshLevelListCallback();
 	}
 
 	/**
@@ -141,9 +139,6 @@ class Profile extends React.Component{
 		let users = this._um.requestDeleteUser(userId);
 		this.setState({users: users});
 	}
-
-
-
 
 
 

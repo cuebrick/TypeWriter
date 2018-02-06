@@ -11,8 +11,6 @@ class ReportView extends React.Component{
 		});
 
 		let result = this.props.level.result;
-		console.log('=============' +
-			result.totalLetterLen);
 		return(
 			<div className="report-view">
 				<div className="report-view-inner">

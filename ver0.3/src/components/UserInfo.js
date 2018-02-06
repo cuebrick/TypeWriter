@@ -27,10 +27,6 @@ class UserInfo{
 		}
 	}
 
-	saveLevel(levelData){
-		this._data.saveData[levelData.id] = JSON.stringify(levelData);
-	}
-
 	get data(){
 		return this._data;
 	}

@@ -36,7 +36,7 @@ class UserManager{
 	}
 
 	reloadUserList(){
-		return this._users = this.getUserListData();
+		return this.getUserListData();
 	}
 
 	createNewUser(options){
@@ -106,19 +106,16 @@ class UserManager{
 
 	getCurrentUserInfo(){
 		let currentUserId = localStorage.getItem('currentUser');
-		// return this._users[currentUserId];
 		return this.getUserInfo(currentUserId);
 	}
 
 	saveUser(userInfo){
 		let info = (userInfo) ? userInfo : this._info;
-		// this._users[info.id] = info.data;
-		// this.saveUsers();
 		this.saveCurrentUserId(info.id);
 
 		localStorage.setItem(info.id, JSON.stringify(info.data));
 
-		console.log('localStorage:>', localStorage);
+		// console.log('localStorage:>', localStorage);
 	}
 
 	saveCurrentUserId(id){

@@ -16,7 +16,6 @@ class LetterItem extends React.Component{
 	}
 
 	input(char){
-		// console.log('LetterItem.input(): ', char);
 		this.setState({input: char});
 		this.setState({isCorrected: (this.props.char === this.state.input)})
 	}
@@ -26,10 +25,6 @@ class LetterItem extends React.Component{
 			text: this.props.char,
 			typing: this.state.input
 		}
-	}
-
-	getTyping(){
-		return this.state.input;
 	}
 
 	render(){

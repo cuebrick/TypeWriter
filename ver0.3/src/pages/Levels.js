@@ -16,7 +16,6 @@ class Levels extends React.Component{
 		}
 
 		this._um.setReloadLevelsCallback(this.reloadLevels);
-
 	}
 
 	_pm;
@@ -27,8 +26,6 @@ class Levels extends React.Component{
 	}
 
 	render(){
-		console.log('Levels.render', this._um.info.saveData);
-
 		return(
 			<div className="level-list-area">
 				<h3>단계 목록</h3>
