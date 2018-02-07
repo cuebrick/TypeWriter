@@ -458,6 +458,7 @@ header{
 }
 .profile > .user-layer .user-list .user-image > img{
 	width: 30px;
+	height: 30px;
 }
 .user-grade{
 	font-size: 11px;
