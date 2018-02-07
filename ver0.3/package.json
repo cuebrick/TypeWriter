@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "build": "babel public --out-dir build && webpack"
   },
   "author": "cuebrick",
   "license": "ISC",
