@@ -160,6 +160,12 @@ header{
 	margin-bottom: 0.4em;
 	font-size: 2em;
 	line-height: 1em;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 .letter > .text{
 	background-color: rgba(255, 255, 255, 0.2);

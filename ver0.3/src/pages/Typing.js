@@ -37,6 +37,8 @@ class Typing extends React.Component{
 		} else if (code === 13 && this.state.isFinished){
 			this.props.history.push('/typing/'+ this.state.nextLevel.id);
 		}
+
+
 	}
 
 	nextCode(code){
@@ -54,6 +56,15 @@ class Typing extends React.Component{
 			isFinished: true,
 			nextLevel: level
 		});
+		window.removeEventListener('keyup', POWERMODE);
+	}
+
+	componentWillUnmount(){
+		window.removeEventListener('keyup', POWERMODE);
+	}
+
+	componentDidMount(){
+		window.addEventListener('keyup', POWERMODE);
 	}
 
 	render(){
