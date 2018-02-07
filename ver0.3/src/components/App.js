@@ -5,8 +5,13 @@ import Main from '../pages/Main';
 import Levels from '../pages/Levels';
 import Typing from '../pages/Typing';
 import NotFound from "../pages/NotFound";
+import IEFix from '../lib/ie-fix';
 
 class App extends React.Component{
+	constructor(props){
+		super(props);
+		new IEFix().addArrayFind();
+	}
 	render(){
 		return(
 			<Router>
