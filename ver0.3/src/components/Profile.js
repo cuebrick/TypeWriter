@@ -2,6 +2,7 @@ import React from 'react';
 import UserList from './UserList';
 import UserManager from "./UserManager";
 import PlayManager from "./PlayManager";
+import { Link } from 'react-router-dom';
 
 class Profile extends React.Component{
 
@@ -171,13 +172,21 @@ class Profile extends React.Component{
 							}
 						</div>
 						:
-						<div className="user-description"
-						     onClick={this.state.isTypingMode ? null : this.toggleUserLayer}>
-							<div className="profile-image">
-								<img src={"/images/icon/profile-icon-" + this.state.info.icon + ".svg"}/>
+						<div className="user-description" onClick={this.state.isTypingMode ? null : this.toggleUserLayer}>
+
+							<div className="current-user-profile">
+								<div className="profile-image">
+									<img src={"/images/icon/profile-icon-" + this.state.info.icon + ".svg"}/>
+								</div>
+								<div className="user-grade">{this.state.info.grade}</div>
+								<div className="user-name">{this.state.info.name}</div>
 							</div>
-							<div className="user-grade">{this.state.info.grade}</div>
-							<div className="user-name">{this.state.info.name}</div>
+							{
+								this.state.isShowUserLayer &&
+								<div className="setting-button">
+									<Link to="/settings"><img src={"/images/settings.svg"} width="15" height="15"/></Link>
+								</div>
+							}
 						</div>
 					}
 				</div>

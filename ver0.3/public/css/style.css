@@ -138,7 +138,7 @@ header{
 	}
 }
 
-.sentence-area, .level-list-area{
+.sentence-area, .level-list-area, .setting-area{
 	padding: 0.5em;
 	position: relative;
 }
@@ -403,7 +403,11 @@ header{
 }
 
 
-
+.profile .user-description .current-user-profile .user-grade,
+.profile .user-description .current-user-profile .user-name{
+	width: 115px;
+	float: right;
+}
 
 .profile-image{
 	float: right;
@@ -505,7 +509,15 @@ input[type=text]{
 	background-color: transparent;
 	outline: none;
 }
-
+.profile.user-layer-mode .user-description .current-user-profile{
+	float: right;
+	max-width: 170px;
+}
+.user-description .setting-button{
+	float: left;
+	margin-top: 12px;
+	margin-left: 5px;
+}
 
 
 
@@ -632,4 +644,20 @@ input[type=text]{
 }
 .keyboard .en > *{
 	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+
+
+/*SETTINGS*/
+.setting-list span.title{
+	display: inline-block;
+	width: 150px;
+}
+.setting-list button{
+	background-color: #97a7c7;
+}
+.setting-list button.on{
+	background-color: #006ec7;
 }
