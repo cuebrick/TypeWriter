@@ -4,10 +4,12 @@ import KeyboardLayout from '../components/KeyboardLayout';
 import { Link } from 'react-router-dom';
 import LetterList from "../components/LetterList";
 import ReportView from "../components/ReportView";
+import UserManager from "../components/UserManager";
 
 class Typing extends React.Component{
 
 	_pm;
+	_um;
 	
 	constructor(props){
 		super(props);
@@ -15,7 +17,10 @@ class Typing extends React.Component{
 		this.typingFinished = this.typingFinished.bind(this);
 		this.nextCode = this.nextCode.bind(this);
 		this.onKeydown = this.onKeydown.bind(this);
+		this.addKeyboardEvent = this.addKeyboardEvent.bind(this);
+		this.removeKeyboardEvent = this.removeKeyboardEvent.bind(this);
 
+		this._um = UserManager.getInstance();
 		this._pm = PlayManager.getInstance();
 		this._pm.setTyping(this);
 		let level = this._pm.getLevelObject(this.props.match.params.id);
@@ -37,8 +42,6 @@ class Typing extends React.Component{
 		} else if (code === 13 && this.state.isFinished){
 			this.props.history.push('/typing/'+ this.state.nextLevel.id);
 		}
-
-
 	}
 
 	nextCode(code){
@@ -56,15 +59,30 @@ class Typing extends React.Component{
 			isFinished: true,
 			nextLevel: level
 		});
-		window.removeEventListener('keyup', POWERMODE);
+
+		this.addKeyboardEvent();
 	}
 
+	addKeyboardEvent(){
+		if(this._um.info.settings.powerMode)
+			window.addEventListener('keyup', POWERMODE);
+	}
+
+	removeKeyboardEvent(){
+		if(this._um.info.settings.powerMode)
+			window.removeEventListener('keyup', POWERMODE);
+	}
+
+
+	/**********************************************
+	 * React Lifecycle
+	 *********************************************/
 	componentWillUnmount(){
-		window.removeEventListener('keyup', POWERMODE);
+		this.removeKeyboardEvent()
 	}
 
 	componentDidMount(){
-		window.addEventListener('keyup', POWERMODE);
+		this.addKeyboardEvent();
 	}
 
 	render(){

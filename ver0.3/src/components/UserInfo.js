@@ -9,6 +9,7 @@ class UserInfo{
 		let grade = "수련생";
 		let saveData = {};
 		let icon = 0;
+		let settings = {};
 
 		if(props){
 			id = (props.id) ? props.id : id;
@@ -16,6 +17,7 @@ class UserInfo{
 			grade = (props.grade) ? props.grade : grade;
 			icon = (props.icon) ? props.icon : icon;
 			saveData = (props.saveData) ? props.saveData : saveData;
+			settings = (props.settings) ? props.settings : settings;
 		}
 
 		this._data = {
@@ -23,8 +25,18 @@ class UserInfo{
 			name: name,
 			grade: grade,
 			icon: icon,
-			saveData: saveData
+			saveData: saveData,
+			settings: settings
 		}
+	}
+
+	removeSaveData(){
+		this._data.saveData = {};
+	}
+
+	saveSettings(key, value){
+		let settings = this._data.settings;
+		settings[key] = value;
 	}
 
 	get data(){
@@ -45,6 +57,10 @@ class UserInfo{
 	get saveData(){
 		return this._data.saveData;
 	}
+	get settings(){
+		return this._data.settings;
+	}
+
 
 	toString(){
 		return JSON.stringify(this._data);

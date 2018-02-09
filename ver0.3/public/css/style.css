@@ -661,3 +661,12 @@ input[type=text]{
 .setting-list button.on{
 	background-color: #006ec7;
 }
+.setting-list button.delete-button{
+	background-color: #b45030;
+}
+.setting-list button.delete-button.removed{
+	background-color: #97a7c7;
+}
+.setting-list li{
+	line-height: 2.5em;
+}

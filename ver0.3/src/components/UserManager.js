@@ -21,6 +21,7 @@ class UserManager{
 	_users;
 
 	_reloadLevelsCallback;
+	_reloadSettingsCallback;
 
 	/****************************************************
 	 * instance method
@@ -48,7 +49,10 @@ class UserManager{
 		localStorage.setItem('currentUser', id);
 		this.initUser();
 		this.getUserListData();
-		this._reloadLevelsCallback();
+		if(this._reloadLevelsCallback)
+			this._reloadLevelsCallback();
+		if(this._reloadSettingsCallback)
+			this._reloadSettingsCallback();
 		return this._info;
 	}
 
@@ -66,6 +70,20 @@ class UserManager{
 
 	setReloadLevelsCallback(callback){
 		this._reloadLevelsCallback = callback;
+	}
+
+	setReloadSettingsCallback(callback){
+		this._reloadSettingsCallback = callback;
+	}
+
+	removeSaveData(){
+		this._info.removeSaveData();
+		this.saveUser();
+	}
+
+	saveSettings(key, value){
+		this._info.saveSettings(key, value);
+		this.saveUser();
 	}
 
 
@@ -115,7 +133,7 @@ class UserManager{
 
 		localStorage.setItem(info.id, JSON.stringify(info.data));
 
-		// console.log('localStorage:>', localStorage);
+		console.log('UserManager.saveUser() > localStorage :', localStorage);
 	}
 
 	saveCurrentUserId(id){
