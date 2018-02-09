@@ -651,9 +651,24 @@ input[type=text]{
 
 
 /*SETTINGS*/
-.setting-list span.title{
-	display: inline-block;
-	width: 150px;
+.setting-list .title{
+	float: left;
+	width: 20%;
+	min-width: 150px;
+}
+.setting-list .desc{
+	float: left;
+	width: 60%;
+	font-size: 0.8em;
+	line-height: 1.2em;
+	padding-top: 0.5em;
+	color: #999;
+}
+.setting-list .ui{
+	float: right;
+	text-align: right;
+	width: 20%;
+	min-width: 150px;
 }
 .setting-list button{
 	background-color: #97a7c7;
@@ -668,5 +683,10 @@ input[type=text]{
 	background-color: #97a7c7;
 }
 .setting-list li{
-	line-height: 2.5em;
+	height: 3em;
+	line-height: 3em;
+	border-top: 1px solid #555555;
+}
+.setting-list li:last-child{
+	border-bottom: 1px solid #555555;
 }

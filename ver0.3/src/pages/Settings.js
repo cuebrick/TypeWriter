@@ -43,19 +43,21 @@ class Settings extends React.Component{
 		let removeRecordClassName = (this.state.isRemovedRecord) ? ' removed' : '';
 		return(
 			<div className="setting-area">
-				<h3>환경 설정</h3>
+				<h3>환경 설정 <small>({this._um.info.name})</small></h3>
 				<ul className="setting-list">
 					<li>
-						<span className="title">파워 모드</span>
-						<span>
+						<div className="title">파워 모드</div>
+						<div className="desc">타이핑 할 때 화면에 반짝이는 효과를 나타냅니다. 속도가 느린 컴퓨터에서는 꺼두는 것을 권장합니다.</div>
+						<div className="ui">
 							<button onClick={this.togglePowerMode} className={powerModeClassName}>{powerModeButtonText}</button>
-						</span>
+						</div>
 					</li>
 					<li>
-						<span className="title">기록 삭제</span>
-						<span>
+						<div className="title">기록 삭제</div>
+						<div className="desc">{this._um.info.name}님이 기록한 레벨 기록들을 모두 삭제 합니다. 삭제 되면 복구 되지 않습니다.</div>
+						<div className="ui">
 							<button onClick={this.handleRemoveRecord} className={"delete-button" + removeRecordClassName}>삭제</button>
-						</span>
+						</div>
 					</li>
 				</ul>
 				<div className="button-ui">
