@@ -1,5 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
-*/
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 @import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
 html, body, #root{
 	height: 100%;
@@ -14,7 +13,7 @@ body{
 }
 *{
 	box-sizing: border-box;
-	font-family: 'malgun gothic', sans-serif;
+	font-family: 'Noto Sans KR', 'malgun gothic', sans-serif;
 }
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, li{
 	margin: 0;
