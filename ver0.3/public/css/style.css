@@ -682,10 +682,15 @@ input[type=text]{
 	background-color: #97a7c7;
 }
 .setting-list li{
+	box-sizing: content-box;
 	height: 3em;
 	line-height: 3em;
 	border-top: 1px solid #555555;
 }
 .setting-list li:last-child{
 	border-bottom: 1px solid #555555;
+}
+
+.setting-area .version{
+	color: #e2c9bc;
 }

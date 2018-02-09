@@ -1,6 +1,7 @@
 import React from 'react';
 import UserManager from "../components/UserManager";
 import { Link } from 'react-router-dom';
+import PackageInfo from '../../package';
 
 class Settings extends React.Component{
 	constructor(props){
@@ -60,6 +61,7 @@ class Settings extends React.Component{
 						</div>
 					</li>
 				</ul>
+				<div className="version">Typing Play Version {PackageInfo.version}</div>
 				<div className="button-ui">
 					<Link to="/levels"><button>단계 목록으로 이동</button></Link>
 				</div>
