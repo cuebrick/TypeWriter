@@ -291,8 +291,15 @@ class LetterList extends React.Component{
 
 	updateDisplay(charArray){
 		let item = this.getCurrentItem();
-		if(item)
+		if(item){
 			item.input(Hangul.a(charArray));
+
+			let selection = window.getSelection();
+			let range = document.createRange();
+			range.selectNodeContents(ReactDOM.findDOMNode(item));
+			selection.removeAllRanges();
+			selection.addRange(range);
+		}
 	}
 
 	getCurrentItem(){

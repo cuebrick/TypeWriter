@@ -17,12 +17,6 @@ class LetterItem extends React.Component{
 	}
 
 	input(char){
-		let selection = window.getSelection();
-		let range = document.createRange();
-		range.selectNodeContents(ReactDOM.findDOMNode(this));
-		selection.removeAllRanges();
-		selection.addRange(range);
-
 		this.setState({input: char});
 		this.setState({isCorrected: (this.props.char === this.state.input)})
 	}
