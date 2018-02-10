@@ -27,7 +27,7 @@ class Levels extends React.Component{
 
 	render(){
 		return(
-			<div className="level-list-area">
+			<div className="container">
 				<h3>단계 목록</h3>
 				<LevelList saveData={this.state.saveData}/>
 			</div>

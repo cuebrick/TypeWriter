@@ -43,7 +43,7 @@ class Settings extends React.Component{
 		let powerModeButtonText = (this.state.isPowerMode) ? '켜짐' : '꺼짐';
 		let removeRecordClassName = (this.state.isRemovedRecord) ? ' removed' : '';
 		return(
-			<div className="setting-area">
+			<div className="container">
 				<h3>환경 설정 <small>({this._um.info.name})</small></h3>
 				<ul className="setting-list">
 					<li>

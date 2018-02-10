@@ -338,7 +338,7 @@ class LetterList extends React.Component{
 		});
 
 		return(
-			<div id="letterList" className="letter-list">
+			<div id="letterList" className="letter-list font-LexiSaebomR">
 				{letterItems}
 			</div>
 		)

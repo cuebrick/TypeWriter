@@ -92,7 +92,7 @@ class Typing extends React.Component{
 		}
 
 		return(
-			<div className="sentence-area">
+			<div className="container">
 				<h3>{this.state.level.title}</h3>
 
 				<LetterList level={this.state.level} nextCode={this.nextCode} typingFinished={this.typingFinished}/>
