@@ -706,9 +706,16 @@ input[type=text]{
 .setting-list li:last-child{
 	border-bottom: 1px solid #555555;
 }
-
-.version{
+.setting-description{
+	font-size: 0.8em;
+}
+.setting-description .version{
 	color: #e2c9bc;
+	padding: 1em 0;
+}
+.setting-description .author{
+	color: #999;
+	line-height: 1.5em;
 }
 
 
