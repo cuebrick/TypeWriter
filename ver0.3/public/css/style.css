@@ -710,3 +710,16 @@ input[type=text]{
 .version{
 	color: #e2c9bc;
 }
+
+
+
+
+
+/*MAIN*/
+.main-text{
+	line-height: 2em;
+}
+.main-text em{
+	font-style: normal;
+	color: #ecc4a6;
+}
