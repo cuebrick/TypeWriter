@@ -68,7 +68,7 @@ class Settings extends React.Component{
 					<p className="version">Typing Play Version {PackageInfo.version}</p>
 					<p className="author">
 						원종선(Won, Jong-sun)의 개인 프로젝트로 만들어 졌습니다.<br/>
-						문의 사항이 있으면 다음 방법으로 연락해 주세요.<br/>
+						문의 사항이 있으면 아래의 방법으로 연락해 주세요.<br/>
 						e-mail : cuebrick@gmail.com
 					</p>
 				</div>
