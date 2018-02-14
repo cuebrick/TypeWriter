@@ -17,7 +17,9 @@ class LevelList extends React.Component{
 							<Link to={'/typing/'+ obj.id} key={obj.id}>
 								<LevelItem
 									dataId={obj.id}
+									grade={obj.grade}
 									title={obj.title}
+									description={obj.description}
 									saveData={this.props.saveData[obj.id]}
 								/>
 							</Link>

@@ -238,7 +238,9 @@ header{
 }
 
 .level-item{
+	position: relative;
 	width: 200px;
+	height: 110px;
 	float: left;
 	box-sizing: border-box;
 	padding: 10px;
@@ -249,9 +251,12 @@ header{
 	cursor: pointer;
 	transition: 0.4s all;
 	font-size: 0.9em;
+	text-align: center;
 }
 .level-item .status{
-	float: left;
+	position: absolute;
+	right: -3px;
+	top: 2px;
 	width: 20px;
 	height: 20px;
 	background-image: url(../images/status.svg);
@@ -265,10 +270,33 @@ header{
 	white-space: nowrap;
 	overflow-x: hidden;
 	text-overflow: ellipsis;
+	position: absolute;
+	width: 180px;
+	bottom: 20px;
+}
+.level-item .level-grade{
+	height: 50px;
+}
+.level-item .level-grade img{
+	height: 100%;
+	width: auto;
 }
 .level-item:hover{
 	background-color: rgba(151, 206, 255, 0.4);
 }
+.level-item .level-desc{
+	font-size: 0.8em;
+	color: #999;
+	position: absolute;
+	width: 180px;
+	bottom: 5px;
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+
+
+
 
 .badge{
 	position: absolute;
