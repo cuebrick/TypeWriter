@@ -37,7 +37,7 @@
     "language": "kr",
     "title": "왼손 가운데 자리 4",
     "description": "이제 순서를 뒤섞어 봅니다.",
-    "text" : "ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ"
+    "text" : "ㅁㅇㅎㄹㄴㄴㄹ ㅎㅁㅇ ㅇㄴㅁㅇ ㅎㄹㅁ ㅇㄴㅎㄹ ㅎㅁㅇㅎㅁㄴ"
   },
   {
     "id": "c0105",
@@ -92,7 +92,7 @@
 
   {
     "id": "c0301",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "type": "sentence",
     "language": "kr",
@@ -148,7 +148,7 @@
 
   {
     "id": "s5",
-    "grade": 4,
+    "grade": 2,
     "difficulty": 4,
     "type": "sentence",
     "language": "kr",
