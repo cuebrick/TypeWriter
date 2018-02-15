@@ -150,7 +150,9 @@ class LetterList extends React.Component{
 
 		if(level.type === Level.CHARACTER_TYPE){
 			this.updateDisplay([char]);
-			this.setNextIndex();
+			if(Hangul.isConsonant(char) || Hangul.isVowel(char)){
+				this.setNextIndex();
+			}
 			this.clearBuffer();
 		}else{
 			this.addBuffer(char);
