@@ -5,7 +5,7 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 가운데 자리 1",
+    "title": "왼손 기본 자리 1",
     "description": "기본 위치부터 시작합니다.",
     "text" : "ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ"
   },
@@ -15,7 +15,7 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 가운데 자리 2",
+    "title": "왼손 기본 자리 2",
     "description": "방향만 다릅니다.",
     "text" : "ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ"
   },
@@ -25,7 +25,7 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 가운데 자리 3",
+    "title": "왼손 기본 자리 3",
     "description": "ㅎ은 왼손 검지 손가락이 이동합니다.",
     "text" : "ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ"
   },
@@ -35,7 +35,7 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 가운데 자리 4",
+    "title": "왼손 기본 자리 4",
     "description": "이제 순서를 뒤섞어 봅니다.",
     "text" : "ㅁㅇㅎㄹㄴㄴㄹ ㅎㅁㅇ ㅇㄴㅁㅇ ㅎㄹㅁ ㅇㄴㅎㄹ ㅎㅁㅇㅎㅁㄴ"
   },
@@ -45,7 +45,7 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 가운데 자리 5",
+    "title": "왼손 기본 자리 5",
     "description": "한 번 더 연습합니다.",
     "text" : "ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ"
   },
@@ -55,7 +55,7 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 가운데 자리 1",
+    "title": "오른손 기본 자리 1",
     "description": "이번에는 오른손 기본 자리 입니다.",
     "text" : "ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ"
   },
@@ -65,7 +65,7 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 가운데 자리 2",
+    "title": "오른손 기본 자리 2",
     "description": "방향만 다릅니다.",
     "text" : "ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ"
   },
@@ -75,7 +75,7 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 가운데 자리 3",
+    "title": "오른손 기본 자리 3",
     "description": "ㅗ는 오른손 검시 손가락이 이동합니다.",
     "text" : "ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ"
   },
@@ -85,7 +85,7 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 가운데 자리 4",
+    "title": "오른손 기본 자리 4",
     "description": "순서가 뒤죽박죽 입니다.",
     "text" : "ㅣㅓㅗㅏ ㅣㅗㅏㅓ ㅗㅏㅣㅏ ㅓㅗㅗㅣ ㅗㅓㅣㅏ ㅓㅗㅣㅓ ㅏㅣㅏㅗ ㅓㅏㅣㅏ"
   },
@@ -96,10 +96,63 @@
     "difficulty": 1,
     "type": "sentence",
     "language": "kr",
-    "title": "가운데 자리 단어",
+    "title": "기본 자리 단어",
     "description": "기본 자리 양손을 사용하여 단어를 써 봅니다.",
-    "text" : "어머니 엄마 어멈 어머니 아라 미라 아마 하하 하이 미로 나라 나로호"
+    "text" : "어머니 엄마 어멈 어머니 아라 미이라 아마 하하 하이 미로 나라 나로호 맘마미아 라모 이미 어라 오호 하이"
   },
+
+  {
+    "id": "c0401",
+    "grade": 0,
+    "difficulty": 1,
+    "type": "character",
+    "language": "kr",
+    "title": "왼손 윗자리 1",
+    "description": "손은 기본자리에.",
+    "text" : "ㅂㄷㄱㅈ ㄱㄷㅈㄱ ㅂㄷㄱㄷ ㅈㅂㄷㅈ ㅂㅈㅂㄷ ㅂㄷㅈㄷ ㅂㄷㅂㅈ ㄷㄱㄷㅂ ㄱㄷㅈㅂ"
+  },
+  {
+    "id": "c0402",
+    "grade": 0,
+    "difficulty": 1,
+    "type": "character",
+    "language": "kr",
+    "title": "왼손 윗자리 2",
+    "description": "한 번 더 반복합니다.",
+    "text" : "ㅂㄷㅅㄷㅂㄷㅂㄷ ㅅㄷㅂㄷㄱ ㅂㄷ ㅅㅅㄷㅂㅈㄷㄷㄱ ㅂㄷㄱㄷㄱㅂ ㅂㄱㄷㄱ ㅂㄷㅅㄱㅂㄷㄷㅂ ㅂㄷㅈㅂㅅㄷ"
+  },
+  {
+    "id": "c0501",
+    "grade": 0,
+    "difficulty": 1,
+    "type": "character",
+    "language": "kr",
+    "title": "오른손 윗자리 1",
+    "description": "손은 기본자리에",
+    "text" : "ㅕㅕㅑㅑ ㅐㅐㅔㅔ ㅕㅐㅑㅔ ㅕㅑㅑㅑ ㅔㅐㅑㅑ ㅕㅑㅔㅕ ㅔㅕㅑㅔ ㅑㅐㅕㅑ"
+  },
+  {
+    "id": "c0502",
+    "grade": 0,
+    "difficulty": 1,
+    "type": "character",
+    "language": "kr",
+    "title": "오른손 윗자리 2",
+    "description": "손은 기본자리에",
+    "text" : "ㅛㅑㅐㅛㅐㅑㅑㅕ ㅑㅐㅔㅐㅑ ㅕㅑㅛㅐㅑㅑㅕ ㅛㅑ ㅐㅔㅑ ㅐㅑㅕㅛ ㅐㅑㅛㅐㅔㅔㅑ ㅕㅑㅛㅑㅐㅔㅑ ㅕㅑㅐㅔㅑㅕㅑ"
+  },
+
+  {
+    "id": "c0601",
+    "grade": 1,
+    "difficulty": 1,
+    "type": "sentence",
+    "language": "kr",
+    "title": "윗 자리 단어",
+    "description": "",
+    "text" : "베게 제제 뱌재 겨제 재개 대배"
+  },
+
 
 
 
