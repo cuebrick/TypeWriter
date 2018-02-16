@@ -318,7 +318,7 @@ header{
 	float: left;
 	margin-right: 10px;
 }
-.stars{
+.report-view .stars{
 	float: left;
 	font-size: 0;
 }
@@ -332,6 +332,23 @@ header{
 .stars > .star.incomplete{
 	background-image: url(../images/star-half.png);
 }
+.star-rating.stars{
+	position: absolute;
+	top: 50px;
+	width: 180px;
+	text-align: center;
+}
+
+.star-rating.stars .star{
+	width: 17px;
+	height: 17px;
+	background-size: 17px;
+}
+.star-rating.stars .star:nth-child(2){
+	margin-bottom: -3px;
+}
+
+
 
 /*report-view*/
 .report-view{
