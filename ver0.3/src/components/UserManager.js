@@ -65,6 +65,7 @@ class UserManager{
 
 	saveLevelData(level){
 		this._info.saveData[level.id] = level.result;
+		this._info.saveProgress(level.id);
 		this.saveUser(this._info);
 	}
 

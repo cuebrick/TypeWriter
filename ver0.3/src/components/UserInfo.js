@@ -9,6 +9,7 @@ class UserInfo{
 		let grade = "수련생";
 		let saveData = {};
 		let icon = 0;
+		let progress = undefined;
 		let settings = {};
 
 		if(props){
@@ -16,6 +17,7 @@ class UserInfo{
 			name = (props.name) ? props.name : name;
 			grade = (props.grade) ? props.grade : grade;
 			icon = (props.icon) ? props.icon : icon;
+			progress = (props.progress) ? props.progress : progress;
 			saveData = (props.saveData) ? props.saveData : saveData;
 			settings = (props.settings) ? props.settings : settings;
 		}
@@ -25,6 +27,7 @@ class UserInfo{
 			name: name,
 			grade: grade,
 			icon: icon,
+			progress: progress,
 			saveData: saveData,
 			settings: settings
 		}
@@ -37,6 +40,10 @@ class UserInfo{
 	saveSettings(key, value){
 		let settings = this._data.settings;
 		settings[key] = value;
+	}
+
+	saveProgress(levelId){
+		this._data.progress = levelId;
 	}
 
 	get data(){
@@ -53,6 +60,9 @@ class UserInfo{
 	}
 	get icon(){
 		return this._data.icon;
+	}
+	get progress(){
+		return this._data.progress;
 	}
 	get saveData(){
 		return this._data.saveData;
