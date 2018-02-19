@@ -22,6 +22,7 @@ class UserManager{
 
 	_reloadLevelsCallback;
 	_reloadSettingsCallback;
+	_reloadMainCallback;
 
 	/****************************************************
 	 * instance method
@@ -53,6 +54,8 @@ class UserManager{
 			this._reloadLevelsCallback();
 		if(this._reloadSettingsCallback)
 			this._reloadSettingsCallback();
+		if(this._reloadMainCallback)
+			this._reloadMainCallback();
 		return this._info;
 	}
 
@@ -61,6 +64,10 @@ class UserManager{
 		delete this._users[id];
 		localStorage.removeItem(id);
 		return this.reloadUserList();
+	}
+
+	requestProgressLevelId(){
+		return (this.info) ? this.info.progress : this.getCurrentUserInfo().progress;
 	}
 
 	saveLevelData(level){
@@ -77,6 +84,10 @@ class UserManager{
 		this._reloadSettingsCallback = callback;
 	}
 
+	setReloadMainCallback(callback){
+		this._reloadMainCallback = callback;
+	}
+
 	removeSaveData(){
 		this._info.removeSaveData();
 		this.saveUser();
@@ -86,7 +97,6 @@ class UserManager{
 		this._info.saveSettings(key, value);
 		this.saveUser();
 	}
-
 
 	/****************************************************
 	 * private method

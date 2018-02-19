@@ -12,6 +12,7 @@ class Level{
 	type;
 	language;
 	title;
+	subtitle;
 	text;
 
 	index;
@@ -30,6 +31,7 @@ class Level{
 		this.type = props.type;
 		this.language = props.language;
 		this.title = props.title;
+		this.subtitle = props.subtitle;
 		this.text = props.text;
 
 		this.index = 0;

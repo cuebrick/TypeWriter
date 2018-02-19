@@ -84,6 +84,10 @@ class PlayManager {
 		let index = LevelData.indexOf(data);
 		return LevelData[index + 1].id;
 	}
+
+	getProgressLevelId(){
+		return this._um.requestProgressLevelId();
+	}
 }
 
 export default PlayManager;

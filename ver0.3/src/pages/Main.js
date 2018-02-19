@@ -1,8 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PlayManager from "../components/PlayManager";
+import UserManager from "../components/UserManager";
 
 class Main extends React.Component{
+
+	_pm;
+	_um;
+
+	constructor(props) {
+		super(props);
+		this.reload = this.reload.bind(this);
+		this._pm = PlayManager.getInstance();
+		this._um = UserManager.getInstance();
+		this._um.setReloadMainCallback(this.reload);
+
+		let nextId = this._pm.getProgressLevelId();
+		this.state = {
+			nextLevel: this._pm.getLevelObject(nextId),
+			isShowNext: (nextId)
+		}
+	}
+
+	reload(){
+		let nextId = this._pm.getProgressLevelId();
+		this.setState({
+			nextLevel: this._pm.getLevelObject(nextId),
+			isShowNext: (nextId)
+		});
+	}
+
 	render(){
+
 		return(
 			<div className="container">
 				<h3>Typing Play 에 오신것을 환영합니다.</h3>
@@ -20,6 +49,10 @@ class Main extends React.Component{
 				</div>
 				<div className="button-ui">
 					<Link to="/levels"><button>단계 목록으로 이동</button></Link>
+					{
+						this.state.isShowNext &&
+						<Link to={"/levels/" + this.state.nextLevel.id}><button>{this.state.nextLevel.title + "(" + this.state.nextLevel.subtitle + ")"} 이어서 하기</button></Link>
+					}
 				</div>
 			</div>
 		)
