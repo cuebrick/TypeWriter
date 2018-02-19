@@ -12,11 +12,11 @@ class LevelList extends React.Component{
 		return(
 			<div id="levelList" className="level-list">
 				{
-					LevelData.map( (obj) => {
+					LevelData.map( (obj, index) => {
 						if(obj.break){
 							return(
-								<div className="break-line"></div>
-							)
+								<div key={'breaker'+index} className="break-line"> </div>
+							);
 						} else {
 							return (
 								<Link to={'/typing/'+ obj.id} key={obj.id}>
