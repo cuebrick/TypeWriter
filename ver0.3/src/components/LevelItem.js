@@ -20,8 +20,10 @@ class LevelItem extends React.Component{
 			});
 		}
 		let level = this.props.level;
+		let breakLineClassName = (level.break) ? ' break-line' : '';
+
 		return(
-			<div className="level-item" data-id={level.dataId}>
+			<div className={"level-item" + breakLineClassName} data-id={level.dataId}>
 				<div className={"status" + statusClassName}> </div>
 				<div className="level-grade">
 					<img src={"/images/grades/grade-icon-" + level.grade + ".svg"}/>

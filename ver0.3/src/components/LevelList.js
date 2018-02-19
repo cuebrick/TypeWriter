@@ -13,14 +13,21 @@ class LevelList extends React.Component{
 			<div id="levelList" className="level-list">
 				{
 					LevelData.map( (obj) => {
-						return (
-							<Link to={'/typing/'+ obj.id} key={obj.id}>
-								<LevelItem
-									level={obj}
-									saveData={this.props.saveData[obj.id]}
-								/>
-							</Link>
-						);
+						if(obj.break){
+							return(
+								<div className="break-line"></div>
+							)
+						} else {
+							return (
+								<Link to={'/typing/'+ obj.id} key={obj.id}>
+									<LevelItem
+										level={obj}
+										saveData={this.props.saveData[obj.id]}
+									/>
+								</Link>
+							);
+						}
+
 					})
 				}
 			</div>

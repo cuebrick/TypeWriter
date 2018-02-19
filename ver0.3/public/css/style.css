@@ -231,7 +231,7 @@ header{
 }
 
 
-
+/*LEVEL LIST, LEVEL ITEM*/
 .level-list{
 	font-size: 16px;
 	overflow: auto;
@@ -252,6 +252,12 @@ header{
 	transition: 0.4s all;
 	font-size: 0.9em;
 	text-align: center;
+}
+.break-line{
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #337195;
+	margin-bottom: 15px;
+	clear: both;
 }
 .level-item .status{
 	position: absolute;
