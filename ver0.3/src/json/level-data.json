@@ -5,8 +5,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 기본 자리 1",
-    "subtitle": "기본 위치부터 시작합니다.",
+    "title": "자음 연습",
+    "subtitle": "왼손 기본 자리 1 \"ㅁㄴㅇㄹ\"",
     "description": "기본 위치는 왼손 검지 손가락이 ㅎ 위치에 자리하고 자연스럽게 나머지 손가락을 누르는 것입니다. 왼손 검지 손가락이 ㅎ 위치에 있다는 것을 꼭 기억하세요.",
     "text" : "ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ"
   },
@@ -16,9 +16,9 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 기본 자리 2",
-    "subtitle": "방향만 다릅니다.",
-    "description": "",
+    "title": "자음 연습",
+    "subtitle": "왼손 기본 자리 2 \"ㅁㄴㅇㄹ\"",
+    "description": "방향만 다릅니다.",
     "text" : "ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ"
   },
   {
@@ -27,8 +27,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 기본 자리 3",
-    "subtitle": "",
+    "title": "자음 연습",
+    "subtitle": "왼손 기본 자리 3 \"ㅁㄴㅇㄹㅎ\"",
     "description": "ㅎ은 왼손 검지 손가락이 이동합니다.",
     "text" : "ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ"
   },
@@ -38,8 +38,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 기본 자리 4",
-    "subtitle": "",
+    "title": "자음 연습",
+    "subtitle": "왼손 기본 자리 4 \"ㅁㄴㅇㄹㅎ\"",
     "description": "이제 순서를 뒤섞어 봅니다.",
     "text" : "ㅁㅇㅎㄹㄴㄴㄹ ㅎㅁㅇ ㅇㄴㅁㅇ ㅎㄹㅁ ㅇㄴㅎㄹ ㅎㅁㅇㅎㅁㄴ"
   },
@@ -49,8 +49,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 기본 자리 5",
-    "subtitle": "",
+    "title": "자음 연습",
+    "subtitle": "왼손 기본 자리 5 \"ㅁㄴㅇㄹㅎ\"",
     "description": "한 번 더 연습합니다.",
     "text" : "ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ"
   },
@@ -60,8 +60,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 기본 자리 1",
-    "subtitle": "",
+    "title": "모음 연습",
+    "subtitle": "오른손 기본 자리 1 \"ㅓㅏㅣ\"",
     "description": "이번에는 오른손 기본 자리 입니다.",
     "text" : "ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ"
   },
@@ -71,8 +71,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 기본 자리 2",
-    "subtitle": "",
+    "title": "모음 연습",
+    "subtitle": "오른손 기본 자리 2 \"ㅓㅏㅣ\"",
     "description": "방향만 다릅니다.",
     "text" : "ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ"
   },
@@ -82,8 +82,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 기본 자리 3",
-    "subtitle": "",
+    "title": "모음 연습",
+    "subtitle": "오른손 기본 자리 3 \"ㅗㅓㅏㅣ\"",
     "description": "ㅗ는 오른손 검시 손가락이 이동합니다.",
     "text" : "ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ"
   },
@@ -93,8 +93,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 기본 자리 4",
-    "subtitle": "",
+    "title": "모음 연습",
+    "subtitle": "오른손 기본 자리 4 \"ㅗㅓㅏㅣ\"",
     "description": "순서가 뒤죽박죽 입니다.",
     "text" : "ㅣㅓㅗㅏ ㅣㅗㅏㅓ ㅗㅏㅣㅏ ㅓㅗㅗㅣ ㅗㅓㅣㅏ ㅓㅗㅣㅓ ㅏㅣㅏㅗ ㅓㅏㅣㅏ"
   },
@@ -105,10 +105,10 @@
     "difficulty": 1,
     "type": "sentence",
     "language": "kr",
-    "title": "기본 자리 단어",
-    "subtitle": "",
+    "title": "간단한 단어 연습",
+    "subtitle": "기본 자리만 사용한 단어",
     "description": "기본 자리 양손을 사용하여 단어를 써 봅니다.",
-    "text" : "어머니 엄마 어멈 어머니 아라 미이라 아마 하하 하이 미로 나라 나로호 맘마미아 라모 이미 어라 오호 하이"
+    "text" : "어머니 엄마 마모 어머니 아라 미이라 아마 하하 하이 미로 나라 나로호 마마미아 라모 이미 어라 오호 하이"
   },
 
   {
@@ -117,8 +117,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 윗자리 1",
-    "subtitle": "",
+    "title": "자음 연습",
+    "subtitle": "왼손 윗자리 1 \"ㅂㅈㄷㄱ\"",
     "description": "손은 기본자리에.",
     "text" : "ㅂㄷㄱㅈ ㄱㄷㅈㄱ ㅂㄷㄱㄷ ㅈㅂㄷㅈ ㅂㅈㅂㄷ ㅂㄷㅈㄷ ㅂㄷㅂㅈ ㄷㄱㄷㅂ ㄱㄷㅈㅂ"
   },
@@ -128,8 +128,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 윗자리 2",
-    "subtitle": "",
+    "title": "자음 연습",
+    "subtitle": "왼손 윗자리 2 \"ㅂㅈㄷㄱㅅ\"",
     "description": "한 번 더 반복합니다.",
     "text" : "ㅂㄷㅅㄷㅂㄷㅂㄷ ㅅㄷㅂㄷㄱ ㅂㄷ ㅅㅅㄷㅂㅈㄷㄷㄱ ㅂㄷㄱㄷㄱㅂ ㅂㄱㄷㄱ ㅂㄷㅅㄱㅂㄷㄷㅂ ㅂㄷㅈㅂㅅㄷ"
   },
@@ -139,8 +139,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 윗자리 1",
-    "subtitle": "",
+    "title": "모음 연습",
+    "subtitle": "오른손 윗자리 1 \"ㅕㅑㅐㅔ\"",
     "description": "손은 기본자리에",
     "text" : "ㅕㅕㅑㅑ ㅐㅐㅔㅔ ㅕㅐㅑㅔ ㅕㅑㅑㅑ ㅔㅐㅑㅑ ㅕㅑㅔㅕ ㅔㅕㅑㅔ ㅑㅐㅕㅑ"
   },
@@ -150,8 +150,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "오른손 윗자리 2",
-    "subtitle": "",
+    "title": "모음 연습",
+    "subtitle": "오른손 윗자리 2 \"ㅛㅕㅑㅐㅔ\"",
     "description": "손은 기본자리에",
     "text" : "ㅛㅑㅐㅛㅐㅑㅑㅕ ㅑㅐㅔㅐㅑ ㅕㅑㅛㅐㅑㅑㅕ ㅛㅑ ㅐㅔㅑ ㅐㅑㅕㅛ ㅐㅑㅛㅐㅔㅔㅑ ㅕㅑㅛㅑㅐㅔㅑ ㅕㅑㅐㅔㅑㅕㅑ"
   },
@@ -162,10 +162,21 @@
     "difficulty": 1,
     "type": "sentence",
     "language": "kr",
-    "title": "윗 자리 단어 1",
-    "subtitle": "",
+    "title": "간단한 단어 연습",
+    "subtitle": "윗 자리 단어만 사용한 단어",
     "description": "",
     "text" : "벼 쟈 대 게 쇼 세개댜겨뵤 뱌겨 대개 겨대 게재 세개 쇼쇼쇼 베게 대게 제제 샤베 뱌재 겨제 재개 대배"
+  },
+  {
+    "id": "c0602",
+    "grade": 1,
+    "difficulty": 1,
+    "type": "sentence",
+    "language": "kr",
+    "title": "간단한 단어 연습",
+    "subtitle": "기본자리와 윗 자리를 사용한 단어",
+    "description": "윗 자리만 누르다 보면 손가락이 윗 자리에서 기본 자리로 내려오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 윗자리를 타이핑 할 때 손가락 하나만 윗 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.",
+    "text" : "어머니가 아버지가 나라고 아기야 호미야 미래 나가라 도라지 바보 라고 하며 다리다"
   },
 
 
@@ -175,8 +186,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 아랫자리 1",
-    "subtitle": "",
+    "title": "자음 연습",
+    "subtitle": "왼손 아랫자리 1 \"ㅋㅌㅊㅍ\"",
     "description": "손은 기본자리에.",
     "text" : "ㅋㅌㅊㅍ ㅋㅌㅊㅍ ㅍㅊㅌㅋ ㅍㅊㅌㅋ ㅋㅍㅋㅍ ㅌㅊㅌㅊ ㅍㅊㅋㅌ ㅍㅌㅊㅍ ㅋㅊㅋㅊ ㅋㅍㅌㅊ ㅊㅌㅍㅋ ㅋㅋㅊㅍ ㅊㅌㅋㅊ"
   },
@@ -186,8 +197,8 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 아랫자리 1",
-    "subtitle": "",
+    "title": "자음 연습",
+    "subtitle": "왼손 아랫자리 2 \"ㅋㅌㅊㅍ\"",
     "description": "손은 기본자리에.",
     "text" : "ㅋㅌㅊㅊㅌㅋㅍㅊ ㅋㅊㅋㅊㅊㅍ ㅋㅌㅊㅋㅋ ㅊㅍㅌㅊ ㅊㅌ ㅋㅊㅍㅋㅌㅊㅍ ㅋㅌㅊㅍㅊㅊㅌㅋ ㅊㅋㅊㅋㅌㅊㅍㅋ ㅊㅋㅊㅍ ㅋㅊㅍㅋㅌㅊㅍ ㅊㅊㅋㅌㅊ"
   },
@@ -197,10 +208,21 @@
     "difficulty": 1,
     "type": "character",
     "language": "kr",
-    "title": "왼손 아랫자리 1",
-    "subtitle": "",
-    "description": "손은 기본자리에.",
-    "text" : ""
+    "title": "모음 연습",
+    "subtitle": "오른손 아랫자리 1 \"ㅠㅜㅡ\"",
+    "description": "오른손 아랫자리는 특별합니다. 다른 자리라면 왼손 검지손가락이 눌러야 할 ㅠ를 아래자리의 경우 오른손 검지 손가락이 누르게 됩니다.",
+    "text" : "ㅠㅜㅡ ㅠㅜㅡ ㅡㅠㅡ ㅜㅡㅠ ㅡㅡㅜ ㅠㅜㅡ ㅡㅜㅠ ㅜㅠㅠ ㅜㅜㅠ"
+  },
+  {
+    "id": "c0901",
+    "grade": 0,
+    "difficulty": 1,
+    "type": "sentence",
+    "language": "kr",
+    "title": "간단한 단어 연습",
+    "subtitle": "아랫 자리만 사용한 단어",
+    "description": "",
+    "text" : "쿠크 추크 푸츄 프쿠츠 트추 추츄"
   },
 
 

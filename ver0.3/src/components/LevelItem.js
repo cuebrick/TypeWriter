@@ -30,7 +30,7 @@ class LevelItem extends React.Component{
 					{stars}
 				</div>
 				<div className="level-title">{level.title}</div>
-				<div className="level-desc">{level.description}</div>
+				<div className="level-desc">{level.subtitle}</div>
 			</div>
 		)
 	}
