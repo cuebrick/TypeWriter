@@ -51,7 +51,11 @@ class Main extends React.Component{
 					<Link to="/levels"><button>단계 목록으로 이동</button></Link>
 					{
 						this.state.isShowNext &&
-						<Link to={"/levels/" + this.state.nextLevel.id}><button>{this.state.nextLevel.title + "(" + this.state.nextLevel.subtitle + ")"} 이어서 하기</button></Link>
+						<Link to={"/levels/" + this.state.nextLevel.id}><button>
+							{this.state.nextLevel.title}
+							<small>{" (" + this.state.nextLevel.subtitle + ") "}</small>
+							이어서 하기
+						</button></Link>
 					}
 				</div>
 			</div>
