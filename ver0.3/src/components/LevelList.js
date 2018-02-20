@@ -13,9 +13,11 @@ class LevelList extends React.Component{
 			<div id="levelList" className="level-list">
 				{
 					LevelData.map( (obj, index) => {
-						if(obj.break){
+						if(obj.group){
 							return(
-								<div key={'breaker'+index} className="break-line"> </div>
+								<div key={'breaker'+index} className="break-line">
+									<div className="group-title">{obj.group}</div>
+								</div>
 							);
 						} else {
 							return (
