@@ -5,13 +5,12 @@ class LevelItem extends React.Component{
 		let statusClassName = '';
 		let starNum = undefined;
 		let stars;
-		console.log('LevelItem.render:', this.props.saveData);
+
 		if(this.props.saveData){
 			statusClassName = ' unlock';
 			starNum = this.props.saveData.star;
 
 			stars = [...Array(3)].map((v, i) => {
-				console.log(starNum , i);
 				if(i < starNum){
 					return <span key={"key"+i} className="star" />
 				} else {
