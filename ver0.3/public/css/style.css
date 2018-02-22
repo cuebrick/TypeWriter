@@ -257,28 +257,27 @@ header{
 	text-align: center;
 }
 .break-line{
-	padding-bottom: 10px;
-	border-bottom: 1px dashed #337195;
-	margin-bottom: 15px;
+	border-top: 1px dashed #337195;
 	clear: both;
+	text-align: center;
 }
 .group-title{
-	float: left;
-	font-size: 13px;
-	background-color: rgba(91, 91, 91, 0.9);
+	display: inline-block;
+	margin: 5px auto;
+	padding: 3px 20px;
 	border-radius: 3px;
-	padding: 3px 10px;
-	margin-left: 20px;
+	background-color: rgba(91, 91, 91, 0.9);
+	font-size: 13px;
 }
 .level-item .status{
 	position: absolute;
 	right: -3px;
 	top: 2px;
+	margin-right: 5px;
 	width: 20px;
 	height: 20px;
 	background-image: url(../images/status.svg);
 	background-size: 100%;
-	margin-right: 5px;
 }
 .level-item .status.unlock{
 	background-image: url(../images/status-unlock.svg);
