@@ -132,8 +132,6 @@ class LetterList extends React.Component{
 			case 222: // '
 				e.preventDefault();
 				this.inputLetter(e);
-				this.setNextIndex();
-				this.clearBuffer();
 				break;
 
 			default:
@@ -150,9 +148,7 @@ class LetterList extends React.Component{
 
 		if(level.type === Level.CHARACTER_TYPE){
 			this.updateDisplay([char]);
-			if(Hangul.isConsonant(char) || Hangul.isVowel(char)){
-				this.setNextIndex();
-			}
+			this.setNextIndex();
 			this.clearBuffer();
 		}else{
 			this.addBuffer(char);
@@ -164,6 +160,12 @@ class LetterList extends React.Component{
 				level.buffer = letters[0];
 			}
 			this.updateDisplay(level.buffer);
+
+			// 스페이스바 또는 기호 입력(입력하고 즉시 다음 칸으로 이동)일 경우
+			if(!Hangul.isConsonant(char) && !Hangul.isVowel(char)){
+				this.setNextIndex();
+				this.clearBuffer();
+			}
 		}
 		this.dispatchNextCode();
 	}

@@ -322,6 +322,23 @@
   },
 
 
+  {
+    "group": "영타 연습"
+  },
+
+  {
+    "id": "q0101",
+    "grade": 0,
+    "difficulty": 1,
+    "type": "character",
+    "language": "en",
+    "title": "lazy fox",
+    "subtitle": "알파벳 테스트",
+    "description": "",
+    "text" : "lazy fox jumped over quick brown dog"
+  },
+
+
 
   {
     "group": "옛 동요"
