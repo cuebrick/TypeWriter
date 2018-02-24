@@ -102,9 +102,30 @@
     "description": "순서가 뒤죽박죽 입니다.",
     "text" : "ㅣㅓㅗㅏ ㅣㅗㅏㅓ ㅗㅏㅣㅏ ㅓㅗㅗㅣ ㅗㅓㅣㅏ ㅓㅗㅣㅓ ㅏㅣㅏㅗ ㅓㅏㅣㅏ"
   },
-
   {
     "id": "c0301",
+    "grade": 1,
+    "difficulty": 1,
+    "type": "sentence",
+    "language": "kr",
+    "title": "자음 모음 결합 연습",
+    "subtitle": "ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ",
+    "description": "기본 자리 양손을 사용하여 단어를 써 봅니다.",
+    "text" : "라라라 아아아 나나나 마마마 러러러러 어어어어 너너너너 머머머머 미미나 미미너 라라머 라미미 호허허 히히히 리리로로 아어어이"
+  },
+  {
+    "id": "c0302",
+    "grade": 1,
+    "difficulty": 1,
+    "type": "sentence",
+    "language": "kr",
+    "title": "자음 모음 결합 연습",
+    "subtitle": "ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ",
+    "description": "기본 자리 양손을 사용하여 단어를 써 봅니다.",
+    "text" : "나라나라 러허러허 아나아나 마리마리 오리오리 모모라라 나미미로 마리마로 나리나로 아리아로 마니마노 마라노 이라모 하이라 호리모 나미로호"
+  },
+  {
+    "id": "c0303",
     "grade": 1,
     "difficulty": 1,
     "type": "sentence",
@@ -288,6 +309,21 @@
   {
     "group": "전체 자리 연습"
   },
+
+  {
+    "id": "c1301",
+    "grade": 0,
+    "difficulty": 1,
+    "type": "sentence",
+    "language": "kr",
+    "title": "간단한 단어 연습",
+    "subtitle": "키보드 전체를 모두 이용",
+    "description": "",
+    "text" : "배터리 마우스 휴지"
+  },
+
+
+
 
   {
     "group": "기본 자리 받침 연습"
