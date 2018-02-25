@@ -133,7 +133,7 @@
     "title": "간단한 단어 연습",
     "subtitle": "기본 자리만 사용한 단어",
     "description": "기본 자리 양손을 사용하여 단어를 써 봅니다.",
-    "text" : "어머니 엄마 마모 어머니 아라 미이라 아마 하하 하이 미로 나라 나로호 마마미아 라모 이미 어라 오호 하이"
+    "text" : "어머니 엄마 이모 미모 마모 어머니 아라 미이라 아마 하하 하이 미로 나라 나로호 마마미아 라모 이미 어라 오호 하이"
   },
 
   {
@@ -191,13 +191,35 @@
     "difficulty": 1,
     "type": "sentence",
     "language": "kr",
+    "title": "자음 모음 결합 연습",
+    "subtitle": "ㅂㅈㄷㄱ ㅕㅑㅐㅔ",
+    "description": "",
+    "text" : "뱌뱌뱌 벼벼벼 배배배 베베베 제제제 재재재 쟈쟈쟈 져져져 대대댜댜 재재죠죠 벼벼게게 져대져대 뎌대재져"
+  },
+  {
+    "id": "c0602",
+    "grade": 1,
+    "difficulty": 1,
+    "type": "sentence",
+    "language": "kr",
+    "title": "자음 모음 결합 연습",
+    "subtitle": "ㅂㅈㄷㄱㅅ ㅛㅕㅑㅐㅔ",
+    "description": "",
+    "text" : "뱌뱌셔셔 갸갸됴됴 져져댜댜 겨겨쇼쇼 대대세세 게게셔셔 재재댜댜 쟈베댜댜 벼대겨겨 베교교교 죠죠재재"
+  },
+  {
+    "id": "c0603",
+    "grade": 1,
+    "difficulty": 1,
+    "type": "sentence",
+    "language": "kr",
     "title": "간단한 단어 연습",
     "subtitle": "윗 자리 단어만 사용한 단어",
     "description": "",
     "text" : "벼 쟈 대 게 쇼 세개댜겨뵤 뱌겨 대개 겨대 게재 세개 쇼쇼쇼 베게 대게 제제 샤베 뱌재 겨제 재개 대배"
   },
   {
-    "id": "c0602",
+    "id": "c0604",
     "grade": 1,
     "difficulty": 1,
     "type": "sentence",
@@ -245,8 +267,20 @@
     "description": "오른손 아랫자리는 특별합니다. 다른 자리라면 왼손 검지손가락이 눌러야 할 ㅠ를 아래자리의 경우 오른손 검지 손가락이 누르게 됩니다.",
     "text" : "ㅠㅜㅡ ㅠㅜㅡ ㅡㅠㅡ ㅜㅡㅠ ㅡㅡㅜ ㅠㅜㅡ ㅡㅜㅠ ㅜㅠㅠ ㅜㅜㅠ"
   },
+
   {
     "id": "c0901",
+    "grade": 0,
+    "difficulty": 1,
+    "type": "sentence",
+    "language": "kr",
+    "title": "자음 모음 결합 연습",
+    "subtitle": "ㅋㅌㅊㅍ ㅠㅜㅡ",
+    "description": "",
+    "text" : "쿠쿠트트 츠츠트트 큐큐츠츠 추추프프 쿠쿠츠츠 트트츠츠 츄츄크크 트트츠츠 크크츠츠 프프츠츠 프프트트 투투쿠쿠"
+  },
+  {
+    "id": "c0902",
     "grade": 0,
     "difficulty": 1,
     "type": "sentence",
@@ -257,7 +291,7 @@
     "text" : "쿠크 추크 푸츄 프쿠츠 트추 추츄"
   },
   {
-    "id": "c0902",
+    "id": "c0903",
     "grade": 0,
     "difficulty": 1,
     "type": "sentence",
