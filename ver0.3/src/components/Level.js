@@ -6,6 +6,9 @@ class Level{
 	static get SENTENCE_TYPE(){
 		return 'sentence';
 	}
+	static get GROUP_TYPE(){
+		return 'group';
+	}
 
 	id;
 	grade;

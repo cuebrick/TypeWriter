@@ -146,7 +146,7 @@ class LetterList extends React.Component{
 		let shiftKey = (e.shiftKey) ? 's' : 'n';
 		let char = Keymap['code' + code][lang + shiftKey];
 
-		if(level.type === Level.CHARACTER_TYPE){
+		if(level.form === Level.CHARACTER_TYPE){
 			this.updateDisplay([char]);
 			this.setNextIndex();
 			this.clearBuffer();
@@ -182,7 +182,7 @@ class LetterList extends React.Component{
 
 		text += (nextItem) ? nextItem.getData().text : '';
 
-		if(level.type === Level.CHARACTER_TYPE){
+		if(level.form === Level.CHARACTER_TYPE){
 			code = getCode(currentItem.getData().text);
 		}else{
 			let len = this.props.level.buffer.length;
