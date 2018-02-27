@@ -400,6 +400,19 @@
   },
 
   {
+    "type": "level",
+    "id": "c1401",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "받침 연습",
+    "subtitle": "ㅁㄴㅇㄹㅎ",
+    "description": "",
+    "text" : "맘마 엄마 암호 날라 몰라 알아 엉망 망함 망하니 날라 미안 먼 머언 안마 알마니아 할머니 할멈 한마리"
+  },
+
+  {
     "type": "group",
     "title": "윗 자리 받침 연습"
   },
