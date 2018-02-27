@@ -600,13 +600,30 @@ input[type=text]{
 
 
 .keyboard{
-	width: 100%;
-	height: 0;
-	padding-bottom: 30%;
+	width: 800px;
+	height: 240px;
+	margin: 0 auto;
+	/*padding-bottom: 30%;*/
 	position: relative;
 	cursor: default;
 	user-select: none;
+	font-size: 18px;
 }
+@media (min-width: 460px) and (max-width: 800px) {
+	.keyboard{
+		font-size: 13px;
+		width: 600px;
+		height: 180px;
+	}
+}
+@media (max-width: 460px){
+	.keyboard{
+		font-size: 9px;
+		width: 300px;
+		height: 90px;
+	}
+}
+
 .keyboard .row{
 	position: absolute;
 	clear: both;
@@ -632,9 +649,8 @@ input[type=text]{
 	width: 6.3%;
 	height: 100%;
 	margin: 0.2%;
-	padding: 0 0.2em;
-	line-height: 1em;
-	font-size: 2vw;
+	padding: 0.4em 0.2em;
+	line-height: 50%;
 	font-weight: 100;
 	position: relative;
 	color: #555;
@@ -684,7 +700,7 @@ input[type=text]{
 .keyboard .row > div.type5,
 .keyboard .row > div.type6,
 .keyboard .row > div.type7{
-	font-size: 1.7vw;
+	font-size: 0.8em;
 }
 .keyboard .row .en,
 .keyboard .row .kr{
@@ -692,7 +708,8 @@ input[type=text]{
 	height: 100%;
 	width: 50%;
 }
-.keyboard .row .en .shift{
+.keyboard .row .normal,
+.keyboard .row .shift{
 	height: 50%;
 }
 .keyboard .row > div .kr{
@@ -704,12 +721,12 @@ input[type=text]{
 }
 .keyboard .row .kr .shift,
 .keyboard .row .kr .normal{
-	position: absolute;
-	bottom: 0.2em;
-	width: 45%;
+	/*position: absolute;*/
+	/*bottom: 0.2em;*/
+	/*width: 45%;*/
 }
 .keyboard .row .kr .shift{
-	top: 0.2em;
+	/*top: 0.2em;*/
 	color: #777;
 }
 .keyboard .row .kr.shifted .shift{
