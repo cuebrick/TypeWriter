@@ -1,6 +1,6 @@
 class Level{
 
-	static get CHARACTER_TYPE(){
+	static get CHARACTER_FORM(){
 		return 'character';
 	}
 	static get SENTENCE_TYPE(){
