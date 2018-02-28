@@ -27,11 +27,11 @@ class Level{
 	result;
 
 	constructor(props){
-		// super(props);
-
+		this.type = props.type;
 		this.id = props.id;
 		this.grade = props.grade;
-		this.type = props.type;
+		this.difficulty = props.difficulty;
+		this.form = props.form;
 		this.language = props.language;
 		this.title = props.title;
 		this.subtitle = props.subtitle;
@@ -43,46 +43,7 @@ class Level{
 		this.timeRecord = [];
 		this.buffer = [];
 		this.result = {};
-
-		/*this.state = {
-			id: this.props.id,
-			grade: this.props.grade,
-			type: this.props.type,
-			language: this.props.language,
-			title: this.props.title,
-			text: this.props.text,
-
-			intervalId: 0
-		}*/
 	}
-
-	/*get id(){
-		return this.state.id
-	}
-	get grade(){
-		return this.state.grade
-	}
-	get type(){
-		return this.state.type
-	}
-	get language(){
-		return this.state.language
-	}
-	get title(){
-		return this.state.title
-	}
-	get text(){
-		return this.state.text
-	}
-
-
-	get intervalId(){
-		return this.state.intervalId;
-	}
-	set intervalId(id){
-		console.log(id);
-		this.setState({intervalId: id});
-	}*/
 }
 
 export default Level;
