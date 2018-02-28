@@ -66,7 +66,7 @@
   },
   {
     "type": "level",
-    "id": "c0201",
+    "id": "c0106",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -78,7 +78,7 @@
   },
   {
     "type": "level",
-    "id": "c0202",
+    "id": "c0107",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -90,7 +90,7 @@
   },
   {
     "type": "level",
-    "id": "c0203",
+    "id": "c0108",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -102,7 +102,7 @@
   },
   {
     "type": "level",
-    "id": "c0204",
+    "id": "c0109",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -114,7 +114,7 @@
   },
   {
     "type": "level",
-    "id": "c0301",
+    "id": "c0110",
     "grade": 1,
     "difficulty": 1,
     "form": "sentence",
@@ -126,7 +126,7 @@
   },
   {
     "type": "level",
-    "id": "c0302",
+    "id": "c0111",
     "grade": 1,
     "difficulty": 1,
     "form": "sentence",
@@ -138,7 +138,7 @@
   },
   {
     "type": "level",
-    "id": "c0303",
+    "id": "c0112",
     "grade": 1,
     "difficulty": 1,
     "form": "sentence",
@@ -156,7 +156,7 @@
 
   {
     "type": "level",
-    "id": "c0401",
+    "id": "c0201",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -168,7 +168,7 @@
   },
   {
     "type": "level",
-    "id": "c0402",
+    "id": "c0202",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -180,7 +180,7 @@
   },
   {
     "type": "level",
-    "id": "c0501",
+    "id": "c0203",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -192,7 +192,7 @@
   },
   {
     "type": "level",
-    "id": "c0502",
+    "id": "c0204",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -205,7 +205,7 @@
 
   {
     "type": "level",
-    "id": "c0601",
+    "id": "c0205",
     "grade": 1,
     "difficulty": 1,
     "form": "sentence",
@@ -217,7 +217,7 @@
   },
   {
     "type": "level",
-    "id": "c0602",
+    "id": "c0206",
     "grade": 1,
     "difficulty": 1,
     "form": "sentence",
@@ -229,7 +229,7 @@
   },
   {
     "type": "level",
-    "id": "c0603",
+    "id": "c0207",
     "grade": 1,
     "difficulty": 1,
     "form": "sentence",
@@ -241,7 +241,7 @@
   },
   {
     "type": "level",
-    "id": "c0604",
+    "id": "c0208",
     "grade": 1,
     "difficulty": 1,
     "form": "sentence",
@@ -259,7 +259,7 @@
 
   {
     "type": "level",
-    "id": "c0701",
+    "id": "c0301",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -271,7 +271,7 @@
   },
   {
     "type": "level",
-    "id": "c0702",
+    "id": "c0302",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -283,7 +283,7 @@
   },
   {
     "type": "level",
-    "id": "c0801",
+    "id": "c0303",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -296,7 +296,7 @@
 
   {
     "type": "level",
-    "id": "c0901",
+    "id": "c0304",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -308,7 +308,7 @@
   },
   {
     "type": "level",
-    "id": "c0902",
+    "id": "c0305",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -320,7 +320,7 @@
   },
   {
     "type": "level",
-    "id": "c0903",
+    "id": "c0306",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -338,7 +338,7 @@
 
   {
     "type": "level",
-    "id": "c1001",
+    "id": "c0401",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -350,7 +350,7 @@
   },
   {
     "type": "level",
-    "id": "c1101",
+    "id": "c0402",
     "grade": 0,
     "difficulty": 1,
     "form": "character",
@@ -362,7 +362,7 @@
   },
   {
     "type": "level",
-    "id": "c1201",
+    "id": "c0403",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -380,7 +380,7 @@
 
   {
     "type": "level",
-    "id": "c1301",
+    "id": "c0501",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -401,7 +401,7 @@
 
   {
     "type": "level",
-    "id": "c1401",
+    "id": "c0601",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -475,7 +475,7 @@
 
   {
     "type": "level",
-    "id": "s3001",
+    "id": "s5001",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -487,7 +487,7 @@
   },
   {
     "type": "level",
-    "id": "s3002",
+    "id": "s5002",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -499,7 +499,7 @@
   },
   {
     "type": "level",
-    "id": "s3003",
+    "id": "s5003",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -511,7 +511,7 @@
   },
   {
     "type": "level",
-    "id": "s3004",
+    "id": "s5004",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -523,7 +523,7 @@
   },
   {
     "type": "level",
-    "id": "s3005",
+    "id": "s5005",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -535,7 +535,7 @@
   },
   {
     "type": "level",
-    "id": "s3006",
+    "id": "s5006",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -547,7 +547,7 @@
   },
   {
     "type": "level",
-    "id": "s3007",
+    "id": "s5007",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -559,7 +559,7 @@
   },
   {
     "type": "level",
-    "id": "s3008",
+    "id": "s5008",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -571,7 +571,7 @@
   },
   {
     "type": "level",
-    "id": "s3009",
+    "id": "s5009",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -583,7 +583,7 @@
   },
   {
     "type": "level",
-    "id": "s3010",
+    "id": "s5010",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -606,7 +606,7 @@
 
   {
     "type": "level",
-    "id": "s0101",
+    "id": "s5201",
     "grade": 2,
     "difficulty": 2,
     "form": "sentence",
@@ -618,7 +618,7 @@
   },
   {
     "type": "level",
-    "id": "s0102",
+    "id": "s5202",
     "grade": 2,
     "difficulty": 2,
     "form": "sentence",
@@ -630,7 +630,7 @@
   },
   {
     "type": "level",
-    "id": "s0103",
+    "id": "s5203",
     "grade": 2,
     "difficulty": 2,
     "form": "sentence",
@@ -642,7 +642,7 @@
   },
   {
     "type": "level",
-    "id": "s0104",
+    "id": "s5204",
     "grade": 2,
     "difficulty": 2,
     "form": "sentence",
@@ -660,7 +660,7 @@
 
   {
     "type": "level",
-    "id": "s1001",
+    "id": "s5301",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -672,7 +672,7 @@
   },
   {
     "type": "level",
-    "id": "s1002",
+    "id": "s5302",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -684,7 +684,7 @@
   },
   {
     "type": "level",
-    "id": "s1003",
+    "id": "s5303",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -696,7 +696,7 @@
   },
   {
     "type": "level",
-    "id": "s1004",
+    "id": "s5304",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -708,7 +708,7 @@
   },
   {
     "type": "level",
-    "id": "s1005",
+    "id": "s5305",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -720,7 +720,7 @@
   },
   {
     "type": "level",
-    "id": "s1006",
+    "id": "s5306",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -732,7 +732,7 @@
   },
   {
     "type": "level",
-    "id": "s1007",
+    "id": "s5307",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -744,7 +744,7 @@
   },
   {
     "type": "level",
-    "id": "s1008",
+    "id": "s5308",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -756,7 +756,7 @@
   },
   {
     "type": "level",
-    "id": "s1009",
+    "id": "s5309",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -768,7 +768,7 @@
   },
   {
     "type": "level",
-    "id": "s1010",
+    "id": "s5310",
     "grade": 3,
     "difficulty": 2,
     "form": "sentence",
@@ -786,7 +786,7 @@
 
   {
     "type": "level",
-    "id": "s5",
+    "id": "s5401",
     "grade": 8,
     "difficulty": 4,
     "form": "sentence",
