@@ -474,14 +474,58 @@
 
   {
     "type": "group",
-    "title": "겹자음 연습"
+    "title": "겹자음 겹모음 연습"
   },
 
   {
-    "type": "group",
-    "title": "겹모음 연습"
+    "type": "level",
+    "id": "c0701",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "쉬프트 사용 겹자음",
+    "subtitle": "ㅃㅉㄸㄲㅆ",
+    "description": "",
+    "text" : "깨비깨비 우리끼리"
   },
-
+  {
+    "type": "level",
+    "id": "c0702",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "쉬프트 사용 겹모음",
+    "subtitle": "ㅒㅖ",
+    "description": "",
+    "text" : "예절 예고"
+  },
+  {
+    "type": "level",
+    "id": "c0703",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "겹자음 받침",
+    "subtitle": "ㄳㄺㄼㄵ",
+    "description": "쉬프트를 사용하지 않는 겹자음은 왼손가락을 두번 누르게 되므로 왼손 오른손 왼손 오른손의 리듬과는 다르게 진행됩니다.",
+    "text" : "값 앉아라 밟아요"
+  },
+  {
+    "type": "level",
+    "id": "c0704",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "겹모음",
+    "subtitle": "ㅘㅙㅚㅞㅟㅢ",
+    "description": "쉬프트를 사용하지 않는 겹모음은 오른손가락을 두번 누르게 되므로 왼손 오른손 왼손 오른손의 리듬과는 다르게 진행됩니다.",
+    "text" : "의자왕"
+  },
+1
   {
     "type": "group",
     "title": "줄바꾸기(엔터, 리턴) 키 연습"
