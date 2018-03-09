@@ -7,6 +7,7 @@ import Typing from '../pages/Typing';
 import NotFound from "../pages/NotFound";
 import IEFix from '../lib/ie-fix';
 import Settings from "../pages/Settings";
+import AppInfo from "../pages/AppInfo";
 
 class App extends React.Component{
 	constructor(props){
@@ -23,6 +24,7 @@ class App extends React.Component{
 						<Route path="/levels" component={Levels}/>
 						<Route path="/typing/:id" component={Typing}/>
 						<Route path="/settings" component={Settings}/>
+						<Route path="/appInfo" component={AppInfo}/>
 						<Route component={NotFound}/>
 					</Switch>
 				</div>
