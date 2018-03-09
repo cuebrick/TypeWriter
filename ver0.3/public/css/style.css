@@ -784,30 +784,26 @@ input[type=text]{
 .setting-list li:last-child{
 	border-bottom: 1px solid #555555;
 }
-.app-description{
+.app-info-item{
 	font-size: 0.8em;
-}
-.app-description .version{
-	color: #e2c9bc;
-	padding: 1em 0;
-}
-.app-description .author{
+	margin: 1em 0 1em 0.5em;
 	color: #999;
 	line-height: 1.5em;
 }
 
-.open-source{
-	margin-top: 1em;
-	font-weight: 100;
-}
-.open-source h4{
+.app-info-item h4{
 	color: #e2c9bc;
-	font-size: 1em;
+	font-size: 1.2em;
 	font-weight: 100;
+	padding: 0.5em 0;
 }
 .open-source-list li{
 	margin: 0.5em 0;
 	font-size: 0.8em;
+}
+.open-source-list h5{
+	font-size: 1.2em;
+	font-weight: 100;
 }
 
 

@@ -8,15 +8,20 @@ class AppInfo extends React.Component{
 			<div className="container">
 				<h3>Typing Play 에 대한 정보</h3>
 
-				<div className="app-description">
+				<div className="app-info-item">원종선(Won, Jong-sun)의 개인 프로젝트로 만들어 졌습니다.</div>
+
+				<div className="app-info-item">
+					<h4>Contact</h4>
 					<p className="author">
-						원종선(Won, Jong-sun)의 개인 프로젝트로 만들어 졌습니다.<br/>
 						문의 또는 개선 사항이 있으면 아래의 방법으로 연락해 주세요.<br/>
 						e-mail : cuebrick@gmail.com
 					</p>
-					<p className="version">Typing Play Version {PackageInfo.version}</p>
 				</div>
-				<div className="open-source">
+				<div className="app-info-item">
+					<h4>Program Version</h4>
+					<p>Typing Play {PackageInfo.version}</p>
+				</div>
+				<div className="app-info-item">
 					<h4>Open Source Licenses</h4>
 					<ul className="open-source-list">
 						<li>
