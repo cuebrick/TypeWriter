@@ -33,6 +33,10 @@ class AppInfo extends React.Component{
 							<a href="https://www.npmjs.com/package/hangul-js">https://www.npmjs.com/package/hangul-js</a>
 						</li>
 						<li>
+							<h5>jQuery</h5>
+							<a href="https://www.jquery.com">https://www.jquery.com</a>
+						</li>
+						<li>
 							<h5>activate-power-mode</h5>
 							<a href="https://www.npmjs.com/package/activate-power-mode" target="_blank">https://www.npmjs.com/package/activate-power-mode</a>
 						</li>
