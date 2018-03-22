@@ -230,14 +230,15 @@ class LetterList extends React.Component{
 			return;
 		}
 
-		let item = this.getCurrentItem();
+		// let item = this.getCurrentItem();
+		let item = this.getPrevItem();
 		if(!item)
 			return;
 
-		this.setNextIndex();
 		if(item.props.char === '↩'){
 			this.clearBuffer();
 		}else{
+			this.setNextIndex();
 			this.enterKeyLoop();
 		}
 	}
@@ -305,6 +306,10 @@ class LetterList extends React.Component{
 			selection.removeAllRanges();
 			selection.addRange(range);
 		}
+	}
+
+	getPrevItem(){
+		return this.refs['letterItem'+ (this.props.level.index-1)];
 	}
 
 	getCurrentItem(){
