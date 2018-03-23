@@ -63,7 +63,11 @@ class LetterList extends React.Component{
 				if(this.props.level.buffer.length){
 					this.props.level.buffer.pop();
 				}else{
-					this.setPrevIndex();
+					if(this.props.level.index === 0){
+						break;
+					}else{
+						this.setPrevIndex();
+					}
 				}
 				this.updateDisplay(this.props.level.buffer);
 				this.dispatchNextCode();
