@@ -818,13 +818,8 @@
   },
 
   {
-    "type": "group",
-    "title": "새로운 동요"
-  },
-
-  {
     "type": "level",
-    "id": "s5101",
+    "id": "s5013",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -836,7 +831,7 @@
   },
   {
     "type": "level",
-    "id": "s5102",
+    "id": "s5014",
     "grade": 0,
     "difficulty": 1,
     "form": "sentence",
@@ -1030,7 +1025,7 @@
 
   {
     "type": "group",
-    "title": "명작 시"
+    "title": "교과서에 나오는 시"
   },
 
   {
@@ -1540,7 +1535,7 @@
 
   {
     "type": "group",
-    "title": "시조"
+    "title": "교과서에 나오는 시조"
   },
 
   {
