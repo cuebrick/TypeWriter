@@ -1,0 +1,635 @@
+/*@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+*/
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+html, body, #root{
+	height: 100%;
+}
+body{
+	margin:0;
+	color: #ddd;
+	font-size: 20px;
+	background: #333 url("../images/type-bg2.jpg") center;
+	background-size: cover;
+	/*overflow-y: hidden;*/
+}
+*{
+	box-sizing: border-box;
+	font-family: 'malgun gothic', sans-serif;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, li{
+	margin: 0;
+	padding: 0;
+}
+ul, ol, dl{
+	list-style: none;
+}
+button{
+	background-color: #0080ae;
+	border-radius: 4px;
+	padding: 5px 10px;
+	color: #c5eaff;
+	border: 0;
+	font-size: 1em;
+}
+button:hover{
+	background-color: #00aae7;
+}
+a{
+	color: #a7cddd;
+}
+
+
+.hide{
+	display: none !important;
+}
+.show{
+	display: block !important;
+}
+
+
+.wrapper{
+	background-color: rgba(0, 0, 0, 0.9);
+	min-height: 100%;
+	padding-top: 1px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+nav{
+	position: fixed;
+	right: 10px;
+	top: 5px;
+	font-size: 12px;
+}
+nav > ul > li{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	/*border: 3px solid #fff;*/
+	border-radius: 40px;
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 0;
+	margin: 1px;
+	cursor: pointer;
+	color: #000;
+	text-align: center;
+	float: left;
+}
+nav > ul > li:hover,
+nav > ul > li:active{
+	background-color: #9cddee;
+}
+nav > ul > li.select{
+	background-color: #9fc0cc;
+}
+h1{
+	font-weight: 100;
+	font-size: 3em;
+	color: coral;
+}
+h1 > a{
+	color: inherit;
+	text-decoration: none;
+}
+h2{
+	font-weight: 100;
+	font-size: 1.2em;
+	height: 50px;
+}
+h3{
+	font-weight: 100;
+	color: #b6e9ee;
+	padding: 0.4em 0;
+}
+header{
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.container{
+	padding: 10px;
+}
+.minimize{
+	padding-left: 10px;
+}
+.minimize > h1{
+	float: left;
+	font-size: 1.5em;
+	padding-top: 3px;
+}
+.minimize > h2{
+	float: left;
+	font-size: 1em;
+	line-height: 2.3em;
+	margin-left: 10px;
+	padding-top: 5px;
+}
+@media (max-width: 599px) {
+	.minimize > h1{
+		float: none;
+		line-height: 1.2em;
+		font-size: 1em;
+		padding-top: 3px;
+	}
+	.minimize > h2{
+		font-size: 0.65em;
+		line-height: 1em;
+		padding-top: 2px;
+		margin-left: 0;
+	}
+}
+
+.sentence-area, .level-list-area{
+	padding: 0.5em;
+	position: relative;
+}
+/*.sentence-area{
+	display: none;
+}*/
+.letter-list{
+	position: relative;
+	min-height: 128px;
+	max-height: 320px;
+	overflow-y: auto;
+	background-color: #20202c;
+	padding: 10px;
+	border-radius: 5px;
+}
+.letter{
+	float: left;
+	margin-right: 0.1em;
+	margin-bottom: 0.4em;
+	font-size: 2em;
+	line-height: 1em;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.letter > .text{
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 0.1em;
+	height: 1.4em;
+	min-width: 0.8em;
+	border-radius: 0.05em 0.05em 0 0;
+	border-bottom: 0.05em solid #8ba5b2;
+}
+.letter > .typing{
+	padding: 0.1em;
+	height: 1.4em;
+	min-width: 0.8em;
+}
+.letter.active > .typing{
+	border-bottom: 0.05em solid #444;
+	animation: blink 0.5s linear infinite alternate;
+}
+.letter.corrected > .text{
+	border-bottom: 0.05em solid #006aeb;
+}
+.letter.incorrected > .text{
+	border-bottom: 0.05em solid #eb005a;
+}
+.letter.enter-key{
+	color: #888;
+}
+.letter.enter-key + .letter{
+	clear: left;
+}
+
+
+#typingResult{
+	clear: both;
+}
+@keyframes blink {
+	from {
+		border-bottom-color: #444;
+	}
+	to {
+		border-bottom-color: #0cf;
+	}
+}
+
+
+.typing-result{
+	display: none;
+}
+
+
+
+.level-list{
+	font-size: 16px;
+	overflow: auto;
+}
+
+.level-item{
+	width: 200px;
+	float: left;
+	box-sizing: border-box;
+	padding: 10px;
+	background-color: rgba(151, 206, 255, 0.1);
+	border-radius: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	transition: 0.4s all;
+	font-size: 0.9em;
+}
+.level-item .status{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/status.svg);
+	background-size: 100%;
+	margin-right: 5px;
+}
+.level-item .status.unlock{
+	background-image: url(../images/status-unlock.svg);
+}
+.level-item .level-title{
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+.level-item:hover{
+	background-color: rgba(151, 206, 255, 0.4);
+}
+
+.badge{
+	position: absolute;
+	top: 55px;
+	right: -310px;
+	min-width: 300px;
+	height: 50px;
+	background-color: rgba(255, 147, 183, 0.11);
+	border: 3px solid #bfa589;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 8px;
+	transition: right 0.5s;
+}
+.badge.show{
+	right: 10px;
+}
+.badge-title{
+	float: left;
+	margin-right: 10px;
+}
+.stars{
+	float: left;
+	font-size: 0;
+}
+.stars > .star{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-image: url(../images/star.png);
+	background-size: 25px;
+}
+.stars > .star.incomplete{
+	background-image: url(../images/star-half.png);
+}
+
+/*report-view*/
+.report-view{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+}
+.report-view .stars{
+	height: 40px;
+}
+.report-view .description{
+	clear: both;
+}
+.report-view .description dl > dt{
+	float: left;
+	width: 150px;
+	clear: both;
+}
+.report-view .description dl > dd{
+	float: left;
+}
+.report-view .report-view-msg{
+	clear: both;
+	padding-top: 30px;
+	color: #c0967c;
+}
+
+.button-ui{
+	padding: 20px 0;
+	font-size: 15px;
+}
+.button-ui button{
+	padding: 10px 20px;
+	width: auto;
+	margin: 0 1px;
+}
+.button-ui .list-btn{
+	background-color: #445263;
+}
+.button-ui .list-btn:hover{
+	background-color: #56687d;
+}
+.button-ui .next-btn{
+
+}
+
+
+.profile{
+	float: right;
+	width: 200px;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 5px;
+	position: relative;
+}
+.profile.user-layer-mode{
+	background-color: #474954;
+}
+.profile.typing-mode.user-layer-mode{
+	background-color: transparent;
+}
+.profile .user-layer,
+.profile.typing-mode.user-layer-mode .user-layer{
+	display: none;
+}
+.profile.user-layer-mode .user-layer{
+	display: block;
+}
+.profile .user-info{
+	height: 100%;
+	cursor: pointer;
+}
+.profile.typing-mode .user-info{
+	cursor: default;
+}
+.profile .user-description{
+	position: absolute;
+	z-index: 99;
+	width: 160px;
+	font-size: 14px;
+	right: 45px;
+	text-align: right;
+	transition: 0.4s all;
+}
+.profile.typing-mode .user-description,
+.profile.user-layer-mode .user-description{
+	right: 5px;
+	z-index: 97;
+	width: 190px;
+}
+.profile.add-user-mode .user-description{
+	right: 85px;
+	z-index: 97;
+}
+.profile .user-description .icon-selector{
+	background-color: rgba(16, 16, 16, 0.9);
+	min-height: 50px;
+	border: 2px solid #6ac1e2;
+	margin-top: 10px;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: left;
+}
+.profile .user-description .icon-selector > img{
+	width: 34px;
+	margin: 1px;
+}
+
+
+
+
+.profile-image{
+	float: right;
+	width: 38px;
+	height: 38px;
+	border-radius: 19px;
+	overflow: hidden;
+	margin-left: 5px;
+}
+.profile-image > img{
+	width: 100%;
+}
+
+.profile > .user-layer{
+	font-size: 12px;
+	position: absolute;
+	z-index: 100;
+	top: 50px;
+	right: 0;
+	width: 100%;
+	min-height: 50px;
+	max-height: 300px;
+	background-color: #515460;
+	overflow-y: auto;
+}
+.profile > .user-layer .user-list{
+	padding: 5px;
+}
+.profile > .user-layer .user-list > li{
+	height: 40px;
+	margin-bottom: 5px;
+	text-align: right;
+}
+.profile > .user-layer .user-list > li > .user-inner{
+	padding: 5px;
+	border-radius: 4px;
+	margin-left: 30px;
+	cursor: pointer;
+}
+.profile > .user-layer .user-list > li.current-user > .user-inner{
+	cursor: default;
+}
+.profile > .user-layer .user-list > li > img.delete,
+.profile > .user-layer .user-list > li > img.checked{
+	float: left;
+	margin-top: 13px;
+	margin-left: 5px;
+}
+.profile > .user-layer .user-list > li > img.delete{
+	cursor: pointer;
+}
+.profile > .user-layer .user-list > li:not(.current-user) > .user-inner:hover{
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.profile > .user-layer .user-list .user-image{
+	float: right;
+	margin-left: 5px;
+}
+.profile > .user-layer .user-list .user-image > img{
+	width: 30px;
+	height: 30px;
+}
+.user-grade{
+	font-size: 11px;
+	color: #6ac1e2;
+}
+.profile .profile-buttons{
+	width: 80px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 98;
+	text-align: right;
+}
+.profile .profile-buttons button{
+	width: 40px;
+	height: 50px;
+	border-radius: 0;
+	font-size: 12px;
+	outline: none;
+	padding: 0;
+}
+.profile .user-name{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.profile .user-name > input[type=text]{
+	width: 110px;
+	font-size: 14px;
+	padding: 0 0 2px 0;
+	text-align: right;
+	animation: blink 0.5s linear infinite alternate;
+}
+input[type=text]{
+	color: #fff;;
+	border: 0;
+	border-bottom: 1px solid #6ac1e2;
+	background-color: transparent;
+	outline: none;
+}
+
+
+
+
+
+
+.keyboard{
+	width: 100%;
+	height: 0;
+	padding-bottom: 30%;
+	position: relative;
+	cursor: default;
+	user-select: none;
+}
+.keyboard .row{
+	position: absolute;
+	clear: both;
+	width: 100%;
+	height: 19%;
+}
+.keyboard .row:nth-child(2){
+	top: 20%
+}
+.keyboard .row:nth-child(3){
+	top: 40%
+}
+.keyboard .row:nth-child(4){
+	top: 60%
+}
+.keyboard .row:nth-child(5){
+	top: 80%
+}
+.keyboard .row > div{
+	float: left;
+	border: 1px #dddddd solid;
+	border-radius: 0.2em;
+	width: 6.3%;
+	height: 100%;
+	margin: 0.2%;
+	padding: 0 0.2em;
+	line-height: 1em;
+	font-size: 2vw;
+	font-weight: 100;
+	position: relative;
+	color: #555;
+	transition: 0.6s background-color;
+}
+.keyboard .row > div.next-code{
+	transition: 0.1s background-color;
+	background-color: rgba(0, 156, 255, 0.6);
+}
+.keyboard .row > div.on{
+	color: #000;
+	background-color: rgba(255, 255, 255, 0.8);
+	transition: 0.2s background-color;
+}
+.keyboard .row > div.press{
+	border: 3px #dd448a solid;
+}
+.keyboard .row > div.disable{
+	border: 1px #555 solid;
+	color: #555;
+}
+.keyboard .row > div.type1{
+	width: 8%;
+}
+.keyboard .row > div.type2{
+	width: 9.4%;
+}
+.keyboard .row > div.type3{
+	width: 11.5%;
+}
+.keyboard .row > div.type4{
+	width: 12.5%;
+}
+.keyboard .row > div.type5{
+	width: 14%;
+}
+.keyboard .row > div.type6{
+	width: 18.2%;
+}
+.keyboard .row > div.type7{
+	width: 40.8%;
+}
+.keyboard .row > div.type1,
+.keyboard .row > div.type2,
+.keyboard .row > div.type3,
+.keyboard .row > div.type4,
+.keyboard .row > div.type5,
+.keyboard .row > div.type6,
+.keyboard .row > div.type7{
+	font-size: 1.7vw;
+}
+.keyboard .row .en,
+.keyboard .row .kr{
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+.keyboard .row .en .shift{
+	height: 50%;
+}
+.keyboard .row > div .kr{
+	text-align: right;
+	color: #fff;
+}
+.keyboard .row > div.disable .kr{
+	color: inherit;
+}
+.keyboard .row .kr .shift,
+.keyboard .row .kr .normal{
+	position: absolute;
+	bottom: 0.2em;
+	width: 45%;
+}
+.keyboard .row .kr .shift{
+	top: 0.2em;
+	color: #777;
+}
+.keyboard .row .kr.shifted .shift{
+	color: #fff;
+}
+.keyboard .row .kr.shifted .normal{
+	color: #777;
+}
+.keyboard .en > *{
+	font-family: 'Noto Sans KR', sans-serif;
+}
