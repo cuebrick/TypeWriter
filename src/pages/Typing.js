@@ -98,7 +98,7 @@ class Typing extends React.Component{
 				<LetterList level={this.state.level} nextCode={this.nextCode} typingFinished={this.typingFinished}/>
 
 				<div className="button-ui">
-					<Link to="/levels"><button className="list-btn">목록으로(esc)</button></Link>
+					<Link to={"/levels?lv=" + this.state.level.id}><button className="list-btn">목록으로(esc)</button></Link>
 					{
 						this.state.isFinished &&
 						<Link to={"/typing/" + this.state.nextLevel.id}><button className="next-btn">다음단계(enter)</button></Link>

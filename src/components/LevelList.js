@@ -7,7 +7,11 @@ import { Link } from 'react-router-dom';
 class LevelList extends React.Component{
 	constructor(props){
 		super(props);
+		let params = new URLSearchParams(location.search);
+		let prevLevel = params.get('lv');
+		console.log(prevLevel);
 	}
+
 
 	render(){
 		return(
