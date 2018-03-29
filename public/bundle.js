@@ -1501,11 +1501,11 @@ var Level = function () {
 	function Level(props) {
 		_classCallCheck(this, Level);
 
-		// super(props);
-
+		this.type = props.type;
 		this.id = props.id;
 		this.grade = props.grade;
-		this.type = props.type;
+		this.difficulty = props.difficulty;
+		this.form = props.form;
 		this.language = props.language;
 		this.title = props.title;
 		this.subtitle = props.subtitle;
@@ -1517,46 +1517,7 @@ var Level = function () {
 		this.timeRecord = [];
 		this.buffer = [];
 		this.result = {};
-
-		/*this.state = {
-  	id: this.props.id,
-  	grade: this.props.grade,
-  	type: this.props.type,
-  	language: this.props.language,
-  	title: this.props.title,
-  	text: this.props.text,
-  			intervalId: 0
-  }*/
 	}
-
-	/*get id(){
- 	return this.state.id
- }
- get grade(){
- 	return this.state.grade
- }
- get type(){
- 	return this.state.type
- }
- get language(){
- 	return this.state.language
- }
- get title(){
- 	return this.state.title
- }
- get text(){
- 	return this.state.text
- }
- 
- 
- get intervalId(){
- 	return this.state.intervalId;
- }
- set intervalId(id){
- 	console.log(id);
- 	this.setState({intervalId: id});
- }*/
-
 
 	return Level;
 }();
@@ -2340,7 +2301,7 @@ module.exports = focusNode;
 /* 32 */
 /***/ (function(module, exports) {
 
-module.exports = [{"type":"group","title":"기본 자리 연습"},{"type":"level","id":"c0101","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 기본 자리 1 \"ㅁㄴㅇㄹ\"","description":"기본 위치는 왼손 검지 손가락이 ㅎ 위치에 자리하고 자연스럽게 나머지 손가락을 누르는 것입니다. 왼손 검지 손가락이 ㅎ 위치에 있다는 것을 꼭 기억하세요.","text":"ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ"},{"type":"level","id":"c0102","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 기본 자리 2 \"ㅁㄴㅇㄹ\"","description":"방향만 다릅니다.","text":"ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ"},{"type":"level","id":"c0103","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 기본 자리 3 \"ㅁㄴㅇㄹㅎ\"","description":"ㅎ은 왼손 검지 손가락이 이동합니다.","text":"ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ"},{"type":"level","id":"c0104","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 기본 자리 4 \"ㅁㄴㅇㄹㅎ\"","description":"이제 순서를 뒤섞어 봅니다.","text":"ㅁㅇㅎㄹㄴㄴㄹ ㅎㅁㅇ ㅇㄴㅁㅇ ㅎㄹㅁ ㅇㄴㅎㄹ ㅎㅁㅇㅎㅁㄴ"},{"type":"level","id":"c0105","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 기본 자리 5 \"ㅁㄴㅇㄹㅎ\"","description":"한 번 더 연습합니다.","text":"ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ"},{"type":"level","id":"c0201","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음 연습","subtitle":"오른손 기본 자리 1 \"ㅓㅏㅣ\"","description":"이번에는 오른손 기본 자리 입니다.","text":"ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ"},{"type":"level","id":"c0202","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음 연습","subtitle":"오른손 기본 자리 2 \"ㅓㅏㅣ\"","description":"방향만 다릅니다.","text":"ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ"},{"type":"level","id":"c0203","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음 연습","subtitle":"오른손 기본 자리 3 \"ㅗㅓㅏㅣ\"","description":"ㅗ는 오른손 검시 손가락이 이동합니다.","text":"ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ"},{"type":"level","id":"c0204","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음 연습","subtitle":"오른손 기본 자리 4 \"ㅗㅓㅏㅣ\"","description":"순서가 뒤죽박죽 입니다.","text":"ㅣㅓㅗㅏ ㅣㅗㅏㅓ ㅗㅏㅣㅏ ㅓㅗㅗㅣ ㅗㅓㅣㅏ ㅓㅗㅣㅓ ㅏㅣㅏㅗ ㅓㅏㅣㅏ"},{"type":"level","id":"c0301","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합 연습","subtitle":"ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ","description":"기본 자리 양손을 사용하여 단어를 써 봅니다.","text":"라라라 아아아 나나나 마마마 러러러러 어어어어 너너너너 머머머머 미미나 미미너 라라머 라미미 호허허 히히히 리리로로 아어어이"},{"type":"level","id":"c0302","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합 연습","subtitle":"ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ","description":"기본 자리 양손을 사용하여 단어를 써 봅니다.","text":"나라나라 러허러허 아나아나 마리마리 오리오리 모모라라 나미미로 마리마로 나리나로 아리아로 마니마노 마라노 이라모 하이라 호리모 나미로호"},{"type":"level","id":"c0303","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어 연습","subtitle":"기본 자리만 사용한 단어","description":"기본 자리 양손을 사용하여 단어를 써 봅니다.","text":"어머니 엄마 이모 미모 마모 어머니 아라 미이라 아마 하하 하이 미로 나라 나로호 마마미아 라모 이미 어라 오호 하이"},{"type":"group","title":"윗자리 연습"},{"type":"level","id":"c0401","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 윗자리 1 \"ㅂㅈㄷㄱ\"","description":"손은 기본자리에.","text":"ㅂㄷㄱㅈ ㄱㄷㅈㄱ ㅂㄷㄱㄷ ㅈㅂㄷㅈ ㅂㅈㅂㄷ ㅂㄷㅈㄷ ㅂㄷㅂㅈ ㄷㄱㄷㅂ ㄱㄷㅈㅂ"},{"type":"level","id":"c0402","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 윗자리 2 \"ㅂㅈㄷㄱㅅ\"","description":"한 번 더 반복합니다.","text":"ㅂㄷㅅㄷㅂㄷㅂㄷ ㅅㄷㅂㄷㄱ ㅂㄷ ㅅㅅㄷㅂㅈㄷㄷㄱ ㅂㄷㄱㄷㄱㅂ ㅂㄱㄷㄱ ㅂㄷㅅㄱㅂㄷㄷㅂ ㅂㄷㅈㅂㅅㄷ"},{"type":"level","id":"c0501","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음 연습","subtitle":"오른손 윗자리 1 \"ㅕㅑㅐㅔ\"","description":"손은 기본자리에","text":"ㅕㅕㅑㅑ ㅐㅐㅔㅔ ㅕㅐㅑㅔ ㅕㅑㅑㅑ ㅔㅐㅑㅑ ㅕㅑㅔㅕ ㅔㅕㅑㅔ ㅑㅐㅕㅑ"},{"type":"level","id":"c0502","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음 연습","subtitle":"오른손 윗자리 2 \"ㅛㅕㅑㅐㅔ\"","description":"손은 기본자리에","text":"ㅛㅑㅐㅛㅐㅑㅑㅕ ㅑㅐㅔㅐㅑ ㅕㅑㅛㅐㅑㅑㅕ ㅛㅑ ㅐㅔㅑ ㅐㅑㅕㅛ ㅐㅑㅛㅐㅔㅔㅑ ㅕㅑㅛㅑㅐㅔㅑ ㅕㅑㅐㅔㅑㅕㅑ"},{"type":"level","id":"c0601","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합 연습","subtitle":"ㅂㅈㄷㄱ ㅕㅑㅐㅔ","description":"","text":"뱌뱌뱌 벼벼벼 배배배 베베베 제제제 재재재 쟈쟈쟈 져져져 대대댜댜 재재죠죠 벼벼게게 져대져대 뎌대재져"},{"type":"level","id":"c0602","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합 연습","subtitle":"ㅂㅈㄷㄱㅅ ㅛㅕㅑㅐㅔ","description":"","text":"뱌뱌셔셔 갸갸됴됴 져져댜댜 겨겨쇼쇼 대대세세 게게셔셔 재재댜댜 쟈베댜댜 벼대겨겨 베교교교 죠죠재재"},{"type":"level","id":"c0603","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어 연습","subtitle":"윗 자리 단어만 사용한 단어","description":"","text":"벼 쟈 대 게 쇼 세개댜겨뵤 뱌겨 대개 겨대 게재 세개 쇼쇼쇼 베게 대게 제제 샤베 뱌재 겨제 재개 대배"},{"type":"level","id":"c0604","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어 연습","subtitle":"기본자리와 윗 자리를 사용한 단어","description":"윗 자리만 누르다 보면 손가락이 윗 자리에서 기본 자리로 내려오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 윗자리를 타이핑 할 때 손가락 하나만 윗 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.","text":"어머니가 아버지가 나라고 아기야 호미야 미래 나가라 도라지 바보 라고 하며 다리다"},{"type":"group","title":"아랫 자리 연습"},{"type":"level","id":"c0701","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 아랫자리 1 \"ㅋㅌㅊㅍ\"","description":"손은 기본자리에.","text":"ㅋㅌㅊㅍ ㅋㅌㅊㅍ ㅍㅊㅌㅋ ㅍㅊㅌㅋ ㅋㅍㅋㅍ ㅌㅊㅌㅊ ㅍㅊㅋㅌ ㅍㅌㅊㅍ ㅋㅊㅋㅊ ㅋㅍㅌㅊ ㅊㅌㅍㅋ ㅋㅋㅊㅍ ㅊㅌㅋㅊ"},{"type":"level","id":"c0702","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 아랫자리 2 \"ㅋㅌㅊㅍ\"","description":"손은 기본자리에.","text":"ㅋㅌㅊㅊㅌㅋㅍㅊ ㅋㅊㅋㅊㅊㅍ ㅋㅌㅊㅋㅋ ㅊㅍㅌㅊ ㅊㅌ ㅋㅊㅍㅋㅌㅊㅍ ㅋㅌㅊㅍㅊㅊㅌㅋ ㅊㅋㅊㅋㅌㅊㅍㅋ ㅊㅋㅊㅍ ㅋㅊㅍㅋㅌㅊㅍ ㅊㅊㅋㅌㅊ"},{"type":"level","id":"c0801","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음 연습","subtitle":"오른손 아랫자리 1 \"ㅠㅜㅡ\"","description":"오른손 아랫자리는 특별합니다. 다른 자리라면 왼손 검지손가락이 눌러야 할 ㅠ를 아래자리의 경우 오른손 검지 손가락이 누르게 됩니다.","text":"ㅠㅜㅡ ㅠㅜㅡ ㅡㅠㅡ ㅜㅡㅠ ㅡㅡㅜ ㅠㅜㅡ ㅡㅜㅠ ㅜㅠㅠ ㅜㅜㅠ"},{"type":"level","id":"c0901","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합 연습","subtitle":"ㅋㅌㅊㅍ ㅠㅜㅡ","description":"","text":"쿠쿠트트 츠츠트트 큐큐츠츠 추추프프 쿠쿠츠츠 트트츠츠 츄츄크크 트트츠츠 크크츠츠 프프츠츠 프프트트 투투쿠쿠"},{"type":"level","id":"c0902","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어 연습","subtitle":"아랫 자리만 사용한 단어","description":"","text":"쿠크 추크 푸츄 프쿠츠 트추 추츄"},{"type":"level","id":"c0903","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어 연습","subtitle":"기본자리와 아랫 자리만 사용한 단어","description":"아랫 자리만 누르다 보면 손가락이 아랫 자리에서 기본 자리로 올라오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 아랫 자리를 타이핑 할 때 손가락 하나만 아랫 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.","text":"쿠미 트리 타로 터프 토토로 투투 마리프 토미 프라하 하프 추이 치프 추이 초파리 추호 마이크 마크로 파이프 처마"},{"type":"group","title":"윗 자리와 아랫자리 연습"},{"type":"level","id":"c1001","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음 연습","subtitle":"왼손 윗 자리와 아랫 자리 1 \"ㅂㅈㄷㄱㅅ, ㅋㅌㅊㅍ\"","description":"","text":"ㅂㅈㄷㄱㅅ ㅋㅌㅊㅍ ㅅㄱㄷㅈㅂ ㅍㅊㅌㅋ ㅂㅌㄷㅍㅅㅊㅈㅋ ㅂㅍㅊㄷㅈㅌㅋㄱ ㅅㅊㄷㄷㅈㅂㅌㅊㅍㅋㅌ ㅊㅍㅈㅊㄷ"},{"type":"level","id":"c1101","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음 연습","subtitle":"오른손 윗 자리와 아랫 자리 1 \"ㅛㅕㅑㅐㅔ, ㅠㅜㅡ\"","description":"","text":"ㅛㅕㅑㅐㅔ ㅠㅜㅡ ㅔㅐㅑㅕㅛ ㅡㅜㅠ ㅛㅑㅔㅐㅕㅠㅡㅜ ㅠㅕㅑㅐㅠㅕㅑㅐㅡㅔㅕㅡ ㅕㅑㅐㅡㅜㅕㅐㅛㅔ ㅑㅕㅡㅐ"},{"type":"level","id":"c1201","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어 연습","subtitle":"윗 자리와 아랫 자리","description":"손이 좀 바쁩니다.","text":"배구 구두 주세 벼 개수 슈크 대체제 추수 두배 투구 수재 세수 세규"},{"type":"group","title":"전체 자리 연습"},{"type":"level","id":"c1301","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어 연습","subtitle":"키보드 전체를 모두 이용","description":"","text":"배터리 마우스 휴지"},{"type":"group","title":"기본 자리 받침 연습"},{"type":"level","id":"c1401","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"받침 연습","subtitle":"ㅁㄴㅇㄹㅎ","description":"","text":"맘마 엄마 암호 날라 몰라 알아 엉망 망함 망하니 날라 미안 먼 머언 안마 알마니아 할머니 할멈 한마리"},{"type":"group","title":"윗 자리 받침 연습"},{"type":"group","title":"아랫 자리 받침 연습"},{"type":"group","title":"겹자음 연습"},{"type":"group","title":"겹모음 연습"},{"type":"group","title":"줄바꾸기(엔터, 리턴) 키 연습"},{"type":"group","title":"숫자 연습"},{"type":"group","title":"기호 연습"},{"type":"group","title":"영타 연습"},{"type":"level","id":"q0101","grade":0,"difficulty":1,"form":"character","language":"en","title":"lazy fox","subtitle":"알파벳 테스트","description":"","text":"lazy fox jumped over quick brown dog"},{"type":"group","title":"옛 동요"},{"type":"level","id":"s3001","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"개구리","subtitle":"개굴개굴 개구리","description":"","text":"개굴개굴 개구리 노래를 한다↩아들 손자며느리 다 모여서↩밤새도록 하여도 듣는 이 없네↩듣는 사람 없어도 날이 밝도록↩개굴개굴 개구리 노래를 한다↩개굴개굴 개구리 목청도 좋다"},{"type":"level","id":"s3002","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"반달","subtitle":"푸른하늘 은하수 하얀 쪽배에","description":"","text":"푸른하늘 은하수 하얀 쪽배에↩계수나무 한 나무 토끼 한 마리↩돛대도 아니달고 삿대도 없이↩가기도 잘도 간다 서쪽 나라로↩은하수를 건너서 푸른나라로↩푸른나라 지나서 어디로 가나↩멀리서 반짝반짝 빛이 있는건↩샛별의 눈에 앉아 길을 찾아라"},{"type":"level","id":"s3003","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"꼬까신","subtitle":"개나리 노오란 꽃 그늘 아래","description":"","text":"개나리 노오란 꽃 그늘 아래↩가지런히 놓여 있는 꼬까신 하나↩아기는 살짝 신벗어 놓고↩맨발로 한들 한들 나들이 갔나↩가지런히 가다리는 꼬까신 하나"},{"type":"level","id":"s3004","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"산토끼","subtitle":"산토끼 토끼야 어디를 가느냐","description":"","text":"산토끼 토끼야 어디를 가느냐↩깡충깡충 뛰면서 어디를 가느냐↩산고개 고개를 나 혼자 넘어서↩토실토실 알밤을 주워서 올 테야↩산토끼 토끼야 어디를 가느냐↩깡충깡충 뛰면서 어디를 가느냐↩산고개 고개를 나 혼자 넘어서↩토실토실 알밤을 주워서 올 테야"},{"type":"level","id":"s3005","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"다람쥐","subtitle":"산골짝에 다람쥐 아기 다람쥐","description":"","text":"산골짝에 다람쥐 아기 다람쥐↩도토리 점심 가지고 소풍을 간다↩다람쥐야 다람쥐야 재주나 한 번 넘으렴↩팔닥 팔닥 팔닥 날도 참말 좋구나↩산골짝에 다람쥐 아기 다람쥐↩도토리 점심 가지고 소풍을 간다↩다람쥐야 다람쥐야 재주나 한 번 넘으렴↩팔닥 팔닥 팔닥 날도 참말 좋구나"},{"type":"level","id":"s3006","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"눈사람","subtitle":"한겨울에 밀짚모자 꼬마눈사람","description":"","text":"한겨울에 밀짚모자 꼬마눈사람↩눈썹이 우습구나 코도 삐뚤고↩거울을 보여줄까 꼬마 눈사람↩하루종일 우두커니 꼬마눈사람↩무엇을 생각하고 혼자 섰는냐↩집으로 들여갈까 꼬마눈사람"},{"type":"level","id":"s3007","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"과수원길","subtitle":"동구밖 과수원길 아카시아꽃이 활짝폈네","description":"","text":"동구밖 과수원길 아카시아꽃이 활짝폈네↩아카시아꽃 잎파리 눈송이 처럼 날리네↩향긋한 꽃냄새가 실바람 타고 솔솔↩둘이서 말이없네 얼굴 마주보며 쌩긋↩아카시아꽃 하얗게핀 먼옛날의 과수원길"},{"type":"level","id":"s3008","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"고향의 봄","subtitle":"나의 살던 고향은 꽃피는 산골","description":"","text":"나의 살던 고향은 꽃피는 산골↩복숭아꽃 살구꽃 아기 진달래↩울긋불긋 꽃대궐 차리는 동네↩그 속에서 놀던 때가 그립습니다↩꽃동네 새동네 나의 옛고향↩파란 들 남쪽에서 바람이 불면↩냇가에 수양버들 춤추는 동네↩그 속에서 놀던 때가 그립습니다"},{"type":"level","id":"s3009","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"나비야","subtitle":"나비야 나비야 이리날아 오너라","description":"","text":"나비야 나비야 이리날아 오너라↩노랑나비 흰나비 춤을 추며 오너라↩봄바람에 꽃잎도 방긋방긋 웃으며↩참새도 짹짹짹 노래하며 춤춘다"},{"type":"level","id":"s3010","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"나비야","subtitle":"나의 살던 고향은 꽃피는 산골","description":"","text":"햇볕은 쨍쩅 모래알은 반짝↩모래알로 떡 해놓고 조약돌로 소반지어↩언니 누나 모셔다가 맛있게도 냠냠↩햇볕은 쨍쨍 모래알은 반짝↩호미 들고 괭이 메고 뻗어가는 메를 캐어↩엄마 아빠 모셔다가 맛있게도 냠냠"},{"type":"group","title":"새로운 동요"},{"type":"group","title":"애국가"},{"type":"level","id":"s0101","grade":2,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (1절)","subtitle":"","description":"경건하게 빠르게...","text":"동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"level","id":"s0102","grade":2,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (2절)","subtitle":"","description":"경건하게 빠르게...","text":"남산 위에 저 소나무 철갑을 두른 듯 바람서리 불변함은 우리 기상일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"level","id":"s0103","grade":2,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (3절)","subtitle":"","description":"경건하게 빠르게...","text":"가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"level","id":"s0104","grade":2,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (4절)","subtitle":"","description":"경건하게 빠르게...","text":"이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"group","title":"돈에 관한 명언"},{"type":"level","id":"s1001","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"1/10","description":"","text":"돈과 쾌락 혹은 명예를 사랑하는 사람은 남을 사랑하지 못한다.↩돈에 관한 욕심은 모든 악의 근원으로 여겨지고 있다. 그러나 돈이 없는 것도 이 점에서는 똑같다.↩돈이란 남의 손에 넘기는 경우를 제외하면, 아무리 가지고 있어도 아무 이익도 가져 다 주지 않는 훌륭한 물건이다.↩돈은 무자비한 주인이지만, 유익한 종이 되기도 한다.↩돈은 바닥이 없는 바다 같은 것. 양심도 명예도 빠져서 떠오르지 않는다.↩돈은 비료와 같은 것으로 뿌리지 않으면 쓸모가 없다.↩꾸어주는 사람은 그냥 주는 사람이다.↩나는 임금이 되어 내 돈을 거지처럼 쓰기보다는 차라리 거지가 되어 내 마지막 1달러를 임금처럼 써보련다.↩내 주머니의 푼돈은 남의 주머니에 있는 거금보다 낫다.↩노력하는 자에게 돈이 붙는다."},{"type":"level","id":"s1002","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"2/10","description":"","text":"누구에게도 자금은 무한한 것이 아니다.↩돈 빌려 달라는 것을 거절함으로써 친구를 잃는 일은 적지만, 반대로 돈을 빌려줌으로써 도리어 친구를 잃기 쉽다.↩돈 속에, 돈 자체 속에, 그리고 돈을 취득하고 소유한다는 그 속에 무엇인가 비도덕적인 점이 있습니다.↩돈 쓰는 것을 겁내는 사람은 부자가 될 수 없다.↩돈 없이 연애 결혼을 하면 즐거운 밤과 슬픈 낮을 갖게 된다.↩가난 때문에 돈에 지배당해서는 안 된다.↩돈에 너무 집착하면 돈을 벌기도, 번 돈을 갖고 있기도 힘들다. 돈을 벌거나 모으려면 우선 돈을 편하게 생각해야 한다. 돈을 거북하게 느낀다면 의식적으로든 무의식적으로든 결국 돈을 안 가지는 쪽으로 해결을 보려 든다.↩돈으로 살 수 있는 행복이라 불리는 상품은 없다.↩돈으로 행복해질 수가 없다. 그러니 가난한 사람에게 돈을 주는 잔혹한 일은 하지 말지어다.↩돈은 거름과 같아서 뿌리지 않으면 썩기 쉽다."},{"type":"level","id":"s1003","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"3/10","description":"","text":"돈은 누군지도 묻지 않고, 그 소유자에게 권리를 준다.↩돈은 모든 불평등을 평등하게 만든다.↩돈은 밑 없는 깊은 물 속과 같다. 명예도 양심도 진리도 모두 그 속에 빠지고 만다.↩돈은 빌려주지도 말고 빌리지도 말라. 빌린 사람은 기가 죽고, 빌려준 사람도 자칫하면 그 본전은 물론 그 친구까지도 잃게 된다.↩돈은 사업을 위해 쓰여야 할 것이며, 술을 위해 쓰여야 할 것은 아니다.↩돈은 악이 아니며, 저주도 아니다. 돈은 사람을 축복하는 것이다.↩돈은 양으로 따질 뿐, 질로 따지는 것이 아니다.↩돈은 제6감 같은 것이다. 그것이 없으면 다른 5감을 완전히 가동시킬 수가 없다.↩돈은 좋은 머슴이기는 하지만, 나쁜 주인이기도 하다.↩돈은 진정 중요한 것이다. 따라서 모든 건전하고 성공적인 개인과 국가의 도덕은 이 사실에 기초를 두어야 한다."},{"type":"level","id":"s1004","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"4/10","description":"","text":"돈은 쫓을 때는 도망가고, 필요 없다고 생각하면 따라와 자연히 모인다.↩돈은 타인이 보기에는 행복하게 보이는 모든 것을 부여한다.↩돈은 필요악이다. 부유한 채로 죽는 것은 인간의 치욕이다.↩돈은 하느님으로부터의 선물을 살 기회를 준다.↩돈을 끌어오고 받아들이는 능력이 당신이 얼마나 돈을 만지며 살 수 있는가를 결정한다.↩돈을 낭비하거나 저금을 하는 사람은 가장 행복한 사람들이다. 그것은 양쪽 다 같이 그 일을 즐기고 있기 때문이다.↩돈을 낭비하거나 저금을 하는 사람은 가장 행복한 사람이다. 그것은 양쪽 다 같이 그 일을 즐기고 있기 때문이다.↩돈을 너무 많이 가지고 있다는 건, 너무 적게 가지고 있는 것보다 괴로운 일이다.↩돈을 모으려면 반드시 지켜야 할 원칙이 있고 정도가 있다.↩돈을 버는 데 그릇된 방법을 썼다면, 그 만큼 그 마음속에는 상처가 나 있을 것이다."},{"type":"level","id":"s1005","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"5/10","description":"","text":"돈을 빌려 준 사람에 대해서는 화를 참아야만 한다.↩돈을 빌려주면 종종 돈은 물론이고 친구까지 잃는다. 돈을 빌리면 흔히 검약의 마음이 둔해진다.↩돈을 빌려준 사람은 돈을 빌린 사람보다 훨씬 기억력이 좋다.↩돈을 빌리는 것은 노예가 되는 것이다.↩돈을 빌리러 가는 것은 자유를 팔러 가는 것이다.↩돈을 사랑함은 모든 악의 뿌리이다.↩돈을 사랑함이 일만 악의 뿌리가 되나니 이것을 사모하는 자들이 미혹을 받아 믿음에서 떠나 많은 근심으로써 자기를 찔렀도다.↩돈의 가치를 알아보고 싶거든 남에게 돈을 꾸어 달라고 요청해 보아라.↩돈이 없는 것은 슬픈 일이다. 하지만 남아도는 것은 그 두 배나 슬픈 일이다.↩돈이 있어도 이상이 없는 사람은 몰락의 길을 밟는다."},{"type":"level","id":"s1006","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"6/10","description":"","text":"돈이 있으면 이 세상에서는 많은 일을 할 수 있다. 그러나 청춘을 돈으로 살 수는 없다.↩돈이나 물건은 그냥 주는 것보다도 빌려주는 쪽이 낫다. 그냥 얻으면, 얻은 쪽은 준 사람보다 밑에 있지 않으면 안 되지만, 빌려주고 빌린다면 대등하게 대할 수 있다.↩돈이란 남에게 행복하게 보이는 온갖 것을 준다.↩돈이란 마치 인간의 제6감과 같아서 그것이 없으면 우리들의 다른 5감도 제대로 활용할 수 없게 된다.↩돈이란 바닷물과도 같다. 그것은 마시면 마실수록 목이 말라진다.↩돈이란 힘이고 자유이며 쿠션이자 모든 악의 근원이기도 한 동시에 한편으로는 최대의 행복이 되기도 한다.↩두툼한 지갑이 좋다고는 말할 수 없다. 그러나 텅 빈 지갑은 더 나쁘다.↩때 묻은 돈도 돈이다. 돈은 어떻게 쓰느냐가 돈의 가치를 결정하는 것이다.↩모든 것은 필요한 만큼 신이 주고 신이 거두어 간다. 특히 돈은 인간보다 신이 더 유용하게 사용하는 신의 도구일지도 모른다. 신의 뜻을 조금이라도 헤아릴 수 있다면 돈이 있다고 교만하지 않을 것이며 돈이 없다고 결코 불평하지 않을 것이다.↩무조건 돈을 아낀다고 모이는 것이 아니다. 때로는 기회가 왔을 때, 과감하게 써야 한다."},{"type":"level","id":"s1007","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"7/10","description":"","text":"방랑자이지만 돈이 있으면 관광객이라 불린다.↩부정하게 번 돈은 오래 가지 못한다. 그것은 쉽게 와서 쉽게 떠난다.↩불로소득은 외상과 같아서, 언젠가는 청구서가 날아오기 마련이다.↩빚을 지고 내일 일어나기보다 오늘밤 먹지 않고 잠자라.↩빚을 지는 것은 노예가 되는 것이다.↩사람들은 돈을 벌기는 어려워도 쓰기는 쉽다고 말한다. 그러나 돈을 잘 쓰는 방법이 훨씬 더 어려운 것이다. 돈을 잘 쓰는 사람은 인생의 승리자가 되고, 그렇지 못할 경우에는 패배자가 된다. 그렇기 때문에 집안이 번영하고 못하고는 주부에게 그 절반의 초점이 있다는 것을 알아야 한다.↩사람을 상처 입히는 것이 세 개 있다. 번민, 말다툼, 텅빈 지갑, 그 중에서 텅빈 지갑이 가장 크게 사람을 상처 입힌다.↩세계에는 단지 두 가족의 집밖에 없다. 가진 자의집과 가지지 못한자의 집.↩수입을 생각하고 나서 지출 계획을 세우라.↩시민으로서의 가장 중요한 미덕은 멋지게 돈을 긁어모으는 재능이다. 다시 말해서 어떠한 일이 있더라도 남에게 폐를 끼치지 말라는 것이다."},{"type":"level","id":"s1008","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"8/10","description":"","text":"아, 돈, 돈, 돈, 나는 반드시 그대를 신성한 것으로 생각하는 사람은 아니다. 하지만, 이따금 가던 길을 멈추고 의아해 한다. 그대는 나갈 때는 그렇게 빠르면서, 들어올 때는 왜 그리 더딘가 라고.↩아, 돈이여! 돈 때문에 얼마나 많은 슬픈 일이 이 세상에서 일어나고 있는가.↩악의 근원을 이루는 것은 돈 자체가 아니라, 돈에 대한 애착인 것이다.↩올바르게 금전을 얻기까지는 이것을 쓰지 말라.↩이유없이 생긴 큰 돈, 이것처럼 위험한 것도 없다.↩인류는 두 인종으로 이루어져 있다. 빌리는 자외 빌려 주는 사람들로.↩일은 일의 기쁨을 얻기 위해서 일하는 것이며, 어떤 일을 발전시키고 창조하는 가운데 만족감을 얻기 위해서 일하는 것입니다. 일을 사랑해서가 아니라, 돈 때문에 일하는 사람은 돈을 벌지도 못할 뿐만 아니라 즐거움도 얻지 못하는 법입니다.↩자기 주머니에서 나오는 돈의 가치를 다른 사람이 알아줄 것이라는 기대는 하지 마라.↩작은 비용을 삼가라. 작은 구멍이 큰 배를 가라앉힌다.↩재물은 생활을 위한 방편일 뿐 그 자체가 목적이 될 수는 없다."},{"type":"level","id":"s1009","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"9/10","description":"","text":"재물과 보배는 불과도 같은 것. 매우 유용한 하인 노릇을 하는가 하면 가장 무서운 주인 노릇도 한다.↩재산은 가지고 있는 자의 것이 아니고, 그것을 즐기는 자의 것이다.↩지갑이 가벼우면 마음이 무겁다.↩참으로 두려운 일은 배금주의 사상이다. 그것은 눈을 멀게 하고 귀를 막게 하고 야수보다 포악하게 하고 양심도 우정도 자기 영혼의 구원을 생각하지 않게 하고 결국 인간을 물욕의 노예로 만들어 버린다. 무엇보다 이 괴로운 노예 상태의 가장 나쁜 점은 사람들이 그 노예 상태를 즐거워하도록 만드는 것이다. 이 때문에 사람들이 황금에 몸을 맡기면 맡길수록 그들의 만족감은 불어난다. 그래서 이 병은 고치기가 힘들며 이러한 야수들은 길들이기 힘든 것이다.↩채권자도 채무자도 되지 말라. 빚돈은 종종 그 자체를 잃지마는 친구를 잃는 수가 있느니라.↩화폐는 인간의 노동과 생존의 양도된 본질이다. 이 본질은 인간을 지배하며, 인간은 이것을 숭배한다.↩정당한 소유는 인간을 자유롭게 하지만 지나친 소유는 소유자체가 주인이되어 소유자를 노예로 만든다.↩가난은 사람을 현명하게도 처절하게도 만든다.↩만족할 줄 아는 사람은 진정한 부자이고,탐욕스러운 사람은 진실로 가난한 사람이다.↩성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다."},{"type":"level","id":"s1010","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"10/10","description":"","text":"마음대로 좋은 나뭇잎을 골라 뜯어먹는 목이 긴 기린의 행복을 생각할 때, 목이 짧아 굶어죽은 기린의 고통을 잊어서는 안된다.↩한 사람의 부자가 있기 위해서는 5백 명의 가난뱅이가 있지 않으면 안된다.↩돈은 최선의 종이요, 최악의 주인이다.↩돈의 가치를 알아보고 싶거든 나가서 남에게 돈을 꾸어 달라고 요청해 보라. 적에게 돈을 꿔주면 그를 이기게 되고, 친구에게 꿔주면 그를 잃게 된다.↩돈은 현악기와 같다.그것을 적절히 사용할 줄 모르는사람은 불협화음을 듣게 된다. 돈은 사랑과 같다.이것을 잘 베풀려 하지 않는 이들을 천천히 그리고 고통스럽게 죽인다. 반면에, 타인에게 이것을 베푸는 이들에게는 생명을 준다.↩신은 인간을 만들고, 옷은 인간의 외양을 꾸민다. 그러나 인간을 마지막으로 완성하는 것은 돈이다.↩도박하는 사람들은 불확실한 것을 얻기위해 확실한 것을 건다.↩도둑질로 잘사는 사람도 있으나 잘사는 사람이라고 모두 도둑질한것은 아니다. 또한 청렴해서 가난하게 사는 사람도 있으나, 가난한 사람이다 청렴한 것은 아니다.↩남의 돈에는 날카로운 이빨이 돋아 있다.↩만일 사회가 많은 가난한 사람을 도울 수 없 다면 부유한 소수의 사람도 구해 줄 수 없다.↩게으름에 대한 하늘의 보복은 두 가지가 있다.하나는 자신의 실패요, 또하나는 그가 하지 않은 일을 한 옆 사람의 성공이다.↩부자가 되는 한 가지 방법이 있다. 내일 할 일을 오늘 하고 오늘 먹을 것을 내일 먹어라."},{"type":"group","title":"명작 시"},{"type":"level","id":"s5","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"별 헤는 밤","subtitle":"","description":"윤동주 시인의 밤하늘","text":"계절이 지나가는 하늘에는↩가을로 가득 차 있습니다.↩↩나는 아무 걱정도 없이↩가을 속의 별들을 다 헬 듯합니다.↩↩가슴 속에 하나 둘 새겨지는 별을↩이제 다 못 헤는 것은↩쉬이 아침이 오는 까닭이요,↩내일 밤이 남은 까닭이요,↩아직 나의 청춘이 다하지 않은 까닭입니다.↩↩별 하나에 추억과↩별 하나에 사랑과↩별 하나에 쓸쓸함과↩별 하나에 동경과↩별 하나에 시와↩별 하나에 어머니, 어머니,↩↩어머님, 나는 별 하나에 아름다운 말 한마디씩 불러 봅니다. 소학교 때 책상을 같이 했던 아이들의 이름과, 패, 경, 옥, 이런 이국 소녀들의 이름과, 벌써 아기 어머니 된 계집애들의 이름과, 가난한 이웃 사람들의 이름과, 비둘기, 강아지, 토끼, 노새, 노루, '프랑시스 잠', '라이너 마리아 릴케' 이런 시인의 이름을 불러 봅니다.↩↩이네들은 너무나 멀리 있습니다.↩별이 아스라이 멀듯이.↩↩어머님,↩그리고 당신은 멀리 북간도에 계십니다.↩↩나는 무엇인지 그리워↩이 많은 별빛이 내린 언덕 위에↩내 이름자를 써 보고↩흙으로 덮어 버리었습니다.↩↩딴은 밤을 새워 우는 벌레는↩부끄러운 이름을 슬퍼하는 까닭입니다.↩↩그러나 겨울이 지나고 나의 별에도 봄이 오면↩무덤 위에 파란 잔디가 피어나듯이↩내 이름자 묻힌 언덕 위에도↩자랑처럼 풀이 무성할 거외다."}]
+module.exports = [{"type":"group","title":"기본 자리 연습"},{"type":"level","id":"c0101","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 기본 자리 1 \"ㅁㄴㅇㄹ\"","description":"기본 위치는 왼손 검지 손가락이 ㄹ 위치에 자리하고 자연스럽게 나머지 손가락을 누르는 것입니다. 왼손 검지 손가락이 ㄹ 위치에 있다는 것을 꼭 기억하세요.","text":"ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ"},{"type":"level","id":"c0102","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 기본 자리 2 \"ㅁㄴㅇㄹ\"","description":"방향만 다릅니다.","text":"ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ"},{"type":"level","id":"c0103","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 기본 자리 3 \"ㅁㄴㅇㄹㅎ\"","description":"ㅎ은 왼손 검지 손가락이 이동합니다.","text":"ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ"},{"type":"level","id":"c0104","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 기본 자리 4 \"ㅁㄴㅇㄹㅎ\"","description":"이제 순서를 뒤섞어 봅니다.","text":"ㅁㅇㅎㄹㄴㄴㄹ ㅎㅁㅇ ㅇㄴㅁㅇ ㅎㄹㅁ ㅇㄴㅎㄹ ㅎㅁㅇㅎㅁㄴ"},{"type":"level","id":"c0105","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 기본 자리 5 \"ㅁㄴㅇㄹㅎ\"","description":"한 번 더 연습합니다.","text":"ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ"},{"type":"level","id":"c0106","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음","subtitle":"오른손 기본 자리 1 \"ㅓㅏㅣ\"","description":"이번에는 오른손 기본 자리 입니다. 기본 위치는 오른손 검지 손가락이 ㅓ 위치에 자리하고 자연스럽게 나머지 손가락을 누르는 것입니다. 오른손 검지 손가락이 ㅓ 위치에 있다는 것을 꼭 기억하세요.","text":"ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ"},{"type":"level","id":"c0107","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음","subtitle":"오른손 기본 자리 2 \"ㅓㅏㅣ\"","description":"방향만 다릅니다.","text":"ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ"},{"type":"level","id":"c0108","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음","subtitle":"오른손 기본 자리 3 \"ㅗㅓㅏㅣ\"","description":"ㅗ는 오른손 검시 손가락이 이동합니다.","text":"ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ"},{"type":"level","id":"c0109","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음","subtitle":"오른손 기본 자리 4 \"ㅗㅓㅏㅣ\"","description":"순서가 뒤죽박죽 입니다.","text":"ㅣㅓㅗㅏ ㅣㅗㅏㅓ ㅗㅏㅣㅏ ㅓㅗㅗㅣ ㅗㅓㅣㅏ ㅓㅗㅣㅓ ㅏㅣㅏㅗ ㅓㅏㅣㅏ"},{"type":"level","id":"c0110","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합","subtitle":"ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ","description":"기본 자리 양손을 사용하여 단어를 써 봅니다.","text":"라라라 아아아 나나나 마마마 러러러러 어어어어 너너너너 머머머머 미미나 미미너 라라머 라미미 호허허 히히히 리리로로 아어어이"},{"type":"level","id":"c0111","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합","subtitle":"ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ","description":"기본 자리 양손을 사용하여 단어를 써 봅니다.","text":"나라나라 러허러허 아나아나 마리마리 오리오리 모모라라 나미미로 마리마로 나리나로 아리아로 마니마노 마라노 이라모 하이라 호리모 나미로호"},{"type":"level","id":"c0112","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"기본 자리만 사용한 단어","description":"기본 자리 양손을 사용하여 단어를 써 봅니다.","text":"어머니 엄마 이모 미모 마모 어머니 아라 미이라 아마 하하 하이 미로 나라 나로호 마마미아 라모 이미 어라 오호 하이"},{"type":"group","title":"윗자리 연습"},{"type":"level","id":"c0201","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 윗자리 1 \"ㅂㅈㄷㄱ\"","description":"손은 기본자리에.","text":"ㅂㄷㄱㅈ ㄱㄷㅈㄱ ㅂㄷㄱㄷ ㅈㅂㄷㅈ ㅂㅈㅂㄷ ㅂㄷㅈㄷ ㅂㄷㅂㅈ ㄷㄱㄷㅂ ㄱㄷㅈㅂ"},{"type":"level","id":"c0202","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 윗자리 2 \"ㅂㅈㄷㄱㅅ\"","description":"한 번 더 반복합니다.","text":"ㅂㄷㅅㄷㅂㄷㅂㄷ ㅅㄷㅂㄷㄱ ㅂㄷ ㅅㅅㄷㅂㅈㄷㄷㄱ ㅂㄷㄱㄷㄱㅂ ㅂㄱㄷㄱ ㅂㄷㅅㄱㅂㄷㄷㅂ ㅂㄷㅈㅂㅅㄷ"},{"type":"level","id":"c0203","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음","subtitle":"오른손 윗자리 1 \"ㅕㅑㅐㅔ\"","description":"손은 기본자리에","text":"ㅕㅕㅑㅑ ㅐㅐㅔㅔ ㅕㅐㅑㅔ ㅕㅑㅑㅑ ㅔㅐㅑㅑ ㅕㅑㅔㅕ ㅔㅕㅑㅔ ㅑㅐㅕㅑ"},{"type":"level","id":"c0204","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음","subtitle":"오른손 윗자리 2 \"ㅛㅕㅑㅐㅔ\"","description":"손은 기본자리에","text":"ㅛㅑㅐㅛㅐㅑㅑㅕ ㅑㅐㅔㅐㅑ ㅕㅑㅛㅐㅑㅑㅕ ㅛㅑ ㅐㅔㅑ ㅐㅑㅕㅛ ㅐㅑㅛㅐㅔㅔㅑ ㅕㅑㅛㅑㅐㅔㅑ ㅕㅑㅐㅔㅑㅕㅑ"},{"type":"level","id":"c0205","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합","subtitle":"ㅂㅈㄷㄱ ㅕㅑㅐㅔ","description":"","text":"뱌뱌뱌 벼벼벼 배배배 베베베 제제제 재재재 쟈쟈쟈 져져져 대대댜댜 재재죠죠 벼벼게게 져대져대 뎌대재져"},{"type":"level","id":"c0206","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합","subtitle":"ㅂㅈㄷㄱㅅ ㅛㅕㅑㅐㅔ","description":"","text":"뱌뱌셔셔 갸갸됴됴 져져댜댜 겨겨쇼쇼 대대세세 게게셔셔 재재댜댜 쟈베댜댜 벼대겨겨 베교교교 죠죠재재"},{"type":"level","id":"c0207","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"윗 자리 단어만 사용한 단어","description":"","text":"벼 쟈 대 게 쇼 세개댜겨뵤 뱌겨 대개 겨대 게재 세개 쇼쇼쇼 베게 대게 제제 샤베 뱌재 겨제 재개 대배"},{"type":"level","id":"c0208","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"기본자리와 윗 자리를 사용한 단어","description":"윗 자리만 누르다 보면 손가락이 윗 자리에서 기본 자리로 내려오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 윗자리를 타이핑 할 때 손가락 하나만 윗 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.","text":"어머니가 아버지가 나라고 아기야 호미야 미래 나가라 도라지 바보 라고 하며 다리다"},{"type":"group","title":"아랫 자리 연습"},{"type":"level","id":"c0301","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 아랫자리 1 \"ㅋㅌㅊㅍ\"","description":"손은 기본자리에.","text":"ㅋㅌㅊㅍ ㅋㅌㅊㅍ ㅍㅊㅌㅋ ㅍㅊㅌㅋ ㅋㅍㅋㅍ ㅌㅊㅌㅊ ㅍㅊㅋㅌ ㅍㅌㅊㅍ ㅋㅊㅋㅊ ㅋㅍㅌㅊ ㅊㅌㅍㅋ ㅋㅋㅊㅍ ㅊㅌㅋㅊ"},{"type":"level","id":"c0302","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 아랫자리 2 \"ㅋㅌㅊㅍ\"","description":"손은 기본자리에.","text":"ㅋㅌㅊㅊㅌㅋㅍㅊ ㅋㅊㅋㅊㅊㅍ ㅋㅌㅊㅋㅋ ㅊㅍㅌㅊ ㅊㅌ ㅋㅊㅍㅋㅌㅊㅍ ㅋㅌㅊㅍㅊㅊㅌㅋ ㅊㅋㅊㅋㅌㅊㅍㅋ ㅊㅋㅊㅍ ㅋㅊㅍㅋㅌㅊㅍ ㅊㅊㅋㅌㅊ"},{"type":"level","id":"c0303","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음","subtitle":"오른손 아랫자리 1 \"ㅠㅜㅡ\"","description":"오른손 아랫자리는 특별합니다. 다른 자리라면 왼손 검지손가락이 눌러야 할 ㅠ를 아래자리의 경우 오른손 검지 손가락이 누르게 됩니다.","text":"ㅠㅜㅡ ㅠㅜㅡ ㅡㅠㅡ ㅜㅡㅠ ㅡㅡㅜ ㅠㅜㅡ ㅡㅜㅠ ㅜㅠㅠ ㅜㅜㅠ"},{"type":"level","id":"c0304","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"자음 모음 결합","subtitle":"ㅋㅌㅊㅍ ㅠㅜㅡ","description":"","text":"쿠쿠트트 츠츠트트 큐큐츠츠 추추프프 쿠쿠츠츠 트트츠츠 츄츄크크 트트츠츠 크크츠츠 프프츠츠 프프트트 투투쿠쿠"},{"type":"level","id":"c0305","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"아랫 자리만 사용한 단어","description":"","text":"쿠크 추크 푸츄 프쿠츠 트추 추츄 투츠트츠 크츠프 크추퓨 큐추 큐큐츄 쿠추 츠프 트쿠푸"},{"type":"level","id":"c0306","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"기본자리와 아랫 자리만 사용한 단어","description":"아랫 자리만 누르다 보면 손가락이 아랫 자리에서 기본 자리로 올라오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 아랫 자리를 타이핑 할 때 손가락 하나만 아랫 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.","text":"쿠미 트리 타로 터프 토토로 투투 마리프 토미 프라하 하프 추이 치프 추이 초파리 추호 마이크 마크로 파이프 처마"},{"type":"group","title":"윗 자리와 아랫자리 연습"},{"type":"level","id":"c0401","grade":0,"difficulty":1,"form":"character","language":"kr","title":"자음","subtitle":"왼손 윗 자리와 아랫 자리 1 \"ㅂㅈㄷㄱㅅ, ㅋㅌㅊㅍ\"","description":"","text":"ㅂㅈㄷㄱㅅ ㅋㅌㅊㅍ ㅅㄱㄷㅈㅂ ㅍㅊㅌㅋ ㅂㅌㄷㅍㅅㅊㅈㅋ ㅂㅍㅊㄷㅈㅌㅋㄱ ㅅㅊㄷㄷㅈㅂㅌㅊㅍㅋㅌ ㅊㅍㅈㅊㄷ"},{"type":"level","id":"c0402","grade":0,"difficulty":1,"form":"character","language":"kr","title":"모음","subtitle":"오른손 윗 자리와 아랫 자리 1 \"ㅛㅕㅑㅐㅔ, ㅠㅜㅡ\"","description":"","text":"ㅛㅕㅑㅐㅔ ㅠㅜㅡ ㅔㅐㅑㅕㅛ ㅡㅜㅠ ㅛㅑㅔㅐㅕㅠㅡㅜ ㅠㅕㅑㅐㅠㅕㅑㅐㅡㅔㅕㅡ ㅕㅑㅐㅡㅜㅕㅐㅛㅔ ㅑㅕㅡㅐ"},{"type":"level","id":"c0403","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"윗 자리와 아랫 자리","description":"손이 좀 바쁩니다.","text":"배구 구두 주세 벼 개수 슈크 대체제 추수 두배 투구 수재 세수 세규"},{"type":"group","title":"전체 자리 연습"},{"type":"level","id":"c0501","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체를 모두 이용","description":"","text":"배터리 마우스 휴지 육탄전 쳇바퀴"},{"type":"group","title":"받침 연습"},{"type":"level","id":"c0601","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"기본 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ, ㅗㅓㅏㅣ","description":"","text":"맘마 엄마 암호 날라 몰라 알아 엉망 홈인 홈런 망함 망하니 날라 미안 먼 머언 안마 망나니 알마니아 할머니 할멈 한마리 함몰"},{"type":"level","id":"c0602","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"윗 자리와 기본 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ, ㅂㅈㄷㄱㅅ, ㅗㅓㅏㅣ, ㅛㅕㅑㅐㅔ","description":"","text":"아범 할아버지 알바니아 맨드라미 블로그 드럼 갈매기 감사하다 감내하고 간간하다 걸레질 검진 간사하다 옹졸하다"},{"type":"level","id":"c0603","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"기본 자리와 윗 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ, ㅂㅈㄷㄱㅅ, ㅗㅓㅏㅣ, ㅛㅕㅑㅐㅔ","description":"","text":"기억 도약 잊다 햇살 밥먹다 맞히다 이합집산 납시오 감각 갑갑하다 검지손가락 갇히다 걷히다 갯지렁이 각질 갈색 감사합니다 걷히다 곧다 걷어가지 걱정하지마 객기"},{"type":"level","id":"c0604","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"아랫 자리와 기본 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ, ㅋㅌㅊㅍ, ㅗㅓㅏㅣ, ㅠㅜㅡ","description":"","text":"호출 미친놈 만루홈런 이탈리아 창문 얼추 춤추니 출출함 충치 친칠라 탐험 통키 콩 한톨 한판 헐크 날라차"},{"type":"level","id":"c0605","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"기본 자리와 아랫 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ, ㅋㅌㅊㅍ, ㅗㅓㅏㅣ, ㅠㅜㅡ","description":"","text":"민낯 잎 높이 밑 옻나무 옻칠 윷놀이 엎치니 잋히니 옅어 앞날 앞일 앞치마 맡아 옻나무 옻칠"},{"type":"level","id":"c0606","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"모든 자리와 기본 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ","description":"","text":"블로킹 홈스틸 파란만장 날라차기 걸치다 걸스카우트 걸음걸이 검찰청 검정풍뎅이 검출하다 통장"},{"type":"level","id":"c0607","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"모든 자리와 윗 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ","description":"","text":"카카오톡 잊어주세요 도움닫기 엊그제 이튿날 각개전투 색칠공부 갖바치 갖추다 갖춘마디 갯마을 갯버들 거룻배 거룩하다 걷어채다"},{"type":"level","id":"c0608","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"모든 자리와 아랫 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ","description":"","text":"잎새 얕다 낯익다 민낯에 높이차기 엎치락뒤치락 엎지르다 팥빙수 팥죽 앞가르마 앞당기다 앞마당 높새바람 잋혀지다 밑장넣기 높이날다 같다 갚다 같이하다 옅어지다 옆면 옆구리 옆길 얕보다"},{"type":"group","title":"겹자음 겹모음 연습"},{"type":"level","id":"c0701","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"쉬프트 사용 겹자음","subtitle":"ㅃㅉㄸㄲㅆ","description":"","text":"아빠 뽀뽀 빼내다 삐삐머리 짜다 짱구 짠하다 쩨쩨하다 쭈쭈바 찌리링 샐쭉 쪼로록 따라하다 땅콩 또르륵 땡땡이 뚜벅이 떨어지네 뜨겁다 따갑다 깨비깨비 우리끼리 깨우다 참깨 노끈 끙끙대다 꽁치 꼬마 싸우다 쌍화차 쏘가리 쑥대머리 쎄시봉 쏘이다"},{"type":"level","id":"c0702","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"쉬프트 사용 겹모음","subtitle":"ㅒㅖ","description":"","text":"예절 예고 얘기하다 얘깃거리 예술가 예민하다 계속하게 하례회 계모 계기판 예스 계단 계량 계산기 계절 계율 셰익스피어 셰퍼드 예상 예술성 예언자"},{"type":"level","id":"c0703","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"겹자음 받침","subtitle":"ㄳㄺㄼㄵㄶㄽㄻㅀㅄㄾ","description":"쉬프트를 사용하지 않는 겹자음은 왼손가락을 두번 누르게 되므로 왼손 오른손 왼손 오른손의 리듬과는 다르게 진행됩니다.","text":"값어치 앉아라 밟아요 젊은이 굶다 핥다 하지않아 넋두리 내몫이다 훑어버리다 옳아요 늙은이 읊조리다 없네"},{"type":"level","id":"c0704","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"겹모음","subtitle":"ㅘㅙㅚㅞㅟㅢ","description":"쉬프트를 사용하지 않는 겹모음은 오른손가락을 두번 누르게 되므로 왼손 오른손 왼손 오른손의 리듬과는 다르게 진행됩니다.","text":"의자왕 나와라 왜불러 왜소하다 참외 퀘스트 궤짝 귀신 고취하다 귀여워 뵈오니 스웨터 가위 의사 한가위 위하다 위장병 윈도우 스윙 스위트"},{"type":"group","title":"숫자, 기호 연습"},{"type":"level","id":"c0801","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"숫자","subtitle":"1234567890","description":"","text":"1234 7890 1234 7890 54321 54321 67890 67890 5599 3748 5252 9012 8923 하나1 둘2 셋3 넷4 다섯5 여섯6 일곱7 여덟8 아홉9 열10"},{"type":"level","id":"c0802","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"기호","subtitle":",. '\" [] {} ;:","description":"","text":""},{"type":"level","id":"c0803","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"숫자키 기호","subtitle":"~!@#$%^&*()-_=+","description":"","text":""},{"type":"group","title":"영타 연습"},{"type":"level","id":"q0101","grade":0,"difficulty":1,"form":"character","language":"en","title":"lazy fox","subtitle":"알파벳 테스트","description":"","text":"lazy fox jumped over quick brown dog"},{"type":"group","title":"속담"},{"type":"level","id":"s4001","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄱ)","subtitle":"1/20","description":"","text":"가게 기둥에 입춘이라↩가까운 남이 먼 일가보다 낫다↩가까운 데를 가도 점심밥은 싸 가지고 가거라↩가난 구제는 나라님도 못한다↩가난한 집 제사 돌아오듯↩가는 날이 장날↩가는 말에 채찍질한다↩가는 말이 고와야 오는 말이 곱다↩가는 토끼 잡으려다 잡은 토끼 놓친다↩가랑비에 옷 잦는 줄 모른다↩가랑잎에 불붙듯↩가랑잎으로 눈 가리고 아웅 한다↩가랑잎이 솔잎더러 바스락거린다고 한다↩가로 지나 세로 지나↩가루는 칠수록 고와지고 말은 할수록 거칠어진다↩가재는 게 편이라↩가지 많은 나무에 바람 잘 날이 없다↩간에 가 붙고 염통에 가 붙는다"},{"type":"level","id":"s4002","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄱ)","subtitle":"2/20","description":"","text":"간에 기별도 안 갔다↩간에 붙었다 쓸개에 붙었다 한다↩갈모 형제라↩갈수록 태산이라↩갈치가 갈치 꼬리 문다↩감사 덕분에 비장나리 호사한다↩값도 모르고 싸다 한다↩값싼 것이 비지떡↩갓 쓰고 자전거 탄다↩강물도 쓰면 준다↩같은 값이면 다홍치마↩개같이 벌어서 정승같이 산다↩개구리 올챙이 적 생각을 못한다↩개 눈엔 똥만 보인다↩개똥도 약에 쓰려면 없다↩개미 쳇바퀴 돌듯 한다↩개 발에 주석 편다↩개밥에 도토리↩개 보름 쇠듯↩개살구도 맛 들일 탓↩개천에서 용 난다↩거미도 줄을 쳐야 벌레를 잡는다"},{"type":"level","id":"s4003","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄱ)","subtitle":"3/20","description":"","text":"겨 뭍은 개가 똥 뭍은 개 나무란다↩고기는 씹어야 맛이요, 말은 해야 맛이라↩고래 싸움에 새우 등 터진다↩고슴도치도 제 새끼가 함함하다면 좋아한다↩고양이 목에 방울달기↩고양이 보고 반찬 가게 지키라고 한다↩고양이 앞의 쥐 걸음↩고추는 작아도 맵다↩공든탑이 무너지랴↩공자 앞에서 문자 쓴다↩공짜라면 양잿물도 먹는다↩과부 사정은 과부가 안다↩광에서 인심 난다↩구관이 명관이라↩구더기 무서워 장 못 담글까↩구렁이 담 넘어가듯↩구슬이 서 말이라도 뀌어야 보배라↩굳은 땅에 물이 괸다↩굿이나 보고 떡이나 먹지↩귀가 보배라"},{"type":"level","id":"s4004","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄱ)","subtitle":"4/20","description":"","text":"귀신 듣는 데 떡 소리 한다↩귀에 걸면 귀걸이 코에 걸면 코걸이↩그슬린 돼지가 달아맨 돼지 타령한다↩긁어 부스럼↩금강산도 식후경이라↩급하기는 우물에 가서 숭늉 달라겠다↩급하면 바늘허리에 실 매어 쓸까↩기는 놈 위에 나는 놈 있다↩기지도 못하면서 뛰려 한다↩길고 짧은 것은 대보아야 안다↩길마 무거워 소 드러누울까↩길이 아니면 가지 말고 말이 아니면 탓하지 마라↩김 안 나는 숭늉이 더 뜨겁다↩김칫국부터 마신다↩까마귀 고기를 먹었나↩까마귀 날자 배 떨어진다↩꼬리가 길면 밟힌다↩꽁지 빠진 새 같다↩꿀도 약이라면 쓰다"},{"type":"group","title":"동요"},{"type":"level","id":"s5001","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"개구리","subtitle":"개굴개굴 개구리","description":"","text":"개굴개굴 개구리 노래를 한다↩아들 손자며느리 다 모여서↩밤새도록 하여도 듣는 이 없네↩듣는 사람 없어도 날이 밝도록↩개굴개굴 개구리 노래를 한다↩개굴개굴 개구리 목청도 좋다"},{"type":"level","id":"s5002","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"반달","subtitle":"푸른하늘 은하수 하얀 쪽배에","description":"","text":"푸른하늘 은하수 하얀 쪽배에↩계수나무 한 나무 토끼 한 마리↩돛대도 아니달고 삿대도 없이↩가기도 잘도 간다 서쪽 나라로↩은하수를 건너서 푸른나라로↩푸른나라 지나서 어디로 가나↩멀리서 반짝반짝 빛이 있는건↩샛별의 눈에 앉아 길을 찾아라"},{"type":"level","id":"s5003","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"꼬까신","subtitle":"개나리 노오란 꽃 그늘 아래","description":"","text":"개나리 노오란 꽃 그늘 아래↩가지런히 놓여 있는 꼬까신 하나↩아기는 살짝 신벗어 놓고↩맨발로 한들 한들 나들이 갔나↩가지런히 가다리는 꼬까신 하나"},{"type":"level","id":"s5004","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"산토끼","subtitle":"산토끼 토끼야 어디를 가느냐","description":"","text":"산토끼 토끼야 어디를 가느냐↩깡충깡충 뛰면서 어디를 가느냐↩산고개 고개를 나 혼자 넘어서↩토실토실 알밤을 주워서 올 테야↩산토끼 토끼야 어디를 가느냐↩깡충깡충 뛰면서 어디를 가느냐↩산고개 고개를 나 혼자 넘어서↩토실토실 알밤을 주워서 올 테야"},{"type":"level","id":"s5005","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"다람쥐","subtitle":"산골짝에 다람쥐 아기 다람쥐","description":"","text":"산골짝에 다람쥐 아기 다람쥐↩도토리 점심 가지고 소풍을 간다↩다람쥐야 다람쥐야 재주나 한 번 넘으렴↩팔닥 팔닥 팔닥 날도 참말 좋구나↩산골짝에 다람쥐 아기 다람쥐↩도토리 점심 가지고 소풍을 간다↩다람쥐야 다람쥐야 재주나 한 번 넘으렴↩팔닥 팔닥 팔닥 날도 참말 좋구나"},{"type":"level","id":"s5006","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"눈사람","subtitle":"한겨울에 밀짚모자 꼬마눈사람","description":"","text":"한겨울에 밀짚모자 꼬마눈사람↩눈썹이 우습구나 코도 삐뚤고↩거울을 보여줄까 꼬마 눈사람↩하루종일 우두커니 꼬마눈사람↩무엇을 생각하고 혼자 섰는냐↩집으로 들여갈까 꼬마눈사람"},{"type":"level","id":"s5007","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"과수원길","subtitle":"동구밖 과수원길 아카시아꽃이 활짝폈네","description":"","text":"동구밖 과수원길 아카시아꽃이 활짝폈네↩아카시아꽃 잎파리 눈송이 처럼 날리네↩향긋한 꽃냄새가 실바람 타고 솔솔↩둘이서 말이없네 얼굴 마주보며 쌩긋↩아카시아꽃 하얗게핀 먼옛날의 과수원길"},{"type":"level","id":"s5008","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"고향의 봄","subtitle":"나의 살던 고향은 꽃피는 산골","description":"","text":"나의 살던 고향은 꽃피는 산골↩복숭아꽃 살구꽃 아기 진달래↩울긋불긋 꽃대궐 차리는 동네↩그 속에서 놀던 때가 그립습니다↩꽃동네 새동네 나의 옛고향↩파란 들 남쪽에서 바람이 불면↩냇가에 수양버들 춤추는 동네↩그 속에서 놀던 때가 그립습니다"},{"type":"level","id":"s5009","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"나비야","subtitle":"나비야 나비야 이리날아 오너라","description":"","text":"나비야 나비야 이리날아 오너라↩노랑나비 흰나비 춤을 추며 오너라↩봄바람에 꽃잎도 방긋방긋 웃으며↩참새도 짹짹짹 노래하며 춤춘다"},{"type":"level","id":"s5010","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"햇볕은 쨍쨍","subtitle":"햇볕은 쨍쩅 모래알은 반짝","description":"","text":"햇볕은 쨍쩅 모래알은 반짝↩모래알로 떡 해놓고 조약돌로 소반지어↩언니 누나 모셔다가 맛있게도 냠냠↩햇볕은 쨍쨍 모래알은 반짝↩호미 들고 괭이 메고 뻗어가는 메를 캐어↩엄마 아빠 모셔다가 맛있게도 냠냠"},{"type":"level","id":"s5011","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"꽃밭에서","subtitle":"아빠하고 나하고 만든꽃밭에","description":"","text":"아빠하고 나하고 만든꽃밭에 채송화도 봉숭아도 한창입니다↩아빠가 매어놓은 새끼줄따라 나팔꽃도 어울리게 피었습니다↩애들하고 재밌게 뛰어놀다가 아빠생각나서 꽃을봅니다↩아빠는 꽃보며 살자그랬죠 날보고 꽃같이 살자 그랬죠"},{"type":"level","id":"s5012","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"파란마음 하얀마음","subtitle":"우리들 마음에 빛이 있다면","description":"","text":"우리들 마음에 빛이 있다면 여름엔 여름엔 파랄 거예요.↩산도 들도 나무도 파란 잎으로 파랗게 파랗게 덮인 속에서 파아란 하늘 보고 자라니까요.↩↩우리들 마음에 빛이 있다면 겨울엔 겨울엔 하얄 거예요.↩산도 들도 지붕도 하얀 눈으로 하얗게 하얗게 덮인 속에서 깨끗한 마음으로 자라니까요."},{"type":"level","id":"s5013","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"올챙이와 개구리","subtitle":"개울가에 올챙이 한마리","description":"","text":"개울가에 올챙이 한마리 꼬물꼬물 헤엄치다↩뒷다리가 쏙 앞다리가 쏙 팔딱팔딱 개구리 됐네↩꼬물 꼬물 꼬물 꼬물 꼬물 꼬물 올챙이가↩뒷다리가 쏙 앞다리가 쏙 팔딱 팔딱 개구리 됐네↩개울가에 올챙이 한마리 꼬물꼬물 헤엄치다↩뒷다리가 쏙 앞다리가 쏙 팔딱팔딱 개구리 됐네↩꼬물 꼬물 꼬물 꼬물 꼬물 꼬물 올챙이가↩뒷다리가 쏙 앞다리가 쏙 팔딱 팔딱 개구리 됐네"},{"type":"level","id":"s5014","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"곰 세 마리","subtitle":"곰 세 마리가 한 집에 있어","description":"","text":"곰 세 마리가 한 집에 있어↩아빠 곰 엄마 곰 애기 곰↩아빠 곰은 뚱뚱해↩엄마 곰은 날씬해↩애기 곰은 너무 귀여워↩으쓱 으쓱 잘 한다"},{"type":"group","title":"애국가"},{"type":"level","id":"s5201","grade":2,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (1절)","subtitle":"","description":"경건하게 빠르게...","text":"동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"level","id":"s5202","grade":2,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (2절)","subtitle":"","description":"경건하게 빠르게...","text":"남산 위에 저 소나무 철갑을 두른 듯 바람서리 불변함은 우리 기상일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"level","id":"s5203","grade":2,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (3절)","subtitle":"","description":"경건하게 빠르게...","text":"가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"level","id":"s5204","grade":2,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (4절)","subtitle":"","description":"경건하게 빠르게...","text":"이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"group","title":"돈에 관한 명언"},{"type":"level","id":"s5301","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"1/10","description":"","text":"돈과 쾌락 혹은 명예를 사랑하는 사람은 남을 사랑하지 못한다.↩돈에 관한 욕심은 모든 악의 근원으로 여겨지고 있다. 그러나 돈이 없는 것도 이 점에서는 똑같다.↩돈이란 남의 손에 넘기는 경우를 제외하면, 아무리 가지고 있어도 아무 이익도 가져 다 주지 않는 훌륭한 물건이다.↩돈은 무자비한 주인이지만, 유익한 종이 되기도 한다.↩돈은 바닥이 없는 바다 같은 것. 양심도 명예도 빠져서 떠오르지 않는다.↩돈은 비료와 같은 것으로 뿌리지 않으면 쓸모가 없다.↩꾸어주는 사람은 그냥 주는 사람이다.↩나는 임금이 되어 내 돈을 거지처럼 쓰기보다는 차라리 거지가 되어 내 마지막 1달러를 임금처럼 써보련다.↩내 주머니의 푼돈은 남의 주머니에 있는 거금보다 낫다.↩노력하는 자에게 돈이 붙는다."},{"type":"level","id":"s5302","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"2/10","description":"","text":"누구에게도 자금은 무한한 것이 아니다.↩돈 빌려 달라는 것을 거절함으로써 친구를 잃는 일은 적지만, 반대로 돈을 빌려줌으로써 도리어 친구를 잃기 쉽다.↩돈 속에, 돈 자체 속에, 그리고 돈을 취득하고 소유한다는 그 속에 무엇인가 비도덕적인 점이 있습니다.↩돈 쓰는 것을 겁내는 사람은 부자가 될 수 없다.↩돈 없이 연애 결혼을 하면 즐거운 밤과 슬픈 낮을 갖게 된다.↩가난 때문에 돈에 지배당해서는 안 된다.↩돈에 너무 집착하면 돈을 벌기도, 번 돈을 갖고 있기도 힘들다. 돈을 벌거나 모으려면 우선 돈을 편하게 생각해야 한다. 돈을 거북하게 느낀다면 의식적으로든 무의식적으로든 결국 돈을 안 가지는 쪽으로 해결을 보려 든다.↩돈으로 살 수 있는 행복이라 불리는 상품은 없다.↩돈으로 행복해질 수가 없다. 그러니 가난한 사람에게 돈을 주는 잔혹한 일은 하지 말지어다.↩돈은 거름과 같아서 뿌리지 않으면 썩기 쉽다."},{"type":"level","id":"s5303","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"3/10","description":"","text":"돈은 누군지도 묻지 않고, 그 소유자에게 권리를 준다.↩돈은 모든 불평등을 평등하게 만든다.↩돈은 밑 없는 깊은 물 속과 같다. 명예도 양심도 진리도 모두 그 속에 빠지고 만다.↩돈은 빌려주지도 말고 빌리지도 말라. 빌린 사람은 기가 죽고, 빌려준 사람도 자칫하면 그 본전은 물론 그 친구까지도 잃게 된다.↩돈은 사업을 위해 쓰여야 할 것이며, 술을 위해 쓰여야 할 것은 아니다.↩돈은 악이 아니며, 저주도 아니다. 돈은 사람을 축복하는 것이다.↩돈은 양으로 따질 뿐, 질로 따지는 것이 아니다.↩돈은 제6감 같은 것이다. 그것이 없으면 다른 5감을 완전히 가동시킬 수가 없다.↩돈은 좋은 머슴이기는 하지만, 나쁜 주인이기도 하다.↩돈은 진정 중요한 것이다. 따라서 모든 건전하고 성공적인 개인과 국가의 도덕은 이 사실에 기초를 두어야 한다."},{"type":"level","id":"s5304","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"4/10","description":"","text":"돈은 쫓을 때는 도망가고, 필요 없다고 생각하면 따라와 자연히 모인다.↩돈은 타인이 보기에는 행복하게 보이는 모든 것을 부여한다.↩돈은 필요악이다. 부유한 채로 죽는 것은 인간의 치욕이다.↩돈은 하느님으로부터의 선물을 살 기회를 준다.↩돈을 끌어오고 받아들이는 능력이 당신이 얼마나 돈을 만지며 살 수 있는가를 결정한다.↩돈을 낭비하거나 저금을 하는 사람은 가장 행복한 사람들이다. 그것은 양쪽 다 같이 그 일을 즐기고 있기 때문이다.↩돈을 낭비하거나 저금을 하는 사람은 가장 행복한 사람이다. 그것은 양쪽 다 같이 그 일을 즐기고 있기 때문이다.↩돈을 너무 많이 가지고 있다는 건, 너무 적게 가지고 있는 것보다 괴로운 일이다.↩돈을 모으려면 반드시 지켜야 할 원칙이 있고 정도가 있다.↩돈을 버는 데 그릇된 방법을 썼다면, 그 만큼 그 마음속에는 상처가 나 있을 것이다."},{"type":"level","id":"s5305","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"5/10","description":"","text":"돈을 빌려 준 사람에 대해서는 화를 참아야만 한다.↩돈을 빌려주면 종종 돈은 물론이고 친구까지 잃는다. 돈을 빌리면 흔히 검약의 마음이 둔해진다.↩돈을 빌려준 사람은 돈을 빌린 사람보다 훨씬 기억력이 좋다.↩돈을 빌리는 것은 노예가 되는 것이다.↩돈을 빌리러 가는 것은 자유를 팔러 가는 것이다.↩돈을 사랑함은 모든 악의 뿌리이다.↩돈을 사랑함이 일만 악의 뿌리가 되나니 이것을 사모하는 자들이 미혹을 받아 믿음에서 떠나 많은 근심으로써 자기를 찔렀도다.↩돈의 가치를 알아보고 싶거든 남에게 돈을 꾸어 달라고 요청해 보아라.↩돈이 없는 것은 슬픈 일이다. 하지만 남아도는 것은 그 두 배나 슬픈 일이다.↩돈이 있어도 이상이 없는 사람은 몰락의 길을 밟는다."},{"type":"level","id":"s5306","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"6/10","description":"","text":"돈이 있으면 이 세상에서는 많은 일을 할 수 있다. 그러나 청춘을 돈으로 살 수는 없다.↩돈이나 물건은 그냥 주는 것보다도 빌려주는 쪽이 낫다. 그냥 얻으면, 얻은 쪽은 준 사람보다 밑에 있지 않으면 안 되지만, 빌려주고 빌린다면 대등하게 대할 수 있다.↩돈이란 남에게 행복하게 보이는 온갖 것을 준다.↩돈이란 마치 인간의 제6감과 같아서 그것이 없으면 우리들의 다른 5감도 제대로 활용할 수 없게 된다.↩돈이란 바닷물과도 같다. 그것은 마시면 마실수록 목이 말라진다.↩돈이란 힘이고 자유이며 쿠션이자 모든 악의 근원이기도 한 동시에 한편으로는 최대의 행복이 되기도 한다.↩두툼한 지갑이 좋다고는 말할 수 없다. 그러나 텅 빈 지갑은 더 나쁘다.↩때 묻은 돈도 돈이다. 돈은 어떻게 쓰느냐가 돈의 가치를 결정하는 것이다.↩모든 것은 필요한 만큼 신이 주고 신이 거두어 간다. 특히 돈은 인간보다 신이 더 유용하게 사용하는 신의 도구일지도 모른다. 신의 뜻을 조금이라도 헤아릴 수 있다면 돈이 있다고 교만하지 않을 것이며 돈이 없다고 결코 불평하지 않을 것이다.↩무조건 돈을 아낀다고 모이는 것이 아니다. 때로는 기회가 왔을 때, 과감하게 써야 한다."},{"type":"level","id":"s5307","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"7/10","description":"","text":"방랑자이지만 돈이 있으면 관광객이라 불린다.↩부정하게 번 돈은 오래 가지 못한다. 그것은 쉽게 와서 쉽게 떠난다.↩불로소득은 외상과 같아서, 언젠가는 청구서가 날아오기 마련이다.↩빚을 지고 내일 일어나기보다 오늘밤 먹지 않고 잠자라.↩빚을 지는 것은 노예가 되는 것이다.↩사람들은 돈을 벌기는 어려워도 쓰기는 쉽다고 말한다. 그러나 돈을 잘 쓰는 방법이 훨씬 더 어려운 것이다. 돈을 잘 쓰는 사람은 인생의 승리자가 되고, 그렇지 못할 경우에는 패배자가 된다. 그렇기 때문에 집안이 번영하고 못하고는 주부에게 그 절반의 초점이 있다는 것을 알아야 한다.↩사람을 상처 입히는 것이 세 개 있다. 번민, 말다툼, 텅빈 지갑, 그 중에서 텅빈 지갑이 가장 크게 사람을 상처 입힌다.↩세계에는 단지 두 가족의 집밖에 없다. 가진 자의집과 가지지 못한자의 집.↩수입을 생각하고 나서 지출 계획을 세우라.↩시민으로서의 가장 중요한 미덕은 멋지게 돈을 긁어모으는 재능이다. 다시 말해서 어떠한 일이 있더라도 남에게 폐를 끼치지 말라는 것이다."},{"type":"level","id":"s5308","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"8/10","description":"","text":"아, 돈, 돈, 돈, 나는 반드시 그대를 신성한 것으로 생각하는 사람은 아니다. 하지만, 이따금 가던 길을 멈추고 의아해 한다. 그대는 나갈 때는 그렇게 빠르면서, 들어올 때는 왜 그리 더딘가 라고.↩아, 돈이여! 돈 때문에 얼마나 많은 슬픈 일이 이 세상에서 일어나고 있는가.↩악의 근원을 이루는 것은 돈 자체가 아니라, 돈에 대한 애착인 것이다.↩올바르게 금전을 얻기까지는 이것을 쓰지 말라.↩이유없이 생긴 큰 돈, 이것처럼 위험한 것도 없다.↩인류는 두 인종으로 이루어져 있다. 빌리는 자외 빌려 주는 사람들로.↩일은 일의 기쁨을 얻기 위해서 일하는 것이며, 어떤 일을 발전시키고 창조하는 가운데 만족감을 얻기 위해서 일하는 것입니다. 일을 사랑해서가 아니라, 돈 때문에 일하는 사람은 돈을 벌지도 못할 뿐만 아니라 즐거움도 얻지 못하는 법입니다.↩자기 주머니에서 나오는 돈의 가치를 다른 사람이 알아줄 것이라는 기대는 하지 마라.↩작은 비용을 삼가라. 작은 구멍이 큰 배를 가라앉힌다.↩재물은 생활을 위한 방편일 뿐 그 자체가 목적이 될 수는 없다."},{"type":"level","id":"s5309","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"9/10","description":"","text":"재물과 보배는 불과도 같은 것. 매우 유용한 하인 노릇을 하는가 하면 가장 무서운 주인 노릇도 한다.↩재산은 가지고 있는 자의 것이 아니고, 그것을 즐기는 자의 것이다.↩지갑이 가벼우면 마음이 무겁다.↩참으로 두려운 일은 배금주의 사상이다. 그것은 눈을 멀게 하고 귀를 막게 하고 야수보다 포악하게 하고 양심도 우정도 자기 영혼의 구원을 생각하지 않게 하고 결국 인간을 물욕의 노예로 만들어 버린다. 무엇보다 이 괴로운 노예 상태의 가장 나쁜 점은 사람들이 그 노예 상태를 즐거워하도록 만드는 것이다. 이 때문에 사람들이 황금에 몸을 맡기면 맡길수록 그들의 만족감은 불어난다. 그래서 이 병은 고치기가 힘들며 이러한 야수들은 길들이기 힘든 것이다.↩채권자도 채무자도 되지 말라. 빚돈은 종종 그 자체를 잃지마는 친구를 잃는 수가 있느니라.↩화폐는 인간의 노동과 생존의 양도된 본질이다. 이 본질은 인간을 지배하며, 인간은 이것을 숭배한다.↩정당한 소유는 인간을 자유롭게 하지만 지나친 소유는 소유자체가 주인이되어 소유자를 노예로 만든다.↩가난은 사람을 현명하게도 처절하게도 만든다.↩만족할 줄 아는 사람은 진정한 부자이고,탐욕스러운 사람은 진실로 가난한 사람이다.↩성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다."},{"type":"level","id":"s5310","grade":3,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"10/10","description":"","text":"마음대로 좋은 나뭇잎을 골라 뜯어먹는 목이 긴 기린의 행복을 생각할 때, 목이 짧아 굶어죽은 기린의 고통을 잊어서는 안된다.↩한 사람의 부자가 있기 위해서는 5백 명의 가난뱅이가 있지 않으면 안된다.↩돈은 최선의 종이요, 최악의 주인이다.↩돈의 가치를 알아보고 싶거든 나가서 남에게 돈을 꾸어 달라고 요청해 보라. 적에게 돈을 꿔주면 그를 이기게 되고, 친구에게 꿔주면 그를 잃게 된다.↩돈은 현악기와 같다.그것을 적절히 사용할 줄 모르는사람은 불협화음을 듣게 된다. 돈은 사랑과 같다.이것을 잘 베풀려 하지 않는 이들을 천천히 그리고 고통스럽게 죽인다. 반면에, 타인에게 이것을 베푸는 이들에게는 생명을 준다.↩신은 인간을 만들고, 옷은 인간의 외양을 꾸민다. 그러나 인간을 마지막으로 완성하는 것은 돈이다.↩도박하는 사람들은 불확실한 것을 얻기위해 확실한 것을 건다.↩도둑질로 잘사는 사람도 있으나 잘사는 사람이라고 모두 도둑질한것은 아니다. 또한 청렴해서 가난하게 사는 사람도 있으나, 가난한 사람이다 청렴한 것은 아니다.↩남의 돈에는 날카로운 이빨이 돋아 있다.↩만일 사회가 많은 가난한 사람을 도울 수 없 다면 부유한 소수의 사람도 구해 줄 수 없다.↩게으름에 대한 하늘의 보복은 두 가지가 있다.하나는 자신의 실패요, 또하나는 그가 하지 않은 일을 한 옆 사람의 성공이다.↩부자가 되는 한 가지 방법이 있다. 내일 할 일을 오늘 하고 오늘 먹을 것을 내일 먹어라."},{"type":"group","title":"교과서에 나오는 시"},{"type":"level","id":"s5401","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"별 헤는 밤","subtitle":"","description":"윤동주 시인의 밤하늘","text":"계절이 지나가는 하늘에는↩가을로 가득 차 있습니다.↩↩나는 아무 걱정도 없이↩가을 속의 별들을 다 헬 듯합니다.↩↩가슴 속에 하나 둘 새겨지는 별을↩이제 다 못 헤는 것은↩쉬이 아침이 오는 까닭이요,↩내일 밤이 남은 까닭이요,↩아직 나의 청춘이 다하지 않은 까닭입니다.↩↩별 하나에 추억과↩별 하나에 사랑과↩별 하나에 쓸쓸함과↩별 하나에 동경과↩별 하나에 시와↩별 하나에 어머니, 어머니,↩↩어머님, 나는 별 하나에 아름다운 말 한마디씩 불러 봅니다. 소학교 때 책상을 같이 했던 아이들의 이름과, 패, 경, 옥, 이런 이국 소녀들의 이름과, 벌써 아기 어머니 된 계집애들의 이름과, 가난한 이웃 사람들의 이름과, 비둘기, 강아지, 토끼, 노새, 노루, '프랑시스 잠', '라이너 마리아 릴케' 이런 시인의 이름을 불러 봅니다.↩↩이네들은 너무나 멀리 있습니다.↩별이 아스라이 멀듯이.↩↩어머님,↩그리고 당신은 멀리 북간도에 계십니다.↩↩나는 무엇인지 그리워↩이 많은 별빛이 내린 언덕 위에↩내 이름자를 써 보고↩흙으로 덮어 버리었습니다.↩↩딴은 밤을 새워 우는 벌레는↩부끄러운 이름을 슬퍼하는 까닭입니다.↩↩그러나 겨울이 지나고 나의 별에도 봄이 오면↩무덤 위에 파란 잔디가 피어나듯이↩내 이름자 묻힌 언덕 위에도↩자랑처럼 풀이 무성할 거외다."},{"type":"level","id":"s5402","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"엄마야 누나야","subtitle":"김소월","description":"","text":"엄마야 누나야 강변 살자↩뜰에는 반짝이는 금모래빛↩뒷문 밖에는 갈잎의 노래↩엄마야 누나야 강변 살자"},{"type":"level","id":"s5403","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"돌담에 속삭이는 햇발","subtitle":"김영랑","description":"","text":"돌담에 속삭이는 햇발같이↩풀 아래 웃음 짓는 샘물같이↩내 마음 고요히 고운 봄길 위에↩오늘 하루 하늘을 우러르고 싶다.↩↩새악시 볼에 떠오는 부끄럼같이↩시의 가슴에 살포시 젖는 물결같이↩보드레한 에머랄드 얇게 흐르는↩실비단 하늘을 바라보고 싶다."},{"type":"level","id":"s5404","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"엄마 걱정","subtitle":"기형도","description":"","text":"열무 삼십 단을 이고↩시장에 간 우리 엄마↩안 오시네, 해는 시든 지 오래↩나는 찬밥처럼 방에 담겨↩아무리 천천히 숙제를 해도↩엄마 안 오시네, 배추잎 같은 발소리 타박타박↩안 들리네, 어둡고 무서워↩금간 창 틈으로 고요히 빗소리↩빈방에 혼자 엎드려 훌쩍거리던↩↩아주 먼 옛날↩지금도 내 눈시울을 뜨겁게 하는↩그 시절, 내 유년의 윗목"},{"type":"level","id":"s5405","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"봄볕","subtitle":"강동주","description":"","text":"어질고 착한 사람 되거라↩엉뎅이 또다려 주시던 할머니↩아무래도 봄볕이 그런 것 같애↩풀잎도 개나리도 엉덩이를 내민다"},{"type":"level","id":"s5406","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"저녁에","subtitle":"김광섭","description":"","text":"저렇게 많은 중에서↩↩별 하나가 나를 나려다 본다.↩이렇게 많은 사람 중에서↩그 별 하나를 쳐다본다.↩↩밤이 깊을수록↩별은 밝음속에 사라지고↩나는 어둠속에 사라진다.↩↩이렇게 정다운↩너 하나 나 하나는↩어디서 무엇이 되어↩다시 만나랴."},{"type":"level","id":"s5407","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"해","subtitle":"박두진","description":"","text":"해야 솟아라. 해야 솟아라. 말갛게 씻은 얼굴 고운 해야 솟아라. 산 넘어 산 넘어서 어둠을 살라먹고 산 넘어서 밤새도록 어둠을 살라먹고, 이글 이글 애띤 얼굴 고운 해야 솟아라.↩↩달밤이 싫어, 달밤이 싫어, 눈물같은 골짜기에 달밤이 싫어, 아무도 없는 뜰에 달밤이 나는 싫어.↩↩해야, 고운 해야, 늬가 오면 늬가사 오면, 나는 나는 청산이 좋아라, 훨훨훨 깃을 치는 청산이 좋아라. 청산이 있으면 홀로라도 좋아라.↩↩사슴을 따라, 사슴을 따라, 양지로 양지로 사슴을 따라 사슴을 만나면 사슴과 놀고, 칡범을 따라 칡범을 따라 칡범을 만나면 칡범과 놀고,↩↩해야, 고운 해야. 해야 솟아라. 꿈이 아니라도 너를 만나면, 꽃도 새도 짐승도 한자리 앉아. 워어이 워어이 모두 불러 한자리 앉아 애띠고 고운 날을 누려 보리라."},{"type":"level","id":"s5408","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"연분홍 송이송이","subtitle":"김억","description":"","text":"봄바람 하늘하늘 넘노는 길에↩연분홍 살구꽃이 눈을 틉니다.↩↩연분홍 송이송이 못내 반가와↩나비는 너훌너훌 춤을 춥니다.↩↩봄바람 하늘하늘 넘노는 길에↩연분홍 살구꽃이 나부낍니다.↩↩연분홍 송이송이 바람에 지니↩나비는 울며 울며 돌아섭니다."},{"type":"level","id":"s5409","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"하늘","subtitle":"박두진","description":"","text":"하늘이 내게로 온다.↩여릿여릿↩머얼리서 온다.↩↩하늘은, 머얼리서 오는 하늘은↩호수처럼 푸르다.↩↩호수처럼 푸른 하늘에↩내가 안긴다. 온 몸이 안긴다.↩↩가슴으로, 가슴으로↩스미어드는 하늘↩향기로운 하늘의 호흡.↩↩따가운 볕.↩초가을 햇볕으로↩목을 씻고,↩↩나늘 하늘을 마신다.↩자꾸 몰말라 마신다.↩↩마시는 하늘에↩내가 익는다.↩능금처럼 내 마음이 익는다."},{"type":"level","id":"s5410","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"행복","subtitle":"허영자","description":"","text":"눈이랑 손이랑↩깨끗이 씻고↩자알 찾아보면 있을 거야↩↩깜짝 놀랄 만큼↩신바람나는 일이↩어딘가 어딘가에 꼭 있을 거야↩↩아이들이↩보물찾기 놀일 할 때↩보물을 감춰 두는↩↩바윗 틈새 같은 데에↩나뭇 구멍 같은 데에↩↩행복은 아기자기↩숨겨져 있을 거야."},{"type":"level","id":"s5411","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"어떤마을","subtitle":"도종환","description":"","text":"사람이 착하게 사는지 별들이 많이 떴다.↩개울물 맑게 흐르는 곳에 마을을 이루고↩물바가지 떠 담던 접동새 소리 별 그림자↩그 물로 쌀을 씻어 밥 짓던 냄새 나면↩굴뚝 가까이 내려오던↩밥티처럼 따스한 별들이 뜬 마을을 지난다.↩↩사람이 순하게 사는지 별들이 참 많이 떴다."},{"type":"level","id":"s5412","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"섬집 아기","subtitle":"한인현","description":"","text":"엄마가 섬그늘에 굴 따러 가면↩아기가 혼자 남아 집을 보다가↩바다가 불러주는 자장 노래에↩팔 베고 스르르 잠이 듭니다↩↩아기는 잠을 곤히 자고 있지만↩갈매기 울음 소리 맘이 설레어↩다 못 찬 굴바구니 머리에 이고↩엄마는 모랫길을 달려옵니다"},{"type":"level","id":"s5413","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"오줌싸개지도","subtitle":"윤동주","description":"","text":"빨랫줄에 걸어 논↩요에다 그린 지도↩지난 밤에 내 동생↩오줌 싸 그린 지도↩↩꿈에 가 본 엄마 계신↩별나라 지돈가?↩돈 벌러 간 아빠 계신↩만주 땅 지돈가?"},{"type":"level","id":"s5414","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"연탄 한 장","subtitle":"안도현","description":"","text":"또 다른 말도 많고 많지만↩삶이란↩나 아닌 그 누구에게↩기꺼이 연탄 한 장 되는 것↩↩방구들 선득선득해지는 날부터 이듬해 봄까지↩조선팔도 거리에서 제일 아름다운 것은↩연탄차가 부릉부릉↩힘쓰며 언덕길 오르는 거라네↩해야 할 일이 무엇인가를 알고 있다는 듯이↩연탄은, 일단 제 몸에 불이 옮겨 붙었다 하면↩하염없이 뜨거워지는 것↩매일 따스한 밥과 국물 퍼먹으면서도 몰랐네↩온 몸으로 사랑하고 나면↩한 덩이 재로 쓸쓸하게 남는 게 두려워↩여태껏 나는 그 누구에게 연탄 한 장도 되지 못하였네↩↩생각하면↩삶이란↩나를 산산이 으깨는 일↩↩눈 내려 세상에 미끄러운 어느 이른 아침에↩나 아닌 그 누가 마음 놓고 걸어갈↩그 길을 만들 줄도 몰랐었네, 나는"},{"type":"level","id":"s5415","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"감자꽃","subtitle":"권태응","description":"","text":"자주 꽃 핀 건 가주 감자.↩파 보나 마나 자주 감자.↩↩하얀 꽃 핀 건 하얀 감자.↩파 보나 마나 하얀 감자."},{"type":"level","id":"s5416","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"그 날이 오면","subtitle":"심훈","description":"","text":"그 날이 오면, 그 날이 오면은↩삼각산이 일어나 더덩실 춤이라고 추고↩한강물이 뒤집혀 용솟음칠 그 날이↩이 목숨이 끊어지기 전에 와 주기만 하량이면↩나는 밤하늘에 나는 까마귀와 같이↩종로의 인경을 머리로 드리받아 울리오리다.↩두개골은 깨어져 산산조각이 나도↩기뻐서 죽사오매 오히려 무슨 한이 남으오리까.↩↩그 날이 와서, 오오 그 날이 와서↩육조 앞 넓은 길을 울며 뛰며 뒹굴어도↩그래도 넘치는 기쁨에 가슴이 미어질 듯하거든↩드는 칼로 이몸의 가죽이라도 벗겨서↩커다란 북을 만들어 들쳐 메고는↩여러분의 행렬에 앞장을 서오리다.↩우렁찬 그 소리를 한 번이라도 듣기만 하면↩그 자리에 거꾸러져도 눈을 감겠소이다."},{"type":"level","id":"s5417","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"내 마음은","subtitle":"김동명","description":"","text":"내 마음은 호수요,↩그대 저어 오오.↩나는 그대의 흰 그림자를 안고,↩옥같이 그대의 뱃전에 부서지리다.↩내 마음은 촛불이요,↩그대 저 문을 닫아 주오.↩나는 그대의 비단 옷자락에 떨며, 고요히↩최후의 한 방울도 남김없이 타오리다.↩↩내 마음은 나그네요,↩그대 피리를 불어 주오.↩나는 달 아래 귀를 기울이며, 호젓이↩나의 밤을 새어오리다.↩↩내 마음은 낙엽이요,↩잠깐 그대의 뜰에 머무르게 하오.↩이제 바람이 일면 나는 또 나그네같이. 외로이↩그대를 떠나오리다."},{"type":"level","id":"s5418","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"초록 바다","subtitle":"박경종","description":"","text":"초록빛↩바닷물에↩두 손을 담그면↩↩파아란↩초록빛↩물이 들지요.↩↩초록빛↩예쁜↩손이 되지요.↩↩초록빛↩여울물에↩두 발을 담그면↩↩물결이↩살랑살랑↩어루만져요.↩↩우리 순이↩손처럼↩간지럼 줘요"},{"type":"level","id":"s5419","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"봄볕","subtitle":"강동주","description":"","text":"어질고 착한 사람 되거라↩엉뎅이 또다려 주시던 할머니↩아무래도 봄볕이 그런 것 같애↩풀잎도 개나리도 엉덩이를 내민다"},{"type":"level","id":"s5420","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"청포도","subtitle":"이육사","description":"","text":"내고장 칠월은↩청포도가 익어가는 시절↩↩이 마을 전설이 주절이 주절이 열리고↩먼 데 하늘이 꿈꾸며 알알이 들어와 박혀↩↩하늘밑 푸른 바다가 가슴을 열고↩흰 돛단배가 곱게 밀려서 오면↩↩내가 바라는 손님은 고달픈 몸으로↩청포를 입고 찾아온다고 했으니↩↩내 그를 맞아 이 포도를 따 먹으면↩두 손은 함뿍 적셔도 좋으련↩↩아이야 우리 식탁엔 은쟁반에↩하이얀 모시 수건을 마련해 두렴."},{"type":"level","id":"s5421","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"동해바다","subtitle":"신경림","description":"","text":"친구가 원수보다 더 미워지는 날이 많다.↩티끌만한 잘못이 맷방석만 하게↩동산만하게 커 보이는 때가 많다.↩그래서 세상이 어지러울수록↩남에게 엄격해지고 내게는 너그러워지나 보다↩돌처럼 작아지고 굳어지나 보다↩↩멀리 동해바다를 내려다보며 생각한다↩널따란 바다처럼 너그러워질 수는 없을까,↩깊고 짙푸른 바다처럼↩감싸고 끌어안고 받아들일 수는 없을까,↩스스로 억센 파도로 다스리면서↩제 몸은 맵고 모진 매로 채찍질 하면서"},{"type":"level","id":"s5422","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"과수원 길","subtitle":"박화목","description":"","text":"동구 밖 과수원 길↩아카시아꽃이 활짝 폈네↩↩하이얀꽃 이파리↩눈송이처럼 날리네.↩↩향긋한 꽃냄새가↩실바람 타고 솔솔↩↩둘이서 말이 없네.↩얼굴 마주보며 생긋↩↩아카시아꽃 하얗게 핀↩먼 옛날의 과수원 길."},{"type":"level","id":"s5423","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"물새알 산새알","subtitle":"박목월","description":"","text":"물새는↩물새라서 바닷가 모래밭에↩알을 낳는다.↩보얗게 하얀 물새알.↩↩산새는↩산새라서 수풀 둥지 안에↩알을 낳는다.↩알락알락 얼룩진 산새알.↩↩물새알은↩간간하고 짭조름한↩미역 냄새↩바람냄새.↩↩산새알은↩달콤하고 향긋한↩풀꽃 냄새↩이슬 냄새.↩↩물새알은↩물새알이라서↩아아, 날갯죽지 하얀↩물새가 된다.↩↩산새알은↩산새알이라서↩머리꼭지에 빨강 댕기를 드린↩산새가 된다."},{"type":"level","id":"s5424","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"말의 힘","subtitle":"황인숙","description":"","text":"기분 좋은 말을 생각해보자.↩파랗다. 하얗다. 깨끗하다. 싱그럽다.↩신선하다. 짜릿하다. 후련하다.↩기분 좋은 말을 소리내보자.↩시원하다. 달콤하다. 아늑하다. 아이스크림.↩얼음. 바람. 아아아. 사랑하는. 소중한. 달린다.↩비!↩머릿속에 가득 기분 좋은↩느낌표를 밟아보자.↩느낌표들을 밟아보자. 만져보자. 핥아보자.↩깨물어보자. 맞아보자. 터뜨려보자!"},{"type":"level","id":"s5425","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"비","subtitle":"황인숙","description":"","text":"찰박거리는 맨발들.↩찰박 찰박 찰박 맨발들.↩맨발들, 맨발들, 맨발들.↩쉬지 않고 찰박 걷는↩티눈 하나 없는↩작은 발들.↩맨발로 끼어들고 싶게 하는."},{"type":"level","id":"s5426","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"호수 1","subtitle":"정지용","description":"","text":"얼굴 하나야↩손바닥 둘로↩폭 가리지만,↩↩보고 싶은 마음↩호수만하니↩눈감을밖에."},{"type":"level","id":"s5427","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"이 바쁜데 웬 설사","subtitle":"김용택","description":"","text":"소낙비는 오지요↩소는 뛰지요↩바작에 풀은 허물어지지요↩설사는 났지요↩허리끈은 안 풀어지지요↩들판에 사람들은 많지요"},{"type":"level","id":"s5428","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"콩, 너는죽었다","subtitle":"김용택","description":"","text":"콩 타작을 하였다↩콩들이 마당으로 콩콩 뛰어나와↩또르르또르르 굴러간다↩콩 잡아라 콩 잡아라↩굴러가는 저 콩 잡아라↩콩 잡으러 가는데↩어, 어, 저 콩 좀 봐라↩구멍으로 쏙 들어가네↩↩콩, 너는 죽었다."},{"type":"level","id":"s5429","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"진달래꽃","subtitle":"김소월","description":"","text":"나 보기가 역겨워↩가실 때에는↩말없이 고이 보내 드리오리다↩↩영변에 약산↩진달래꽃↩아름 따다 가실 길에 뿌리오리다↩↩가시는 걸음걸음↩놓인 그 꽃을↩사뿐히 즈려밟고 가시옵소서↩↩나 보기가 역겨워↩가실 때에는↩죽어도 아니 눈물 흘리오리다."},{"type":"level","id":"s5430","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"가는 길","subtitle":"김소월","description":"","text":"그립다↩말을 할까↩하니 그리워↩↩그냥 갈까↩그래도↩다시 더 한 번......↩↩저 산에도 가마귀, 들에 가마귀,↩서산에는 해 진다고↩지저귑니다.↩↩앞 강물, 뒷 강물,↩흐르는 물은↩어서 따라 오라고 따라 가자고↩흘러도 연달아 흐릅디다려."},{"type":"level","id":"s5431","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"풀따기","subtitle":"김소월","description":"","text":"우리 집 뒷산에는 풀이 푸르고↩숲 사이의 시냇물, 모래 바닥은↩파아란 풀 그림자, 떠서 흘러요.↩↩그리운 우리 님은 어디 계신고,↩날마다 피어 나는 우리 님 생각.↩날마다 뒷산에 홀로 앉아서↩날마다 풀을 따서 물에 던져요.↩↩흘러가는 시내의 물이 흘러서↩내어 던진 풀잎은 옅게 떠갈 제↩물살이 해적해적 품을 헤쳐요.↩↩그리운 우리 님은 어디 계신고,↩가엾은 이내 속을 둘 곳 없어서↩날마다 풀을 따서 물에 던지고↩흘러가는 잎이나 맘해 보아요."},{"type":"level","id":"s5432","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"공무도하가","subtitle":"백수광부의 처","description":"","text":"임이여 물을 건너지 마오.↩임은 결국 물을 건너시네.↩물에 빠져 죽었으니,↩장차 임을 어이할꼬."},{"type":"level","id":"s5433","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"별","subtitle":"정진규","description":"","text":"별들의 바탕은 어둠이 마땅하다↩대낮에는 보이지 않는다↩지금 대낮인 사람들은↩별들이 보이지 않는다↩지금 어둠인 사람들에게만↩별들이 보인다↩지금 어둠인 사람들만↩별들을 낳을 수 있다↩↩지금 대낮인 사람들은 어둡다"},{"type":"level","id":"s5434","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"흔들리며 피는 꽃","subtitle":"도종환","description":"","text":"흔들리지 않고 피는 꽃이 어디 있으랴↩이 세상 그 어떤 아름다운 꽃들도↩다 흔들리면서 피었나니↩흔들리면서 줄기를 곧게 세웠나니↩흔들리지 않고 가는 사랑이 어디 있으랴↩↩젖지 않고 피는 꽃이 어디 있으랴↩이 세상 그 어떤 빛나는 꽃들도↩다 젖으며 젖으며 피었나니↩바람과 비에 젖으며 꽃잎 따뜻하게 피웠나니↩젖지 않고 가는 삶이 어디 있으랴"},{"type":"level","id":"s5435","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"제비꽃에 대하여","subtitle":"안도현","description":"","text":"제비꽃을 알아도 봄은 오고↩제비꽃을 몰라도 봄은 간다↩↩제비꽃에 대해 알기 위해서↩따로 책을 뒤적여 공부할 필요는 없지↩↩연인과 들길을 걸을 때 잊지 않는다면↩발견할 수 있을 거야↩↩그래, 허리를 낮출 줄 아는 사람에게만↩보이는 거야 자줏빛이지↩↩자줏빛을 톡 한번 건드려봐↩흔들리지? 그건 관심이 있다는 뜻이야↩↩사랑이란 그런 거야↩사랑이란 그런 거야↩↩봄은,↩제비꽃을 모르는 사람을 기억하지 않지만↩↩제비꽃을 아는 사람 앞으로는↩그냥 가는 법이 없단다↩↩그 사람 앞에는↩제비꽃 한포기를 피워두고 가거든↩↩참 이상하지?↩해마다 잊지 않고 피워두고 가거든"},{"type":"level","id":"s5436","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"봄은 고양이로다","subtitle":"이장희","description":"","text":"꽃가루와 같이 부드러운 고양이의 털에↩고운 봄의 향기가 어리우도다.↩↩금방울과 같이 호동그란 고양이의 눈에↩미친 봄의 불길이 흐르도다.↩↩고요히 다물은 고양이의 입술에↩포근한 봄 졸음이 떠돌아라.↩↩날카롭게 쭉 뻗은 고양이의 수염에↩푸른 봄의 생기가 뛰놀아라."},{"type":"level","id":"s5437","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"오라, 이 강변으로","subtitle":"홍윤숙","description":"","text":"오라, 이 강변으로↩우리는 하나, 만나야 할 한 핏줄,↩마침내 손잡을 그 날을 기다린다.↩그 날이 오면, 끊어진 허리↩동강난 세월들 씻은 듯 나으리라↩너의 주름과 나의 백발도↩이 땅의 아름다운 꽃이 되리라.↩오늘도 여기 서서 너를 기다린다."},{"type":"level","id":"s5438","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"나뭇잎 배","subtitle":"박홍근","description":"","text":"낮에 놀다 두고 온 나뭇잎 배는↩엄마 곁에 누워도 생각이 나요.↩푸른 달과 흰 구름 둥실 떠가는↩연못에서 사알 살 떠다니겠지.↩↩연못에다 띄워 논 나뭇잎 배는↩엄마 곁에 누워도 생각이 나요.↩살랑살랑 바람에 소곤거리는↩갈잎 새를 혼자서 떠다니겠지."},{"type":"level","id":"s5439","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"끝없는 강물이 흐르네","subtitle":"김영랑","description":"","text":"내 마음의 어딘 듯 한 편에 끝없는↩강물이 흐르네.↩↩돋쳐 오르는 아침날 빛이 빤질한↩은결을 도도네.↩↩가슴엔 듯 눈엔 듯 또 핏줄엔 듯↩마음이 도른도른 숨어 있는 곳↩↩내 마음의 어딘 듯 한 편에 끝없는↩강물이 흐르네."},{"type":"level","id":"s5440","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"기대","subtitle":"양정자","description":"","text":"공부도 신통찮은데↩남에게 지기 싫어하고 참견 안 하는 데가 없어↩친구들과 유난히 잘 다투는↩입이 참새처럼 뾰죽 튀어나온 박현주↩아무리 야단쳐도 말다툼 그칠 날 없네↩생각다 못해 1학기 성적표 가정 통신란에↩'마음이 너그럽고 이해심이 깊어↩친구들과 유난히 사이가 좋습니다'라고↩은근히 정반대로 부추겨 주었더니↩아니, 이게 웬일인가↩2학기부터는 싸움 한번 안하고↩밀가루 반죽처럼 부드러워졌네↩눈부신 꽃으로 보면 더욱 눈부신 꽃이 되고↩하찮은 돌멩이로 보면 여지없이 돌멩이로 돼 버리는↩기대한 만큼보다 훨씬 더 이루는↩무한 가능성의 놀라운 아이들"},{"type":"level","id":"s5441","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"만돌이","subtitle":"윤동주","description":"","text":"만돌이가 학교에서 돌아오다가↩전봇대 있는 데서↩돌짜기 다섯 개를 주웠습니다.↩↩전봇대를 겨누고↩돌 첫개를 뿌렸습니다.↩-딱↩두 개째 뿌렸습니다.↩-아뿔싸~↩세 개째 뿌렸습니다.↩-딱-↩네 개째 뿌렸습니다.↩-아뿔싸~↩다섯 개째 뿌렸습니다.↩-딱-↩다섯 개에 세 개......↩그만하면 되었다.↩↩내일 시험↩다섯 문제에 세 문제만 하면-↩손꼽아 구구를 하여 봐도↩허양 육십 점이다.↩볼 거 있나 공차러 가자. -↩↩그 이튿날 만돌이는↩꼼짝 못 하고 선생님한테↩흰 종이를 바쳤을까요.↩↩그렇잖으면 정말↩육십 점을 맞았을까요."},{"type":"level","id":"s5442","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"굴뚝","subtitle":"윤동주","description":"","text":"산골짜기 오막살이 낮은 굴뚝엔↩몽기몽기 웬 연기 대낮에 솟나.↩↩감자를 굽는게지 총각애들이↩깜박깜박 검은 눈이 모여 앉아서↩입술에 꺼멓게 숯을 바르고↩옛 이야기 한 커리에 감자 하나씩.↩↩산골짜기 오막살이 낮은 굴뚝엔↩살랑살랑 솟아나네 감자 굽는 내"},{"type":"group","title":"교과서에 나오는 시조"},{"type":"level","id":"s5501","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"단심가","subtitle":"정몽주","description":"","text":"이 몸이 죽고 죽어 일 백번 고쳐 죽어↩백골이 진토되어 넋이라도 있고 없고↩임 향한 일편단심이야 가실 줄 있으랴"},{"type":"level","id":"s5502","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"하여가","subtitle":"이방원","description":"","text":"이런들 어떠하리 저런들 어떠하리↩만수산 드렁칡이이 얽혀진들 어떠하리↩우리도 이같이 얽혀져 백년까지 누리리라"},{"type":"level","id":"s5503","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"그 집 앞","subtitle":"이은상","description":"","text":"오가며 그 집 앞을 지나노라면↩그리워 나도 몰래 발이 머물고↩오히려 눈에 띌까 다시 걸어도↩되오면 그 자리에 서졌습니다.↩↩오늘도 비 내리는 가을 저녁을↩외로이 이 집 앞을 지나는 마음↩잊으려 옛날일을 잊어버리려↩불빛에 빗줄기만 세며 갑니다. "},{"type":"level","id":"s5504","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"별","subtitle":"이병기","description":"","text":"바람이 서늘도 하여 뜰앞에 나섰더니↩서산 머리에 하늘은 구름을 벗어나고↩산뜻한 초사흘달이 별과 함께 나오더라↩↩달은 넘어가고 별만 서로 반짝인다↩저 별은 뉘 별이며 내 별 또한 어느 게오↩잠자코 호올로 서서 별을 헤어 보노라"},{"type":"level","id":"s5505","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"어져 내 일이야","subtitle":"황진이","description":"","text":"어져 내 일이야 그릴 줄을 모로다냐↩이시라 하더면 가랴마난 제 구태야↩보내고 그리난 정은 나도 몰라 하노라"},{"type":"level","id":"s5506","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"봉선화","subtitle":"김상옥","description":"","text":"비오자 장독간에 봉선화 반만벌어↩해마다 피는꽃을 나만두고 볼것인가↩세세한 사연을 적어 누님께로 보내자↩↩누님이 편지보며 하마울까 웃으실까↩눈앞에 삼삼이는 고향집을 그리시고↩손톱에 꽃물들이던 그날 생각하시리↩↩양지에 마주앉아 실로찬찬 매어주던↩그 하얀 손 가락가락이 연붉은 그 손톱을↩지금은 꿈속에 본듯 힘줄만이 서노라"},{"type":"level","id":"s5507","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"문패","subtitle":"김상옥","description":"","text":"해방된 그다음날↩문패를 떼고↩우리 이름 옛 이름↩써서 붙였다.↩↩앞집에도 새 문패↩하얀 새 문패↩뒷집에도 새 문패↩갈아 붙였다.↩↩그리운 우리 이름↩다시 부르자↩정다운 옛 이름도↩귀에 설고나."},{"type":"level","id":"s5508","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"동창이 밝았느냐","subtitle":"남구만","description":"","text":"동창이 밝았느냐 노고지리 우지진다↩소치는 아이는 상기 아니 일었느냐↩재너머 사래 긴 밭을 언제 갈려 하느니."},{"type":"level","id":"s5509","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"개화","subtitle":"이호우","description":"","text":"꽃이 피네, 한 잎 한 잎↩한 하늘이 열리고 있네.↩↩마침내 남은 한 잎이↩마지막 떨고 있는 고비.↩↩바람도 햇볕도 숨을 죽이네↩나도 그만 눈을 감네"},{"type":"level","id":"s5510","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"오우가","subtitle":"윤선도","description":"","text":"내 벗이 몇이냐 하니 수석과 송죽이라.↩동산에 달 오르니 그 더욱 반갑구나.↩두어라, 이 다섯밖에 또 더하여 무엇하리.↩↩구름 빛 좋다 하나 검기를 자주 한다.↩바람 소리 맑다 하나 그칠 적이 많도다.↩좋고도 그칠 일 없기는 물뿐인가 하노라.↩↩꽃은 무슨 일로 피면서 쉬이 지고↩풀은 어이하여 푸르는 듯 누르나니↩아마도 변치 아닐손 바위뿐인가 하노라.↩↩더우면 꽃 피고 추우면 잎 지거늘↩솔아 너는 어찌 눈서리를 모르느냐.↩구천의 부리 곹은 줄을 글로 하여 아노라.↩↩나무도 아늰 것이 풀도 아닌 것이↩곧기는 뉘 시기며 속은 어이 비엇느냐.↩저렇게 사시에 푸르나 그를 좋아하노라.↩↩작은 것이 높이 떠서 만물을 다 비추니↩밤중의 광명이 너만한 이 또 있느냐.↩보고도 말  아니하니 내 벗인가 하노라."}]
 
 /***/ }),
 /* 33 */
@@ -20704,6 +20665,10 @@ var _Settings = __webpack_require__(99);
 
 var _Settings2 = _interopRequireDefault(_Settings);
 
+var _AppInfo = __webpack_require__(100);
+
+var _AppInfo2 = _interopRequireDefault(_AppInfo);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20741,6 +20706,7 @@ var App = function (_React$Component) {
 						_react2.default.createElement(_reactRouterDom.Route, { path: '/levels', component: _Levels2.default }),
 						_react2.default.createElement(_reactRouterDom.Route, { path: '/typing/:id', component: _Typing2.default }),
 						_react2.default.createElement(_reactRouterDom.Route, { path: '/settings', component: _Settings2.default }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: '/appInfo', component: _AppInfo2.default }),
 						_react2.default.createElement(_reactRouterDom.Route, { component: _NotFound2.default })
 					)
 				)
@@ -25388,7 +25354,12 @@ var LevelList = function (_React$Component) {
 	function LevelList(props) {
 		_classCallCheck(this, LevelList);
 
-		return _possibleConstructorReturn(this, (LevelList.__proto__ || Object.getPrototypeOf(LevelList)).call(this, props));
+		var _this = _possibleConstructorReturn(this, (LevelList.__proto__ || Object.getPrototypeOf(LevelList)).call(this, props));
+
+		var params = new URLSearchParams(location.search);
+		var prevLevel = params.get('lv');
+		console.log(prevLevel);
+		return _this;
 	}
 
 	_createClass(LevelList, [{
@@ -25680,7 +25651,7 @@ var Typing = function (_React$Component) {
 					{ className: 'button-ui' },
 					_react2.default.createElement(
 						_reactRouterDom.Link,
-						{ to: '/levels' },
+						{ to: "/levels?lv=" + this.state.level.id },
 						_react2.default.createElement(
 							'button',
 							{ className: 'list-btn' },
@@ -25889,6 +25860,20 @@ var KeyboardLayout = function (_React$Component) {
 					_react2.default.createElement(_Keycap2.default, { keyCode: 91, enn: "win", keyType: "type1 disable" }),
 					_react2.default.createElement(_Keycap2.default, { keyCode: 93, enn: "c", keyType: "type1 disable" }),
 					_react2.default.createElement(_Keycap2.default, { keyCode: 25, enn: "ctrl", keyType: "type1 disable" })
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'hands' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'hand-left' },
+						_react2.default.createElement('img', { src: '/images/hand-left.svg' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'hand-right' },
+						_react2.default.createElement('img', { src: '/images/hand-right.svg' })
+					)
 				)
 			);
 		}
@@ -26094,7 +26079,11 @@ var LetterList = function (_React$Component) {
 					if (this.props.level.buffer.length) {
 						this.props.level.buffer.pop();
 					} else {
-						this.setPrevIndex();
+						if (this.props.level.index === 0) {
+							break;
+						} else {
+							this.setPrevIndex();
+						}
 					}
 					this.updateDisplay(this.props.level.buffer);
 					this.dispatchNextCode();
@@ -26269,13 +26258,14 @@ var LetterList = function (_React$Component) {
 				return;
 			}
 
-			var item = this.getCurrentItem();
+			// let item = this.getCurrentItem();
+			var item = this.getPrevItem();
 			if (!item) return;
 
-			this.setNextIndex();
 			if (item.props.char === '↩') {
 				this.clearBuffer();
 			} else {
+				this.setNextIndex();
 				this.enterKeyLoop();
 			}
 		}
@@ -26353,6 +26343,11 @@ var LetterList = function (_React$Component) {
 				selection.removeAllRanges();
 				selection.addRange(range);
 			}
+		}
+	}, {
+		key: 'getPrevItem',
+		value: function getPrevItem() {
+			return this.refs['letterItem' + (this.props.level.index - 1)];
 		}
 	}, {
 		key: 'getCurrentItem',
@@ -26778,10 +26773,6 @@ var _UserManager2 = _interopRequireDefault(_UserManager);
 
 var _reactRouterDom = __webpack_require__(6);
 
-var _package = __webpack_require__(100);
-
-var _package2 = _interopRequireDefault(_package);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26915,25 +26906,15 @@ var Settings = function (_React$Component) {
 							null,
 							'\uB2E8\uACC4 \uBAA9\uB85D\uC73C\uB85C \uC774\uB3D9'
 						)
-					)
-				),
-				_react2.default.createElement(
-					'div',
-					{ className: 'setting-description' },
-					_react2.default.createElement(
-						'p',
-						{ className: 'version' },
-						'Typing Play Version ',
-						_package2.default.version
 					),
 					_react2.default.createElement(
-						'p',
-						{ className: 'author' },
-						'\uC6D0\uC885\uC120(Won, Jong-sun)\uC758 \uAC1C\uC778 \uD504\uB85C\uC81D\uD2B8\uB85C \uB9CC\uB4E4\uC5B4 \uC84C\uC2B5\uB2C8\uB2E4.',
-						_react2.default.createElement('br', null),
-						'\uBB38\uC758 \uC0AC\uD56D\uC774 \uC788\uC73C\uBA74 \uC544\uB798\uC758 \uBC29\uBC95\uC73C\uB85C \uC5F0\uB77D\uD574 \uC8FC\uC138\uC694.',
-						_react2.default.createElement('br', null),
-						'e-mail : cuebrick@gmail.com'
+						_reactRouterDom.Link,
+						{ to: '/appInfo' },
+						_react2.default.createElement(
+							'button',
+							null,
+							'\uD504\uB85C\uADF8\uB7A8 \uC815\uBCF4'
+						)
 					)
 				)
 			);
@@ -26947,6 +26928,184 @@ exports.default = Settings;
 
 /***/ }),
 /* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(6);
+
+var _package = __webpack_require__(101);
+
+var _package2 = _interopRequireDefault(_package);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AppInfo = function (_React$Component) {
+	_inherits(AppInfo, _React$Component);
+
+	function AppInfo() {
+		_classCallCheck(this, AppInfo);
+
+		return _possibleConstructorReturn(this, (AppInfo.__proto__ || Object.getPrototypeOf(AppInfo)).apply(this, arguments));
+	}
+
+	_createClass(AppInfo, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'container' },
+				_react2.default.createElement(
+					'h3',
+					null,
+					'Typing Play \uC5D0 \uB300\uD55C \uC815\uBCF4'
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'app-info-item' },
+					'\uC6D0\uC885\uC120(Won, Jong-sun)\uC758 \uAC1C\uC778 \uD504\uB85C\uC81D\uD2B8\uB85C \uB9CC\uB4E4\uC5B4 \uC84C\uC2B5\uB2C8\uB2E4.'
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'app-info-item' },
+					_react2.default.createElement(
+						'h4',
+						null,
+						'Contact'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'author' },
+						'\uBB38\uC758 \uB610\uB294 \uAC1C\uC120 \uC0AC\uD56D\uC774 \uC788\uC73C\uBA74 \uC544\uB798\uC758 \uBC29\uBC95\uC73C\uB85C \uC5F0\uB77D\uD574 \uC8FC\uC138\uC694.',
+						_react2.default.createElement('br', null),
+						'e-mail : cuebrick@gmail.com'
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'app-info-item' },
+					_react2.default.createElement(
+						'h4',
+						null,
+						'Program Version'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'Typing Play ',
+						_package2.default.version
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'app-info-item' },
+					_react2.default.createElement(
+						'h4',
+						null,
+						'Open Source Licenses'
+					),
+					_react2.default.createElement(
+						'ul',
+						{ className: 'open-source-list' },
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement(
+								'h5',
+								null,
+								'ReactJS'
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://reactjs.org/' },
+								'https://reactjs.org/'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement(
+								'h5',
+								null,
+								'Hangul.js'
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://www.npmjs.com/package/hangul-js' },
+								'https://www.npmjs.com/package/hangul-js'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement(
+								'h5',
+								null,
+								'jQuery'
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://www.jquery.com' },
+								'https://www.jquery.com'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement(
+								'h5',
+								null,
+								'activate-power-mode'
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://www.npmjs.com/package/activate-power-mode', target: '_blank' },
+								'https://www.npmjs.com/package/activate-power-mode'
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'button-ui' },
+					_react2.default.createElement(
+						_reactRouterDom.Link,
+						{ to: '/levels' },
+						_react2.default.createElement(
+							'button',
+							null,
+							'\uB2E8\uACC4 \uBAA9\uB85D\uC73C\uB85C \uC774\uB3D9'
+						)
+					)
+				)
+			);
+		}
+	}]);
+
+	return AppInfo;
+}(_react2.default.Component);
+
+exports.default = AppInfo;
+
+/***/ }),
+/* 101 */
 /***/ (function(module, exports) {
 
 module.exports = {"name":"typingplay","version":"1.0.0","description":"","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1","dev-server":"webpack-dev-server","build":"babel public --out-dir build && webpack"},"author":"cuebrick","license":"ISC","dependencies":{"react":"^16.2.0","react-dom":"^16.2.0","react-router":"^4.2.0","react-router-dom":"^4.2.2"},"devDependencies":{"babel-cli":"^6.26.0","babel-core":"^6.26.0","babel-loader":"^7.1.2","babel-preset-es2015":"^6.24.1","babel-preset-react":"^6.24.1","react-hot-loader":"^3.1.3","webpack":"^3.10.0","webpack-dev-server":"^2.9.7"}}
