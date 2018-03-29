@@ -7,11 +7,16 @@ import { Link } from 'react-router-dom';
 class LevelList extends React.Component{
 	constructor(props){
 		super(props);
-		let params = new URLSearchParams(location.search);
-		let prevLevel = params.get('lv');
-		console.log(prevLevel);
 	}
 
+	componentDidMount(){
+		let params = new URLSearchParams(location.search);
+		let prevLevel = params.get('lv');
+		if(prevLevel){
+			let top = document.getElementById(prevLevel).offsetTop;
+			document.getElementById("levelList").scrollTop = top;
+		}
+	}
 
 	render(){
 		return(
@@ -26,7 +31,7 @@ class LevelList extends React.Component{
 							);
 						} else {
 							return (
-								<Link to={'/typing/'+ obj.id} key={obj.id}>
+								<Link to={'/typing/'+ obj.id} key={obj.id} id={obj.id}>
 									<LevelItem
 										level={obj}
 										saveData={this.props.saveData[obj.id]}
