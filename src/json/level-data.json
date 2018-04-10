@@ -115,7 +115,7 @@
   {
     "type": "level",
     "id": "c0110",
-    "grade": 1,
+    "grade": 0,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -127,7 +127,7 @@
   {
     "type": "level",
     "id": "c0111",
-    "grade": 1,
+    "grade": 0,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -139,7 +139,7 @@
   {
     "type": "level",
     "id": "c0112",
-    "grade": 1,
+    "grade": 0,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -206,7 +206,7 @@
   {
     "type": "level",
     "id": "c0205",
-    "grade": 1,
+    "grade": 0,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -218,7 +218,7 @@
   {
     "type": "level",
     "id": "c0206",
-    "grade": 1,
+    "grade": 0,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -230,7 +230,7 @@
   {
     "type": "level",
     "id": "c0207",
-    "grade": 1,
+    "grade": 0,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -242,7 +242,7 @@
   {
     "type": "level",
     "id": "c0208",
-    "grade": 1,
+    "grade": 0,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -402,7 +402,7 @@
   {
     "type": "level",
     "id": "c0601",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -414,7 +414,7 @@
   {
     "type": "level",
     "id": "c0602",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -426,7 +426,7 @@
   {
     "type": "level",
     "id": "c0603",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -438,7 +438,7 @@
   {
     "type": "level",
     "id": "c0604",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -450,7 +450,7 @@
   {
     "type": "level",
     "id": "c0605",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -462,7 +462,7 @@
   {
     "type": "level",
     "id": "c0606",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -474,7 +474,7 @@
   {
     "type": "level",
     "id": "c0607",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -486,7 +486,7 @@
   {
     "type": "level",
     "id": "c0608",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -504,7 +504,7 @@
   {
     "type": "level",
     "id": "c0701",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -516,7 +516,7 @@
   {
     "type": "level",
     "id": "c0702",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -528,7 +528,7 @@
   {
     "type": "level",
     "id": "c0703",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -540,7 +540,7 @@
   {
     "type": "level",
     "id": "c0704",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -558,7 +558,7 @@
   {
     "type": "level",
     "id": "c0801",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -570,7 +570,7 @@
   {
     "type": "level",
     "id": "c0802",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -582,7 +582,7 @@
   {
     "type": "level",
     "id": "c0803",
-    "grade": 0,
+    "grade": 1,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -621,7 +621,7 @@
   {
     "type": "level",
     "id": "s4001",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -633,7 +633,7 @@
   {
     "type": "level",
     "id": "s4002",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -645,7 +645,7 @@
   {
     "type": "level",
     "id": "s4003",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -657,7 +657,7 @@
   {
     "type": "level",
     "id": "s4004",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -669,7 +669,7 @@
   {
     "type": "level",
     "id": "s4005",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -681,7 +681,7 @@
   {
     "type": "level",
     "id": "s4006",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -705,7 +705,7 @@
   {
     "type": "level",
     "id": "s4008",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -717,7 +717,7 @@
   {
     "type": "level",
     "id": "s4009",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -729,7 +729,7 @@
   {
     "type": "level",
     "id": "s4010",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -741,7 +741,7 @@
   {
     "type": "level",
     "id": "s4011",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -753,7 +753,7 @@
   {
     "type": "level",
     "id": "s4012",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -765,7 +765,7 @@
   {
     "type": "level",
     "id": "s4013",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -777,7 +777,7 @@
   {
     "type": "level",
     "id": "s4014",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -789,7 +789,7 @@
   {
     "type": "level",
     "id": "s4015",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -801,7 +801,7 @@
   {
     "type": "level",
     "id": "s4016",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -813,7 +813,7 @@
   {
     "type": "level",
     "id": "s4017",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -825,7 +825,7 @@
   {
     "type": "level",
     "id": "s4018",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -837,7 +837,7 @@
   {
     "type": "level",
     "id": "s4019",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -849,7 +849,7 @@
   {
     "type": "level",
     "id": "s4020",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -861,7 +861,7 @@
   {
     "type": "level",
     "id": "s4021",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
@@ -873,7 +873,7 @@
   {
     "type": "level",
     "id": "s4022",
-    "grade": 0,
+    "grade": 5,
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
