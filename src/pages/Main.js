@@ -36,6 +36,7 @@ class Main extends React.Component{
 			<div className="container">
 				<h3>Typing Play 에 오신것을 환영합니다.</h3>
 				<div className="main-text font-LexiSaebomR">
+					<img src="/images/main.png"/><br/>
 					Typing Play는 pc의 한글 키보드 연습을 위한 프로그램 입니다.<br/>
 					여러분이 만약<br/>
 					<em>
