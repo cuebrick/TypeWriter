@@ -829,6 +829,7 @@ input[type=text]{
 /*MAIN*/
 .main-text{
 	line-height: 2em;
+	margin-bottom: 2em;
 }
 .main-text em{
 	font-style: normal;
