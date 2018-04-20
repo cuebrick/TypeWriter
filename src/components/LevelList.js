@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 class LevelList extends React.Component{
 	constructor(props){
 		super(props);
+		this.state = {count: 0}
 	}
 
 	componentDidMount(){
@@ -17,6 +18,13 @@ class LevelList extends React.Component{
 			document.getElementById("levelList").scrollTop = top;
 		}
 	}
+
+	// count = 0;
+	/*c = 0;
+	getCount(){
+		// return this.c++;
+		console.log(this.c);
+	}*/
 
 	render(){
 		return(
@@ -34,6 +42,7 @@ class LevelList extends React.Component{
 								<Link to={'/typing/'+ obj.id} key={obj.id} id={obj.id}>
 									<LevelItem
 										level={obj}
+										count={++this.state.count}
 										saveData={this.props.saveData[obj.id]}
 									/>
 								</Link>

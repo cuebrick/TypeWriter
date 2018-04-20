@@ -24,6 +24,7 @@ class LevelItem extends React.Component{
 		return(
 			<div className={"level-item" + breakLineClassName} data-id={level.dataId}>
 				<div className={"status" + statusClassName}> </div>
+				<div className="count">{this.props.count}</div>
 				<div className="level-grade">
 					<img src={"/images/grades/grade-icon-" + level.grade + ".svg"}/>
 				</div>
