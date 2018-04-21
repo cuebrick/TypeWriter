@@ -420,8 +420,18 @@ header{
 .button-ui .list-btn:hover{
 	background-color: #56687d;
 }
-.button-ui .next-btn{
-
+.button-ui .settings-btn{
+	float: right;
+}
+.button-ui .settings-btn button{
+	background-color: #2c4553;
+}
+.button-ui .settings-btn button:hover{
+	background-color: #3a5b6e;
+}
+.button-ui .settings-btn img{
+	margin-right: 4px;
+	vertical-align: middle;
 }
 
 
