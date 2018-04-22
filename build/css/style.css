@@ -1,6 +1,15 @@
-/*@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
-*/
-@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+/*@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');*/
+@font-face {
+	font-family: 'LexiSaebomR';
+	font-style: normal;
+	font-weight: 800;
+	src: url(fonts/LexiSaebomR.eot);
+	src: url(fonts/LexiSaebomR.eot?#iefix) format('embedded-opentype'),
+	url(fonts/LexiSaebomR.woff) format('woff'),
+	url(fonts/LexiSaebomR.ttf) format('truetype');
+}
+
 html, body, #root{
 	height: 100%;
 }
@@ -10,11 +19,16 @@ body{
 	font-size: 20px;
 	background: #333 url("../images/type-bg2.jpg") center;
 	background-size: cover;
+	font-family: 'malgun gothic', sans-serif;
 	/*overflow-y: hidden;*/
 }
+
+.font-LexiSaebomR{
+	font-family: 'LexiSaebomR', 'malgun gothic', sans-serif;
+}
+
 *{
 	box-sizing: border-box;
-	font-family: 'malgun gothic', sans-serif;
 }
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, li{
 	margin: 0;
@@ -33,6 +47,9 @@ button{
 }
 button:hover{
 	background-color: #00aae7;
+}
+button > small{
+	opacity: 0.7;
 }
 a{
 	color: #a7cddd;
@@ -104,6 +121,7 @@ h3{
 header{
 	height: 50px;
 	background-color: rgba(255, 255, 255, 0.1);
+	font-family: 'DroidSans', sans-serif;
 }
 .container{
 	padding: 10px;
@@ -138,7 +156,7 @@ header{
 	}
 }
 
-.sentence-area, .level-list-area{
+.container{
 	padding: 0.5em;
 	position: relative;
 }
@@ -216,14 +234,16 @@ header{
 }
 
 
-
+/*LEVEL LIST, LEVEL ITEM*/
 .level-list{
 	font-size: 16px;
 	overflow: auto;
 }
 
 .level-item{
+	position: relative;
 	width: 200px;
+	height: 110px;
 	float: left;
 	box-sizing: border-box;
 	padding: 10px;
@@ -234,14 +254,38 @@ header{
 	cursor: pointer;
 	transition: 0.4s all;
 	font-size: 0.9em;
+	text-align: center;
+}
+.break-line{
+	border-top: 1px dashed #337195;
+	clear: both;
+	text-align: center;
+}
+.group-title{
+	display: inline-block;
+	margin: 5px auto;
+	padding: 3px 20px;
+	border-radius: 3px;
+	background-color: rgba(91, 91, 91, 0.9);
+	font-size: 13px;
 }
 .level-item .status{
-	float: left;
+	position: absolute;
+	right: -3px;
+	top: 2px;
+	margin-right: 5px;
 	width: 20px;
 	height: 20px;
 	background-image: url(../images/status.svg);
 	background-size: 100%;
-	margin-right: 5px;
+}
+.level-item .count{
+	position: absolute;
+	top: 22px;
+	right: 0;
+	text-align: center;
+	width: 25px;
+	color: #555;
 }
 .level-item .status.unlock{
 	background-image: url(../images/status-unlock.svg);
@@ -250,10 +294,33 @@ header{
 	white-space: nowrap;
 	overflow-x: hidden;
 	text-overflow: ellipsis;
+	position: absolute;
+	width: 180px;
+	bottom: 20px;
+}
+.level-item .level-grade{
+	height: 50px;
+}
+.level-item .level-grade img{
+	height: 100%;
+	width: auto;
 }
 .level-item:hover{
 	background-color: rgba(151, 206, 255, 0.4);
 }
+.level-item .level-desc{
+	font-size: 0.8em;
+	color: #999;
+	position: absolute;
+	width: 180px;
+	bottom: 5px;
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+
+
+
 
 .badge{
 	position: absolute;
@@ -275,7 +342,7 @@ header{
 	float: left;
 	margin-right: 10px;
 }
-.stars{
+.report-view .stars{
 	float: left;
 	font-size: 0;
 }
@@ -289,6 +356,23 @@ header{
 .stars > .star.incomplete{
 	background-image: url(../images/star-half.png);
 }
+.star-rating.stars{
+	position: absolute;
+	top: 50px;
+	width: 180px;
+	text-align: center;
+}
+
+.star-rating.stars .star{
+	width: 17px;
+	height: 17px;
+	background-size: 17px;
+}
+.star-rating.stars .star:nth-child(2){
+	margin-bottom: -3px;
+}
+
+
 
 /*report-view*/
 .report-view{
@@ -336,8 +420,18 @@ header{
 .button-ui .list-btn:hover{
 	background-color: #56687d;
 }
-.button-ui .next-btn{
-
+.button-ui .settings-btn{
+	float: right;
+}
+.button-ui .settings-btn button{
+	background-color: #2c4553;
+}
+.button-ui .settings-btn button:hover{
+	background-color: #3a5b6e;
+}
+.button-ui .settings-btn img{
+	margin-right: 4px;
+	vertical-align: middle;
 }
 
 
@@ -403,7 +497,11 @@ header{
 }
 
 
-
+.profile .user-description .current-user-profile .user-grade,
+.profile .user-description .current-user-profile .user-name{
+	width: 115px;
+	float: right;
+}
 
 .profile-image{
 	float: right;
@@ -505,20 +603,45 @@ input[type=text]{
 	background-color: transparent;
 	outline: none;
 }
-
+.profile.user-layer-mode .user-description .current-user-profile{
+	float: right;
+	max-width: 170px;
+}
+.user-description .setting-button{
+	float: left;
+	margin-top: 12px;
+	margin-left: 5px;
+}
 
 
 
 
 
 .keyboard{
-	width: 100%;
-	height: 0;
-	padding-bottom: 30%;
+	width: 800px;
+	height: 240px;
+	margin: 0 auto;
+	/*padding-bottom: 30%;*/
 	position: relative;
 	cursor: default;
 	user-select: none;
+	font-size: 18px;
 }
+@media (min-width: 460px) and (max-width: 800px) {
+	.keyboard{
+		font-size: 13px;
+		width: 600px;
+		height: 180px;
+	}
+}
+@media (max-width: 460px){
+	.keyboard{
+		font-size: 9px;
+		width: 300px;
+		height: 90px;
+	}
+}
+
 .keyboard .row{
 	position: absolute;
 	clear: both;
@@ -544,9 +667,8 @@ input[type=text]{
 	width: 6.3%;
 	height: 100%;
 	margin: 0.2%;
-	padding: 0 0.2em;
-	line-height: 1em;
-	font-size: 2vw;
+	padding: 0.4em 0.2em;
+	line-height: 50%;
 	font-weight: 100;
 	position: relative;
 	color: #555;
@@ -596,7 +718,7 @@ input[type=text]{
 .keyboard .row > div.type5,
 .keyboard .row > div.type6,
 .keyboard .row > div.type7{
-	font-size: 1.7vw;
+	font-size: 0.8em;
 }
 .keyboard .row .en,
 .keyboard .row .kr{
@@ -604,7 +726,8 @@ input[type=text]{
 	height: 100%;
 	width: 50%;
 }
-.keyboard .row .en .shift{
+.keyboard .row .normal,
+.keyboard .row .shift{
 	height: 50%;
 }
 .keyboard .row > div .kr{
@@ -616,12 +739,12 @@ input[type=text]{
 }
 .keyboard .row .kr .shift,
 .keyboard .row .kr .normal{
-	position: absolute;
-	bottom: 0.2em;
-	width: 45%;
+	/*position: absolute;*/
+	/*bottom: 0.2em;*/
+	/*width: 45%;*/
 }
 .keyboard .row .kr .shift{
-	top: 0.2em;
+	/*top: 0.2em;*/
 	color: #777;
 }
 .keyboard .row .kr.shifted .shift{
@@ -632,4 +755,104 @@ input[type=text]{
 }
 .keyboard .en > *{
 	font-family: 'Noto Sans KR', sans-serif;
+}
+.keyboard .hands{
+	/*background-color: rgba(255, 255, 255, 0.56);*/
+	height: 200px;
+	position: absolute;
+	width: 100%;
+}
+.keyboard .hands > .hand-left,
+.keyboard .hands > .hand-right{
+	position: absolute;
+	width: 35%;
+}
+.keyboard .hands > .hand-left{
+	top: 3.5em;
+	left: 4.5em;
+}
+.keyboard .hands > .hand-right{
+	top: 3.5em;
+	right: 8.5em;
+}
+
+
+
+/*SETTINGS*/
+.setting-list .title{
+	float: left;
+	width: 20%;
+	min-width: 150px;
+}
+.setting-list .desc{
+	float: left;
+	width: 60%;
+	font-size: 0.8em;
+	line-height: 1.2em;
+	padding-top: 0.5em;
+	color: #999;
+}
+.setting-list .ui{
+	float: right;
+	text-align: right;
+	width: 20%;
+	min-width: 150px;
+}
+.setting-list button{
+	background-color: #97a7c7;
+}
+.setting-list button.on{
+	background-color: #006ec7;
+}
+.setting-list button.delete-button{
+	background-color: #b45030;
+}
+.setting-list button.delete-button.removed{
+	background-color: #97a7c7;
+}
+.setting-list li{
+	box-sizing: content-box;
+	height: 3em;
+	line-height: 3em;
+	border-top: 1px solid #555555;
+}
+.setting-list li:last-child{
+	border-bottom: 1px solid #555555;
+}
+.app-info-item{
+	font-size: 0.8em;
+	margin: 1em 0 1em 0.5em;
+	color: #999;
+	line-height: 1.5em;
+}
+
+.app-info-item h4{
+	color: #e2c9bc;
+	font-size: 1.2em;
+	font-weight: 100;
+	padding: 0.5em 0;
+}
+.open-source-list li{
+	margin: 0.5em 0;
+	font-size: 0.8em;
+}
+.open-source-list h5{
+	font-size: 1.2em;
+	font-weight: 100;
+}
+
+
+
+
+/*MAIN*/
+.main-text{
+	line-height: 2em;
+	margin-bottom: 2em;
+}
+.main-text em{
+	font-style: normal;
+	color: #ecc4a6;
+}
+.main-img{
+	text-align: center;
 }
