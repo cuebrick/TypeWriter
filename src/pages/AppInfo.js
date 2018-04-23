@@ -19,7 +19,7 @@ class AppInfo extends React.Component{
 				</div>
 				<div className="app-info-item">
 					<h4>Program Version</h4>
-					<p>Typing Play {PackageInfo.version}</p>
+					<p>Typing Play {PackageInfo.version} last updated on April 24th, 2018</p>
 				</div>
 				<div className="app-info-item">
 					<h4>Open Source Licenses</h4>
