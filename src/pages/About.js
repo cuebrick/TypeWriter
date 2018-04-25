@@ -1,5 +1,6 @@
 import React from 'react';
 import Information from "../components/Information";
+import { Link } from 'react-router-dom';
 
 class About extends React.Component{
 	render(){
@@ -18,6 +19,17 @@ class About extends React.Component{
 					다른 pc에서는 새로운 사용자를 만들어 주셔야 합니다.<br/>
 					그러나 하나의 pc 에서 여러 사용자의 기록을 관리 할 수 있도록 사용자를 추가할 수 있습니다.<br/>
 					사용자를 추가하시려면 화면 오른쪽 위의 + 버튼을 선택해 주세요.
+				</div>
+
+				<div className="button-ui">
+					<Link to="/levels"><button>단계 목록으로 이동</button></Link>
+					<Link to="/appInfo"><button>프로그램 기술 정보</button></Link>
+					<Link to="/settings" className="settings-btn">
+						<button>
+							<img src="/images/settings.svg" width="15" height="15"/>
+							설정
+						</button>
+					</Link>
 				</div>
 			</div>
 		)

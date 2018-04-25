@@ -44,6 +44,13 @@ class AppInfo extends React.Component{
 				</div>
 				<div className="button-ui">
 					<Link to="/levels"><button>단계 목록으로 이동</button></Link>
+					<Link to="/about"><button>Typing Play 일반 정보</button></Link>
+					<Link to="/settings" className="settings-btn">
+						<button>
+							<img src="/images/settings.svg" width="15" height="15"/>
+							설정
+						</button>
+					</Link>
 				</div>
 			</div>
 		)
