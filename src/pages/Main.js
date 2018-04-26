@@ -33,6 +33,7 @@ class Main extends React.Component{
 
 	render(){
 
+		console.log("MAIN: ", this.props.match);
 		return(
 			<div className="container">
 				<h3>Typing Play 에 오신것을 환영합니다.</h3>
@@ -41,9 +42,7 @@ class Main extends React.Component{
 						this.state.isShowNext === false ?
 						<Information/>
 						:
-						<div>
-							다시 만나 반갑습니다. 아래 메뉴 중 하나를 선택할 수 있습니다.
-						</div>
+						<div>다시 만나 반갑습니다. 아래 메뉴 중 하나를 선택할 수 있습니다.</div>
 					}
 				</div>
 				<div className="button-ui">

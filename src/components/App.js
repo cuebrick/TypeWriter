@@ -14,22 +14,30 @@ class App extends React.Component{
 	constructor(props){
 		super(props);
 		new IEFix().addArrayFind();
+		this.state = {bgClassName : ''}
 	}
+
 	render(){
+
 		return(
 			<Router>
-				<div className="wrapper">
-					<Header/>
-					<Switch>
-						<Route exact path="/" component={Main}/>
-						<Route path="/levels" component={Levels}/>
-						<Route path="/typing/:id" component={Typing}/>
-						<Route path="/settings" component={Settings}/>
-						<Route path="/appInfo" component={AppInfo}/>
-						<Route path="/about" component={About}/>
-						<Route component={NotFound}/>
-					</Switch>
-				</div>
+				<Route render={(props) => {
+					let bgClassName = (props.location.pathname === '/') ? ' main' : '';
+					return (
+						<div className={"wrapper" + bgClassName}>
+							<Header/>
+							<Switch>
+								<Route exact path="/" component={Main}/>
+								<Route path="/levels" component={Levels}/>
+								<Route path="/typing/:id" component={Typing}/>
+								<Route path="/settings" component={Settings}/>
+								<Route path="/appInfo" component={AppInfo}/>
+								<Route path="/about" component={About}/>
+								<Route component={NotFound}/>
+							</Switch>
+						</div>
+					)
+				}} />
 			</Router>
 		)
 	}

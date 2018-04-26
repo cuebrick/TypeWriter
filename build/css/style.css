@@ -71,6 +71,9 @@ a{
 	position: relative;
 	overflow-x: hidden;
 }
+.wrapper.main{
+	background-color: rgba(0, 0, 0, 0.1);
+}
 
 nav{
 	position: fixed;
