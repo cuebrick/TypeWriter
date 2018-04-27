@@ -57,11 +57,8 @@ class Main extends React.Component{
 							</button>
 						</Link>
 					}
-					<Link to="/settings" className="settings-btn">
-						<button>
-							<img src="/images/settings.svg" width="15" height="15"/>
-							설정
-						</button>
+					<Link to="/settings">
+						<button className="settings-btn circle-btn"><img src="/images/settings.svg" width="15" height="15"/></button>
 					</Link>
 				</div>
 			</div>
