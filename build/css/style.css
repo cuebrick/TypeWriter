@@ -146,17 +146,34 @@ header{
 }
 @media (max-width: 599px) {
 	.minimize > h1{
-		float: none;
-		line-height: 1.2em;
-		font-size: 1em;
+		float: left;
+		line-height: 40px;
+		font-size: 1.1em;
 		padding-top: 3px;
 	}
 	.minimize > h2{
-		font-size: 0.65em;
+		/*font-size: 0.65em;
 		line-height: 1em;
 		padding-top: 2px;
-		margin-left: 0;
+		margin-left: 0;*/
+		display: none;
 	}
+	.main h3{
+		font-size: 0.9em;
+		letter-spacing: -0.05em;
+	}
+	.main .main-text{
+		font-size: 0.8em;
+	}
+}
+.main h3{
+	background-color: rgba(0,0,0,0.7);
+	/*border-radius: 0.2em;*/
+	padding: 0.4em;
+}
+.main .main-text{
+	background-color: rgba(0,0,0,0.7);
+	padding: 0.4em;
 }
 
 .container{
@@ -415,7 +432,7 @@ header{
 .button-ui button{
 	padding: 10px 20px;
 	width: auto;
-	margin: 0 1px;
+	margin: 1px;
 	height: 40px;
 }
 .button-ui .list-btn{
