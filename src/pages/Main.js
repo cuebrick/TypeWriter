@@ -40,27 +40,35 @@ class Main extends React.Component{
 				<div className="main-text font-LexiSaebomR">
 					{
 						this.state.isShowNext === false ?
-						<Information/>
+						<div>
+							<Information/>
+							<div className="button-ui">
+								<Link to="/levels"><button>시작하기</button></Link>
+								<Link to="/settings">
+									<button className="settings-btn circle-btn"><img src="/images/settings.svg" width="15" height="15"/></button>
+								</Link>
+							</div>
+						</div>
 						:
-						<div>다시 만나 반갑습니다. 아래 메뉴 중 하나를 선택할 수 있습니다.</div>
+						<div>
+							다시 만나 반갑습니다. 아래 메뉴 중 하나를 선택할 수 있습니다.
+							<div className="button-ui">
+								<Link to="/levels"><button>단계 목록으로 이동</button></Link>
+								<Link to={"/typing/" + this.state.nextLevel.id}>
+									<button>
+										{this.state.nextLevel.title}
+										<small>{" (" + this.state.nextLevel.subtitle + ") "}</small>
+										이어서 하기
+									</button>
+								</Link>
+								<Link to="/settings">
+									<button className="settings-btn circle-btn"><img src="/images/settings.svg" width="15" height="15"/></button>
+								</Link>
+							</div>
+						</div>
 					}
 				</div>
-				<div className="button-ui">
-					<Link to="/levels"><button>단계 목록으로 이동</button></Link>
-					{
-						this.state.isShowNext &&
-						<Link to={"/typing/" + this.state.nextLevel.id}>
-							<button>
-								{this.state.nextLevel.title}
-								<small>{" (" + this.state.nextLevel.subtitle + ") "}</small>
-								이어서 하기
-							</button>
-						</Link>
-					}
-					<Link to="/settings">
-						<button className="settings-btn circle-btn"><img src="/images/settings.svg" width="15" height="15"/></button>
-					</Link>
-				</div>
+
 			</div>
 		)
 	}
