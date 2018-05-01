@@ -259,13 +259,16 @@ header{
 	font-size: 16px;
 	overflow: auto;
 }
-
+.level-list > a{
+	font-size: 0;
+	display: inline-block;
+}
 .level-item{
 	position: relative;
-	width: 200px;
+	width: 180px;
 	height: 110px;
 	float: left;
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 	padding: 10px;
 	background-color: rgba(151, 206, 255, 0.1);
 	border-radius: 5px;
@@ -273,8 +276,17 @@ header{
 	margin-bottom: 5px;
 	cursor: pointer;
 	transition: 0.4s all;
-	font-size: 0.9em;
+	font-size: 14px;
 	text-align: center;
+}
+@media (max-width: 599px) {
+	.level-list > a{
+		width: 48%;
+		margin-right: 2%;
+	}
+	.level-item{
+		width: 100%;
+	}
 }
 .break-line{
 	border-top: 1px dashed #337195;
@@ -314,9 +326,10 @@ header{
 	white-space: nowrap;
 	overflow-x: hidden;
 	text-overflow: ellipsis;
-	position: absolute;
-	width: 180px;
-	bottom: 20px;
+	margin-top: 10px;
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*bottom: 20px;*/
 }
 .level-item .level-grade{
 	height: 50px;
@@ -331,9 +344,9 @@ header{
 .level-item .level-desc{
 	font-size: 0.8em;
 	color: #999;
-	position: absolute;
-	width: 180px;
-	bottom: 5px;
+	/*position: absolute;*/
+	/*width: 180px;*/
+	/*bottom: 5px;*/
 	white-space: nowrap;
 	overflow-x: hidden;
 	text-overflow: ellipsis;
@@ -378,8 +391,9 @@ header{
 }
 .star-rating.stars{
 	position: absolute;
+	left: 50%;
+	margin-left: -25px;
 	top: 50px;
-	width: 180px;
 	text-align: center;
 }
 
