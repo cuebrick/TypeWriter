@@ -262,6 +262,7 @@ header{
 .level-list > a{
 	font-size: 0;
 	display: inline-block;
+	height: 110px;
 }
 .level-item{
 	position: relative;

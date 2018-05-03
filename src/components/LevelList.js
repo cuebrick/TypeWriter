@@ -19,13 +19,6 @@ class LevelList extends React.Component{
 		}
 	}
 
-	// count = 0;
-	/*c = 0;
-	getCount(){
-		// return this.c++;
-		console.log(this.c);
-	}*/
-
 	render(){
 		return(
 			<div id="levelList" className="level-list">

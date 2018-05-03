@@ -37,7 +37,6 @@ class Settings extends React.Component{
 	}
 
 	render(){
-		// console.log(UserManager.getInstance().info);
 		let powerModeClassName = (this.state.isPowerMode) ? 'on' : '';
 		let powerModeButtonText = (this.state.isPowerMode) ? '켜짐' : '꺼짐';
 		let removeRecordClassName = (this.state.isRemovedRecord) ? ' removed' : '';

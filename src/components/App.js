@@ -14,11 +14,9 @@ class App extends React.Component{
 	constructor(props){
 		super(props);
 		new IEFix().addArrayFind();
-		this.state = {bgClassName : ''}
 	}
 
 	render(){
-
 		return(
 			<Router>
 				<Route render={(props) => {

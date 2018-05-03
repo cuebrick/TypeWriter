@@ -32,8 +32,6 @@ class Main extends React.Component{
 	}
 
 	render(){
-
-		console.log("MAIN: ", this.props.match);
 		return(
 			<div className="container">
 				<h3>Typing Play 에 오신것을 환영합니다.</h3>
