@@ -552,69 +552,6 @@
 
   {
     "type": "group",
-    "title": "숫자, 기호 연습"
-  },
-
-  {
-    "type": "level",
-    "id": "c0801",
-    "grade": 1,
-    "difficulty": 1,
-    "form": "sentence",
-    "language": "kr",
-    "title": "숫자",
-    "subtitle": "1234567890",
-    "description": "",
-    "text" : "1234 7890 1234 7890 54321 54321 67890 67890 5599 3748 5252 9012 8923 하나1 둘2 셋3 넷4 다섯5 여섯6 일곱7 여덟8 아홉9 열10"
-  },
-  {
-    "type": "level",
-    "id": "c0802",
-    "grade": 1,
-    "difficulty": 1,
-    "form": "sentence",
-    "language": "kr",
-    "title": "기호",
-    "subtitle": ",. '\" [] {} ;:",
-    "description": "",
-    "text" : ""
-  },
-  {
-    "type": "level",
-    "id": "c0803",
-    "grade": 1,
-    "difficulty": 1,
-    "form": "sentence",
-    "language": "kr",
-    "title": "숫자키 기호",
-    "subtitle": "~!@#$%^&*()-_=+",
-    "description": "",
-    "text" : ""
-  },
-
-
-  {
-    "type": "group",
-    "title": "영타 연습"
-  },
-
-  {
-    "type": "level",
-    "id": "q0101",
-    "grade": 0,
-    "difficulty": 1,
-    "form": "character",
-    "language": "en",
-    "title": "lazy fox",
-    "subtitle": "알파벳 테스트",
-    "description": "",
-    "text" : "lazy fox jumped over quick brown dog"
-  },
-
-
-
-  {
-    "type": "group",
     "title": "속담"
   },
 
