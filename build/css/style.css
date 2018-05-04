@@ -74,7 +74,15 @@ a{
 .wrapper.main{
 	background-color: rgba(0, 0, 0, 0.1);
 }
-
+.wrapper.main .container{
+	max-width: 800px;
+	margin: 10% auto 0 auto;
+	padding: 30px;
+	background-color: rgba(0, 40, 50, 0.85);
+}
+.wrapper.main .container .main-text{
+	margin: 0;
+}
 nav{
 	position: fixed;
 	right: 10px;
@@ -167,12 +175,12 @@ header{
 	}
 }
 .main h3{
-	background-color: rgba(0,0,0,0.7);
+	/*background-color: rgba(0,0,0,0.7);*/
 	/*border-radius: 0.2em;*/
 	padding: 0.4em;
 }
 .main .main-text{
-	background-color: rgba(0,0,0,0.7);
+	/*background-color: rgba(0,0,0,0.7);*/
 	padding: 0.4em;
 }
 
