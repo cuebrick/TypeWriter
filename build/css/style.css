@@ -265,7 +265,7 @@ header{
 /*LEVEL LIST, LEVEL ITEM*/
 .level-list{
 	font-size: 16px;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 .level-list > a{
 	font-size: 0;
