@@ -11,8 +11,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음 기본 자리",
-    "subtitle": "1/5 \"ㅁㄴㅇㄹ\"",
+    "title": "기본 자리 자음",
+    "subtitle": "ㅁㄴㅇㄹ",
     "description": "기본 위치는 왼손 검지 손가락이 ㄹ 위치에 자리하고 자연스럽게 나머지 손가락을 누르는 것입니다. 왼손 검지 손가락이 ㄹ 위치에 있다는 것을 꼭 기억하세요.",
     "text" : "ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ"
   },
@@ -23,8 +23,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음 기본 자리",
-    "subtitle": "2/5 \"ㅁㄴㅇㄹ\"",
+    "title": "기본 자리 자음",
+    "subtitle": "ㅁㄴㅇㄹ",
     "description": "방향만 다릅니다.",
     "text" : "ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ"
   },
@@ -35,8 +35,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음 기본 자리",
-    "subtitle": "3/5 \"ㅁㄴㅇㄹㅎ\"",
+    "title": "기본 자리 자음",
+    "subtitle": "ㅁㄴㅇㄹㅎ",
     "description": "ㅎ은 왼손 검지 손가락이 이동합니다.",
     "text" : "ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ"
   },
@@ -47,8 +47,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음 기본 자리",
-    "subtitle": "4/5 \"ㅁㄴㅇㄹㅎ\"",
+    "title": "기본 자리 자음",
+    "subtitle": "ㅁㄴㅇㄹㅎ",
     "description": "이제 순서를 뒤섞어 봅니다.",
     "text" : "ㅁㅇㅎㄹㄴㄴㄹ ㅎㅁㅇ ㅇㄴㅁㅇ ㅎㄹㅁ ㅇㄴㅎㄹ ㅎㅁㅇㅎㅁㄴ"
   },
@@ -59,8 +59,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음 기본 자리",
-    "subtitle": "5/5 \"ㅁㄴㅇㄹㅎ\"",
+    "title": "기본 자리 자음",
+    "subtitle": "ㅁㄴㅇㄹㅎ",
     "description": "한 번 더 연습합니다.",
     "text" : "ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ"
   },
@@ -71,8 +71,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "모음 기본 자리",
-    "subtitle": "1/4 \"ㅓㅏㅣ\"",
+    "title": "기본 자리 모음",
+    "subtitle": "ㅓㅏㅣ",
     "description": "이번에는 오른손 기본 자리 입니다. 기본 위치는 오른손 검지 손가락이 ㅓ 위치에 자리하고 자연스럽게 나머지 손가락을 누르는 것입니다. 오른손 검지 손가락이 ㅓ 위치에 있다는 것을 꼭 기억하세요.",
     "text" : "ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ"
   },
@@ -83,8 +83,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "모음 기본 자리",
-    "subtitle": "2/4 \"ㅓㅏㅣ\"",
+    "title": "기본 자리 모음",
+    "subtitle": "ㅓㅏㅣ",
     "description": "방향만 다릅니다.",
     "text" : "ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ"
   },
@@ -95,8 +95,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "모음 기본 자리",
-    "subtitle": "3/4 \"ㅗㅓㅏㅣ\"",
+    "title": "기본 자리 모음",
+    "subtitle": "ㅗㅓㅏㅣ",
     "description": "ㅗ는 오른손 검시 손가락이 이동합니다.",
     "text" : "ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ"
   },
@@ -107,8 +107,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "모음 기본 자리",
-    "subtitle": "4/4 \"ㅗㅓㅏㅣ\"",
+    "title": "기본 자리 모음",
+    "subtitle": "ㅗㅓㅏㅣ",
     "description": "순서가 뒤죽박죽 입니다.",
     "text" : "ㅣㅓㅗㅏ ㅣㅗㅏㅓ ㅗㅏㅣㅏ ㅓㅗㅗㅣ ㅗㅓㅣㅏ ㅓㅗㅣㅓ ㅏㅣㅏㅗ ㅓㅏㅣㅏ"
   },
@@ -119,8 +119,8 @@
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
-    "title": "자음 모음 기본 자리",
-    "subtitle": "1/3 \"ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ\"",
+    "title": "기본 자리 자음 모음",
+    "subtitle": "ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ",
     "description": "기본 자리 양손을 사용하여 단어를 써 봅니다.",
     "text" : "라라라 아아아 나나나 마마마 러러러러 어어어어 너너너너 머머머머 미미나 미미너 라라머 라미미 호허허 히히히 리리로로 아어어이"
   },
@@ -131,8 +131,8 @@
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
-    "title": "자음 모음 기본 자리",
-    "subtitle": "2/3 \"ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ\"",
+    "title": "기본 자리 자음 모음",
+    "subtitle": "ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ",
     "description": "기본 자리 양손을 사용하여 단어를 써 봅니다.",
     "text" : "나라나라 러허러허 아나아나 마리마리 오리오리 모모라라 나미미로 마리마로 나리나로 아리아로 마니마노 마라노 이라모 하이라 호리모 나미로호"
   },
@@ -143,15 +143,15 @@
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
-    "title": "자음 모음 기본 자리",
-    "subtitle": "2/3",
+    "title": "기본 자리 자음 모음",
+    "subtitle": "ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ",
     "description": "기본 자리 양손을 사용하여 단어를 써 봅니다.",
     "text" : "어머니 엄마 이모 미모 마모 어머니 아라 미이라 아마 하하 하이 미로 나라 나로호 마마미아 라모 이미 어라 오호 하이"
   },
 
   {
     "type": "group",
-    "title": "윗자리 연습"
+    "title": "윗 자리 연습"
   },
 
   {
@@ -161,8 +161,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음",
-    "subtitle": "왼손 윗자리 1 \"ㅂㅈㄷㄱ\"",
+    "title": "윗 자리 자음",
+    "subtitle": "ㅂㅈㄷㄱ",
     "description": "손은 기본자리에.",
     "text" : "ㅂㄷㄱㅈ ㄱㄷㅈㄱ ㅂㄷㄱㄷ ㅈㅂㄷㅈ ㅂㅈㅂㄷ ㅂㄷㅈㄷ ㅂㄷㅂㅈ ㄷㄱㄷㅂ ㄱㄷㅈㅂ"
   },
@@ -173,8 +173,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음",
-    "subtitle": "왼손 윗자리 2 \"ㅂㅈㄷㄱㅅ\"",
+    "title": "윗 자리 자음",
+    "subtitle": "ㅂㅈㄷㄱㅅ",
     "description": "한 번 더 반복합니다.",
     "text" : "ㅂㄷㅅㄷㅂㄷㅂㄷ ㅅㄷㅂㄷㄱ ㅂㄷ ㅅㅅㄷㅂㅈㄷㄷㄱ ㅂㄷㄱㄷㄱㅂ ㅂㄱㄷㄱ ㅂㄷㅅㄱㅂㄷㄷㅂ ㅂㄷㅈㅂㅅㄷ"
   },
@@ -185,8 +185,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "모음",
-    "subtitle": "오른손 윗자리 1 \"ㅕㅑㅐㅔ\"",
+    "title": "윗 자리 모음",
+    "subtitle": "ㅕㅑㅐㅔ",
     "description": "손은 기본자리에",
     "text" : "ㅕㅕㅑㅑ ㅐㅐㅔㅔ ㅕㅐㅑㅔ ㅕㅑㅑㅑ ㅔㅐㅑㅑ ㅕㅑㅔㅕ ㅔㅕㅑㅔ ㅑㅐㅕㅑ"
   },
@@ -197,8 +197,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "모음",
-    "subtitle": "오른손 윗자리 2 \"ㅛㅕㅑㅐㅔ\"",
+    "title": "윗 자리 모음",
+    "subtitle": "ㅛㅕㅑㅐㅔ",
     "description": "손은 기본자리에",
     "text" : "ㅛㅑㅐㅛㅐㅑㅑㅕ ㅑㅐㅔㅐㅑ ㅕㅑㅛㅐㅑㅑㅕ ㅛㅑ ㅐㅔㅑ ㅐㅑㅕㅛ ㅐㅑㅛㅐㅔㅔㅑ ㅕㅑㅛㅑㅐㅔㅑ ㅕㅑㅐㅔㅑㅕㅑ"
   },
@@ -210,7 +210,7 @@
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
-    "title": "자음 모음 결합",
+    "title": "윗 자리 자음 모음 결합",
     "subtitle": "ㅂㅈㄷㄱ ㅕㅑㅐㅔ",
     "description": "",
     "text" : "뱌뱌뱌 벼벼벼 배배배 베베베 제제제 재재재 쟈쟈쟈 져져져 대대댜댜 재재죠죠 벼벼게게 져대져대 뎌대재져"
@@ -222,7 +222,7 @@
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
-    "title": "자음 모음 결합",
+    "title": "윗 자리 자음 모음 결합",
     "subtitle": "ㅂㅈㄷㄱㅅ ㅛㅕㅑㅐㅔ",
     "description": "",
     "text" : "뱌뱌셔셔 갸갸됴됴 져져댜댜 겨겨쇼쇼 대대세세 게게셔셔 재재댜댜 쟈베댜댜 벼대겨겨 베교교교 죠죠재재"
@@ -234,8 +234,8 @@
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
-    "title": "간단한 단어",
-    "subtitle": "윗 자리 단어만 사용한 단어",
+    "title": "윗 자리 간단한 단어",
+    "subtitle": "윗 자리 단어",
     "description": "",
     "text" : "벼 쟈 대 게 쇼 세개댜겨뵤 뱌겨 대개 겨대 게재 세개 쇼쇼쇼 베게 대게 제제 샤베 뱌재 겨제 재개 대배"
   },
@@ -246,9 +246,9 @@
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
-    "title": "간단한 단어",
-    "subtitle": "기본자리와 윗 자리를 사용한 단어",
-    "description": "윗 자리만 누르다 보면 손가락이 윗 자리에서 기본 자리로 내려오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 윗자리를 타이핑 할 때 손가락 하나만 윗 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.",
+    "title": "윗 자리 간단한 단어",
+    "subtitle": "기본자리와 윗 자리 단어",
+    "description": "윗 자리만 누르다 보면 손가락이 윗 자리에서 기본 자리로 내려오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 윗 자리를 타이핑 할 때 손가락 하나만 윗 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.",
     "text" : "어머니가 아버지가 나라고 아기야 호미야 미래 나가라 도라지 바보 라고 하며 다리다"
   },
 
@@ -264,8 +264,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음",
-    "subtitle": "왼손 아랫자리 1 \"ㅋㅌㅊㅍ\"",
+    "title": "아랫 자리 자음",
+    "subtitle": "ㅋㅌㅊㅍ",
     "description": "손은 기본자리에.",
     "text" : "ㅋㅌㅊㅍ ㅋㅌㅊㅍ ㅍㅊㅌㅋ ㅍㅊㅌㅋ ㅋㅍㅋㅍ ㅌㅊㅌㅊ ㅍㅊㅋㅌ ㅍㅌㅊㅍ ㅋㅊㅋㅊ ㅋㅍㅌㅊ ㅊㅌㅍㅋ ㅋㅋㅊㅍ ㅊㅌㅋㅊ"
   },
@@ -276,8 +276,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음",
-    "subtitle": "왼손 아랫자리 2 \"ㅋㅌㅊㅍ\"",
+    "title": "아랫 자리 자음",
+    "subtitle": "ㅋㅌㅊㅍ",
     "description": "손은 기본자리에.",
     "text" : "ㅋㅌㅊㅊㅌㅋㅍㅊ ㅋㅊㅋㅊㅊㅍ ㅋㅌㅊㅋㅋ ㅊㅍㅌㅊ ㅊㅌ ㅋㅊㅍㅋㅌㅊㅍ ㅋㅌㅊㅍㅊㅊㅌㅋ ㅊㅋㅊㅋㅌㅊㅍㅋ ㅊㅋㅊㅍ ㅋㅊㅍㅋㅌㅊㅍ ㅊㅊㅋㅌㅊ"
   },
@@ -288,9 +288,9 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "모음",
-    "subtitle": "오른손 아랫자리 1 \"ㅠㅜㅡ\"",
-    "description": "오른손 아랫자리는 특별합니다. 다른 자리라면 왼손 검지손가락이 눌러야 할 ㅠ를 아래자리의 경우 오른손 검지 손가락이 누르게 됩니다.",
+    "title": "아랫 자리 모음",
+    "subtitle": "ㅠㅜㅡ",
+    "description": "오른손 아랫 자리는 특별합니다. 다른 자리라면 왼손 검지손가락이 눌러야 할 ㅠ를 아래자리의 경우 오른손 검지 손가락이 누르게 됩니다.",
     "text" : "ㅠㅜㅡ ㅠㅜㅡ ㅡㅠㅡ ㅜㅡㅠ ㅡㅡㅜ ㅠㅜㅡ ㅡㅜㅠ ㅜㅠㅠ ㅜㅜㅠ"
   },
 
@@ -301,7 +301,7 @@
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
-    "title": "자음 모음 결합",
+    "title": "아랫 자리 자음 모음",
     "subtitle": "ㅋㅌㅊㅍ ㅠㅜㅡ",
     "description": "",
     "text" : "쿠쿠트트 츠츠트트 큐큐츠츠 추추프프 쿠쿠츠츠 트트츠츠 츄츄크크 트트츠츠 크크츠츠 프프츠츠 프프트트 투투쿠쿠"
@@ -313,8 +313,8 @@
     "difficulty": 1,
     "form": "sentence",
     "language": "kr",
-    "title": "간단한 단어",
-    "subtitle": "아랫 자리만 사용한 단어",
+    "title": "아랫 자리 자음 모음",
+    "subtitle": "ㅋㅌㅊㅍ ㅠㅜㅡ",
     "description": "",
     "text" : "쿠크 추크 푸츄 프쿠츠 트추 추츄 투츠트츠 크츠프 크추퓨 큐추 큐큐츄 쿠추 츠프 트쿠푸"
   },
@@ -326,14 +326,14 @@
     "form": "sentence",
     "language": "kr",
     "title": "간단한 단어",
-    "subtitle": "기본자리와 아랫 자리만 사용한 단어",
+    "subtitle": "기본 자리와 아랫 자리 단어",
     "description": "아랫 자리만 누르다 보면 손가락이 아랫 자리에서 기본 자리로 올라오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 아랫 자리를 타이핑 할 때 손가락 하나만 아랫 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.",
     "text" : "쿠미 트리 타로 터프 토토로 투투 마리프 토미 프라하 하프 추이 치프 추이 초파리 추호 마이크 마크로 파이프 처마"
   },
 
   {
     "type": "group",
-    "title": "윗 자리와 아랫자리 연습"
+    "title": "윗 자리와 아랫 자리 연습"
   },
 
   {
@@ -343,8 +343,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "자음",
-    "subtitle": "왼손 윗 자리와 아랫 자리 1 \"ㅂㅈㄷㄱㅅ, ㅋㅌㅊㅍ\"",
+    "title": "윗 자리와 아랫 자리 자음",
+    "subtitle": "ㅂㅈㄷㄱㅅ ㅋㅌㅊㅍ",
     "description": "",
     "text" : "ㅂㅈㄷㄱㅅ ㅋㅌㅊㅍ ㅅㄱㄷㅈㅂ ㅍㅊㅌㅋ ㅂㅌㄷㅍㅅㅊㅈㅋ ㅂㅍㅊㄷㅈㅌㅋㄱ ㅅㅊㄷㄷㅈㅂㅌㅊㅍㅋㅌ ㅊㅍㅈㅊㄷ"
   },
@@ -355,8 +355,8 @@
     "difficulty": 1,
     "form": "character",
     "language": "kr",
-    "title": "모음",
-    "subtitle": "오른손 윗 자리와 아랫 자리 1 \"ㅛㅕㅑㅐㅔ, ㅠㅜㅡ\"",
+    "title": "윗 자리와 아랫 자리 모음",
+    "subtitle": "ㅛㅕㅑㅐㅔ ㅠㅜㅡ",
     "description": "",
     "text" : "ㅛㅕㅑㅐㅔ ㅠㅜㅡ ㅔㅐㅑㅕㅛ ㅡㅜㅠ ㅛㅑㅔㅐㅕㅠㅡㅜ ㅠㅕㅑㅐㅠㅕㅑㅐㅡㅔㅕㅡ ㅕㅑㅐㅡㅜㅕㅐㅛㅔ ㅑㅕㅡㅐ"
   },
@@ -368,7 +368,7 @@
     "form": "sentence",
     "language": "kr",
     "title": "간단한 단어",
-    "subtitle": "윗 자리와 아랫 자리",
+    "subtitle": "윗 자리와 아랫 자리 단어",
     "description": "손이 좀 바쁩니다.",
     "text" : "배구 구두 주세 벼 개수 슈크 대체제 추수 두배 투구 수재 세수 세규"
   },
@@ -407,7 +407,7 @@
     "form": "sentence",
     "language": "kr",
     "title": "기본 자리 받침",
-    "subtitle": "ㅁㄴㅇㄹㅎ, ㅗㅓㅏㅣ",
+    "subtitle": "ㅁㄴㅇㄹㅎ",
     "description": "",
     "text" : "맘마 엄마 암호 날라 몰라 알아 엉망 홈인 홈런 망함 망하니 날라 미안 먼 머언 안마 망나니 알마니아 할머니 할멈 한마리 함몰"
   },
@@ -419,7 +419,7 @@
     "form": "sentence",
     "language": "kr",
     "title": "윗 자리와 기본 자리 받침",
-    "subtitle": "ㅁㄴㅇㄹㅎ, ㅂㅈㄷㄱㅅ, ㅗㅓㅏㅣ, ㅛㅕㅑㅐㅔ",
+    "subtitle": "ㅁㄴㅇㄹㅎ ㅂㅈㄷㄱㅅ",
     "description": "",
     "text" : "아범 할아버지 알바니아 맨드라미 블로그 드럼 갈매기 감사하다 감내하고 간간하다 걸레질 검진 간사하다 옹졸하다"
   },
@@ -431,7 +431,7 @@
     "form": "sentence",
     "language": "kr",
     "title": "기본 자리와 윗 자리 받침",
-    "subtitle": "ㅁㄴㅇㄹㅎ, ㅂㅈㄷㄱㅅ, ㅗㅓㅏㅣ, ㅛㅕㅑㅐㅔ",
+    "subtitle": "ㅁㄴㅇㄹㅎ ㅂㅈㄷㄱㅅ",
     "description": "",
     "text" : "기억 도약 잊다 햇살 밥먹다 맞히다 이합집산 납시오 감각 갑갑하다 검지손가락 갇히다 걷히다 갯지렁이 각질 갈색 감사합니다 걷히다 곧다 걷어가지 걱정하지마 객기"
   },
@@ -443,7 +443,7 @@
     "form": "sentence",
     "language": "kr",
     "title": "아랫 자리와 기본 자리 받침",
-    "subtitle": "ㅁㄴㅇㄹㅎ, ㅋㅌㅊㅍ, ㅗㅓㅏㅣ, ㅠㅜㅡ",
+    "subtitle": "ㅁㄴㅇㄹㅎ ㅋㅌㅊㅍ",
     "description": "",
     "text" : "호출 미친놈 만루홈런 이탈리아 창문 얼추 춤추니 출출함 충치 친칠라 탐험 통키 콩 한톨 한판 헐크 날라차"
   },
@@ -455,7 +455,7 @@
     "form": "sentence",
     "language": "kr",
     "title": "기본 자리와 아랫 자리 받침",
-    "subtitle": "ㅁㄴㅇㄹㅎ, ㅋㅌㅊㅍ, ㅗㅓㅏㅣ, ㅠㅜㅡ",
+    "subtitle": "ㅁㄴㅇㄹㅎ ㅋㅌㅊㅍ",
     "description": "",
     "text" : "민낯 잎 높이 밑 옻나무 옻칠 윷놀이 엎치니 잋히니 옅어 앞날 앞일 앞치마 맡아 옻나무 옻칠"
   },
@@ -479,7 +479,7 @@
     "form": "sentence",
     "language": "kr",
     "title": "모든 자리와 윗 자리 받침",
-    "subtitle": "ㅁㄴㅇㄹㅎ",
+    "subtitle": "ㅂㅈㄷㄱㅅ",
     "description": "",
     "text" : "카카오톡 잊어주세요 도움닫기 엊그제 이튿날 각개전투 색칠공부 갖바치 갖추다 갖춘마디 갯마을 갯버들 거룻배 거룩하다 걷어채다"
   },
@@ -491,7 +491,7 @@
     "form": "sentence",
     "language": "kr",
     "title": "모든 자리와 아랫 자리 받침",
-    "subtitle": "ㅁㄴㅇㄹㅎ",
+    "subtitle": "ㅋㅌㅊㅍ",
     "description": "",
     "text" : "잎새 얕다 낯익다 민낯에 높이차기 엎치락뒤치락 엎지르다 팥빙수 팥죽 앞가르마 앞당기다 앞마당 높새바람 잋혀지다 밑장넣기 높이날다 같다 갚다 같이하다 옅어지다 옆면 옆구리 옆길 얕보다"
   },
