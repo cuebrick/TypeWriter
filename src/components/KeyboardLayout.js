@@ -129,10 +129,10 @@ class KeyboardLayout extends React.Component{
 					<Keycap keyCode={93} enn={"c"} keyType={"type1 disable"}/>
 					<Keycap keyCode={25} enn={"ctrl"} keyType={"type1 disable"}/>
 				</div>
-				<div className="hands">
+				{/*<div className="hands">
 					<div className="hand-left"><img src="/images/hand-left.svg" /></div>
 					<div className="hand-right"><img src="/images/hand-right.svg" /></div>
-				</div>
+				</div>*/}
 			</div>
 		)
 	}
