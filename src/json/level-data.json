@@ -390,6 +390,30 @@
     "description": "",
     "text" : "배터리 마우스 휴지 육탄전 쳇바퀴"
   },
+  {
+    "type": "level",
+    "id": "c0502",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "간단한 단어",
+    "subtitle": "키보드 전체를 모두 이용",
+    "description": "",
+    "text" : "배터리 마우스 휴지 너구리 너그러이 더구나 도르래 디도스 두르다 드레스 드러나다 드라이버 드라마 드라이아이스 드러내다 디스크 라디에이터 레이스 레퍼토리 레코드"
+  },
+  {
+    "type": "level",
+    "id": "c0503",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "간단한 단어",
+    "subtitle": "키보드 전체를 모두 이용",
+    "description": "",
+    "text" : "리프트 리트머스 리포터 리스트 리어카 리코더 마크하다 마도로스 마르다 마무리 마요네즈 마스크 미스터리 마호메트 매스미디어 미스트 머리채 머무르다"
+  },
 
 
 
