@@ -1,6 +1,18 @@
 "use strict";
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof3 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _typeof2 = typeof Symbol === "function" && _typeof3(Symbol.iterator) === "symbol" ? function (obj) {
+	return typeof obj === "undefined" ? "undefined" : _typeof3(obj);
+} : function (obj) {
+	return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof3(obj);
+};
+
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+} : function (obj) {
+	return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+};
 
 /*!
  * jQuery JavaScript Library v3.2.1
@@ -593,6 +605,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		    push_native = arr.push,
 		    push = arr.push,
 		    slice = arr.slice,
+
 
 		// Use a stripped-down indexOf as it's faster than native
 		// https://jsperf.com/thor-indexof-vs-for/5
@@ -1218,6 +1231,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				    tmp = [],
 				    i = 0,
 
+
 				// By happy coincidence, a (broken) gEBTN appears on DocumentFragment nodes too
 				results = context.getElementsByTagName(tag);
 
@@ -1509,6 +1523,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			}
 
 			var fn = Expr.attrHandle[name.toLowerCase()],
+
 
 			// Don't get fooled by Object.prototype properties (jQuery #13807)
 			val = fn && hasOwn.call(Expr.attrHandle, name.toLowerCase()) ? fn(elem, name, !documentIsHTML) : undefined;
@@ -2423,8 +2438,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				    setMatched = [],
 				    contextBackup = outermostContext,
 
+
 				// We must always have either seed elements or outermost context
 				elems = seed || byElement && Expr.find["TAG"]("*", outermost),
+
 
 				// Use integer dirruns iff this is the outermost matcher
 				dirrunsUnique = dirruns += contextBackup == null ? 1 : Math.random() || 0.1,
