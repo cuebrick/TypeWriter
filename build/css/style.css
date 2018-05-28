@@ -194,7 +194,7 @@ header{
 .letter-list{
 	position: relative;
 	min-height: 128px;
-	max-height: 320px;
+	max-height: 300px;
 	overflow-y: auto;
 	background-color: #20202c;
 	padding: 10px;
