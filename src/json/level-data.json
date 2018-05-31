@@ -474,7 +474,42 @@
     "description": "",
     "text" : "무르다 무시무시하다 무모하다 무치다 무허가 무효 무지 미그기 미뉴에트 미니스커트 미루다 미스터리 미시시피 미지수 미치다 미터기"
   },
-
+  {
+    "type": "level",
+    "id": "c0509",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "간단한 단어",
+    "subtitle": "키보드 전체를 모두 이용",
+    "description": "",
+    "text" : "바구니 바그너 바르다 바래다주다 바르샤바 바리케이드 바야흐로 바이스 바이러스 바이트 바치다 바코드 바흐 버그 버드나무 버무리다 버티다 버스 버퍼"
+  },
+  {
+    "type": "level",
+    "id": "c0510",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "간단한 단어",
+    "subtitle": "키보드 전체를 모두 이용",
+    "description": "",
+    "text" : "배터리 베르디 베이스 베이크벼루 벼르다 보디가드 보르네오 보수파 보유자 보채다 보초 보크사이트 보트 보푸라기 부도나다 부도체 부드러우니 부르다 부르트다 부리나케 부스러기 부지기수 부추기다 부치다 부처 부푸러기"
+  },
+  {
+    "type": "level",
+    "id": "c0511",
+    "grade": 0,
+    "difficulty": 1,
+    "form": "sentence",
+    "language": "kr",
+    "title": "간단한 단어",
+    "subtitle": "키보드 전체를 모두 이용",
+    "description": "",
+    "text" : "브라보 브로마이드 브이아이피 브러시 비구니 비너스 비누 비디오테이프 비수기 비우다 비유 비즈니스 비추다 비이커 비켜나다 비키니 비파 비치다 비프스테이크"
+  },
 
   {
     "type": "group",
