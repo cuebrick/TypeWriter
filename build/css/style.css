@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans');
-/*@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');*/
 @font-face {
 	font-family: 'LexiSaebomR';
 	font-style: normal;
@@ -20,7 +19,6 @@ body{
 	background: #333 url("../images/type-bg2.jpg") center;
 	background-size: cover;
 	font-family: 'malgun gothic', sans-serif;
-	/*overflow-y: hidden;*/
 }
 
 .font-LexiSaebomR{
@@ -93,7 +91,6 @@ nav > ul > li{
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
-	/*border: 3px solid #fff;*/
 	border-radius: 40px;
 	background-color: rgba(255, 255, 255, 0.4);
 	padding: 0;
@@ -160,10 +157,6 @@ header{
 		padding-top: 3px;
 	}
 	.minimize > h2{
-		/*font-size: 0.65em;
-		line-height: 1em;
-		padding-top: 2px;
-		margin-left: 0;*/
 		display: none;
 	}
 	.main h3{
@@ -175,12 +168,9 @@ header{
 	}
 }
 .main h3{
-	/*background-color: rgba(0,0,0,0.7);*/
-	/*border-radius: 0.2em;*/
 	padding: 0.4em;
 }
 .main .main-text{
-	/*background-color: rgba(0,0,0,0.7);*/
 	padding: 0.4em;
 }
 
@@ -188,9 +178,6 @@ header{
 	padding: 0.5em;
 	position: relative;
 }
-/*.sentence-area{
-	display: none;
-}*/
 .letter-list{
 	position: relative;
 	min-height: 128px;
@@ -212,6 +199,11 @@ header{
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+@media (max-width: 460px){
+	.letter{
+		font-size: 1em;
+	}
 }
 .letter > .text{
 	background-color: rgba(255, 255, 255, 0.2);
@@ -265,7 +257,6 @@ header{
 /*LEVEL LIST, LEVEL ITEM*/
 .level-list{
 	font-size: 16px;
-	/*overflow: auto;*/
 }
 .level-list > a{
 	font-size: 0;
@@ -277,7 +268,6 @@ header{
 	width: 180px;
 	height: 110px;
 	float: left;
-	/*box-sizing: border-box;*/
 	padding: 10px;
 	background-color: rgba(151, 206, 255, 0.1);
 	border-radius: 5px;
@@ -336,9 +326,6 @@ header{
 	overflow-x: hidden;
 	text-overflow: ellipsis;
 	margin-top: 10px;
-	/*position: absolute;*/
-	/*width: 100%;*/
-	/*bottom: 20px;*/
 }
 .level-item .level-grade{
 	height: 50px;
@@ -353,9 +340,6 @@ header{
 .level-item .level-desc{
 	font-size: 0.8em;
 	color: #999;
-	/*position: absolute;*/
-	/*width: 180px;*/
-	/*bottom: 5px;*/
 	white-space: nowrap;
 	overflow-x: hidden;
 	text-overflow: ellipsis;
@@ -811,7 +795,6 @@ input[type=text]{
 	font-family: 'Noto Sans KR', sans-serif;
 }
 .keyboard .hands{
-	/*background-color: rgba(255, 255, 255, 0.56);*/
 	height: 200px;
 	position: absolute;
 	width: 100%;
