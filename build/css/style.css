@@ -848,13 +848,26 @@ input[type=text]{
 }
 .setting-list li{
 	box-sizing: content-box;
-	height: 3em;
+	min-height: 3em;
 	line-height: 3em;
 	border-top: 1px solid #555555;
 }
 .setting-list li:last-child{
 	border-bottom: 1px solid #555555;
 }
+
+@media (max-width: 460px){
+	.setting-list li{
+		overflow: auto;
+		min-height: 6em;
+	}
+	.setting-list .desc{
+		float: none;
+		clear: both;
+		width: auto;
+	}
+}
+
 .app-info-item{
 	font-size: 0.8em;
 	margin: 1em 0 1em 0.5em;
