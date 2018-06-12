@@ -477,7 +477,7 @@ header{
 	width: 200px;
 	height: 100%;
 	box-sizing: border-box;
-	padding: 5px;
+	/*padding: 5px;*/
 	position: relative;
 }
 .profile.user-layer-mode{
@@ -503,11 +503,13 @@ header{
 .profile .user-description{
 	position: absolute;
 	z-index: 99;
-	width: 160px;
+	min-width: 170px;
+	height: 50px;
 	font-size: 14px;
-	right: 45px;
+	right: 40px;
 	text-align: right;
 	transition: 0.4s all;
+	padding: 5px;
 }
 .profile.typing-mode .user-description,
 .profile.user-layer-mode .user-description{
@@ -515,9 +517,12 @@ header{
 	z-index: 97;
 	width: 190px;
 }
+.profile.add-user-mode{
+}
 .profile.add-user-mode .user-description{
-	right: 85px;
+	right: 80px;
 	z-index: 97;
+	background-color: #393a53;
 }
 .profile .user-description .icon-selector{
 	background-color: rgba(16, 16, 16, 0.9);
@@ -536,7 +541,7 @@ header{
 
 .profile .user-description .current-user-profile .user-grade,
 .profile .user-description .current-user-profile .user-name{
-	width: 115px;
+	width: 110px;
 	float: right;
 }
 
