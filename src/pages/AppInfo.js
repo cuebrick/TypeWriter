@@ -14,7 +14,7 @@ class AppInfo extends React.Component{
 					<h4>Contact</h4>
 					<p className="author">
 						문의 또는 개선 사항이 있으면 아래의 방법으로 연락해 주세요.<br/>
-						e-mail : cuebrick@gmail.com
+						e-mail : <a href="mailto:cuebrick@gmail.com">cuebrick@gmail.com</a>
 					</p>
 				</div>
 				<div className="app-info-item">
