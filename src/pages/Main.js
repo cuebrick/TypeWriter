@@ -37,7 +37,7 @@ class Main extends React.Component{
 				<h3>Typing Play 에 오신것을 환영합니다.</h3>
 				<div className="main-text font-LexiSaebomR">
 					{
-						this.state.isShowNext === false ?
+						this.state.isShowNext === undefined ?
 						<div>
 							<Information/>
 							<div className="button-ui">
