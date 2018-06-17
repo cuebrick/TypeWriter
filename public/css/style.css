@@ -495,6 +495,8 @@ header{
 .profile .user-info{
 	height: 100%;
 	cursor: pointer;
+	overflow: hidden;
+	position: relative;
 }
 .profile.typing-mode .user-info{
 	cursor: default;
@@ -646,12 +648,11 @@ input[type=text]{
 }
 .profile.user-layer-mode .user-description .current-user-profile{
 	float: right;
-	max-width: 170px;
+	max-width: 160px;
 }
 .user-description .setting-button{
 	float: left;
 	margin-top: 12px;
-	margin-left: 5px;
 }
 
 
