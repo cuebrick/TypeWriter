@@ -518,7 +518,8 @@ header{
 	z-index: 97;
 	width: 190px;
 }
-.profile.add-user-mode{
+.profile.add-user-mode > .user-info{
+	overflow: visible;
 }
 .profile.add-user-mode .user-description{
 	right: 80px;
