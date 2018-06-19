@@ -13,8 +13,9 @@ class AppInfo extends React.Component{
 				<div className="app-info-item">
 					<h4>Contact</h4>
 					<p className="author">
-						문의 또는 개선 사항이 있으면 아래의 방법으로 연락해 주세요.<br/>
-						e-mail : <a href="mailto:cuebrick@gmail.com">cuebrick@gmail.com</a>
+						문의 또는 개선에 대한 의견이 있으면 아래의 방법으로 연락해 주세요.<br/>
+						e-mail : <a href="mailto:cuebrick@gmail.com">cuebrick@gmail.com</a><br/>
+						웹사이트 : <a href="http://thiscript.com" target="_blank">http://thiscript.com</a>
 					</p>
 				</div>
 				<div className="app-info-item">
