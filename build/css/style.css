@@ -431,6 +431,7 @@ header{
 }
 
 .button-ui{
+	clear: both;
 	padding: 20px 0;
 	font-size: 15px;
 }
@@ -853,6 +854,7 @@ input[type=text]{
 	background-color: #97a7c7;
 }
 .setting-list li{
+	clear: both;
 	box-sizing: content-box;
 	min-height: 3em;
 	line-height: 3em;
