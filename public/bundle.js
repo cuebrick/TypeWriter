@@ -27108,13 +27108,20 @@ var AppInfo = function (_React$Component) {
 					_react2.default.createElement(
 						'p',
 						{ className: 'author' },
-						'\uBB38\uC758 \uB610\uB294 \uAC1C\uC120 \uC0AC\uD56D\uC774 \uC788\uC73C\uBA74 \uC544\uB798\uC758 \uBC29\uBC95\uC73C\uB85C \uC5F0\uB77D\uD574 \uC8FC\uC138\uC694.',
+						'\uBB38\uC758 \uB610\uB294 \uAC1C\uC120\uC5D0 \uB300\uD55C \uC758\uACAC\uC774 \uC788\uC73C\uBA74 \uC544\uB798\uC758 \uBC29\uBC95\uC73C\uB85C \uC5F0\uB77D\uD574 \uC8FC\uC138\uC694.',
 						_react2.default.createElement('br', null),
 						'e-mail : ',
 						_react2.default.createElement(
 							'a',
 							{ href: 'mailto:cuebrick@gmail.com' },
 							'cuebrick@gmail.com'
+						),
+						_react2.default.createElement('br', null),
+						'\uC6F9\uC0AC\uC774\uD2B8 : ',
+						_react2.default.createElement(
+							'a',
+							{ href: 'http://thiscript.com', target: '_blank' },
+							'http://thiscript.com'
 						)
 					)
 				),
