@@ -254,12 +254,12 @@ header{
 
 /*LEVEL LIST, LEVEL ITEM*/
 .level-list{
-	font-size: 16px;
+	font-size: 0;
 }
 .level-list > a{
-	font-size: 0;
 	display: inline-block;
 	height: 110px;
+	margin: 3px;
 }
 .level-item{
 	position: relative;
@@ -269,17 +269,15 @@ header{
 	padding: 10px;
 	background-color: rgba(151, 206, 255, 0.1);
 	border-radius: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
 	cursor: pointer;
 	transition: 0.4s all;
 	font-size: 14px;
 	text-align: center;
 }
-@media (max-width: 599px) {
+@media (max-width: 460px) {
 	.level-list > a{
 		width: 48%;
-		margin-right: 2%;
+		margin: 1%;
 	}
 	.level-item{
 		width: 100%;
