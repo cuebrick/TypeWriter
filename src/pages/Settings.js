@@ -45,6 +45,11 @@ class Settings extends React.Component{
 				<h3>환경 설정 <small>({this._um.info.name})</small></h3>
 				<ul className="setting-list">
 					<li>
+						<div className="icon-view">
+							<img src={"/images/icon/profile-icon-" + this._um.info.icon + ".svg"}/>
+						</div>
+					</li>
+					<li>
 						<div className="title">파워 모드</div>
 						<div className="ui">
 							<button onClick={this.togglePowerMode} className={powerModeClassName}>{powerModeButtonText}</button>

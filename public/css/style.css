@@ -820,6 +820,9 @@ input[type=text]{
 
 
 /*SETTINGS*/
+.setting-list .icon-view img{
+	width: 100px;
+}
 .setting-list .title{
 	float: left;
 	width: 20%;
