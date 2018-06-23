@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PackageInfo from '../../package';
+// import HomeImage from '../images/home.svg';
 
 class AppInfo extends React.Component{
 	render(){
@@ -45,7 +46,7 @@ class AppInfo extends React.Component{
 				</div>
 				<div className="button-ui">
 					<Link to="/">
-						<button className="home-btn circle-btn"><img src="/images/home.svg" width="15" height="15"/></button>
+						<button className="home-btn"><img src="/images/home.svg" width="15" height="15"/></button>
 					</Link>
 					<Link to="/levels"><button>단계 목록으로 이동</button></Link>
 					<Link to="/about"><button>Typing Play 일반 정보</button></Link>
