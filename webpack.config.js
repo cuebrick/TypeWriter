@@ -25,7 +25,8 @@ module.exports = {
 					cacheDirectory: true,
 					presets: ['es2015', 'react']
 				}
-			}
+			},
+			{ test: /\.(svg|ttf|woff|woff2|eot)$/, loader: 'babel-loader' }
 		]
 	}
 };
