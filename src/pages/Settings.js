@@ -48,6 +48,7 @@ class Settings extends React.Component{
 						<div className="icon-view">
 							<img src={"/images/icon/profile-icon-" + this._um.info.icon + ".svg"}/>
 						</div>
+						<div className="username-view">{this._um.info.name}</div>
 					</li>
 					<li>
 						<div className="title">파워 모드</div>
