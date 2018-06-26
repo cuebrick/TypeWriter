@@ -36,6 +36,10 @@ class Settings extends React.Component{
 		this.setState({isRemovedRecord: true});
 	}
 
+	handleRemovePlayer(){
+		// TODO: 플레이어 삭제 구현
+	}
+
 	render(){
 		let powerModeClassName = (this.state.isPowerMode) ? 'on' : '';
 		let powerModeButtonText = (this.state.isPowerMode) ? '켜짐' : '꺼짐';
@@ -55,7 +59,7 @@ class Settings extends React.Component{
 						<div className="ui">
 							<button onClick={this.togglePowerMode} className={powerModeClassName}>{powerModeButtonText}</button>
 						</div>
-						<div className="desc">타이핑 할 때 화면에 반짝이는 효과를 나타냅니다. 속도가 느린 컴퓨터에서는 꺼두는 것을 권장합니다.</div>
+						<div className="desc">타이핑 할 때 화면에 반짝이는 효과를 나타냅니다. 화면 느려짐이 생기는 컴퓨터에서는 꺼두는 것을 권장합니다.</div>
 					</li>
 					<li>
 						<div className="title">기록 삭제</div>
@@ -63,6 +67,13 @@ class Settings extends React.Component{
 							<button onClick={this.handleRemoveRecord} className={"delete-button" + removeRecordClassName}>삭제</button>
 						</div>
 						<div className="desc">{this._um.info.name}님이 기록한 레벨 기록들을 모두 삭제 합니다. 삭제 되면 복구 되지 않습니다.</div>
+					</li>
+					<li>
+						<div className="title">캐릭터 삭제</div>
+						<div className="ui">
+							<button onClick={this.handleRemovePlayer} className={"delete-button" + removeRecordClassName}>삭제</button>
+						</div>
+						<div className="desc">{this._um.info.name}님의 플레이어를 삭제 합니다. 삭제 되면 복구 되지 않습니다.</div>
 					</li>
 				</ul>
 				<div className="button-ui">
