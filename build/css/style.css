@@ -140,15 +140,15 @@ header{
 }
 .minimize > h1{
 	float: left;
-	font-size: 1.5em;
-	padding-top: 3px;
+	font-size: 1em;
+	padding-top: 10px;
 }
 .minimize > h2{
 	float: left;
 	font-size: 1em;
-	line-height: 2.3em;
+	line-height: 1em;
 	margin-left: 10px;
-	padding-top: 3px;
+	padding-top: 20px;
 	color: #aaaaaa;
 }
 @media (max-width: 599px) {
@@ -372,11 +372,11 @@ header{
 	display: inline-block;
 	width: 25px;
 	height: 25px;
-	background-image: url(../images/star.png);
+	background-image: url(../images/star.svg);
 	background-size: 25px;
 }
 .stars > .star.incomplete{
-	background-image: url(../images/star-half.png);
+	background-image: url(../images/star-half.svg);
 }
 .star-rating.stars{
 	position: absolute;
