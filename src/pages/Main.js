@@ -43,7 +43,7 @@ class Main extends React.Component{
 							<div className="button-ui">
 								<Link to="/levels"><button>시작하기</button></Link>
 								<Link to="/settings">
-									<button className="settings-btn circle-btn"><img src="/images/settings.svg" width="15" height="15"/></button>
+									<button className="settings-btn"><img src="/images/settings.svg" width="15" height="15"/></button>
 								</Link>
 							</div>
 						</div>
@@ -60,7 +60,7 @@ class Main extends React.Component{
 									</button>
 								</Link>
 								<Link to="/settings">
-									<button className="settings-btn circle-btn"><img src="/images/settings.svg" width="15" height="15"/></button>
+									<button className="settings-btn"><img src="/images/settings.svg" width="15" height="15"/></button>
 								</Link>
 							</div>
 						</div>
