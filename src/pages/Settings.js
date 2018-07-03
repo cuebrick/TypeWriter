@@ -16,14 +16,18 @@ class Settings extends React.Component{
 
 		this.state = {
 			isPowerMode : this._um.info.settings.powerMode,
-			isRemovedRecord: false
+			isRemovedRecord: false,
+			info: this._um.info
 		}
 	}
 
 	_um;
 
 	reloadSettings(){
-		this.setState({isPowerMode: this._um.info.settings.powerMode});
+		this.setState({
+			isPowerMode: this._um.info.settings.powerMode,
+			info: this._um.info
+		});
 	}
 
 	togglePowerMode(){
@@ -47,13 +51,13 @@ class Settings extends React.Component{
 		let removeRecordClassName = (this.state.isRemovedRecord) ? ' removed' : '';
 		return(
 			<div className="container">
-				<h3>환경 설정 <small>({this._um.info.name})</small></h3>
+				<h3>환경 설정 <small>({this.state.info.name})</small></h3>
 				<ul className="setting-list">
 					<li>
 						<div className="icon-view">
-							<img src={"/images/icon/profile-icon-" + this._um.info.icon + ".svg"}/>
+							<img src={"/images/icon/profile-icon-" + this.state.info.icon + ".svg"}/>
 						</div>
-						<div className="username-view">{this._um.info.name}</div>
+						<div className="username-view">{this.state.info.name}</div>
 					</li>
 					<li>
 						<div className="title">파워 모드</div>
@@ -67,7 +71,7 @@ class Settings extends React.Component{
 						<div className="ui">
 							<button onClick={this.handleRemoveRecord} className={"delete-button" + removeRecordClassName}>삭제</button>
 						</div>
-						<div className="desc">{this._um.info.name}님이 기록한 레벨 기록들을 모두 삭제 합니다. 삭제 되면 복구 되지 않습니다.</div>
+						<div className="desc">{this.state.info.name}님이 기록한 레벨 기록들을 모두 삭제 합니다. 삭제 되면 복구 되지 않습니다.</div>
 					</li>
 					{/*
 					<li>
