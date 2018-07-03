@@ -15,7 +15,8 @@ class Levels extends React.Component{
 			saveData : this._um.info.saveData
 		}
 
-		this._um.setReloadLevelsCallback(this.reloadLevels);
+		// this._um.setReloadLevelsCallback(this.reloadLevels);
+		this._um.setUserReloadCallback(this.reloadLevels);
 	}
 
 	_pm;

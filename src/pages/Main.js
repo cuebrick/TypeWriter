@@ -14,7 +14,8 @@ class Main extends React.Component{
 		this.reload = this.reload.bind(this);
 		this._pm = PlayManager.getInstance();
 		this._um = UserManager.getInstance();
-		this._um.setReloadMainCallback(this.reload);
+		// this._um.setReloadMainCallback(this.reload);
+		this._um.setUserReloadCallback(this.reload);
 
 		let nextId = this._pm.getProgressLevelId();
 		this.state = {

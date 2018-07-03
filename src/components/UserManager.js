@@ -20,9 +20,11 @@ class UserManager{
 	_info;
 	_users;
 
-	_reloadLevelsCallback;
-	_reloadSettingsCallback;
-	_reloadMainCallback;
+	// _reloadLevelsCallback;
+	// _reloadSettingsCallback;
+	// _reloadMainCallback;
+	
+	_reloadCallbacks;
 
 	/****************************************************
 	 * instance method
@@ -34,6 +36,7 @@ class UserManager{
 			new Error('UserManager is Singlton class !!');
 		}
 
+		this._reloadCallbacks = [];
 		this.initUser();
 	}
 
@@ -50,12 +53,17 @@ class UserManager{
 		localStorage.setItem('currentUser', id);
 		this.initUser();
 		this.getUserListData();
-		if(this._reloadLevelsCallback)
-			this._reloadLevelsCallback();
-		if(this._reloadSettingsCallback)
-			this._reloadSettingsCallback();
-		if(this._reloadMainCallback)
-			this._reloadMainCallback();
+		// if(this._reloadLevelsCallback)
+		// 	this._reloadLevelsCallback();
+		// if(this._reloadSettingsCallback)
+		// 	this._reloadSettingsCallback();
+		// if(this._reloadMainCallback)
+		// 	this._reloadMainCallback();
+
+		for(let i = 0; i < this._reloadCallbacks.length; ++i){
+			this._reloadCallbacks[i]();
+		}
+
 		return this._info;
 	}
 
@@ -76,16 +84,23 @@ class UserManager{
 		this.saveUser(this._info);
 	}
 
-	setReloadLevelsCallback(callback){
-		this._reloadLevelsCallback = callback;
+	/*setReloadLevelsCallback(callback){
+		// this._reloadLevelsCallback = callback;
+		this.setUserReloadCallback(callback);
 	}
 
 	setReloadSettingsCallback(callback){
-		this._reloadSettingsCallback = callback;
+		// this._reloadSettingsCallback = callback;
+		this.setUserReloadCallback(callback);
 	}
 
 	setReloadMainCallback(callback){
-		this._reloadMainCallback = callback;
+		// this._reloadMainCallback = callback;
+		this.setUserReloadCallback(callback);
+	}*/
+
+	setUserReloadCallback(callback){
+		this._reloadCallbacks.push(callback);
 	}
 
 	removeSaveData(){

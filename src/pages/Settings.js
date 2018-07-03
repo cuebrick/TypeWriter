@@ -11,7 +11,8 @@ class Settings extends React.Component{
 		this.handleRemoveRecord = this.handleRemoveRecord.bind(this);
 		this.reloadSettings = this.reloadSettings.bind(this);
 
-		this._um.setReloadSettingsCallback(this.reloadSettings);
+		// this._um.setReloadSettingsCallback(this.reloadSettings);
+		this._um.setUserReloadCallback(this.reloadSettings);
 
 		this.state = {
 			isPowerMode : this._um.info.settings.powerMode,
