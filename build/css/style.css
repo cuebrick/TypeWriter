@@ -872,6 +872,9 @@ input[type=text]{
 .setting-list li:last-child{
 	border-bottom: 1px solid #555555;
 }
+.setting-list .desc > img{
+	vertical-align: middle;
+}
 
 @media (max-width: 460px){
 	.setting-list li{

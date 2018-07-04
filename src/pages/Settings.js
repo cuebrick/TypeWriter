@@ -10,6 +10,7 @@ class Settings extends React.Component{
 		this.togglePowerMode = this.togglePowerMode.bind(this);
 		this.handleRemoveRecord = this.handleRemoveRecord.bind(this);
 		this.reloadSettings = this.reloadSettings.bind(this);
+		this.handleDeleteUser = this.handleDeleteUser.bind(this);
 
 		// this._um.setReloadSettingsCallback(this.reloadSettings);
 		this._um.setUserReloadCallback(this.reloadSettings);
@@ -43,6 +44,9 @@ class Settings extends React.Component{
 
 	handleDeleteUser(){
 		// TODO: 플레이어 삭제 구현
+		console.log('사용자 삭제=====');
+		// let users = this._um.requestDeleteUser(this.state.info.id);
+		// this.setState({users: users});
 	}
 
 	render(){
@@ -73,13 +77,18 @@ class Settings extends React.Component{
 						</div>
 						<div className="desc">{this.state.info.name}님이 기록한 레벨 기록들을 모두 삭제 합니다. 삭제 되면 복구 되지 않습니다.</div>
 					</li>
+					<li>
+						<div className="title">사용자 삭제</div>
+						<div className="ui"> </div>
+						<div className="desc">사용자를 삭제하려면 오른쪽 위의 사용자 아이콘을 선택한 후 삭제하려고 하는 사용자 이름에 있는 <img src="/images/delete.svg" className="delete" width="15" /> 아이콘을 선택하세요.</div>
+					</li>
 					{/*
 					<li>
-						<div className="title">캐릭터 삭제</div>
+						<div className="title">사용자 삭제</div>
 						<div className="ui">
 							<button onClick={this.handleDeleteUser} className={"delete-button" + removeRecordClassName}>삭제</button>
 						</div>
-						<div className="desc">{this._um.info.name}님의 플레이어를 삭제 합니다. 삭제 되면 복구 되지 않습니다.</div>
+						<div className="desc">{this.state.info.name}님의 플레이어를 삭제 합니다. 삭제 되면 복구 되지 않습니다.</div>
 					</li>
 					*/}
 				</ul>
