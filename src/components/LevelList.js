@@ -3,11 +3,21 @@ import Level from './Level';
 import LevelItem from './LevelItem';
 import LevelData from '../json/level-data';
 import { Link } from 'react-router-dom';
+import UserManager from './UserManager';
 
 class LevelList extends React.Component{
+	_um;
+
 	constructor(props){
 		super(props);
-		this.state = {count: 0}
+		this.userReloadCallback = this.userReloadCallback.bind(this);
+		this.state = {count: 0};
+		this._um = UserManager.getInstance();
+		this._um.setUserReloadCallback(this.userReloadCallback);
+	}
+
+	userReloadCallback(){
+		this.setState({count: 0});
 	}
 
 	componentDidMount(){
