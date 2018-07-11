@@ -57,10 +57,10 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 48);
+/******/ 	return __webpack_require__(__webpack_require__.s = 42);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,9 +71,9 @@
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(49);
+  module.exports = __webpack_require__(43);
 } else {
-  module.exports = __webpack_require__(50);
+  module.exports = __webpack_require__(44);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
@@ -362,11 +362,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(66)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(60)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(67)();
+  module.exports = __webpack_require__(61)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
@@ -436,31 +436,31 @@ module.exports = invariant;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(59);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(63);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(37);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(65);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(68);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(71);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(73);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(38);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(22);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(79);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(81);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(83);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(84);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
 
 
@@ -544,7 +544,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _UserInfo = __webpack_require__(63);
+var _UserInfo = __webpack_require__(57);
 
 var _UserInfo2 = _interopRequireDefault(_UserInfo);
 
@@ -1155,11 +1155,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _levelData = __webpack_require__(33);
+var _levelData = __webpack_require__(32);
 
 var _levelData2 = _interopRequireDefault(_levelData);
 
-var _Level = __webpack_require__(21);
+var _Level = __webpack_require__(19);
 
 var _Level2 = _interopRequireDefault(_Level);
 
@@ -1167,7 +1167,7 @@ var _UserManager = __webpack_require__(7);
 
 var _UserManager2 = _interopRequireDefault(_UserManager);
 
-var _Reporter = __webpack_require__(64);
+var _Reporter = __webpack_require__(58);
 
 var _Reporter2 = _interopRequireDefault(_Reporter);
 
@@ -1279,6 +1279,459 @@ exports.default = PlayManager;
 
 /***/ }),
 /* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createLocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(11);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+
+
+
+
+var createLocation = function createLocation(path, state, key, currentLocation) {
+  var location = void 0;
+  if (typeof path === 'string') {
+    // Two-arg form: push(path, state)
+    location = Object(__WEBPACK_IMPORTED_MODULE_2__PathUtils__["d" /* parsePath */])(path);
+    location.state = state;
+  } else {
+    // One-arg form: push(location)
+    location = _extends({}, path);
+
+    if (location.pathname === undefined) location.pathname = '';
+
+    if (location.search) {
+      if (location.search.charAt(0) !== '?') location.search = '?' + location.search;
+    } else {
+      location.search = '';
+    }
+
+    if (location.hash) {
+      if (location.hash.charAt(0) !== '#') location.hash = '#' + location.hash;
+    } else {
+      location.hash = '';
+    }
+
+    if (state !== undefined && location.state === undefined) location.state = state;
+  }
+
+  try {
+    location.pathname = decodeURI(location.pathname);
+  } catch (e) {
+    if (e instanceof URIError) {
+      throw new URIError('Pathname "' + location.pathname + '" could not be decoded. ' + 'This is likely caused by an invalid percent-encoding.');
+    } else {
+      throw e;
+    }
+  }
+
+  if (key) location.key = key;
+
+  if (currentLocation) {
+    // Resolve incomplete/relative pathname relative to current location.
+    if (!location.pathname) {
+      location.pathname = currentLocation.pathname;
+    } else if (location.pathname.charAt(0) !== '/') {
+      location.pathname = Object(__WEBPACK_IMPORTED_MODULE_0_resolve_pathname__["default"])(location.pathname, currentLocation.pathname);
+    }
+  } else {
+    // When there is no prior location and pathname is empty, set it to /
+    if (!location.pathname) {
+      location.pathname = '/';
+    }
+  }
+
+  return location;
+};
+
+var locationsAreEqual = function locationsAreEqual(a, b) {
+  return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && Object(__WEBPACK_IMPORTED_MODULE_1_value_equal__["default"])(a.state, b.state);
+};
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+if (process.env.NODE_ENV !== 'production') {
+  var invariant = __webpack_require__(9);
+  var warning = __webpack_require__(13);
+  var ReactPropTypesSecret = __webpack_require__(17);
+  var loggedTypeFailures = {};
+}
+
+/**
+ * Assert that the values match with the type specs.
+ * Error messages are memorized and will only be shown once.
+ *
+ * @param {object} typeSpecs Map of name to a ReactPropType
+ * @param {object} values Runtime values that need to be type-checked
+ * @param {string} location e.g. "prop", "context", "child context"
+ * @param {string} componentName Name of the component for error messages.
+ * @param {?Function} getStack Returns the component stack.
+ * @private
+ */
+function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+  if (process.env.NODE_ENV !== 'production') {
+    for (var typeSpecName in typeSpecs) {
+      if (typeSpecs.hasOwnProperty(typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+          // This is intentionally an invariant that gets caught. It's the same
+          // behavior as without this statement except with a better message.
+          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, typeof typeSpecs[typeSpecName]);
+          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+          error = ex;
+        }
+        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error);
+        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error.message] = true;
+
+          var stack = getStack ? getStack() : '';
+
+          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
+        }
+      }
+    }
+  }
+}
+
+module.exports = checkPropTypes;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (process.env.NODE_ENV !== 'production') {
+    // This branch is unreachable because this function is only called
+    // in production, but the condition is true only in development.
+    // Therefore if the branch is still here, dead code elimination wasn't
+    // properly applied.
+    // Don't change the message. React DevTools relies on it. Also make sure
+    // this message doesn't occur elsewhere in this function, or it will cause
+    // a false positive.
+    throw new Error('^_^');
+  }
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (process.env.NODE_ENV === 'production') {
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = __webpack_require__(45);
+} else {
+  module.exports = __webpack_require__(48);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Level = function () {
+	_createClass(Level, null, [{
+		key: 'CHARACTER_FORM',
+		get: function get() {
+			return 'character';
+		}
+	}, {
+		key: 'SENTENCE_TYPE',
+		get: function get() {
+			return 'sentence';
+		}
+	}, {
+		key: 'GROUP_TYPE',
+		get: function get() {
+			return 'group';
+		}
+	}]);
+
+	function Level(props) {
+		_classCallCheck(this, Level);
+
+		this.type = props.type;
+		this.id = props.id;
+		this.grade = props.grade;
+		this.difficulty = props.difficulty;
+		this.form = props.form;
+		this.language = props.language;
+		this.title = props.title;
+		this.subtitle = props.subtitle;
+		this.text = props.text;
+
+		this.index = 0;
+		this.intervalId = undefined;
+		this.timeCount = 0;
+		this.timeRecord = [];
+		this.buffer = [];
+		this.result = {};
+	}
+
+	return Level;
+}();
+
+exports.default = Level;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.locationsAreEqual = exports.createLocation = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _resolvePathname = __webpack_require__(34);
+
+var _resolvePathname2 = _interopRequireDefault(_resolvePathname);
+
+var _valueEqual = __webpack_require__(35);
+
+var _valueEqual2 = _interopRequireDefault(_valueEqual);
+
+var _PathUtils = __webpack_require__(10);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var createLocation = exports.createLocation = function createLocation(path, state, key, currentLocation) {
+  var location = void 0;
+  if (typeof path === 'string') {
+    // Two-arg form: push(path, state)
+    location = (0, _PathUtils.parsePath)(path);
+    location.state = state;
+  } else {
+    // One-arg form: push(location)
+    location = _extends({}, path);
+
+    if (location.pathname === undefined) location.pathname = '';
+
+    if (location.search) {
+      if (location.search.charAt(0) !== '?') location.search = '?' + location.search;
+    } else {
+      location.search = '';
+    }
+
+    if (location.hash) {
+      if (location.hash.charAt(0) !== '#') location.hash = '#' + location.hash;
+    } else {
+      location.hash = '';
+    }
+
+    if (state !== undefined && location.state === undefined) location.state = state;
+  }
+
+  try {
+    location.pathname = decodeURI(location.pathname);
+  } catch (e) {
+    if (e instanceof URIError) {
+      throw new URIError('Pathname "' + location.pathname + '" could not be decoded. ' + 'This is likely caused by an invalid percent-encoding.');
+    } else {
+      throw e;
+    }
+  }
+
+  if (key) location.key = key;
+
+  if (currentLocation) {
+    // Resolve incomplete/relative pathname relative to current location.
+    if (!location.pathname) {
+      location.pathname = currentLocation.pathname;
+    } else if (location.pathname.charAt(0) !== '/') {
+      location.pathname = (0, _resolvePathname2.default)(location.pathname, currentLocation.pathname);
+    }
+  } else {
+    // When there is no prior location and pathname is empty, set it to /
+    if (!location.pathname) {
+      location.pathname = '/';
+    }
+  }
+
+  return location;
+};
+
+var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {
+  return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && (0, _valueEqual2.default)(a.state, b.state);
+};
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _warning = __webpack_require__(1);
+
+var _warning2 = _interopRequireDefault(_warning);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var createTransitionManager = function createTransitionManager() {
+  var prompt = null;
+
+  var setPrompt = function setPrompt(nextPrompt) {
+    (0, _warning2.default)(prompt == null, 'A history supports only one prompt at a time');
+
+    prompt = nextPrompt;
+
+    return function () {
+      if (prompt === nextPrompt) prompt = null;
+    };
+  };
+
+  var confirmTransitionTo = function confirmTransitionTo(location, action, getUserConfirmation, callback) {
+    // TODO: If another transition starts while we're still confirming
+    // the previous one, we may end up in a weird state. Figure out the
+    // best way to handle this.
+    if (prompt != null) {
+      var result = typeof prompt === 'function' ? prompt(location, action) : prompt;
+
+      if (typeof result === 'string') {
+        if (typeof getUserConfirmation === 'function') {
+          getUserConfirmation(result, callback);
+        } else {
+          (0, _warning2.default)(false, 'A history needs a getUserConfirmation function in order to use a prompt message');
+
+          callback(true);
+        }
+      } else {
+        // Return false from a transition hook to cancel the transition.
+        callback(result !== false);
+      }
+    } else {
+      callback(true);
+    }
+  };
+
+  var listeners = [];
+
+  var appendListener = function appendListener(fn) {
+    var isActive = true;
+
+    var listener = function listener() {
+      if (isActive) fn.apply(undefined, arguments);
+    };
+
+    listeners.push(listener);
+
+    return function () {
+      isActive = false;
+      listeners = listeners.filter(function (item) {
+        return item !== listener;
+      });
+    };
+  };
+
+  var notifyListeners = function notifyListeners() {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    listeners.forEach(function (listener) {
+      return listener.apply(undefined, args);
+    });
+  };
+
+  return {
+    setPrompt: setPrompt,
+    confirmTransitionTo: confirmTransitionTo,
+    appendListener: appendListener,
+    notifyListeners: notifyListeners
+  };
+};
+
+exports.default = createTransitionManager;
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(23);
+// Written in this round about way for babel-transform-imports
+
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__["a" /* default */]);
+
+/***/ }),
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1397,11 +1850,11 @@ Router.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Router);
 
 /***/ }),
-/* 16 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -1474,609 +1927,7 @@ var matchPath = function matchPath(pathname) {
 /* harmony default export */ __webpack_exports__["a"] = (matchPath);
 
 /***/ }),
-/* 17 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createLocation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(11);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-
-
-
-
-var createLocation = function createLocation(path, state, key, currentLocation) {
-  var location = void 0;
-  if (typeof path === 'string') {
-    // Two-arg form: push(path, state)
-    location = Object(__WEBPACK_IMPORTED_MODULE_2__PathUtils__["d" /* parsePath */])(path);
-    location.state = state;
-  } else {
-    // One-arg form: push(location)
-    location = _extends({}, path);
-
-    if (location.pathname === undefined) location.pathname = '';
-
-    if (location.search) {
-      if (location.search.charAt(0) !== '?') location.search = '?' + location.search;
-    } else {
-      location.search = '';
-    }
-
-    if (location.hash) {
-      if (location.hash.charAt(0) !== '#') location.hash = '#' + location.hash;
-    } else {
-      location.hash = '';
-    }
-
-    if (state !== undefined && location.state === undefined) location.state = state;
-  }
-
-  try {
-    location.pathname = decodeURI(location.pathname);
-  } catch (e) {
-    if (e instanceof URIError) {
-      throw new URIError('Pathname "' + location.pathname + '" could not be decoded. ' + 'This is likely caused by an invalid percent-encoding.');
-    } else {
-      throw e;
-    }
-  }
-
-  if (key) location.key = key;
-
-  if (currentLocation) {
-    // Resolve incomplete/relative pathname relative to current location.
-    if (!location.pathname) {
-      location.pathname = currentLocation.pathname;
-    } else if (location.pathname.charAt(0) !== '/') {
-      location.pathname = Object(__WEBPACK_IMPORTED_MODULE_0_resolve_pathname__["default"])(location.pathname, currentLocation.pathname);
-    }
-  } else {
-    // When there is no prior location and pathname is empty, set it to /
-    if (!location.pathname) {
-      location.pathname = '/';
-    }
-  }
-
-  return location;
-};
-
-var locationsAreEqual = function locationsAreEqual(a, b) {
-  return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && Object(__WEBPACK_IMPORTED_MODULE_1_value_equal__["default"])(a.state, b.state);
-};
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(9);
-  var warning = __webpack_require__(13);
-  var ReactPropTypesSecret = __webpack_require__(19);
-  var loggedTypeFailures = {};
-}
-
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */
-function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if (process.env.NODE_ENV !== 'production') {
-    for (var typeSpecName in typeSpecs) {
-      if (typeSpecs.hasOwnProperty(typeSpecName)) {
-        var error;
-        // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-        try {
-          // This is intentionally an invariant that gets caught. It's the same
-          // behavior as without this statement except with a better message.
-          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, typeof typeSpecs[typeSpecName]);
-          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-        } catch (ex) {
-          error = ex;
-        }
-        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error);
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-          // Only monitor this failure once because there tends to be a lot of the
-          // same error.
-          loggedTypeFailures[error.message] = true;
-
-          var stack = getStack ? getStack() : '';
-
-          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
-        }
-      }
-    }
-  }
-}
-
-module.exports = checkPropTypes;
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (process.env.NODE_ENV !== 'production') {
-    // This branch is unreachable because this function is only called
-    // in production, but the condition is true only in development.
-    // Therefore if the branch is still here, dead code elimination wasn't
-    // properly applied.
-    // Don't change the message. React DevTools relies on it. Also make sure
-    // this message doesn't occur elsewhere in this function, or it will cause
-    // a false positive.
-    throw new Error('^_^');
-  }
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (process.env.NODE_ENV === 'production') {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = __webpack_require__(51);
-} else {
-  module.exports = __webpack_require__(54);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Level = function () {
-	_createClass(Level, null, [{
-		key: 'CHARACTER_FORM',
-		get: function get() {
-			return 'character';
-		}
-	}, {
-		key: 'SENTENCE_TYPE',
-		get: function get() {
-			return 'sentence';
-		}
-	}, {
-		key: 'GROUP_TYPE',
-		get: function get() {
-			return 'group';
-		}
-	}]);
-
-	function Level(props) {
-		_classCallCheck(this, Level);
-
-		this.type = props.type;
-		this.id = props.id;
-		this.grade = props.grade;
-		this.difficulty = props.difficulty;
-		this.form = props.form;
-		this.language = props.language;
-		this.title = props.title;
-		this.subtitle = props.subtitle;
-		this.text = props.text;
-
-		this.index = 0;
-		this.intervalId = undefined;
-		this.timeCount = 0;
-		this.timeRecord = [];
-		this.buffer = [];
-		this.result = {};
-	}
-
-	return Level;
-}();
-
-exports.default = Level;
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.locationsAreEqual = exports.createLocation = undefined;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _resolvePathname = __webpack_require__(35);
-
-var _resolvePathname2 = _interopRequireDefault(_resolvePathname);
-
-var _valueEqual = __webpack_require__(36);
-
-var _valueEqual2 = _interopRequireDefault(_valueEqual);
-
-var _PathUtils = __webpack_require__(10);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var createLocation = exports.createLocation = function createLocation(path, state, key, currentLocation) {
-  var location = void 0;
-  if (typeof path === 'string') {
-    // Two-arg form: push(path, state)
-    location = (0, _PathUtils.parsePath)(path);
-    location.state = state;
-  } else {
-    // One-arg form: push(location)
-    location = _extends({}, path);
-
-    if (location.pathname === undefined) location.pathname = '';
-
-    if (location.search) {
-      if (location.search.charAt(0) !== '?') location.search = '?' + location.search;
-    } else {
-      location.search = '';
-    }
-
-    if (location.hash) {
-      if (location.hash.charAt(0) !== '#') location.hash = '#' + location.hash;
-    } else {
-      location.hash = '';
-    }
-
-    if (state !== undefined && location.state === undefined) location.state = state;
-  }
-
-  try {
-    location.pathname = decodeURI(location.pathname);
-  } catch (e) {
-    if (e instanceof URIError) {
-      throw new URIError('Pathname "' + location.pathname + '" could not be decoded. ' + 'This is likely caused by an invalid percent-encoding.');
-    } else {
-      throw e;
-    }
-  }
-
-  if (key) location.key = key;
-
-  if (currentLocation) {
-    // Resolve incomplete/relative pathname relative to current location.
-    if (!location.pathname) {
-      location.pathname = currentLocation.pathname;
-    } else if (location.pathname.charAt(0) !== '/') {
-      location.pathname = (0, _resolvePathname2.default)(location.pathname, currentLocation.pathname);
-    }
-  } else {
-    // When there is no prior location and pathname is empty, set it to /
-    if (!location.pathname) {
-      location.pathname = '/';
-    }
-  }
-
-  return location;
-};
-
-var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {
-  return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && (0, _valueEqual2.default)(a.state, b.state);
-};
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _warning = __webpack_require__(1);
-
-var _warning2 = _interopRequireDefault(_warning);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var createTransitionManager = function createTransitionManager() {
-  var prompt = null;
-
-  var setPrompt = function setPrompt(nextPrompt) {
-    (0, _warning2.default)(prompt == null, 'A history supports only one prompt at a time');
-
-    prompt = nextPrompt;
-
-    return function () {
-      if (prompt === nextPrompt) prompt = null;
-    };
-  };
-
-  var confirmTransitionTo = function confirmTransitionTo(location, action, getUserConfirmation, callback) {
-    // TODO: If another transition starts while we're still confirming
-    // the previous one, we may end up in a weird state. Figure out the
-    // best way to handle this.
-    if (prompt != null) {
-      var result = typeof prompt === 'function' ? prompt(location, action) : prompt;
-
-      if (typeof result === 'string') {
-        if (typeof getUserConfirmation === 'function') {
-          getUserConfirmation(result, callback);
-        } else {
-          (0, _warning2.default)(false, 'A history needs a getUserConfirmation function in order to use a prompt message');
-
-          callback(true);
-        }
-      } else {
-        // Return false from a transition hook to cancel the transition.
-        callback(result !== false);
-      }
-    } else {
-      callback(true);
-    }
-  };
-
-  var listeners = [];
-
-  var appendListener = function appendListener(fn) {
-    var isActive = true;
-
-    var listener = function listener() {
-      if (isActive) fn.apply(undefined, arguments);
-    };
-
-    listeners.push(listener);
-
-    return function () {
-      isActive = false;
-      listeners = listeners.filter(function (item) {
-        return item !== listener;
-      });
-    };
-  };
-
-  var notifyListeners = function notifyListeners() {
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    listeners.forEach(function (listener) {
-      return listener.apply(undefined, args);
-    });
-  };
-
-  return {
-    setPrompt: setPrompt,
-    confirmTransitionTo: confirmTransitionTo,
-    appendListener: appendListener,
-    notifyListeners: notifyListeners
-  };
-};
-
-exports.default = createTransitionManager;
-
-/***/ }),
-/* 24 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(15);
-// Written in this round about way for babel-transform-imports
-
-
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__["a" /* default */]);
-
-/***/ }),
 /* 25 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(16);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-var isEmptyChildren = function isEmptyChildren(children) {
-  return __WEBPACK_IMPORTED_MODULE_2_react___default.a.Children.count(children) === 0;
-};
-
-/**
- * The public API for matching a single path and rendering.
- */
-
-var Route = function (_React$Component) {
-  _inherits(Route, _React$Component);
-
-  function Route() {
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, Route);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {
-      match: _this.computeMatch(_this.props, _this.context.router)
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  Route.prototype.getChildContext = function getChildContext() {
-    return {
-      router: _extends({}, this.context.router, {
-        route: {
-          location: this.props.location || this.context.router.route.location,
-          match: this.state.match
-        }
-      })
-    };
-  };
-
-  Route.prototype.computeMatch = function computeMatch(_ref, router) {
-    var computedMatch = _ref.computedMatch,
-        location = _ref.location,
-        path = _ref.path,
-        strict = _ref.strict,
-        exact = _ref.exact,
-        sensitive = _ref.sensitive;
-
-    if (computedMatch) return computedMatch; // <Switch> already computed the match for us
-
-    __WEBPACK_IMPORTED_MODULE_1_invariant___default()(router, 'You should not use <Route> or withRouter() outside a <Router>');
-
-    var route = router.route;
-
-    var pathname = (location || route.location).pathname;
-
-    return path ? Object(__WEBPACK_IMPORTED_MODULE_4__matchPath__["a" /* default */])(pathname, { path: path, strict: strict, exact: exact, sensitive: sensitive }) : route.match;
-  };
-
-  Route.prototype.componentWillMount = function componentWillMount() {
-    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(this.props.component && this.props.render), 'You should not use <Route component> and <Route render> in the same route; <Route render> will be ignored');
-
-    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(this.props.component && this.props.children && !isEmptyChildren(this.props.children)), 'You should not use <Route component> and <Route children> in the same route; <Route children> will be ignored');
-
-    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(this.props.render && this.props.children && !isEmptyChildren(this.props.children)), 'You should not use <Route render> and <Route children> in the same route; <Route children> will be ignored');
-  };
-
-  Route.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps, nextContext) {
-    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(nextProps.location && !this.props.location), '<Route> elements should not change from uncontrolled to controlled (or vice versa). You initially used no "location" prop and then provided one on a subsequent render.');
-
-    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(!nextProps.location && this.props.location), '<Route> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.');
-
-    this.setState({
-      match: this.computeMatch(nextProps, nextContext.router)
-    });
-  };
-
-  Route.prototype.render = function render() {
-    var match = this.state.match;
-    var _props = this.props,
-        children = _props.children,
-        component = _props.component,
-        render = _props.render;
-    var _context$router = this.context.router,
-        history = _context$router.history,
-        route = _context$router.route,
-        staticContext = _context$router.staticContext;
-
-    var location = this.props.location || route.location;
-    var props = { match: match, location: location, history: history, staticContext: staticContext };
-
-    return component ? // component prop gets first priority, only called if there's a match
-    match ? __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(component, props) : null : render ? // render prop is next, only called if there's a match
-    match ? render(props) : null : children ? // children come last, always called
-    typeof children === 'function' ? children(props) : !isEmptyChildren(children) ? __WEBPACK_IMPORTED_MODULE_2_react___default.a.Children.only(children) : null : null;
-  };
-
-  return Route;
-}(__WEBPACK_IMPORTED_MODULE_2_react___default.a.Component);
-
-Route.propTypes = {
-  computedMatch: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object, // private, from <Switch>
-  path: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.string,
-  exact: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
-  strict: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
-  sensitive: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
-  component: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func,
-  render: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func,
-  children: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func, __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.node]),
-  location: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object
-};
-Route.contextTypes = {
-  router: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.shape({
-    history: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired,
-    route: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired,
-    staticContext: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object
-  })
-};
-Route.childContextTypes = {
-  router: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired
-};
-
-
-/* harmony default export */ __webpack_exports__["a"] = (Route);
-
-/***/ }),
-/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2161,7 +2012,7 @@ var createTransitionManager = function createTransitionManager() {
 /* harmony default export */ __webpack_exports__["a"] = (createTransitionManager);
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2200,7 +2051,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2281,7 +2132,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2323,7 +2174,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2394,7 +2245,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2409,7 +2260,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(52);
+var isTextNode = __webpack_require__(46);
 
 /*eslint-disable no-bitwise */
 
@@ -2437,7 +2288,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2467,13 +2318,13 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = [{"type":"group","title":"기본 자리 연습"},{"type":"level","id":"c0101","grade":0,"difficulty":1,"form":"character","language":"kr","title":"기본 자리 자음","subtitle":"ㅁㄴㅇㄹ","description":"기본 위치는 왼손 검지 손가락이 ㄹ 위치에 자리하고 자연스럽게 나머지 손가락을 누르는 것입니다. 왼손 검지 손가락이 ㄹ 위치에 있다는 것을 꼭 기억하세요.","text":"ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ"},{"type":"level","id":"c0102","grade":0,"difficulty":1,"form":"character","language":"kr","title":"기본 자리 자음","subtitle":"ㅁㄴㅇㄹ","description":"방향만 다릅니다.","text":"ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ ㄹㅇㄴㅁ"},{"type":"level","id":"c0103","grade":0,"difficulty":1,"form":"character","language":"kr","title":"기본 자리 자음","subtitle":"ㅁㄴㅇㄹㅎ","description":"ㅎ은 왼손 검지 손가락이 이동합니다.","text":"ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ ㅁㄴㅇㄹㅎ"},{"type":"level","id":"c0104","grade":0,"difficulty":1,"form":"character","language":"kr","title":"기본 자리 자음","subtitle":"ㅁㄴㅇㄹㅎ","description":"이제 순서를 뒤섞어 봅니다.","text":"ㅁㅇㅎㄹㄴㄴㄹ ㅎㅁㅇ ㅇㄴㅁㅇ ㅎㄹㅁ ㅇㄴㅎㄹ ㅎㅁㅇㅎㅁㄴ"},{"type":"level","id":"c0105","grade":0,"difficulty":1,"form":"character","language":"kr","title":"기본 자리 자음","subtitle":"ㅁㄴㅇㄹㅎ","description":"한 번 더 연습합니다.","text":"ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ ㅁㅇㅎㄹㄴ ㄴㄹㅎㅁㅇ ㅇㄴㅁㅎㄹ ㅁㅇㄴㅎㄹ"},{"type":"level","id":"c0106","grade":0,"difficulty":1,"form":"character","language":"kr","title":"기본 자리 모음","subtitle":"ㅓㅏㅣ","description":"이번에는 오른손 기본 자리 입니다. 기본 위치는 오른손 검지 손가락이 ㅓ 위치에 자리하고 자연스럽게 나머지 손가락을 누르는 것입니다. 오른손 검지 손가락이 ㅓ 위치에 있다는 것을 꼭 기억하세요.","text":"ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ ㅓㅏㅣ"},{"type":"level","id":"c0107","grade":0,"difficulty":1,"form":"character","language":"kr","title":"기본 자리 모음","subtitle":"ㅓㅏㅣ","description":"방향만 다릅니다.","text":"ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ ㅣㅏㅓ"},{"type":"level","id":"c0108","grade":0,"difficulty":1,"form":"character","language":"kr","title":"기본 자리 모음","subtitle":"ㅗㅓㅏㅣ","description":"ㅗ는 오른손 검시 손가락이 이동합니다.","text":"ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ ㅗㅓㅏㅣ"},{"type":"level","id":"c0109","grade":0,"difficulty":1,"form":"character","language":"kr","title":"기본 자리 모음","subtitle":"ㅗㅓㅏㅣ","description":"순서가 뒤죽박죽 입니다.","text":"ㅣㅓㅗㅏ ㅣㅗㅏㅓ ㅗㅏㅣㅏ ㅓㅗㅗㅣ ㅗㅓㅣㅏ ㅓㅗㅣㅓ ㅏㅣㅏㅗ ㅓㅏㅣㅏ"},{"type":"level","id":"c0110","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"기본 자리 자음 모음","subtitle":"ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ","description":"기본 자리 양손을 사용하여 단어를 써 봅니다.","text":"라라라 아아아 나나나 마마마 러러러러 어어어어 너너너너 머머머머 미미나 미미너 라라머 라미미 호허허 히히히 리리로로 아어어이"},{"type":"level","id":"c0111","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"기본 자리 자음 모음","subtitle":"ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ","description":"기본 자리 양손을 사용하여 단어를 써 봅니다.","text":"나라나라 러허러허 아나아나 마리마리 오리오리 모모라라 나미미로 마리마로 나리나로 아리아로 마니마노 마라노 이라모 하이라 호리모 나미로호"},{"type":"level","id":"c0112","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"기본 자리 자음 모음","subtitle":"ㅁㄴㅇㄹㅎㅗㅓㅏㅣㅣ","description":"기본 자리 양손을 사용하여 단어를 써 봅니다.","text":"어머니 엄마 이모 미모 마모 어머니 아라 미이라 아마 하하 하이 미로 나라 나로호 마마미아 라모 이미 어라 오호 하이"},{"type":"group","title":"윗 자리 연습"},{"type":"level","id":"c0201","grade":0,"difficulty":1,"form":"character","language":"kr","title":"윗 자리 자음","subtitle":"ㅂㅈㄷㄱ","description":"손은 기본자리에.","text":"ㅂㄷㄱㅈ ㄱㄷㅈㄱ ㅂㄷㄱㄷ ㅈㅂㄷㅈ ㅂㅈㅂㄷ ㅂㄷㅈㄷ ㅂㄷㅂㅈ ㄷㄱㄷㅂ ㄱㄷㅈㅂ"},{"type":"level","id":"c0202","grade":0,"difficulty":1,"form":"character","language":"kr","title":"윗 자리 자음","subtitle":"ㅂㅈㄷㄱㅅ","description":"한 번 더 반복합니다.","text":"ㅂㄷㅅㄷㅂㄷㅂㄷ ㅅㄷㅂㄷㄱ ㅂㄷ ㅅㅅㄷㅂㅈㄷㄷㄱ ㅂㄷㄱㄷㄱㅂ ㅂㄱㄷㄱ ㅂㄷㅅㄱㅂㄷㄷㅂ ㅂㄷㅈㅂㅅㄷ"},{"type":"level","id":"c0203","grade":0,"difficulty":1,"form":"character","language":"kr","title":"윗 자리 모음","subtitle":"ㅕㅑㅐㅔ","description":"손은 기본자리에","text":"ㅕㅕㅑㅑ ㅐㅐㅔㅔ ㅕㅐㅑㅔ ㅕㅑㅑㅑ ㅔㅐㅑㅑ ㅕㅑㅔㅕ ㅔㅕㅑㅔ ㅑㅐㅕㅑ"},{"type":"level","id":"c0204","grade":0,"difficulty":1,"form":"character","language":"kr","title":"윗 자리 모음","subtitle":"ㅛㅕㅑㅐㅔ","description":"손은 기본자리에","text":"ㅛㅑㅐㅛㅐㅑㅑㅕ ㅑㅐㅔㅐㅑ ㅕㅑㅛㅐㅑㅑㅕ ㅛㅑ ㅐㅔㅑ ㅐㅑㅕㅛ ㅐㅑㅛㅐㅔㅔㅑ ㅕㅑㅛㅑㅐㅔㅑ ㅕㅑㅐㅔㅑㅕㅑ"},{"type":"level","id":"c0205","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"윗 자리 자음 모음 결합","subtitle":"ㅂㅈㄷㄱ ㅕㅑㅐㅔ","description":"","text":"뱌뱌뱌 벼벼벼 배배배 베베베 제제제 재재재 쟈쟈쟈 져져져 대대댜댜 재재죠죠 벼벼게게 져대져대 뎌대재져"},{"type":"level","id":"c0206","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"윗 자리 자음 모음 결합","subtitle":"ㅂㅈㄷㄱㅅ ㅛㅕㅑㅐㅔ","description":"","text":"뱌뱌셔셔 갸갸됴됴 져져댜댜 겨겨쇼쇼 대대세세 게게셔셔 재재댜댜 쟈베댜댜 벼대겨겨 베교교교 죠죠재재"},{"type":"level","id":"c0207","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"윗 자리 간단한 단어","subtitle":"윗 자리 단어","description":"","text":"벼 쟈 대 게 쇼 세개댜겨뵤 뱌겨 대개 겨대 게재 세개 쇼쇼쇼 베게 대게 제제 샤베 뱌재 겨제 재개 대배"},{"type":"level","id":"c0208","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"윗 자리 간단한 단어","subtitle":"기본자리와 윗 자리 단어","description":"윗 자리만 누르다 보면 손가락이 윗 자리에서 기본 자리로 내려오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 윗 자리를 타이핑 할 때 손가락 하나만 윗 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.","text":"어머니가 아버지가 나라고 아기야 호미야 미래 나가라 도라지 바보 라고 하며 다리다"},{"type":"group","title":"아랫 자리 연습"},{"type":"level","id":"c0301","grade":0,"difficulty":1,"form":"character","language":"kr","title":"아랫 자리 자음","subtitle":"ㅋㅌㅊㅍ","description":"손은 기본자리에.","text":"ㅋㅌㅊㅍ ㅋㅌㅊㅍ ㅍㅊㅌㅋ ㅍㅊㅌㅋ ㅋㅍㅋㅍ ㅌㅊㅌㅊ ㅍㅊㅋㅌ ㅍㅌㅊㅍ ㅋㅊㅋㅊ ㅋㅍㅌㅊ ㅊㅌㅍㅋ ㅋㅋㅊㅍ ㅊㅌㅋㅊ"},{"type":"level","id":"c0302","grade":0,"difficulty":1,"form":"character","language":"kr","title":"아랫 자리 자음","subtitle":"ㅋㅌㅊㅍ","description":"손은 기본자리에.","text":"ㅋㅌㅊㅊㅌㅋㅍㅊ ㅋㅊㅋㅊㅊㅍ ㅋㅌㅊㅋㅋ ㅊㅍㅌㅊ ㅊㅌ ㅋㅊㅍㅋㅌㅊㅍ ㅋㅌㅊㅍㅊㅊㅌㅋ ㅊㅋㅊㅋㅌㅊㅍㅋ ㅊㅋㅊㅍ ㅋㅊㅍㅋㅌㅊㅍ ㅊㅊㅋㅌㅊ"},{"type":"level","id":"c0303","grade":0,"difficulty":1,"form":"character","language":"kr","title":"아랫 자리 모음","subtitle":"ㅠㅜㅡ","description":"오른손 아랫 자리는 특별합니다. 다른 자리라면 왼손 검지손가락이 눌러야 할 ㅠ를 아래자리의 경우 오른손 검지 손가락이 누르게 됩니다.","text":"ㅠㅜㅡ ㅠㅜㅡ ㅡㅠㅡ ㅜㅡㅠ ㅡㅡㅜ ㅠㅜㅡ ㅡㅜㅠ ㅜㅠㅠ ㅜㅜㅠ"},{"type":"level","id":"c0304","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"아랫 자리 자음 모음","subtitle":"ㅋㅌㅊㅍ ㅠㅜㅡ","description":"","text":"쿠쿠트트 츠츠트트 큐큐츠츠 추추프프 쿠쿠츠츠 트트츠츠 츄츄크크 트트츠츠 크크츠츠 프프츠츠 프프트트 투투쿠쿠"},{"type":"level","id":"c0305","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"아랫 자리 자음 모음","subtitle":"ㅋㅌㅊㅍ ㅠㅜㅡ","description":"","text":"쿠크 추크 푸츄 프쿠츠 트추 추츄 투츠트츠 크츠프 크추퓨 큐추 큐큐츄 쿠추 츠프 트쿠푸"},{"type":"level","id":"c0306","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"기본 자리와 아랫 자리 단어","description":"아랫 자리만 누르다 보면 손가락이 아랫 자리에서 기본 자리로 올라오지 않게 마련입니다. 그렇지만 실제로 타이핑은 기본자리에 손가락이 위치하고 아랫 자리를 타이핑 할 때 손가락 하나만 아랫 자리를 눌렀다 다시 기본 자리로 돌아와야 합니다. 바로 이걸 연습합니다.","text":"쿠미 트리 타로 터프 토토로 투투 마리프 토미 프라하 하프 추이 치프 추이 초파리 추호 마이크 마크로 파이프 처마"},{"type":"group","title":"윗 자리와 아랫 자리 연습"},{"type":"level","id":"c0401","grade":0,"difficulty":1,"form":"character","language":"kr","title":"윗 자리와 아랫 자리 자음","subtitle":"ㅂㅈㄷㄱㅅ ㅋㅌㅊㅍ","description":"","text":"ㅂㅈㄷㄱㅅ ㅋㅌㅊㅍ ㅅㄱㄷㅈㅂ ㅍㅊㅌㅋ ㅂㅌㄷㅍㅅㅊㅈㅋ ㅂㅍㅊㄷㅈㅌㅋㄱ ㅅㅊㄷㄷㅈㅂㅌㅊㅍㅋㅌ ㅊㅍㅈㅊㄷ"},{"type":"level","id":"c0402","grade":0,"difficulty":1,"form":"character","language":"kr","title":"윗 자리와 아랫 자리 모음","subtitle":"ㅛㅕㅑㅐㅔ ㅠㅜㅡ","description":"","text":"ㅛㅕㅑㅐㅔ ㅠㅜㅡ ㅔㅐㅑㅕㅛ ㅡㅜㅠ ㅛㅑㅔㅐㅕㅠㅡㅜ ㅠㅕㅑㅐㅠㅕㅑㅐㅡㅔㅕㅡ ㅕㅑㅐㅡㅜㅕㅐㅛㅔ ㅑㅕㅡㅐ"},{"type":"level","id":"c0403","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"윗 자리와 아랫 자리 단어","description":"손이 좀 바쁩니다.","text":"배구 구두 주세 벼 개수 슈크 대체제 추수 두배 투구 수재 세수 세규"},{"type":"group","title":"전체 자리 연습"},{"type":"level","id":"c0501","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㄱ\" 1/4","description":"","text":"가누다 가구 가두다 가두리 가로채다 가루 가루비누 가르다 가르치다 가리키다 가무 가스 가우스 가치 가파르다 가타부타 개구리 개표기 거느리다 거두다 거래처 거르다"},{"type":"level","id":"c0502","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㄱ\" 2/4","description":"","text":"게으르다 겨누다 겨우내 고르다 고무나무 고무마개 고부사이 고수머리 고수부지 고수하다 고유어 고치다 고추가루 고프다 구기다 구더기 구도자 구르다 구리다 구매하다"},{"type":"level","id":"c0503","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㄱ\" 3/4","description":"","text":"구수하다 구시대 구애 구어체 구유 구조하다 구조사다리 구지레하다 구하다 구치소 구태여 구토하다 구호 규모 그거 그나저나 그네 그다지 그대로 그래서 그래프 그러그러하다 그러나 그러니 그루"},{"type":"level","id":"c0504","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㄱ\" 4/4","description":"","text":"그리다 그르다 그르치다 그리고 그리니치 그리스 그리스도교 그제야 기구하다 기르다 기류 기어오르다 기어코 기우제 기체 기초하다 기초자치 기타 기차표 기포 기표소 기피하다 기후대"},{"type":"level","id":"c0505","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㄴ\"","description":"","text":"나루터 나누어지다 나누이다 나누다 나무가지 나부대다 나타나다 나태하다 내두르다 내리누르다 내리치다 내무부 내비치다 내세우다 내주다 내지르다 내치다 내키다 내포하다 너구리 너그러이"},{"type":"level","id":"c0506","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㄷ,ㄹ\"","description":"","text":"다세포 다르다 다이너마이트 다이어트 다이오드 다치다 다큐 더구나 도르래 디도스 두르다 드레스 드러나다 드라이버 드라마 드라이아이스 드러내다 디스크 라디에이터 레이스 레퍼토리 레코드 리프트 리트머스 리포터 리스트 리어카 리코더"},{"type":"level","id":"c0507","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅁ\"","description":"","text":"마크하다 마도로스 마르다 마우스 마무리 마요네즈 마스크 미스터리 마호메트 매스미디어 미스트 머리채 머무르다 무르다 무시무시하다 무모하다 무치다 무허가 무효 무지 미그기 미뉴에트 미니스커트 미루다 미스터리 미시시피 미지수 미치다 미터기"},{"type":"level","id":"c0508","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅂ\" 1/3","description":"","text":"바구니 바그너 바르다 바래다주다 바르샤바 바리케이드 바야흐로 바이스 바이러스 바이트 바치다 바코드 바흐 버그 버드나무 버무리다 버티다 버스 버퍼"},{"type":"level","id":"c0509","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅂ\" 2/3","description":"","text":"배터리 베르디 베이스 베이크벼루 벼르다 보디가드 보르네오 보수파 보유자 보채다 보초 보크사이트 보트 보푸라기 부도나다 부도체 부드러우니 부르다 부르트다 부리나케 부스러기 부지기수 부추기다 부치다 부처 부푸러기"},{"type":"level","id":"c0510","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅂ\" 3/3","description":"","text":"브라보 브로마이드 브이아이피 브러시 비구니 비너스 비누 비디오테이프 비수기 비우다 비유 비즈니스 비추다 비이커 비켜나다 비키니 비파 비치다 비프스테이크"},{"type":"level","id":"c0511","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅅ\" 1/3","description":"","text":"사구 사그라지다 사르르 사르다 사무소 사부 사유 사이즈 사이트 사주 사치 사파이어 사투리 사포 사표 사후 새우 새치기 서구 서두르다 서부 서비스 서투르다 서커스 서프라이즈 세이프 세무서 세우다 세차게 셔터 세포"},{"type":"level","id":"c0512","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅅ\" 2/3","description":"","text":"소나타 소스라치다 소수파 소파 소유하고 소포가 소쿠리에 스르르 소프트 쇼크사 수고하게 수그러지다 수나라 수다 수도 수레 수료하다 수리하다 수리비 수모 수비수가 수비하다 수시로 수수료 수에즈 수요자 수저 수치 수채 수초 수포 수호하다"},{"type":"level","id":"c0513","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅅ\" 3/3","description":"","text":"슈바이처 슈베르트 슈트라우스 스노우보드 스며나오다 스마트하다 스모그 스미다 스스로 스카이 스카프 스캐너 스커트 스케이트 스키 스쿠버다이브 스타트 스테이크 스튜디오 스트레스 스트로우 스티커 스파게티 스패너 스페이스 스포이트 스포츠 스프레이 스피드 스피커 시루 시부모 시아주버니 시주하다 시차 시초 시키다 시트"},{"type":"level","id":"c0514","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅇ\" 1/4","description":"","text":"아르바이트 아르메니아 아마조네스 아메리카 아무개 아베크 아수라 아스라이 아스파라거스 아이스 아우르다 아이스하키 아주머니 아지트 아카데미 아카시아 아테네 아프다 아흐레 애주가 애프터서비스 야구 야무지다 야채 야후"},{"type":"level","id":"c0515","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅇ\" 2/4","description":"","text":"어느새 어그러지다 어디가느냐 어르다 어스레하다 어부지리 어시스트 어우르다 어우러지다 어이구 어지르다 어처구니 어패류 에누리 에베레스트 에스오에스 에스키모 에스파냐 에이스 에이즈 에티오피아 에테르 에피소드"},{"type":"level","id":"c0516","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅇ\" 3/4","description":"","text":"여드레 여태 오그라지다 오르다 오므리다 오므라이스 오스트리아 오아시스 오케스트라 오토바이 오피스 요오드 요구르트 요거트 우두머리 우그리다 우러나다 우러러보다 우려내다 우스개소리 우수하다 우표 우체부"},{"type":"level","id":"c0517","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅇ\" 4/4","description":"","text":"유니세프 유교 유네스코 유대교 유라시아 유리하다 유배가다 유머러스 유야무야 유수지 유에프오 유치하다 유프라테스 유효하다 으리으리하다 으스러지다 으스스하다 이루어지다 이르다 이모부 이부자리 이스트 이유기 이주하다 히로부미 이후에"},{"type":"level","id":"c0518","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅈ\" 1/2","description":"","text":"자그마하다 자르르 자두나무 자루 자르다 자부하고 자유로이 자주 자체로 자초하다 자치제 자카르타 자투리 자포자기 재우다 재수하고 재채기 저수지 제아무리 제우스 제주도 제휴하다 제트기가 제치다 조그마하다 조르다 조부모 조수에게 조표"},{"type":"level","id":"c0519","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅈ\" 2/2","description":"","text":"주르르 주머니 주무시다 주무르다 주사기 주부에게 주모자 주저하다 주어지다 주초에 주차하다 지게차 지구에 지느러미 지르다 지우개가 지켜주다 지치고 지켜보자 지프 지표가 지피지기 지하수"},{"type":"level","id":"c0520","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅊ\"","description":"","text":"차고 차다 차버리다 차디차다 차려버리다 차이코프스키 차트에 차오르다 채도 채비하다 채소바구니에 채우다 처리하다 처세하다 처지다 처하다 체내에 체류하다 체조하다 체코 체크하다 체하다 쳐다보다 쳐내다 쳐부수다 초보자라서 초라하다 추구하다 추레하다 추리다 추사체 추스르다 추켜세우다 추하다 치료비 치료제 치마저고리 치매 치사하다 치수 치우다 치우치다 치자나무 치유하다 치켜세우다"},{"type":"level","id":"c0521","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅋ\"","description":"","text":"카나리아가 카드 카레라이스 카리스마 카메라 카세트 카스테라 카시오페이아 카타르시스 캐스터네츠 캐쳐 커뮤니케이트 커브 커서 커트하다 케냐 케이크 케이스 켜다 코미디언 코브라 코스모스 코페르니쿠스 코카서스 쿠바 쿠데타 쿠키가 큐피드 크레파스 크리스마스이브 크리스마스카드 크리스트교 키다리 키보드 키우다"},{"type":"level","id":"c0522","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅌ\"","description":"","text":"타고르 타이르다 타오르다 타이프라이터가 타자기 태도 태어나다 태우다 테니스 테두리 테라스 테라코타 테러리스트 테이프 토라지다 토로하다 토마토토스트 토하다 투사하다 투우사 투피스 투표자 투표소 티베트 티그리스 티셔츠"},{"type":"level","id":"c0523","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅍ\"","description":"","text":"파내버리다 파기하다 파다하다 파도타기 파라다이스 파래지다 파리채 파브르 파우더 파이다 파자마 파키스탄 파헤치다 패거리 패다 패배하다 패소하다 패스하다 패스트푸드 패스포트 패하다 퍼내다 퍼레이드 퍼지다 페니키아 페르시아 페스트 페이지 페가수스 페니키아 펴내다 펴지다 포스티시모 포도주 포스터 포크레인 표기하다 푸르게 표시하다 프라이버시 프라이드 프로포즈 프로듀서 프로세서 피겨스케이트 피라미드 피사체 피서지 피아니스트 피어오르다 피카소 피타고라스 피하다"},{"type":"level","id":"c0524","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"간단한 단어","subtitle":"키보드 전체 \"ㅎ\"","description":"","text":"하구 하드디스크 하수구 하피스트 해모수 해치다 해코지 해파리 허구 허드레 허수아비 허우대 호두나무 호루라기 호주머니 효수시키다 후두 후리후리하다 후미지다 후사하다 휴게소 흐드러지게 흐르다 흐지부지 흐트러지다 히스테리"},{"type":"group","title":"받침 연습"},{"type":"level","id":"c0601","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"기본 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ","description":"","text":"맘마 엄마 암호 날라 몰라 알아 엉망 홈인 홈런 망함 망하니 날라 미안 먼 머언 안마 망나니 알마니아 할머니 할멈 한마리 함몰"},{"type":"level","id":"c0602","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"윗 자리와 기본 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ ㅂㅈㄷㄱㅅ","description":"","text":"아범 할아버지 알바니아 맨드라미 블로그 드럼 갈매기 감사하다 감내하고 간간하다 걸레질 검진 간사하다 옹졸하다"},{"type":"level","id":"c0603","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"기본 자리와 윗 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ ㅂㅈㄷㄱㅅ","description":"","text":"기억 도약 잊다 햇살 밥먹다 맞히다 이합집산 납시오 감각 갑갑하다 검지손가락 갇히다 걷히다 갯지렁이 각질 갈색 감사합니다 걷히다 곧다 걷어가지 걱정하지마 객기"},{"type":"level","id":"c0604","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"아랫 자리와 기본 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ ㅋㅌㅊㅍ","description":"","text":"호출 미친놈 만루홈런 이탈리아 창문 얼추 춤추니 출출함 충치 친칠라 탐험 통키 콩 한톨 한판 헐크 날라차"},{"type":"level","id":"c0605","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"기본 자리와 아랫 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ ㅋㅌㅊㅍ","description":"","text":"민낯 잎 높이 밑 옻나무 옻칠 윷놀이 엎치니 잋히니 옅어 앞날 앞일 앞치마 맡아 옻나무 옻칠"},{"type":"level","id":"c0606","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"모든 자리와 기본 자리 받침","subtitle":"ㅁㄴㅇㄹㅎ","description":"","text":"블로킹 홈스틸 파란만장 날라차기 걸치다 걸스카우트 걸음걸이 검찰청 검정풍뎅이 검출하다 통장"},{"type":"level","id":"c0607","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"모든 자리와 윗 자리 받침","subtitle":"ㅂㅈㄷㄱㅅ","description":"","text":"카카오톡 잊어주세요 도움닫기 엊그제 이튿날 각개전투 색칠공부 갖바치 갖추다 갖춘마디 갯마을 갯버들 거룻배 거룩하다 걷어채다"},{"type":"level","id":"c0608","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"모든 자리와 아랫 자리 받침","subtitle":"ㅋㅌㅊㅍ","description":"","text":"잎새 얕다 낯익다 민낯에 높이차기 엎치락뒤치락 엎지르다 팥빙수 팥죽 앞가르마 앞당기다 앞마당 높새바람 잋혀지다 밑장넣기 높이날다 같다 갚다 같이하다 옅어지다 옆면 옆구리 옆길 얕보다"},{"type":"group","title":"겹자음 겹모음 연습"},{"type":"level","id":"c0701","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"쉬프트 사용 겹자음","subtitle":"ㅃㅉㄸㄲㅆ","description":"","text":"아빠 뽀뽀 빼내다 삐삐머리 짜다 짱구 짠하다 쩨쩨하다 쭈쭈바 찌리링 샐쭉 쪼로록 따라하다 땅콩 또르륵 땡땡이 뚜벅이 떨어지네 뜨겁다 따갑다 깨비깨비 우리끼리 깨우다 참깨 노끈 끙끙대다 꽁치 꼬마 싸우다 쌍화차 쏘가리 쑥대머리 쎄시봉 쏘이다"},{"type":"level","id":"c0702","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"쉬프트 사용 겹모음","subtitle":"ㅒㅖ","description":"","text":"예절 예고 얘기하다 얘깃거리 예술가 예민하다 계속하게 하례회 계모 계기판 예스 계단 계량 계산기 계절 계율 셰익스피어 셰퍼드 예상 예술성 예언자"},{"type":"level","id":"c0703","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"겹자음 받침","subtitle":"ㄳㄺㄼㄵㄶㄽㄻㅀㅄㄾ","description":"쉬프트를 사용하지 않는 겹자음은 왼손가락을 두번 누르게 되므로 왼손 오른손 왼손 오른손의 리듬과는 다르게 진행됩니다.","text":"값어치 앉아라 밟아요 젊은이 굶다 핥다 하지않아 넋두리 내몫이다 훑어버리다 옳아요 늙은이 읊조리다 없네"},{"type":"level","id":"c0704","grade":1,"difficulty":1,"form":"sentence","language":"kr","title":"겹모음","subtitle":"ㅘㅙㅚㅞㅟㅢ","description":"쉬프트를 사용하지 않는 겹모음은 오른손가락을 두번 누르게 되므로 왼손 오른손 왼손 오른손의 리듬과는 다르게 진행됩니다.","text":"의자왕 나와라 왜불러 왜소하다 참외 퀘스트 궤짝 귀신 고취하다 귀여워 뵈오니 스웨터 가위 의사 한가위 위로하다 위장병 윈도우 의약품 의붓어머니 희사하다 의미심장하다 와르르 완납하다 스윙 스위트"},{"type":"group","title":"속담"},{"type":"level","id":"s4001","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄱ)","subtitle":"1/22","description":"","text":"가게 기둥에 입춘이라↩가까운 남이 먼 일가보다 낫다↩가까운 데를 가도 점심밥은 싸 가지고 가거라↩가난 구제는 나라님도 못한다↩가난한 집 제사 돌아오듯↩가는 날이 장날↩가는 말에 채찍질한다↩가는 말이 고와야 오는 말이 곱다↩가는 토끼 잡으려다 잡은 토끼 놓친다↩가랑비에 옷 잦는 줄 모른다↩가랑잎에 불붙듯↩가랑잎으로 눈 가리고 아웅 한다↩가랑잎이 솔잎더러 바스락거린다고 한다↩가로 지나 세로 지나↩가루는 칠수록 고와지고 말은 할수록 거칠어진다↩가재는 게 편이라↩가지 많은 나무에 바람 잘 날이 없다↩간에 가 붙고 염통에 가 붙는다"},{"type":"level","id":"s4002","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄱ)","subtitle":"2/22","description":"","text":"간에 기별도 안 갔다↩간에 붙었다 쓸개에 붙었다 한다↩갈모 형제라↩갈수록 태산이라↩갈치가 갈치 꼬리 문다↩감사 덕분에 비장나리 호사한다↩값도 모르고 싸다 한다↩값싼 것이 비지떡↩갓 쓰고 자전거 탄다↩강물도 쓰면 준다↩같은 값이면 다홍치마↩개같이 벌어서 정승같이 산다↩개구리 올챙이 적 생각을 못한다↩개 눈엔 똥만 보인다↩개똥도 약에 쓰려면 없다↩개미 쳇바퀴 돌듯 한다↩개 발에 주석 편다↩개밥에 도토리↩개 보름 쇠듯↩개살구도 맛 들일 탓↩개천에서 용 난다↩거미도 줄을 쳐야 벌레를 잡는다"},{"type":"level","id":"s4003","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄱ)","subtitle":"3/22","description":"","text":"겨 뭍은 개가 똥 뭍은 개 나무란다↩고기는 씹어야 맛이요, 말은 해야 맛이라↩고래 싸움에 새우 등 터진다↩고슴도치도 제 새끼가 함함하다면 좋아한다↩고양이 목에 방울달기↩고양이 보고 반찬 가게 지키라고 한다↩고양이 앞의 쥐 걸음↩고추는 작아도 맵다↩공든탑이 무너지랴↩공자 앞에서 문자 쓴다↩공짜라면 양잿물도 먹는다↩과부 사정은 과부가 안다↩광에서 인심 난다↩구관이 명관이라↩구더기 무서워 장 못 담글까↩구렁이 담 넘어가듯↩구슬이 서 말이라도 뀌어야 보배라↩굳은 땅에 물이 괸다↩굿이나 보고 떡이나 먹지↩귀가 보배라"},{"type":"level","id":"s4004","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄱ)","subtitle":"4/22","description":"","text":"귀신 듣는 데 떡 소리 한다↩귀에 걸면 귀걸이 코에 걸면 코걸이↩그슬린 돼지가 달아맨 돼지 타령한다↩긁어 부스럼↩금강산도 식후경이라↩급하기는 우물에 가서 숭늉 달라겠다↩급하면 바늘허리에 실 매어 쓸까↩기는 놈 위에 나는 놈 있다↩기지도 못하면서 뛰려 한다↩길고 짧은 것은 대보아야 안다↩길마 무거워 소 드러누울까↩길이 아니면 가지 말고 말이 아니면 탓하지 마라↩김 안 나는 숭늉이 더 뜨겁다↩김칫국부터 마신다↩까마귀 고기를 먹었나↩까마귀 날자 배 떨어진다↩꼬리가 길면 밟힌다↩꽁지 빠진 새 같다↩꿀도 약이라면 쓰다↩꿀 먹은 벙어리↩꿈보다 해몽이 좋다↩꿩 대신 닭이다↩꿩 먹고 알 먹는다↩꿩 잡는 것이 매다"},{"type":"level","id":"s4005","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄱ)","subtitle":"5/22","description":"","text":"나간 놈의 몫은 있어도 자는 놈의 몫은 없다↩나룻이 석 자라도 먹어야 샌님↩나무에 오르라 하고 흔드는 격↩나중 난 뿔이 우뚝하다↩낙숫물은 떨어지던 데 또 떨어진다↩낙숫물이 댓돌을 뚫는다↩남의 다리 긁는다↩남의 말 하기는 식은 죽 먹기↩남의 잔치에 감 놓아라 배 놓아라 한다↩낫 놓고 기역 자도 모른다↩낮말은 새가 듣고 밤말은 쥐가 듣는다↩나 배 부르면 종의 밥 짓지 말라 한다↩내 코가 석 자↩내 할 말을 사돈이 한다↩냉수 먹고 이 쑤시기↩네 떡이 한 개면 내 떡이 한 개라"},{"type":"level","id":"s4006","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄴ, ㄷ)","subtitle":"6/22","description":"","text":"네 콩이 크니 내 콩이 크니 한다↩놓친 고기가 더 크다↩누워서 침 뱉기↩눈 가리고 아웅↩눈 감으면 코 베어 먹을 세상↩눈 뜨고 도둑맞는다↩눈치가 빠르면 절에 가도 젓국을 얻어먹는다↩뉘 집에 죽이 끓는지 밥이 끓는지 아나↩늦게 배운 도둑이 날 새는 줄 모른다↩다 된 죽에 코 풀기↩단단한 땅에 물이 괸다↩닫는 말에 채찍질↩달도 차면 기운다↩달면 삼키고 쓰면 뱉는다↩달밤에 삿갓 쓰고 나온다↩닭 잡아먹고 오리발 내놓기↩닭 쫓던 개 지붕 쳐다보듯↩당장 먹기엔 곶감이 달다↩댓구멍으로 하늘을 본다↩더위 먹은 소 달만 보아도 헐떡인다↩도끼로 제 발등 찍는다↩도둑놈 문 열어 준 셈↩도둑 맞고 사립 고친다"},{"type":"level","id":"s4007","grade":0,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄷ)","subtitle":"7/22","description":"","text":"도둑을 맞으려면 개도 안 짖는다↩도둑이 제 발 저리다↩도둑질을 해야 손발이 맞아야 한다↩도랑 치고 가재 잡는다↩도마에 오른 고기↩도포를 입고 논을 갈아도 제멋이다↩독 안에 든 쥐↩돈만 있으면 귀신도 부릴 수 있다↩돌다리도 두드려 보고 건너라↩돌부리를 차면 발부리만 아프다↩돌절구도 밑 빠질 날이 있다↩동냥은 아니 주고 쪽박만 깬다↩동네 색시 믿고 장가 못 간다↩동무 따라 강남 간다↩되로 주고 말로 받는다↩될성부른 나무는 떡잎부터 알아본다↩둘러치나 메어치나 매한가지↩둘이 먹다가 하나가 죽어도 모르겠다↩뒤웅박 신은 것 같다↩뒷간에 갈 적 마음 다르고 올 적 마음 다르다↩뒷구멍으로 호박씨 깐다↩드는 줄은 몰라도 나는 줄은 안다"},{"type":"level","id":"s4008","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㄷ)","subtitle":"8/22","description":"","text":"들으면 병이요 안 들으면 약이다↩등잔 밑이 어둡다↩등치고 간 내먹다↩땅 짚고 헤엄치기↩때리는 시어머니보다 말리는 시누이가 더 밉다↩떡 본 김에 제사 지낸다↩떡 줄 사람은 꿈도 안 꾸는데 김칫국부터 마신다↩떡 해 먹을 집안↩떼어 놓은 당상↩똥 누러 갈 적 마음 다르고 올 적 마음 다르다↩똥 묻은 개가 겨 묻은 개 나무란다↩똥이 무서워서 피하나 더러워서 피하지↩뚝배기보다 장맛이 좋다↩뛰는 놈 위에 나는 놈 있다↩뜨거운 국에 맛 모른다"},{"type":"level","id":"s4009","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅁ)","subtitle":"9/22","description":"","text":"마른하늘에 날벼락↩말 많은 집은 장맛도 쓰다↩말이 많으면 쓸 말이 적다↩말 한마디에 천 냥 빚도 갚는다↩맛있는 음식도 늘 먹으면 싫다↩매도 먼저 맞는 놈이 낫다↩먹기는 파발이 먹고 뛰기는 역마가 뛴다↩모기 보고 칼 빼기↩모난 돌이 정 맞는다↩모로 가도 서울만 가면 된다↩목구멍이 포도청↩못된 송아지 엉덩이에 뿔이 난다↩못 먹는 감 찔러나 본다↩무쇠도 갈면 바늘이 된다↩물에 빠지면 지푸라기라도 움켜쥔다↩물에 빠진 놈 건져 놓으니까 내 봇짐 내라 한다↩미꾸라지 한 마리가 온 웅덩이를 흐려 놓는다↩미꾸라짓국 먹고 용트림한다↩믿는 도끼에 발등 찍힌다↩밀가루 장사하면 바람이 불고 소금 장사하면 비가 온다↩밑 빠진 독에 물 붓기"},{"type":"level","id":"s4010","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅂ)","subtitle":"10/22","description":"","text":"바늘 가는 데 실 간다↩바늘 도둑이 소도둑 된다↩바늘 방석에 앉은 것 같다↩바람 앞에 등불↩바위를 차면 제 발부리만 아프다↩반딧불로 별을 대적하랴↩발등에 불이 떨어지다↩발없는 말이 천 리 간다↩밥 먹을 때는 개도 안 때린다↩배보다 배꼽이 더 크다↩배부른 흥정↩배지 않은 아이 낳으라고 한다↩백지장도 맞들면 낫다↩뱁새가 활새를 따라가면 다리가 찢어진다↩번개가 잦으면 천둥을 한다↩번갯불에 콩 볶아 먹겠다↩벌집을 건드렸다↩범 없는 골에는 토끼가 스승이라↩범에게 물려 가도 정신말 차리면 산다↩벙어리 냉가슴 앓듯↩벼는 익을수록 고개를 숙인다↩벼락치는 하늘도 속인다↩벼룩도 낯짝이 있다"},{"type":"level","id":"s4011","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅂ)","subtitle":"11/22","description":"","text":"벼룩의 간을 내어 먹는다↩변죽을 치면 복판이 운다↩병 주고 약 준다↩보기 좋은 떡이 먹기도 좋다↩보채는 아이 밥 한 술 더 준다↩부뚜막의 소금도 집어 넣어야 짜다↩부조는 않더라도 제상이나 치지 마라↩북은 칠수록 소리가 난다↩불 가져오라는데 물 가져온다↩불난 데 부채질한다↩불면 꺼질까 쥐면 터질까↩불에 놀란 놈이 부지깽이만 보아도 놀란다↩비 온 뒤에 땅이 굳어진다↩빈 수레가 더 요란하다↩빚 주고 뺨 맞기↩빛 좋은 개살구"},{"type":"level","id":"s4012","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅅ)","subtitle":"12/22","description":"","text":"사공이 많으면 배가 산으로 간다↩사나운 개 콧등 아물 틈이 없다↩사돈 남 나무란다↩사돈집과 뒷간은 멀수록 좋다↩사또 덕분에 나팔 분다↩사또 떠난 뒤에 나팔 분다↩사람 나고 돈 났지, 돈 나고 사람 났나↩사람 팔자 시간문제↩사흘 굶어 도둑질 아니할 놈 없다↩산 사람의 입에 거미줄 치랴↩산에 가야 범을 잡는다↩삼십육계 줄행랑이 제일↩상주 보고 제삿날 다툰다↩새 까먹은 소리↩새도 앉는 곳마다 깃이 떨어진다↩새벽달 보자고 초저녁부터 기다린다↩새침데기 골로 빠진다↩서당 개 삼년 풍월을 읊는다↩서리 맞은 구렁이↩서울 가서 김 서방 찾기↩선무당이 사람 죽인다↩설마가 사람 죽인다↩성나 바위 차기↩섶을 지고 불로 들어간다↩세 살 적 버릇이 여든까지 간다"},{"type":"level","id":"s4013","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅅ)","subtitle":"13/22","description":"","text":"소경 기름 값 내기↩소경 단청 구경↩소경이 개천을 나무란다↩소경 제 닭 잡아먹기↩소금 먹은 놈이 물을 켠다↩소 닭 보듯 닭 소 보듯↩소문난 잔치에 먹을 것 없다↩소 잃고 외양간 고친다↩솔개도 오래면 꿩을 잡는다↩송곳도 끝부터 들어간다↩송곳 박을 땅도 없다↩쇠귀에 경 읽기↩쇠꼬리보다 닭 대가리가 낫다↩쇠뿔도 단김에 빼랬다↩쇠죽가마에 달걀 삶아 먹을라↩수박 겉 핥기↩수염이 대 자라도 먹어야 양반이다↩숭어가 뛰니까 망둥이도 뛴다↩숯이 검정 나무란다↩시꺼먼 도둑놈↩시어머니 미워서 개 옆구리 찬다↩시작이 반이라↩시장이 반찬이다↩시집도 가기 전에 기줘기 마련한다↩신선놀음에 도낏자루 썪는 줄 모른다↩심은 대로 거둔다↩십년공부 나무아미타불↩십 년이면 강산도 변한다↩쏘아 놓은 살이요 엎지른 물이다"},{"type":"level","id":"s4014","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅇ)","subtitle":"14/22","description":"","text":"아는 길도 물어 가랬다↩아니 땐 굴뚝에 연기 날까↩아닌 밤중에 홍두깨↩아무리 바빠도 바늘허리 매어 쓰지 못한다↩안되면 조상 탓↩앉아 주고 서서 받는다↩앉은 자리에 풀도 안 나겠다↩약방에 감초↩얕은 내도 깊게 건너라↩어느 장단에 춤추랴↩어두운 밤중에 홍두깨 내밀듯↩어르고 뺨 치기↩어물전 망신은 꼴두기가 시킨다↩업은 아기 삼년 찾는다↩엉덩이에 뿔이 났다↩엎드러지면 코 닿을 데↩엎드려 절 받기"},{"type":"level","id":"s4015","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅇ)","subtitle":"15/22","description":"","text":"에 헤 다르고 애 해 다르다↩열 길 물속은 알아도 한 길 사람의 속은 모른다↩열 번 찍어 아니 넘어가는 나무 없다↩열 손가락 깨물어 안 아픈 손가락이 없다↩염불에는 맘이 없고 잿밥에만 맘이 있다↩옆찔러 절 받기↩오뉴월 감기는 개도 안 걸린다↩오뉴월 겻불도 쬐다 나면 섭섭하다↩오는 말이 고와야 가는 말이 곱다↩오는 정이 있어야 가는 정이 있다↩오르지 못할 나무는 쳐다보지도 마라↩오이는 씨가 있어도 도둑은 씨가 없다↩옥에도 티가 있다↩옷이 날개다↩외상이면 소도 잡아먹는다↩우물 안 개구리↩우물에 가 숭늉 찾는다↩우물을 파도 한 우물을 파라↩우선 먹기는 곶감이 달다↩울며 겨자 먹기↩울지 않는 아이 젖 주랴↩웃는 낯에 침 뱉으랴"},{"type":"level","id":"s4016","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅇ)","subtitle":"16/22","description":"","text":"원님 덕에 나팔이라↩원수는 외나무다리에서 만난다↩원숭이도 나무에서 떨어진다↩윗물이 맑아야 아랫물이 맑다↩음지도 양지 된다↩이마를 찔러도 피 한 방울 안 나겠다↩이 아픈 날 콩밥 한다↩이 없으면 잇몸으로 산다↩익은 밥 먹고 선소리한다↩임도 보고 뽕도 딴다↩입은 거지는 얻어먹어도 벗은 거지는 못 얻어먹는다↩입은 비뚤어져도 말은 바로 해라↩잉엇국 먹고 용트림한다"},{"type":"level","id":"s4017","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅈ)","subtitle":"17/22","description":"","text":"자라 보고 놀란 가슴 소댕 보고 놀란다↩자랄 나무는 떡잎부터 알아본다↩자빠져도 코가 깨진다↩작은 고추가 더 맵다↩잔고기 가시 세다↩잔디밭에서 바늘 찾기↩잘되면 제 탓, 못되면 조상 탓↩잠을 자야 꿈을 꾸지↩장독보다 장맛이 좋다↩장사 나면 용마 난다↩저승길이 대문 밖이다↩절에 가면 중인 체, 촌에 가면 속인인 체↩절에 간 색시↩절이 망하려니까 새우젓 장수가 들어온다↩점잖은 개가 부뚜막에 오른다↩젖 먹던 힘이 다 든다↩제 꾀에 제가 넘어간다↩제 낯에 침 뱉기↩제 똥 구린 줄 모른다↩제 발등을 제가 찍는다↩제 발등의 불을 먼저 끄랬다↩제 버릇 개 줄까↩제비는 작아도 강남 간다↩제집 개에게 발뒤꿈치 물린 셈↩제 흉 열 가지 가진 놈이 남의 흉 한 가지를 본다↩족제비도 낯짝이 있다↩존대하고 뺌 맞지 않는다↩종로에서 뺨 맞고 한강에 가서 눈 흘긴다↩죄는 지은 데로 가고 덕은 닦은 데로 간다"},{"type":"level","id":"s4018","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅈ)","subtitle":"18/22","description":"","text":"주머닛돈이 쌈짓돈↩죽어 석 잔 술이 살아 한 잔 술만 못하다↩죽은 자식 나이 세기↩죽은 정승이 산 개만 못하다↩죽이 끓는지 밥이 끓는지 모른다↩중이 고기 맛을 알면 절에 빈대가 안 남는다↩중이 제 머리를 못 깎는다↩쥐구멍에도 볕 들 날이 있다↩쥐면 꺼질까 불면 날까↩지게를 지고 제사를 지내도 제멋이다↩지렁이도 밟으면 꿈틀한다↩지성이면 감천이다↩지키는 사람 열이 도둑 하나를 못 당한다↩진날 나막신 찾듯↩집에서 새는 바가지 들에 가도 샌다↩짚신감발에 사립 쓰고 단다↩쭈그렁밤송이 삼 년 간다"},{"type":"level","id":"s4019","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅊ)","subtitle":"19/22","description":"","text":"참빗으로 훑듯↩참새가 방앗간을 그저 지나랴↩참새가 죽어도 짹 한다↩참을 인 자 셋이면 살인도 피한다↩천 냥 빚도 말로 갚는다↩천 리 길도 한 걸음부터↩첫술에 배부르랴↩초년고생은 사서도 한다↩초가삼간 다 타도 빈대 죽는 것만 시원하다↩침 뱉은 우물물 다시 먹는다"},{"type":"level","id":"s4020","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅋ)","subtitle":"20/22","description":"","text":"칼로 물 베기↩칼 물고 뜀뛰기↩콩밭에 가서 두부 찾는다↩콩 심은 데 콩 나고, 팥 심은 데 팥 난다↩콩으로 메주를 쑨다 하여도 곧이 듣지 않는다↩콩을 팥이라 해도 곧이 듣는다↩콩이야 팥이야 한다↩큰 방죽도 개미구멍으로 무너진다↩큰 북에서 큰 소리 난다"},{"type":"level","id":"s4021","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅌ, ㅍ)","subtitle":"21/22","description":"","text":"탕약에 감초 빠질까↩태산을 넘으면 평지를 본다↩털끝도 못 건드리게 한다↩털도 아니 난 것이 날기부터 하려 한다↩털도 안 뜯고 먹겠다 한다↩털어서 먼지 안 나는 사람 없다↩티끌 모아 태산↩팔이 안으로 굽지 밖으로 굽나↩팥으로 메주를 쑨대도 곧이듣는다↩패는 곡식 이삭 뽑기↩평양 감사도 저 싫으면 그만이다↩품 안의 자식↩피는 물보다 진하다↩핑계 없는 무덤이 없다"},{"type":"level","id":"s4022","grade":5,"difficulty":1,"form":"sentence","language":"kr","title":"속담 (ㅎ)","subtitle":"22/22","description":"","text":"하나만 알고 둘은 모른다↩하나를 보면 열을 안다↩하늘의 별 따기↩하늘이 무너져도 솟아날 구멍이 있다↩하룻강아지 범 무서운 줄 모른다↩한강에 돌 던지기↩한 귀로 듣고 한 귀로 흘린다↩한 번 실수는 병가의 상사↩한술 밥에 배부르랴↩헌 짚신도 짝이 있다↩헤엄 잘 치는 놈 물에 빠져 죽고, 나무에 잘 오르는 놈 나무에서 떨어져 죽는다↩형만 한 아우 없다↩호랑이 굴에 가야 호랑이 새끼를 잡는다↩호랑이는 죽어서 가죽을 남기고 사람은 죽어서 이름을 남긴다↩호랑이도 제 말 하면 온다↩호랑이에게 물려가도 정신만 차리면 산다↩호박씨 까서 한입에 넣는다↩호박이 넝쿨째 굴러 떨어졌다↩혹 떼거 갔다가 혹 붙여 온다↩화약을 지고 불로 들어간다↩흥정은 붙이고 싸움은 말리랬다"},{"type":"group","title":"동요"},{"type":"level","id":"s5001","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"개구리","subtitle":"개굴개굴 개구리","description":"","text":"개굴개굴 개구리 노래를 한다↩아들 손자며느리 다 모여서↩밤새도록 하여도 듣는 이 없네↩듣는 사람 없어도 날이 밝도록↩개굴개굴 개구리 노래를 한다↩개굴개굴 개구리 목청도 좋다"},{"type":"level","id":"s5002","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"반달","subtitle":"푸른하늘 은하수 하얀 쪽배에","description":"","text":"푸른하늘 은하수 하얀 쪽배에↩계수나무 한 나무 토끼 한 마리↩돛대도 아니달고 삿대도 없이↩가기도 잘도 간다 서쪽 나라로↩은하수를 건너서 푸른나라로↩푸른나라 지나서 어디로 가나↩멀리서 반짝반짝 빛이 있는건↩샛별의 눈에 앉아 길을 찾아라"},{"type":"level","id":"s5003","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"꼬까신","subtitle":"개나리 노오란 꽃 그늘 아래","description":"","text":"개나리 노오란 꽃 그늘 아래↩가지런히 놓여 있는 꼬까신 하나↩아기는 살짝 신벗어 놓고↩맨발로 한들 한들 나들이 갔나↩가지런히 가다리는 꼬까신 하나"},{"type":"level","id":"s5004","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"산토끼","subtitle":"산토끼 토끼야 어디를 가느냐","description":"","text":"산토끼 토끼야 어디를 가느냐↩깡충깡충 뛰면서 어디를 가느냐↩산고개 고개를 나 혼자 넘어서↩토실토실 알밤을 주워서 올 테야↩산토끼 토끼야 어디를 가느냐↩깡충깡충 뛰면서 어디를 가느냐↩산고개 고개를 나 혼자 넘어서↩토실토실 알밤을 주워서 올 테야"},{"type":"level","id":"s5005","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"다람쥐","subtitle":"산골짝에 다람쥐 아기 다람쥐","description":"","text":"산골짝에 다람쥐 아기 다람쥐↩도토리 점심 가지고 소풍을 간다↩다람쥐야 다람쥐야 재주나 한 번 넘으렴↩팔닥 팔닥 팔닥 날도 참말 좋구나↩산골짝에 다람쥐 아기 다람쥐↩도토리 점심 가지고 소풍을 간다↩다람쥐야 다람쥐야 재주나 한 번 넘으렴↩팔닥 팔닥 팔닥 날도 참말 좋구나"},{"type":"level","id":"s5006","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"눈사람","subtitle":"한겨울에 밀짚모자 꼬마눈사람","description":"","text":"한겨울에 밀짚모자 꼬마눈사람↩눈썹이 우습구나 코도 삐뚤고↩거울을 보여줄까 꼬마 눈사람↩하루종일 우두커니 꼬마눈사람↩무엇을 생각하고 혼자 섰는냐↩집으로 들여갈까 꼬마눈사람"},{"type":"level","id":"s5007","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"과수원길","subtitle":"동구밖 과수원길 아카시아꽃이 활짝폈네","description":"","text":"동구밖 과수원길 아카시아꽃이 활짝폈네↩아카시아꽃 잎파리 눈송이 처럼 날리네↩향긋한 꽃냄새가 실바람 타고 솔솔↩둘이서 말이없네 얼굴 마주보며 쌩긋↩아카시아꽃 하얗게핀 먼옛날의 과수원길"},{"type":"level","id":"s5008","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"고향의 봄","subtitle":"나의 살던 고향은 꽃피는 산골","description":"","text":"나의 살던 고향은 꽃피는 산골↩복숭아꽃 살구꽃 아기 진달래↩울긋불긋 꽃대궐 차리는 동네↩그 속에서 놀던 때가 그립습니다↩꽃동네 새동네 나의 옛고향↩파란 들 남쪽에서 바람이 불면↩냇가에 수양버들 춤추는 동네↩그 속에서 놀던 때가 그립습니다"},{"type":"level","id":"s5009","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"나비야","subtitle":"나비야 나비야 이리날아 오너라","description":"","text":"나비야 나비야 이리날아 오너라↩노랑나비 흰나비 춤을 추며 오너라↩봄바람에 꽃잎도 방긋방긋 웃으며↩참새도 짹짹짹 노래하며 춤춘다"},{"type":"level","id":"s5010","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"햇볕은 쨍쨍","subtitle":"햇볕은 쨍쩅 모래알은 반짝","description":"","text":"햇볕은 쨍쩅 모래알은 반짝↩모래알로 떡 해놓고 조약돌로 소반지어↩언니 누나 모셔다가 맛있게도 냠냠↩햇볕은 쨍쨍 모래알은 반짝↩호미 들고 괭이 메고 뻗어가는 메를 캐어↩엄마 아빠 모셔다가 맛있게도 냠냠"},{"type":"level","id":"s5011","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"꽃밭에서","subtitle":"아빠하고 나하고 만든꽃밭에","description":"","text":"아빠하고 나하고 만든꽃밭에 채송화도 봉숭아도 한창입니다↩아빠가 매어놓은 새끼줄따라 나팔꽃도 어울리게 피었습니다↩애들하고 재밌게 뛰어놀다가 아빠생각나서 꽃을봅니다↩아빠는 꽃보며 살자그랬죠 날보고 꽃같이 살자 그랬죠"},{"type":"level","id":"s5012","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"파란마음 하얀마음","subtitle":"우리들 마음에 빛이 있다면","description":"","text":"우리들 마음에 빛이 있다면 여름엔 여름엔 파랄 거예요.↩산도 들도 나무도 파란 잎으로 파랗게 파랗게 덮인 속에서 파아란 하늘 보고 자라니까요.↩↩우리들 마음에 빛이 있다면 겨울엔 겨울엔 하얄 거예요.↩산도 들도 지붕도 하얀 눈으로 하얗게 하얗게 덮인 속에서 깨끗한 마음으로 자라니까요."},{"type":"level","id":"s5013","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"올챙이와 개구리","subtitle":"개울가에 올챙이 한마리","description":"","text":"개울가에 올챙이 한마리 꼬물꼬물 헤엄치다↩뒷다리가 쏙 앞다리가 쏙 팔딱팔딱 개구리 됐네↩꼬물 꼬물 꼬물 꼬물 꼬물 꼬물 올챙이가↩뒷다리가 쏙 앞다리가 쏙 팔딱 팔딱 개구리 됐네↩개울가에 올챙이 한마리 꼬물꼬물 헤엄치다↩뒷다리가 쏙 앞다리가 쏙 팔딱팔딱 개구리 됐네↩꼬물 꼬물 꼬물 꼬물 꼬물 꼬물 올챙이가↩뒷다리가 쏙 앞다리가 쏙 팔딱 팔딱 개구리 됐네"},{"type":"level","id":"s5014","grade":6,"difficulty":1,"form":"sentence","language":"kr","title":"곰 세 마리","subtitle":"곰 세 마리가 한 집에 있어","description":"","text":"곰 세 마리가 한 집에 있어↩아빠 곰 엄마 곰 애기 곰↩아빠 곰은 뚱뚱해↩엄마 곰은 날씬해↩애기 곰은 너무 귀여워↩으쓱 으쓱 잘 한다"},{"type":"group","title":"애국가"},{"type":"level","id":"s5201","grade":6,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (1절)","subtitle":"","description":"경건하게 빠르게...","text":"동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"level","id":"s5202","grade":6,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (2절)","subtitle":"","description":"경건하게 빠르게...","text":"남산 위에 저 소나무 철갑을 두른 듯 바람서리 불변함은 우리 기상일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"level","id":"s5203","grade":6,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (3절)","subtitle":"","description":"경건하게 빠르게...","text":"가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"level","id":"s5204","grade":6,"difficulty":2,"form":"sentence","language":"kr","title":"애국가 (4절)","subtitle":"","description":"경건하게 빠르게...","text":"이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."},{"type":"group","title":"돈에 관한 명언"},{"type":"level","id":"s5301","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"1/10","description":"","text":"돈과 쾌락 혹은 명예를 사랑하는 사람은 남을 사랑하지 못한다.↩돈에 관한 욕심은 모든 악의 근원으로 여겨지고 있다. 그러나 돈이 없는 것도 이 점에서는 똑같다.↩돈이란 남의 손에 넘기는 경우를 제외하면, 아무리 가지고 있어도 아무 이익도 가져 다 주지 않는 훌륭한 물건이다.↩돈은 무자비한 주인이지만, 유익한 종이 되기도 한다.↩돈은 바닥이 없는 바다 같은 것. 양심도 명예도 빠져서 떠오르지 않는다.↩돈은 비료와 같은 것으로 뿌리지 않으면 쓸모가 없다.↩꾸어주는 사람은 그냥 주는 사람이다.↩나는 임금이 되어 내 돈을 거지처럼 쓰기보다는 차라리 거지가 되어 내 마지막 1달러를 임금처럼 써보련다.↩내 주머니의 푼돈은 남의 주머니에 있는 거금보다 낫다.↩노력하는 자에게 돈이 붙는다."},{"type":"level","id":"s5302","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"2/10","description":"","text":"누구에게도 자금은 무한한 것이 아니다.↩돈 빌려 달라는 것을 거절함으로써 친구를 잃는 일은 적지만, 반대로 돈을 빌려줌으로써 도리어 친구를 잃기 쉽다.↩돈 속에, 돈 자체 속에, 그리고 돈을 취득하고 소유한다는 그 속에 무엇인가 비도덕적인 점이 있습니다.↩돈 쓰는 것을 겁내는 사람은 부자가 될 수 없다.↩돈 없이 연애 결혼을 하면 즐거운 밤과 슬픈 낮을 갖게 된다.↩가난 때문에 돈에 지배당해서는 안 된다.↩돈에 너무 집착하면 돈을 벌기도, 번 돈을 갖고 있기도 힘들다. 돈을 벌거나 모으려면 우선 돈을 편하게 생각해야 한다. 돈을 거북하게 느낀다면 의식적으로든 무의식적으로든 결국 돈을 안 가지는 쪽으로 해결을 보려 든다.↩돈으로 살 수 있는 행복이라 불리는 상품은 없다.↩돈으로 행복해질 수가 없다. 그러니 가난한 사람에게 돈을 주는 잔혹한 일은 하지 말지어다.↩돈은 거름과 같아서 뿌리지 않으면 썩기 쉽다."},{"type":"level","id":"s5303","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"3/10","description":"","text":"돈은 누군지도 묻지 않고, 그 소유자에게 권리를 준다.↩돈은 모든 불평등을 평등하게 만든다.↩돈은 밑 없는 깊은 물 속과 같다. 명예도 양심도 진리도 모두 그 속에 빠지고 만다.↩돈은 빌려주지도 말고 빌리지도 말라. 빌린 사람은 기가 죽고, 빌려준 사람도 자칫하면 그 본전은 물론 그 친구까지도 잃게 된다.↩돈은 사업을 위해 쓰여야 할 것이며, 술을 위해 쓰여야 할 것은 아니다.↩돈은 악이 아니며, 저주도 아니다. 돈은 사람을 축복하는 것이다.↩돈은 양으로 따질 뿐, 질로 따지는 것이 아니다.↩돈은 제6감 같은 것이다. 그것이 없으면 다른 5감을 완전히 가동시킬 수가 없다.↩돈은 좋은 머슴이기는 하지만, 나쁜 주인이기도 하다.↩돈은 진정 중요한 것이다. 따라서 모든 건전하고 성공적인 개인과 국가의 도덕은 이 사실에 기초를 두어야 한다."},{"type":"level","id":"s5304","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"4/10","description":"","text":"돈은 쫓을 때는 도망가고, 필요 없다고 생각하면 따라와 자연히 모인다.↩돈은 타인이 보기에는 행복하게 보이는 모든 것을 부여한다.↩돈은 필요악이다. 부유한 채로 죽는 것은 인간의 치욕이다.↩돈은 하느님으로부터의 선물을 살 기회를 준다.↩돈을 끌어오고 받아들이는 능력이 당신이 얼마나 돈을 만지며 살 수 있는가를 결정한다.↩돈을 낭비하거나 저금을 하는 사람은 가장 행복한 사람들이다. 그것은 양쪽 다 같이 그 일을 즐기고 있기 때문이다.↩돈을 낭비하거나 저금을 하는 사람은 가장 행복한 사람이다. 그것은 양쪽 다 같이 그 일을 즐기고 있기 때문이다.↩돈을 너무 많이 가지고 있다는 건, 너무 적게 가지고 있는 것보다 괴로운 일이다.↩돈을 모으려면 반드시 지켜야 할 원칙이 있고 정도가 있다.↩돈을 버는 데 그릇된 방법을 썼다면, 그 만큼 그 마음속에는 상처가 나 있을 것이다."},{"type":"level","id":"s5305","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"5/10","description":"","text":"돈을 빌려 준 사람에 대해서는 화를 참아야만 한다.↩돈을 빌려주면 종종 돈은 물론이고 친구까지 잃는다. 돈을 빌리면 흔히 검약의 마음이 둔해진다.↩돈을 빌려준 사람은 돈을 빌린 사람보다 훨씬 기억력이 좋다.↩돈을 빌리는 것은 노예가 되는 것이다.↩돈을 빌리러 가는 것은 자유를 팔러 가는 것이다.↩돈을 사랑함은 모든 악의 뿌리이다.↩돈을 사랑함이 일만 악의 뿌리가 되나니 이것을 사모하는 자들이 미혹을 받아 믿음에서 떠나 많은 근심으로써 자기를 찔렀도다.↩돈의 가치를 알아보고 싶거든 남에게 돈을 꾸어 달라고 요청해 보아라.↩돈이 없는 것은 슬픈 일이다. 하지만 남아도는 것은 그 두 배나 슬픈 일이다.↩돈이 있어도 이상이 없는 사람은 몰락의 길을 밟는다."},{"type":"level","id":"s5306","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"6/10","description":"","text":"돈이 있으면 이 세상에서는 많은 일을 할 수 있다. 그러나 청춘을 돈으로 살 수는 없다.↩돈이나 물건은 그냥 주는 것보다도 빌려주는 쪽이 낫다. 그냥 얻으면, 얻은 쪽은 준 사람보다 밑에 있지 않으면 안 되지만, 빌려주고 빌린다면 대등하게 대할 수 있다.↩돈이란 남에게 행복하게 보이는 온갖 것을 준다.↩돈이란 마치 인간의 제6감과 같아서 그것이 없으면 우리들의 다른 5감도 제대로 활용할 수 없게 된다.↩돈이란 바닷물과도 같다. 그것은 마시면 마실수록 목이 말라진다.↩돈이란 힘이고 자유이며 쿠션이자 모든 악의 근원이기도 한 동시에 한편으로는 최대의 행복이 되기도 한다.↩두툼한 지갑이 좋다고는 말할 수 없다. 그러나 텅 빈 지갑은 더 나쁘다.↩때 묻은 돈도 돈이다. 돈은 어떻게 쓰느냐가 돈의 가치를 결정하는 것이다.↩모든 것은 필요한 만큼 신이 주고 신이 거두어 간다. 특히 돈은 인간보다 신이 더 유용하게 사용하는 신의 도구일지도 모른다. 신의 뜻을 조금이라도 헤아릴 수 있다면 돈이 있다고 교만하지 않을 것이며 돈이 없다고 결코 불평하지 않을 것이다.↩무조건 돈을 아낀다고 모이는 것이 아니다. 때로는 기회가 왔을 때, 과감하게 써야 한다."},{"type":"level","id":"s5307","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"7/10","description":"","text":"방랑자이지만 돈이 있으면 관광객이라 불린다.↩부정하게 번 돈은 오래 가지 못한다. 그것은 쉽게 와서 쉽게 떠난다.↩불로소득은 외상과 같아서, 언젠가는 청구서가 날아오기 마련이다.↩빚을 지고 내일 일어나기보다 오늘밤 먹지 않고 잠자라.↩빚을 지는 것은 노예가 되는 것이다.↩사람들은 돈을 벌기는 어려워도 쓰기는 쉽다고 말한다. 그러나 돈을 잘 쓰는 방법이 훨씬 더 어려운 것이다. 돈을 잘 쓰는 사람은 인생의 승리자가 되고, 그렇지 못할 경우에는 패배자가 된다. 그렇기 때문에 집안이 번영하고 못하고는 주부에게 그 절반의 초점이 있다는 것을 알아야 한다.↩사람을 상처 입히는 것이 세 개 있다. 번민, 말다툼, 텅빈 지갑, 그 중에서 텅빈 지갑이 가장 크게 사람을 상처 입힌다.↩세계에는 단지 두 가족의 집밖에 없다. 가진 자의집과 가지지 못한자의 집.↩수입을 생각하고 나서 지출 계획을 세우라.↩시민으로서의 가장 중요한 미덕은 멋지게 돈을 긁어모으는 재능이다. 다시 말해서 어떠한 일이 있더라도 남에게 폐를 끼치지 말라는 것이다."},{"type":"level","id":"s5308","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"8/10","description":"","text":"아, 돈, 돈, 돈, 나는 반드시 그대를 신성한 것으로 생각하는 사람은 아니다. 하지만, 이따금 가던 길을 멈추고 의아해 한다. 그대는 나갈 때는 그렇게 빠르면서, 들어올 때는 왜 그리 더딘가 라고.↩아, 돈이여! 돈 때문에 얼마나 많은 슬픈 일이 이 세상에서 일어나고 있는가.↩악의 근원을 이루는 것은 돈 자체가 아니라, 돈에 대한 애착인 것이다.↩올바르게 금전을 얻기까지는 이것을 쓰지 말라.↩이유없이 생긴 큰 돈, 이것처럼 위험한 것도 없다.↩인류는 두 인종으로 이루어져 있다. 빌리는 자외 빌려 주는 사람들로.↩일은 일의 기쁨을 얻기 위해서 일하는 것이며, 어떤 일을 발전시키고 창조하는 가운데 만족감을 얻기 위해서 일하는 것입니다. 일을 사랑해서가 아니라, 돈 때문에 일하는 사람은 돈을 벌지도 못할 뿐만 아니라 즐거움도 얻지 못하는 법입니다.↩자기 주머니에서 나오는 돈의 가치를 다른 사람이 알아줄 것이라는 기대는 하지 마라.↩작은 비용을 삼가라. 작은 구멍이 큰 배를 가라앉힌다.↩재물은 생활을 위한 방편일 뿐 그 자체가 목적이 될 수는 없다."},{"type":"level","id":"s5309","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"9/10","description":"","text":"재물과 보배는 불과도 같은 것. 매우 유용한 하인 노릇을 하는가 하면 가장 무서운 주인 노릇도 한다.↩재산은 가지고 있는 자의 것이 아니고, 그것을 즐기는 자의 것이다.↩지갑이 가벼우면 마음이 무겁다.↩참으로 두려운 일은 배금주의 사상이다. 그것은 눈을 멀게 하고 귀를 막게 하고 야수보다 포악하게 하고 양심도 우정도 자기 영혼의 구원을 생각하지 않게 하고 결국 인간을 물욕의 노예로 만들어 버린다. 무엇보다 이 괴로운 노예 상태의 가장 나쁜 점은 사람들이 그 노예 상태를 즐거워하도록 만드는 것이다. 이 때문에 사람들이 황금에 몸을 맡기면 맡길수록 그들의 만족감은 불어난다. 그래서 이 병은 고치기가 힘들며 이러한 야수들은 길들이기 힘든 것이다.↩채권자도 채무자도 되지 말라. 빚돈은 종종 그 자체를 잃지마는 친구를 잃는 수가 있느니라.↩화폐는 인간의 노동과 생존의 양도된 본질이다. 이 본질은 인간을 지배하며, 인간은 이것을 숭배한다.↩정당한 소유는 인간을 자유롭게 하지만 지나친 소유는 소유자체가 주인이되어 소유자를 노예로 만든다.↩가난은 사람을 현명하게도 처절하게도 만든다.↩만족할 줄 아는 사람은 진정한 부자이고,탐욕스러운 사람은 진실로 가난한 사람이다.↩성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다."},{"type":"level","id":"s5310","grade":7,"difficulty":2,"form":"sentence","language":"kr","title":"돈에 관한 명언","subtitle":"10/10","description":"","text":"마음대로 좋은 나뭇잎을 골라 뜯어먹는 목이 긴 기린의 행복을 생각할 때, 목이 짧아 굶어죽은 기린의 고통을 잊어서는 안된다.↩한 사람의 부자가 있기 위해서는 5백 명의 가난뱅이가 있지 않으면 안된다.↩돈은 최선의 종이요, 최악의 주인이다.↩돈의 가치를 알아보고 싶거든 나가서 남에게 돈을 꾸어 달라고 요청해 보라. 적에게 돈을 꿔주면 그를 이기게 되고, 친구에게 꿔주면 그를 잃게 된다.↩돈은 현악기와 같다.그것을 적절히 사용할 줄 모르는사람은 불협화음을 듣게 된다. 돈은 사랑과 같다.이것을 잘 베풀려 하지 않는 이들을 천천히 그리고 고통스럽게 죽인다. 반면에, 타인에게 이것을 베푸는 이들에게는 생명을 준다.↩신은 인간을 만들고, 옷은 인간의 외양을 꾸민다. 그러나 인간을 마지막으로 완성하는 것은 돈이다.↩도박하는 사람들은 불확실한 것을 얻기위해 확실한 것을 건다.↩도둑질로 잘사는 사람도 있으나 잘사는 사람이라고 모두 도둑질한것은 아니다. 또한 청렴해서 가난하게 사는 사람도 있으나, 가난한 사람이다 청렴한 것은 아니다.↩남의 돈에는 날카로운 이빨이 돋아 있다.↩만일 사회가 많은 가난한 사람을 도울 수 없 다면 부유한 소수의 사람도 구해 줄 수 없다.↩게으름에 대한 하늘의 보복은 두 가지가 있다.하나는 자신의 실패요, 또하나는 그가 하지 않은 일을 한 옆 사람의 성공이다.↩부자가 되는 한 가지 방법이 있다. 내일 할 일을 오늘 하고 오늘 먹을 것을 내일 먹어라."},{"type":"group","title":"교과서에 나오는 시"},{"type":"level","id":"s5401","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"별 헤는 밤","subtitle":"","description":"윤동주 시인의 밤하늘","text":"계절이 지나가는 하늘에는↩가을로 가득 차 있습니다.↩↩나는 아무 걱정도 없이↩가을 속의 별들을 다 헬 듯합니다.↩↩가슴 속에 하나 둘 새겨지는 별을↩이제 다 못 헤는 것은↩쉬이 아침이 오는 까닭이요,↩내일 밤이 남은 까닭이요,↩아직 나의 청춘이 다하지 않은 까닭입니다.↩↩별 하나에 추억과↩별 하나에 사랑과↩별 하나에 쓸쓸함과↩별 하나에 동경과↩별 하나에 시와↩별 하나에 어머니, 어머니,↩↩어머님, 나는 별 하나에 아름다운 말 한마디씩 불러 봅니다. 소학교 때 책상을 같이 했던 아이들의 이름과, 패, 경, 옥, 이런 이국 소녀들의 이름과, 벌써 아기 어머니 된 계집애들의 이름과, 가난한 이웃 사람들의 이름과, 비둘기, 강아지, 토끼, 노새, 노루, '프랑시스 잠', '라이너 마리아 릴케' 이런 시인의 이름을 불러 봅니다.↩↩이네들은 너무나 멀리 있습니다.↩별이 아스라이 멀듯이.↩↩어머님,↩그리고 당신은 멀리 북간도에 계십니다.↩↩나는 무엇인지 그리워↩이 많은 별빛이 내린 언덕 위에↩내 이름자를 써 보고↩흙으로 덮어 버리었습니다.↩↩딴은 밤을 새워 우는 벌레는↩부끄러운 이름을 슬퍼하는 까닭입니다.↩↩그러나 겨울이 지나고 나의 별에도 봄이 오면↩무덤 위에 파란 잔디가 피어나듯이↩내 이름자 묻힌 언덕 위에도↩자랑처럼 풀이 무성할 거외다."},{"type":"level","id":"s5402","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"엄마야 누나야","subtitle":"김소월","description":"","text":"엄마야 누나야 강변 살자↩뜰에는 반짝이는 금모래빛↩뒷문 밖에는 갈잎의 노래↩엄마야 누나야 강변 살자"},{"type":"level","id":"s5403","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"돌담에 속삭이는 햇발","subtitle":"김영랑","description":"","text":"돌담에 속삭이는 햇발같이↩풀 아래 웃음 짓는 샘물같이↩내 마음 고요히 고운 봄길 위에↩오늘 하루 하늘을 우러르고 싶다.↩↩새악시 볼에 떠오는 부끄럼같이↩시의 가슴에 살포시 젖는 물결같이↩보드레한 에머랄드 얇게 흐르는↩실비단 하늘을 바라보고 싶다."},{"type":"level","id":"s5404","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"엄마 걱정","subtitle":"기형도","description":"","text":"열무 삼십 단을 이고↩시장에 간 우리 엄마↩안 오시네, 해는 시든 지 오래↩나는 찬밥처럼 방에 담겨↩아무리 천천히 숙제를 해도↩엄마 안 오시네, 배추잎 같은 발소리 타박타박↩안 들리네, 어둡고 무서워↩금간 창 틈으로 고요히 빗소리↩빈방에 혼자 엎드려 훌쩍거리던↩↩아주 먼 옛날↩지금도 내 눈시울을 뜨겁게 하는↩그 시절, 내 유년의 윗목"},{"type":"level","id":"s5405","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"봄볕","subtitle":"강동주","description":"","text":"어질고 착한 사람 되거라↩엉뎅이 또다려 주시던 할머니↩아무래도 봄볕이 그런 것 같애↩풀잎도 개나리도 엉덩이를 내민다"},{"type":"level","id":"s5406","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"저녁에","subtitle":"김광섭","description":"","text":"저렇게 많은 중에서↩↩별 하나가 나를 나려다 본다.↩이렇게 많은 사람 중에서↩그 별 하나를 쳐다본다.↩↩밤이 깊을수록↩별은 밝음속에 사라지고↩나는 어둠속에 사라진다.↩↩이렇게 정다운↩너 하나 나 하나는↩어디서 무엇이 되어↩다시 만나랴."},{"type":"level","id":"s5407","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"해","subtitle":"박두진","description":"","text":"해야 솟아라. 해야 솟아라. 말갛게 씻은 얼굴 고운 해야 솟아라. 산 넘어 산 넘어서 어둠을 살라먹고 산 넘어서 밤새도록 어둠을 살라먹고, 이글 이글 애띤 얼굴 고운 해야 솟아라.↩↩달밤이 싫어, 달밤이 싫어, 눈물같은 골짜기에 달밤이 싫어, 아무도 없는 뜰에 달밤이 나는 싫어.↩↩해야, 고운 해야, 늬가 오면 늬가사 오면, 나는 나는 청산이 좋아라, 훨훨훨 깃을 치는 청산이 좋아라. 청산이 있으면 홀로라도 좋아라.↩↩사슴을 따라, 사슴을 따라, 양지로 양지로 사슴을 따라 사슴을 만나면 사슴과 놀고, 칡범을 따라 칡범을 따라 칡범을 만나면 칡범과 놀고,↩↩해야, 고운 해야. 해야 솟아라. 꿈이 아니라도 너를 만나면, 꽃도 새도 짐승도 한자리 앉아. 워어이 워어이 모두 불러 한자리 앉아 애띠고 고운 날을 누려 보리라."},{"type":"level","id":"s5408","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"연분홍 송이송이","subtitle":"김억","description":"","text":"봄바람 하늘하늘 넘노는 길에↩연분홍 살구꽃이 눈을 틉니다.↩↩연분홍 송이송이 못내 반가와↩나비는 너훌너훌 춤을 춥니다.↩↩봄바람 하늘하늘 넘노는 길에↩연분홍 살구꽃이 나부낍니다.↩↩연분홍 송이송이 바람에 지니↩나비는 울며 울며 돌아섭니다."},{"type":"level","id":"s5409","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"하늘","subtitle":"박두진","description":"","text":"하늘이 내게로 온다.↩여릿여릿↩머얼리서 온다.↩↩하늘은, 머얼리서 오는 하늘은↩호수처럼 푸르다.↩↩호수처럼 푸른 하늘에↩내가 안긴다. 온 몸이 안긴다.↩↩가슴으로, 가슴으로↩스미어드는 하늘↩향기로운 하늘의 호흡.↩↩따가운 볕.↩초가을 햇볕으로↩목을 씻고,↩↩나늘 하늘을 마신다.↩자꾸 몰말라 마신다.↩↩마시는 하늘에↩내가 익는다.↩능금처럼 내 마음이 익는다."},{"type":"level","id":"s5410","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"행복","subtitle":"허영자","description":"","text":"눈이랑 손이랑↩깨끗이 씻고↩자알 찾아보면 있을 거야↩↩깜짝 놀랄 만큼↩신바람나는 일이↩어딘가 어딘가에 꼭 있을 거야↩↩아이들이↩보물찾기 놀일 할 때↩보물을 감춰 두는↩↩바윗 틈새 같은 데에↩나뭇 구멍 같은 데에↩↩행복은 아기자기↩숨겨져 있을 거야."},{"type":"level","id":"s5411","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"어떤마을","subtitle":"도종환","description":"","text":"사람이 착하게 사는지 별들이 많이 떴다.↩개울물 맑게 흐르는 곳에 마을을 이루고↩물바가지 떠 담던 접동새 소리 별 그림자↩그 물로 쌀을 씻어 밥 짓던 냄새 나면↩굴뚝 가까이 내려오던↩밥티처럼 따스한 별들이 뜬 마을을 지난다.↩↩사람이 순하게 사는지 별들이 참 많이 떴다."},{"type":"level","id":"s5412","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"섬집 아기","subtitle":"한인현","description":"","text":"엄마가 섬그늘에 굴 따러 가면↩아기가 혼자 남아 집을 보다가↩바다가 불러주는 자장 노래에↩팔 베고 스르르 잠이 듭니다↩↩아기는 잠을 곤히 자고 있지만↩갈매기 울음 소리 맘이 설레어↩다 못 찬 굴바구니 머리에 이고↩엄마는 모랫길을 달려옵니다"},{"type":"level","id":"s5413","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"오줌싸개지도","subtitle":"윤동주","description":"","text":"빨랫줄에 걸어 논↩요에다 그린 지도↩지난 밤에 내 동생↩오줌 싸 그린 지도↩↩꿈에 가 본 엄마 계신↩별나라 지돈가?↩돈 벌러 간 아빠 계신↩만주 땅 지돈가?"},{"type":"level","id":"s5414","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"연탄 한 장","subtitle":"안도현","description":"","text":"또 다른 말도 많고 많지만↩삶이란↩나 아닌 그 누구에게↩기꺼이 연탄 한 장 되는 것↩↩방구들 선득선득해지는 날부터 이듬해 봄까지↩조선팔도 거리에서 제일 아름다운 것은↩연탄차가 부릉부릉↩힘쓰며 언덕길 오르는 거라네↩해야 할 일이 무엇인가를 알고 있다는 듯이↩연탄은, 일단 제 몸에 불이 옮겨 붙었다 하면↩하염없이 뜨거워지는 것↩매일 따스한 밥과 국물 퍼먹으면서도 몰랐네↩온 몸으로 사랑하고 나면↩한 덩이 재로 쓸쓸하게 남는 게 두려워↩여태껏 나는 그 누구에게 연탄 한 장도 되지 못하였네↩↩생각하면↩삶이란↩나를 산산이 으깨는 일↩↩눈 내려 세상에 미끄러운 어느 이른 아침에↩나 아닌 그 누가 마음 놓고 걸어갈↩그 길을 만들 줄도 몰랐었네, 나는"},{"type":"level","id":"s5415","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"감자꽃","subtitle":"권태응","description":"","text":"자주 꽃 핀 건 가주 감자.↩파 보나 마나 자주 감자.↩↩하얀 꽃 핀 건 하얀 감자.↩파 보나 마나 하얀 감자."},{"type":"level","id":"s5416","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"그 날이 오면","subtitle":"심훈","description":"","text":"그 날이 오면, 그 날이 오면은↩삼각산이 일어나 더덩실 춤이라고 추고↩한강물이 뒤집혀 용솟음칠 그 날이↩이 목숨이 끊어지기 전에 와 주기만 하량이면↩나는 밤하늘에 나는 까마귀와 같이↩종로의 인경을 머리로 드리받아 울리오리다.↩두개골은 깨어져 산산조각이 나도↩기뻐서 죽사오매 오히려 무슨 한이 남으오리까.↩↩그 날이 와서, 오오 그 날이 와서↩육조 앞 넓은 길을 울며 뛰며 뒹굴어도↩그래도 넘치는 기쁨에 가슴이 미어질 듯하거든↩드는 칼로 이몸의 가죽이라도 벗겨서↩커다란 북을 만들어 들쳐 메고는↩여러분의 행렬에 앞장을 서오리다.↩우렁찬 그 소리를 한 번이라도 듣기만 하면↩그 자리에 거꾸러져도 눈을 감겠소이다."},{"type":"level","id":"s5417","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"내 마음은","subtitle":"김동명","description":"","text":"내 마음은 호수요,↩그대 저어 오오.↩나는 그대의 흰 그림자를 안고,↩옥같이 그대의 뱃전에 부서지리다.↩내 마음은 촛불이요,↩그대 저 문을 닫아 주오.↩나는 그대의 비단 옷자락에 떨며, 고요히↩최후의 한 방울도 남김없이 타오리다.↩↩내 마음은 나그네요,↩그대 피리를 불어 주오.↩나는 달 아래 귀를 기울이며, 호젓이↩나의 밤을 새어오리다.↩↩내 마음은 낙엽이요,↩잠깐 그대의 뜰에 머무르게 하오.↩이제 바람이 일면 나는 또 나그네같이. 외로이↩그대를 떠나오리다."},{"type":"level","id":"s5418","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"초록 바다","subtitle":"박경종","description":"","text":"초록빛↩바닷물에↩두 손을 담그면↩↩파아란↩초록빛↩물이 들지요.↩↩초록빛↩예쁜↩손이 되지요.↩↩초록빛↩여울물에↩두 발을 담그면↩↩물결이↩살랑살랑↩어루만져요.↩↩우리 순이↩손처럼↩간지럼 줘요"},{"type":"level","id":"s5419","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"봄볕","subtitle":"강동주","description":"","text":"어질고 착한 사람 되거라↩엉뎅이 또다려 주시던 할머니↩아무래도 봄볕이 그런 것 같애↩풀잎도 개나리도 엉덩이를 내민다"},{"type":"level","id":"s5420","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"청포도","subtitle":"이육사","description":"","text":"내고장 칠월은↩청포도가 익어가는 시절↩↩이 마을 전설이 주절이 주절이 열리고↩먼 데 하늘이 꿈꾸며 알알이 들어와 박혀↩↩하늘밑 푸른 바다가 가슴을 열고↩흰 돛단배가 곱게 밀려서 오면↩↩내가 바라는 손님은 고달픈 몸으로↩청포를 입고 찾아온다고 했으니↩↩내 그를 맞아 이 포도를 따 먹으면↩두 손은 함뿍 적셔도 좋으련↩↩아이야 우리 식탁엔 은쟁반에↩하이얀 모시 수건을 마련해 두렴."},{"type":"level","id":"s5421","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"동해바다","subtitle":"신경림","description":"","text":"친구가 원수보다 더 미워지는 날이 많다.↩티끌만한 잘못이 맷방석만 하게↩동산만하게 커 보이는 때가 많다.↩그래서 세상이 어지러울수록↩남에게 엄격해지고 내게는 너그러워지나 보다↩돌처럼 작아지고 굳어지나 보다↩↩멀리 동해바다를 내려다보며 생각한다↩널따란 바다처럼 너그러워질 수는 없을까,↩깊고 짙푸른 바다처럼↩감싸고 끌어안고 받아들일 수는 없을까,↩스스로 억센 파도로 다스리면서↩제 몸은 맵고 모진 매로 채찍질 하면서"},{"type":"level","id":"s5422","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"과수원 길","subtitle":"박화목","description":"","text":"동구 밖 과수원 길↩아카시아꽃이 활짝 폈네↩↩하이얀꽃 이파리↩눈송이처럼 날리네.↩↩향긋한 꽃냄새가↩실바람 타고 솔솔↩↩둘이서 말이 없네.↩얼굴 마주보며 생긋↩↩아카시아꽃 하얗게 핀↩먼 옛날의 과수원 길."},{"type":"level","id":"s5423","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"물새알 산새알","subtitle":"박목월","description":"","text":"물새는↩물새라서 바닷가 모래밭에↩알을 낳는다.↩보얗게 하얀 물새알.↩↩산새는↩산새라서 수풀 둥지 안에↩알을 낳는다.↩알락알락 얼룩진 산새알.↩↩물새알은↩간간하고 짭조름한↩미역 냄새↩바람냄새.↩↩산새알은↩달콤하고 향긋한↩풀꽃 냄새↩이슬 냄새.↩↩물새알은↩물새알이라서↩아아, 날갯죽지 하얀↩물새가 된다.↩↩산새알은↩산새알이라서↩머리꼭지에 빨강 댕기를 드린↩산새가 된다."},{"type":"level","id":"s5424","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"말의 힘","subtitle":"황인숙","description":"","text":"기분 좋은 말을 생각해보자.↩파랗다. 하얗다. 깨끗하다. 싱그럽다.↩신선하다. 짜릿하다. 후련하다.↩기분 좋은 말을 소리내보자.↩시원하다. 달콤하다. 아늑하다. 아이스크림.↩얼음. 바람. 아아아. 사랑하는. 소중한. 달린다.↩비!↩머릿속에 가득 기분 좋은↩느낌표를 밟아보자.↩느낌표들을 밟아보자. 만져보자. 핥아보자.↩깨물어보자. 맞아보자. 터뜨려보자!"},{"type":"level","id":"s5425","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"비","subtitle":"황인숙","description":"","text":"찰박거리는 맨발들.↩찰박 찰박 찰박 맨발들.↩맨발들, 맨발들, 맨발들.↩쉬지 않고 찰박 걷는↩티눈 하나 없는↩작은 발들.↩맨발로 끼어들고 싶게 하는."},{"type":"level","id":"s5426","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"호수 1","subtitle":"정지용","description":"","text":"얼굴 하나야↩손바닥 둘로↩폭 가리지만,↩↩보고 싶은 마음↩호수만하니↩눈감을밖에."},{"type":"level","id":"s5427","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"이 바쁜데 웬 설사","subtitle":"김용택","description":"","text":"소낙비는 오지요↩소는 뛰지요↩바작에 풀은 허물어지지요↩설사는 났지요↩허리끈은 안 풀어지지요↩들판에 사람들은 많지요"},{"type":"level","id":"s5428","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"콩, 너는죽었다","subtitle":"김용택","description":"","text":"콩 타작을 하였다↩콩들이 마당으로 콩콩 뛰어나와↩또르르또르르 굴러간다↩콩 잡아라 콩 잡아라↩굴러가는 저 콩 잡아라↩콩 잡으러 가는데↩어, 어, 저 콩 좀 봐라↩구멍으로 쏙 들어가네↩↩콩, 너는 죽었다."},{"type":"level","id":"s5429","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"진달래꽃","subtitle":"김소월","description":"","text":"나 보기가 역겨워↩가실 때에는↩말없이 고이 보내 드리오리다↩↩영변에 약산↩진달래꽃↩아름 따다 가실 길에 뿌리오리다↩↩가시는 걸음걸음↩놓인 그 꽃을↩사뿐히 즈려밟고 가시옵소서↩↩나 보기가 역겨워↩가실 때에는↩죽어도 아니 눈물 흘리오리다."},{"type":"level","id":"s5430","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"가는 길","subtitle":"김소월","description":"","text":"그립다↩말을 할까↩하니 그리워↩↩그냥 갈까↩그래도↩다시 더 한 번......↩↩저 산에도 가마귀, 들에 가마귀,↩서산에는 해 진다고↩지저귑니다.↩↩앞 강물, 뒷 강물,↩흐르는 물은↩어서 따라 오라고 따라 가자고↩흘러도 연달아 흐릅디다려."},{"type":"level","id":"s5431","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"풀따기","subtitle":"김소월","description":"","text":"우리 집 뒷산에는 풀이 푸르고↩숲 사이의 시냇물, 모래 바닥은↩파아란 풀 그림자, 떠서 흘러요.↩↩그리운 우리 님은 어디 계신고,↩날마다 피어 나는 우리 님 생각.↩날마다 뒷산에 홀로 앉아서↩날마다 풀을 따서 물에 던져요.↩↩흘러가는 시내의 물이 흘러서↩내어 던진 풀잎은 옅게 떠갈 제↩물살이 해적해적 품을 헤쳐요.↩↩그리운 우리 님은 어디 계신고,↩가엾은 이내 속을 둘 곳 없어서↩날마다 풀을 따서 물에 던지고↩흘러가는 잎이나 맘해 보아요."},{"type":"level","id":"s5432","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"공무도하가","subtitle":"백수광부의 처","description":"","text":"임이여 물을 건너지 마오.↩임은 결국 물을 건너시네.↩물에 빠져 죽었으니,↩장차 임을 어이할꼬."},{"type":"level","id":"s5433","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"별","subtitle":"정진규","description":"","text":"별들의 바탕은 어둠이 마땅하다↩대낮에는 보이지 않는다↩지금 대낮인 사람들은↩별들이 보이지 않는다↩지금 어둠인 사람들에게만↩별들이 보인다↩지금 어둠인 사람들만↩별들을 낳을 수 있다↩↩지금 대낮인 사람들은 어둡다"},{"type":"level","id":"s5434","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"흔들리며 피는 꽃","subtitle":"도종환","description":"","text":"흔들리지 않고 피는 꽃이 어디 있으랴↩이 세상 그 어떤 아름다운 꽃들도↩다 흔들리면서 피었나니↩흔들리면서 줄기를 곧게 세웠나니↩흔들리지 않고 가는 사랑이 어디 있으랴↩↩젖지 않고 피는 꽃이 어디 있으랴↩이 세상 그 어떤 빛나는 꽃들도↩다 젖으며 젖으며 피었나니↩바람과 비에 젖으며 꽃잎 따뜻하게 피웠나니↩젖지 않고 가는 삶이 어디 있으랴"},{"type":"level","id":"s5435","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"제비꽃에 대하여","subtitle":"안도현","description":"","text":"제비꽃을 알아도 봄은 오고↩제비꽃을 몰라도 봄은 간다↩↩제비꽃에 대해 알기 위해서↩따로 책을 뒤적여 공부할 필요는 없지↩↩연인과 들길을 걸을 때 잊지 않는다면↩발견할 수 있을 거야↩↩그래, 허리를 낮출 줄 아는 사람에게만↩보이는 거야 자줏빛이지↩↩자줏빛을 톡 한번 건드려봐↩흔들리지? 그건 관심이 있다는 뜻이야↩↩사랑이란 그런 거야↩사랑이란 그런 거야↩↩봄은,↩제비꽃을 모르는 사람을 기억하지 않지만↩↩제비꽃을 아는 사람 앞으로는↩그냥 가는 법이 없단다↩↩그 사람 앞에는↩제비꽃 한포기를 피워두고 가거든↩↩참 이상하지?↩해마다 잊지 않고 피워두고 가거든"},{"type":"level","id":"s5436","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"봄은 고양이로다","subtitle":"이장희","description":"","text":"꽃가루와 같이 부드러운 고양이의 털에↩고운 봄의 향기가 어리우도다.↩↩금방울과 같이 호동그란 고양이의 눈에↩미친 봄의 불길이 흐르도다.↩↩고요히 다물은 고양이의 입술에↩포근한 봄 졸음이 떠돌아라.↩↩날카롭게 쭉 뻗은 고양이의 수염에↩푸른 봄의 생기가 뛰놀아라."},{"type":"level","id":"s5437","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"오라, 이 강변으로","subtitle":"홍윤숙","description":"","text":"오라, 이 강변으로↩우리는 하나, 만나야 할 한 핏줄,↩마침내 손잡을 그 날을 기다린다.↩그 날이 오면, 끊어진 허리↩동강난 세월들 씻은 듯 나으리라↩너의 주름과 나의 백발도↩이 땅의 아름다운 꽃이 되리라.↩오늘도 여기 서서 너를 기다린다."},{"type":"level","id":"s5438","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"나뭇잎 배","subtitle":"박홍근","description":"","text":"낮에 놀다 두고 온 나뭇잎 배는↩엄마 곁에 누워도 생각이 나요.↩푸른 달과 흰 구름 둥실 떠가는↩연못에서 사알 살 떠다니겠지.↩↩연못에다 띄워 논 나뭇잎 배는↩엄마 곁에 누워도 생각이 나요.↩살랑살랑 바람에 소곤거리는↩갈잎 새를 혼자서 떠다니겠지."},{"type":"level","id":"s5439","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"끝없는 강물이 흐르네","subtitle":"김영랑","description":"","text":"내 마음의 어딘 듯 한 편에 끝없는↩강물이 흐르네.↩↩돋쳐 오르는 아침날 빛이 빤질한↩은결을 도도네.↩↩가슴엔 듯 눈엔 듯 또 핏줄엔 듯↩마음이 도른도른 숨어 있는 곳↩↩내 마음의 어딘 듯 한 편에 끝없는↩강물이 흐르네."},{"type":"level","id":"s5440","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"기대","subtitle":"양정자","description":"","text":"공부도 신통찮은데↩남에게 지기 싫어하고 참견 안 하는 데가 없어↩친구들과 유난히 잘 다투는↩입이 참새처럼 뾰죽 튀어나온 박현주↩아무리 야단쳐도 말다툼 그칠 날 없네↩생각다 못해 1학기 성적표 가정 통신란에↩'마음이 너그럽고 이해심이 깊어↩친구들과 유난히 사이가 좋습니다'라고↩은근히 정반대로 부추겨 주었더니↩아니, 이게 웬일인가↩2학기부터는 싸움 한번 안하고↩밀가루 반죽처럼 부드러워졌네↩눈부신 꽃으로 보면 더욱 눈부신 꽃이 되고↩하찮은 돌멩이로 보면 여지없이 돌멩이로 돼 버리는↩기대한 만큼보다 훨씬 더 이루는↩무한 가능성의 놀라운 아이들"},{"type":"level","id":"s5441","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"만돌이","subtitle":"윤동주","description":"","text":"만돌이가 학교에서 돌아오다가↩전봇대 있는 데서↩돌짜기 다섯 개를 주웠습니다.↩↩전봇대를 겨누고↩돌 첫개를 뿌렸습니다.↩-딱↩두 개째 뿌렸습니다.↩-아뿔싸~↩세 개째 뿌렸습니다.↩-딱-↩네 개째 뿌렸습니다.↩-아뿔싸~↩다섯 개째 뿌렸습니다.↩-딱-↩다섯 개에 세 개......↩그만하면 되었다.↩↩내일 시험↩다섯 문제에 세 문제만 하면-↩손꼽아 구구를 하여 봐도↩허양 육십 점이다.↩볼 거 있나 공차러 가자. -↩↩그 이튿날 만돌이는↩꼼짝 못 하고 선생님한테↩흰 종이를 바쳤을까요.↩↩그렇잖으면 정말↩육십 점을 맞았을까요."},{"type":"level","id":"s5442","grade":8,"difficulty":4,"form":"sentence","language":"kr","title":"굴뚝","subtitle":"윤동주","description":"","text":"산골짜기 오막살이 낮은 굴뚝엔↩몽기몽기 웬 연기 대낮에 솟나.↩↩감자를 굽는게지 총각애들이↩깜박깜박 검은 눈이 모여 앉아서↩입술에 꺼멓게 숯을 바르고↩옛 이야기 한 커리에 감자 하나씩.↩↩산골짜기 오막살이 낮은 굴뚝엔↩살랑살랑 솟아나네 감자 굽는 내"},{"type":"group","title":"교과서에 나오는 시조"},{"type":"level","id":"s5501","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"단심가","subtitle":"정몽주","description":"","text":"이 몸이 죽고 죽어 일 백번 고쳐 죽어↩백골이 진토되어 넋이라도 있고 없고↩임 향한 일편단심이야 가실 줄 있으랴"},{"type":"level","id":"s5502","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"하여가","subtitle":"이방원","description":"","text":"이런들 어떠하리 저런들 어떠하리↩만수산 드렁칡이이 얽혀진들 어떠하리↩우리도 이같이 얽혀져 백년까지 누리리라"},{"type":"level","id":"s5503","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"그 집 앞","subtitle":"이은상","description":"","text":"오가며 그 집 앞을 지나노라면↩그리워 나도 몰래 발이 머물고↩오히려 눈에 띌까 다시 걸어도↩되오면 그 자리에 서졌습니다.↩↩오늘도 비 내리는 가을 저녁을↩외로이 이 집 앞을 지나는 마음↩잊으려 옛날일을 잊어버리려↩불빛에 빗줄기만 세며 갑니다. "},{"type":"level","id":"s5504","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"별","subtitle":"이병기","description":"","text":"바람이 서늘도 하여 뜰앞에 나섰더니↩서산 머리에 하늘은 구름을 벗어나고↩산뜻한 초사흘달이 별과 함께 나오더라↩↩달은 넘어가고 별만 서로 반짝인다↩저 별은 뉘 별이며 내 별 또한 어느 게오↩잠자코 호올로 서서 별을 헤어 보노라"},{"type":"level","id":"s5505","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"어져 내 일이야","subtitle":"황진이","description":"","text":"어져 내 일이야 그릴 줄을 모로다냐↩이시라 하더면 가랴마난 제 구태야↩보내고 그리난 정은 나도 몰라 하노라"},{"type":"level","id":"s5506","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"봉선화","subtitle":"김상옥","description":"","text":"비오자 장독간에 봉선화 반만벌어↩해마다 피는꽃을 나만두고 볼것인가↩세세한 사연을 적어 누님께로 보내자↩↩누님이 편지보며 하마울까 웃으실까↩눈앞에 삼삼이는 고향집을 그리시고↩손톱에 꽃물들이던 그날 생각하시리↩↩양지에 마주앉아 실로찬찬 매어주던↩그 하얀 손 가락가락이 연붉은 그 손톱을↩지금은 꿈속에 본듯 힘줄만이 서노라"},{"type":"level","id":"s5507","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"문패","subtitle":"김상옥","description":"","text":"해방된 그다음날↩문패를 떼고↩우리 이름 옛 이름↩써서 붙였다.↩↩앞집에도 새 문패↩하얀 새 문패↩뒷집에도 새 문패↩갈아 붙였다.↩↩그리운 우리 이름↩다시 부르자↩정다운 옛 이름도↩귀에 설고나."},{"type":"level","id":"s5508","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"동창이 밝았느냐","subtitle":"남구만","description":"","text":"동창이 밝았느냐 노고지리 우지진다↩소치는 아이는 상기 아니 일었느냐↩재너머 사래 긴 밭을 언제 갈려 하느니."},{"type":"level","id":"s5509","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"개화","subtitle":"이호우","description":"","text":"꽃이 피네, 한 잎 한 잎↩한 하늘이 열리고 있네.↩↩마침내 남은 한 잎이↩마지막 떨고 있는 고비.↩↩바람도 햇볕도 숨을 죽이네↩나도 그만 눈을 감네"},{"type":"level","id":"s5510","grade":9,"difficulty":4,"form":"sentence","language":"kr","title":"오우가","subtitle":"윤선도","description":"","text":"내 벗이 몇이냐 하니 수석과 송죽이라.↩동산에 달 오르니 그 더욱 반갑구나.↩두어라, 이 다섯밖에 또 더하여 무엇하리.↩↩구름 빛 좋다 하나 검기를 자주 한다.↩바람 소리 맑다 하나 그칠 적이 많도다.↩좋고도 그칠 일 없기는 물뿐인가 하노라.↩↩꽃은 무슨 일로 피면서 쉬이 지고↩풀은 어이하여 푸르는 듯 누르나니↩아마도 변치 아닐손 바위뿐인가 하노라.↩↩더우면 꽃 피고 추우면 잎 지거늘↩솔아 너는 어찌 눈서리를 모르느냐.↩구천의 부리 곹은 줄을 글로 하여 아노라.↩↩나무도 아늰 것이 풀도 아닌 것이↩곧기는 뉘 시기며 속은 어이 비엇느냐.↩저렇게 사시에 푸르나 그를 좋아하노라.↩↩작은 것이 높이 떠서 만물을 다 비추니↩밤중의 광명이 너만한 이 또 있느냐.↩보고도 말  아니하니 내 벗인가 하노라."},{"type":"group","title":"안내 책자"},{"type":"level","id":"s6001","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"서울시 책방지도 2018","subtitle":"소개말","description":"","text":"동네 책방이 점점 줄어들고 있다는 안타까운 소문이 여기저기에서 들려옵니다. 사람들이 책을 안 읽게 되면서, 온라인에서 책을 싸게 사면서 동네 책방은 손님이 줄어들어 경영이 어려워져서 문을 닫게 된다고 합니다.↩그런 한편 개성 넘치는 책방이 하나둘씩 문을 열고 있다는 반가운 소식도 들려옵니다. 책방이 책을 만나는 곳은 물론, 약속 장소가 되고 모임이나 이벤트가 있는 날에는 사람들이 북적북적한 동네 문화 사랑방이 되고 있습니다.↩출퇴근길에, 등하굣길에 책방에 들러서 새로 나온 책을 들추어 보면서 책방 주인과 이웃들과 함께 요즘 읽는 책과 오늘 하루의 삶을 이야기하면 참 좋겠습니다.↩ 지금 이런 책방이 우리 동네에 있나요?"},{"type":"level","id":"s6002","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"서울시 책방지도 2018","subtitle":"나에게 서점이란? 1/3","description":"","text":"서점이란 한 자리를 지켜주는 나무이다. 서점은 사람들의 마음이 자라게 하고 때론 기대거나 비와 해를 피할 수 있는 힘을 주기 때문이다. - 개똥이네 놀이터↩(책은 애인이고) 서점이란 설레임이다 - 땡스북스↩서점은 동네사랑방이다. - 바람길↩서점은 경험이다. - 북스피리언스↩서점이란 소금이다. 서점은 가까이에 있을 때는 잘 모르지만 사라지고 나면 소중함을 느끼게 된다. - 불광문고↩서점이란 같은 것을 좋아하는 사람들을 만날 수 있는 곳이다. - 사슴책방"},{"type":"level","id":"s6003","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"서울시 책방지도 2018","subtitle":"나에게 서점이란? 2/3","description":"","text":"서점이란 공간이 아니다. 사람이다. - 서점 리스본↩서점은 저자와 독자간의 순수한 마음이 오고가는 장소이다 - 순정책방↩서점은 \"재미있는 미로\"이다. - 서촌 그 책방↩서점은 책의 맥박에 맞춰 호흡이 고르게 되는 곳이다. - 아무책방↩서점은 내면에 좀 더 가까이 갈 수 있는 공간이다. - 오버그린파크↩서점은 평범한 사람들의 특별한 이야기가 모이는 곳이다. - 옥탑방책방↩서점은 책과 사람이 어울려 춤이 되는 터전이다. - 이상한나라의헌책방↩(책은 행성이고) 서점은 우주다. - 인덱스↩서점이란 공감과 위로, 도전의 이야기를 맛깔나게 담아낸 상추쌈이다. 서점은 기술의 발전처럼 결코 사라지지 않을 희말과 욕구의 집합소이다. - 지구책방 여행마을"},{"type":"level","id":"s6004","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"서울시 책방지도 2018","subtitle":"나에게 서점이란? 3/3","description":"","text":"서점은 보물섬이다. - 책방이음↩서점이란 지혜의 공간이다. 서점은 문화의 지표이다. - 책인감↩서점은 숲이다. 서로의 생각이 만나 다양해지고 깊어지는 생각의 숲이다. - 최인아책방↩서점이란 고전을 내 몸으로 배우면서, 내 삶을 아름답게 조형하기 위해 수양하는 곳이다. - 학아재서점↩서점이란 '나를 고민하는 곳'이다. - 행복바구니↩서점은 뿌리다. 서점은 도서를 판매하는 곳이며 나의 지식을 키우고 성장시키는 뿌리이다. - 행복한글간↩서점은 동네사랑방이다. - 북션↩서점은 취향이다. - 피스"},{"type":"level","id":"s6005","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"서울시 책방지도 2018","subtitle":"국내 책방들을 소개한 책 1/2","description":"","text":"[단행본]↩↩헌책방에서 보낸 1년↩함께살기 최종규의 헌책방 나들이↩최종규 / 그물코, 2006↩↩책빛숲↩아벨서점과 배다리 헌책방거리↩최종규 / 숲속여우비, 2014↩↩작은 책방, 우리 책 쫌 팝니다!↩동네서점의 유쾌한 반란↩백창화 / 남해의봄날, 2015↩↩우리, 독립책방↩북노마드 편집부 엮음 / 북노마드, 2015↩↩술 먹는 책방↩동네서점 북바이북 이야기↩김진양 / 나무나무, 2015↩↩어서오세요, 오늘의 동네서점↩땡스북스+퍼니플랜 / 알마, 2016↩↩탐방서점↩금정연과 김중혁의 서점 기행↩프로파간다 편집부 / 프로파간다, 2016↩↩작고 아름다운 동네 책방 이야기↩이충열 / 마음의 숲, 2016↩↩여행자의 동네서점↩구선아 / 퍼니플랜, 2016"},{"type":"level","id":"s6006","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"서울시 책방지도 2018","subtitle":"국내 책방들을 소개한 책 2/2","description":"","text":"동네서점이 사랑한 책들↩전국의 책방지기가 추천하는 선물하고 싶은 책 104↩이유리 등 / 퍼니플랜, 2016↩↩책 사랑꾼 이색 서점에서 무얼 보았나?↩김건숙 / 바이북스, 2017↩서점을 둘러싼 희망↩문희언 / 여름의숲, 2017↩↩당신에게 말을 건다↩속초 동아서점 이야기↩김영건 / 알마, 2017↩↩책방산책 서울 No.1↩서울도서관 / 서울특별시, 2017↩↩책방산책 서울 No.2↩서울도서관 / 서울특별시, 2017↩↩[잡지]↩↩로브(rove)↩책방 유랑↩채비 편집부 / 채비, 2016↩↩서울의 3년 이하 서점들: 책 팔아서 목고살 수 있느냐고 묻는다면?↩로컬샵 연구 잡지 2호↩브로드컬리, 2016↩↩서울의 3년 이하 서점들: 솔직히 책이 정말 팔릴 거라 생각했나?↩로컬샵 연구 잡지 3호↩브로드컬리, 2017"},{"type":"level","id":"s6007","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"서울시 책방지도 2018","subtitle":"서울 책방 역사의 두 축","description":"","text":"서울 책방 역사의 두 축, 대학천 책 도매 상가와 청계천 헌책방 거리는 청계천 복개 이전 혜화동에서 흘러나온 개울이 옛 서울대 문리대를 거쳐 청계천과 만나는 곳에 있다.↩자연스럽게 개울을 따라 대학문화가 형성되었고 서점이 들어서기 시작했다.↩6.25동란시 서울 수복직후로부터 번성하기 시작한 이곳은 주로 헌책과 전쟁으로 공급이 어려워진 학생용 헌 교과서들의 매매에서부터 시작되었다. 70년대 중반 학생층을 중심으로 100여개의 서점이 운영되는 최대의 호황을 누렸었다. 청계천 복개 이후에는 평화시장 쪽으로도 책방이 늘어나기 시작했고, 기존 대학천 부근은 도매상 거리로 평화시장 쪽은 헌책 거리로 역할이 나뉘어지게 되었다. 현재 대학천 책 도매 상가는 덕성빌딩 1층과 인접지역의 20여 곳이 운영되고 있고 청계천 헌책방거리도 20개의 헌책방이 운영되고 있다 ↩아직 시민들의 발검음이 이어지고 있긴 하지만 우리나라 도서 문화보급의 큰 역할을 했던 대학천 서점들과 청계천 헌책방거리가 점점 사라져가고 있어 아쉽기만 하다."},{"type":"level","id":"s6008","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"내 몸 알기 건강관리 수첩","subtitle":"대사증후군이란?","description":"","text":"대사증후군이란 복부비만, 고혈압, 고혈당, 고지혈증 같은 생활 습관병의 위험인자를 3가지 이상 가지고 있는 상태를 말하며 고혈압, 당뇨병, 이상지질혈증의 진단이 내려지기 바로 직전의 단계입니다.↩생활습관 개선으로 관리가 가능하며 그중에서도 체중조절이 가장 중요합니다. 6개월~1년 동안 체중의 5~10%를 줄이도록 합니다."},{"type":"level","id":"s6009","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"내 몸 알기 건강관리 수첩","subtitle":"고혈압 이야기","description":"","text":"고혈압은 만성 순환 기계 질환 중 발생 빈도가 가장 높은 질환입니다. 비교적 증상이 없는 편이지만 뇌졸증, 신부전, 관상동맥질환 등 치명적인 합병증을 유발할 수 있기 때문에 보다 적극적인 관리와 치료가 요구되고 있습니다."},{"type":"level","id":"s6010","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"내 몸 알기 건강관리 수첩","subtitle":"당뇨병 이야기","description":"","text":"당뇨병은 인슐린의 분비량이 부족하거나 정상적인 기능이 이루어지지 않아 혈중 포도당 농도가 높아져 소변에 포도당을 배출하는 질환입니다."},{"type":"level","id":"s6011","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"내 몸 알기 건강관리 수첩","subtitle":"이상지질혈증 이야기","description":"","text":"이상지질혈증은 우리몸의 혈액 속에 기름기가 많다는 것을 뜻합니다. 혈중 지질 수치가 높아 이것이 혈관 벽에 붙어, 혈관이 점점 두꺼워지고 급기야는 막히게 되어 여러 가지 질병을 불러오게 됩니다."},{"type":"level","id":"s6012","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"내 몸 알기 건강관리 수첩","subtitle":"내 몸의 상태는?","description":"","text":"비만은 우리 몸에 필요 이상으로 지방이 많이 쌓여있는 상태입니다. 다음과 같은 기준에 의해 비반 여부를 결정합니다.↩비만이란?↩체지방이 과다하게 축적된 상태로, 음식을 많이 먹고 활동량이 적어 에너지 섭취와 소비의 불균형이 오랫동안 축적되어 나타난 결과 입니다."},{"type":"group","title":"선언문"},{"type":"level","id":"s6101","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"세계인권선언문 (전문)","subtitle":"국제앰네스티 한국지부","description":"","text":"인류사회의 모든 구성원이 갖는 고유한 존엄과 평등하고도 양도할 수 없는 권리를 승인함은 세계의 자유, 정의와 평화의 기초이기에,↩인권 무시와 멸시는 인류의 양심을 짓밟는 만행을 초래하였으며, 언론과 신앙의 자유 그리고 공포와 결핍 없는 세계의 도래는 사람들의 최고의 소망으로 선언되어 왔기에,↩인간이 전제와 탄압에 저항하는 최후의 수단으로 반란을 일으키지 않도록 하기 위하여 법의 지배에 의해 인권을 보장하는 것이 필수적이기에,↩여러 국가 사이의 우호적 관계의 발전을 증진시키는 것이 필수적이기에,↩유엔의 여러 국민들은 유엔헌장에서 기본적 인권, 인간의 존엄과 가치, 그리고 남녀의 평등권에 대한 믿음을 재확인하고, 더욱 광범한 자유 중에서 사회적 진보와 생활수준 향상을 촉진하고자 결의하였기에,↩가입국은 유엔과 협력하여 인권과 기본적 자유의 보편적인 존중 및 준수의 촉진을 이루어내고자 서약하였기에,↩이러한 권리와 자유에 대한 공통된 이해는 그러한 서약의 완전한 실현에 가장 중요한 것이므로,↩따라서 이에 국제연합 총회는,사회의 모든 개인과 기관이 이 세계인권선언을 항상 마음에 새기면서, 가입국 자신의 인민들과 자국의 통치하에 있는 인민에게도 이들 권리와 자유의 존중을 교육을 통하여 촉진하는 일 및 그 보편적이고 효과적인 승인과 준수를 확보하도록 국내적 및 국제적인 점진적 조치를 통하여 확보하기 위하여 노력하도록, 모든 인민과 모든 국가가 이룩해야 할 공통의 기준으로 이 세계인권선언을 공포한다."},{"type":"level","id":"s6102","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"유연아동권리협약 (전문)","subtitle":"","description":"","text":"이 협약의 당사국은,↩국제연합헌장에 선언된 원칙에 따라, 인류사회의 모든 구성원의 고유의 존엄성 및 평등하고 양도 할 수 없는 권리를 인정하는 것이 세계의 자유, 정의 및 평화의 기초가 됨을 고려하고,↩국제연합체제하의 모든 국민들은 기본적인 인권과 인간의 존엄성 및 가치에 대한 신념을 헌장에서 재확인하였고, 확대된 자유 속에서 사회진보와 생활수준의 향상을 촉진하기로 결의하였음에 유념하며,↩국제연합이 세계인권선언과 국제인권규약에서 모든 사람은 인종, 피부색, 성별, 언어, 종교, 정치적 또는 기타의 의견, 민족적 또는 사회적 출신, 재산, 출생 또는 기타의 신분 등 어떠한 종류 구분에 의한 차별 없이 동 선언 및 규약에 규정된 모든 권리와 자유를 향유할 자격이 있음을 선언하고 동의하였음을 인정하고,↩국제연합이 세계인권선언을 아동시절에는 특별한 보호와 원조를 받을 권리가 있다고 선언하였음을 상기하며,↩사회의 기초집단이며 모든 구성원 특히 아동의 성장과 복지를 위한 자연적 환경으로서의 가족에게는 공동체 내에서 그 책임을 충분히 감당할 수 있도록 필요한 보호와 원조가 부여되어야 함을 확신하며,↩아동은, 완전하고 조화로운 인격 발달을 위하여, 가족적 환경과 행복, 사랑 및 이해의 분위기 속에서 성장하여야 함을 인정하고,↩아동은 사회에서 한 개인으로서의 삶을 영위할 수 있도록 충분히 준비되어져야 하며, 국제연합 헌장에서 선언된 이상의 정신과 특히 평화, 존엄, 관용, 자유, 평등, 연대의 정신 속에서 양육되어야 함을 고려하고,↩아동에게 각별한 보호를 제공하여야 할 필요성은 1924년 아동권리에 관한 제네바 선언과 1959년 11월 20일 총회에 의하여 채택된 아동권리선언에 명시되어 있으며, 세계인권선언, 시민적 및 정치적 권리에 관한 국제규약(특히 제23조와 제24조),경제적, 사회적 및 문화적 권리에 관한 국제협약(특히 제10조) 및 아동의 복지와 관련된 전문기구와 국제기구의 규정 및 관련문서에서 인정되었음을 유념하고,↩아동권리에 나타나 있는 바와 같이, “아동은 신체적, 정신적 미성숙으로 인하여 출생전후를 막론하고 적절한 법적 보호를 포함한 특별한 보호와 배려를 필요로 한다\"는 점에 유념하고,↩\"국내적 또는 국제적 양육위탁과 입양을 별도로 규정하는 아동의 보호와 복지에 관한 사회적 및 법적 원칙에 관한 선언\"의 제규정, \"소년법 운영을 위한 국제연합 최소표준규격\"(베이징규칙) 및 \"비상시 및 무력충돌시 부녀자와 아동의 보호에 관한 선언\"을 상기 하고,↩세계 모든 국가에 예외적으로 어려운 여건하에 생활하고 있는 아동들이 있으며, 이 아동들은 특별한 고려를 필요로 함을 인정하고,↩아동의 보호와 조화로운 발전을 위하여 각 민족의 전통과 문화적 가치의 중요성을 충분히 고려하고, 모든 국가, 특히 개발도상국가 아동의 생활여건을 향상 시키기 위한 국제협력의 중요성을 인정하면서,↩다음과 같이 합의하였다."},{"type":"level","id":"s6103","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문","subtitle":"한국어 번역: 송창훈","description":"","text":"GNU란 무엇인가? Gnu는 유닉스가 아니다!↩↩GNU(그뉴)란 'GNU는 유닉스가 아니다'를 의미하는 영어 표현인 'Gnu is Not Unix'를 구성하는 단어들의 첫자를 따서 만든 약어이다. GNU는 유닉스와 완벽하게 호환되는 소프트웨어 시스템의 이름이며, 원하는 모든 사람이 자유롭게 사용할 수 있도록 만들어진 것이다. (1) 몇몇 자원자들이 내게 도움을 주고 있지만 보다 많은 자원자들의 지원과 프로그램과 장비 그리고 금전적인 도움이 절실히 필요한 실정이다.↩우리는 지금까지 에디터 명령어를 Lisp 언어로 작성할 수 있는 텍스트 에디터 Emacs(이맥스)와 소스 코드 단계까지 오류를 추적할 수 있는 디버거, yacc(약) 호환 파서 생성기, 링커 그리고 35개 가량의 유틸리티들을 만들었으며 셸은 거의 완성된 상태에 이르렀다. 이식성 있는 최적화 C 컴파일러가 컴파일러 자신을 통해 새로이 컴파일되어 만들어 졌으며 이번 해에 배포될 것이다. 초기 단계의 커널이 존재하기는 하지만 유닉스에 필적하기 위해서는 보다 많은 기능들이 추가되어야 한다. 커널과 컴파일러가 완성되면 프로그램 개발에 적합한 GNU 시스템을 배포할 수 있을 것이다. 우리는 조판 프로그램으로 TeX(텍)을 사용하겠지만, nroff(엔로프)도 계속 사용할 것이다. 또한 이식성을 갖춘 자유 소프트웨어인 X 윈도우 시스템도 사용할 것이다. 그런 후에 이식성을 확보한 Common Lisp과 Empire 게임, 스프레드시트를 포함한 수많은 다른 프로그램과 온라인 문서들을 추가할 것이다. 종국적으로 우리는 일반적인 유닉스 시스템에 포함된 모든 프로그램과 그 이상의 것들을 제공하게 되기를 희망한다.↩GNU는 유닉스 프로그램을 사용할 수 있게 해주지만 유닉스와 동일한 것은 아니다. 우리는 다른 운영체제에서의 경험을 살려 사용하기에 편리한 모든 향상을 꾀할 것이다. 특히, 긴 길이의 파일 이름과 파일 버전 번호 그리고 견고한 파일 시스템을 구현할 계획이며 가능하다면 파일명 완성 기능도 제공할 것이다. 또한 터미널에 독립적인 출력을 지원할 계획이며 최종적으로 몇 개의 Lisp 프로그램과 일반적인 유닉스 프로그램이 한 화면을 나누어 쓸 수 있는 Lisp 기반의 윈도우 시스템을 만들 것이다. 시스템 프로그래밍 언어로 C와 Lisp 두 가지를 모두 사용할 수 있을 것이다. 우리는 또한 통신을 위해 UUCP와 MIT Chaosnet 그리고 인터넷 프로토콜들을 지원해 나갈 것이다.↩GNU는 본래 가상 메모리를 가진 68000/16000 CPU 계열의 컴퓨터를 기준으로 제작되었다. 그 까닭은 이 기계들에서 GNU를 가장 쉽게 작동시킬 수 있기 때문이다. 보다 작은 컴퓨터에서 GNU를 작동시키기 위해서는 별도의 노력이 필요하며 이것은 그러한 시스템에서 GNU를 사용하고자 하는 사람의 몫으로 남겨져 있다.↩GNU 프로젝트를 말할 때는 'GNU'의 'G' 발음이 생략되어 \"뉴 프로젝트\"(new project)와 혼동되지 않도록, \"그뉴 프로젝트\"라고 명확히 발음해 주기를 부탁한다."},{"type":"level","id":"s6104","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문","subtitle":"한국어 번역: 송창훈","description":"","text":"왜 GNU를 작성해야만 했는가?↩↩어떤 프로그램을 좋아한다면 당연히 그것을 좋아하는 사람들과 함께 나누는 것이 황금률(대우받고자 하는 데로 대하라 - 성서)이라고 생각한다. 소프트웨어를 판매하는 사람들은 사용자를 각각 구분하고, 그들 위에 군림하고, 사용자 서로가 프로그램을 공유하는 것을 막고자 한다. 나는 이런 식으로 사용자 간의 결속이 깨지는 것을 거부한다. 나는 올바른 양심으로 비공개 협정이나 소프트웨어 사용권 계약에 서명할 수 없다. 여러 해 동안 인공지능 연구소에서 일하면서 이러한 경향과 다른 박정한 일들에 저항해 보았지만 결국 그들의 승리로 끝나고 말았다. 내 의지에 역행하는 이런 일들이 일어나는 연구소에 나는 더이상 머무를 수가 없었다.↩신념을 포기하지 않고도 컴퓨터를 계속 사용하기 위해서 나는 사용이 제한되는 소프트웨어 없이도 작업을 해 나갈 수 있는 충분한 자유 소프트웨어의 본체를 만들 결심을 했다. 나는 MIT측이 어떠한 법률적 근거에 의해서도 GNU의 자유로운 배포를 제지하지 못하도록 하기 위해서 인공지능 연구소를 그만두었다."},{"type":"level","id":"s6105","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"GNU가 유닉스와 호환되는 이유","description":"","text":"유닉스가 이상적인 운영체제라고 생각하지는 않지만 제법 쓸만하다고 할 수 있다. 유닉스의 골자는 훌륭한 것이며 나는 유닉스의 장점을 해치지 않고도 부족한 점들을 메울 수 있으리라고 생각한다. 또한 유닉스와 호환성을 갖는 시스템은 이를 채택할 다른 많은 사람들에게도 편리할 것이다."},{"type":"level","id":"s6106","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"GNU가 배포되는 방식","description":"","text":"GNU는 사용상의 어떠한 제한도 존재하지 않는 공용 소프트웨어(public domain)가 아니다. 누구든지 GNU를 개작하고 배포할 수는 있지만 어떤 이도 GNU가 보다 널리 배포되는 것을 제한할 수 없다. 즉, 개작한 내용을 독점할 수 없다는 것이다. 나는 모든 버전의 GNU가 자유롭게 남아 있기를 보장받고 싶은 것이다."},{"type":"level","id":"s6107","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"많은 프로그래머들이 동참을 원하는 이유","description":"","text":"나는 그 동안 GNU에 흥미를 느끼고 돕고자 하는 많은 프로그래머들을 찾을 수 있었다.↩많은 프로그래머들은 시스템 소프트웨어의 상용화에 대해 불쾌하게 생각한다. 이렇게 함으로써 보다 더 많은 돈을 벌 수는 있겠지만, 일반적으로 이런 상황에서는 프로그래머들이 서로를 동지로 느끼기보다 투쟁해야 할 대상으로 느끼게 된다. 프로그래머들 사이에 우정을 나타내는 가장 기본적인 행동은 프로그램을 함께 나누는 것이다. 그러나 현재의 전형적인 마케팅 협정은 프로그래머들이 다른 프로그래머를 친구로 대하는 것을 근본적으로 막고 있다. 소프트웨어를 구입한 자는 우정과 준법 중 하나를 선택해야만 한다. 물론 많은 사람들은 우정을 보다 중요시한다. 그러나 법의 존재 가치를 인정하는 사람들은 어떤 결정을 내리든 편한 마음을 가질 수 없다. 그들은 냉소적이 되어 프로그래밍은 단지 돈을 버는 수단이라고 생각하게 된다.↩그러나 독점적인 프로그램 대신 GNU를 사용하게 되면, 우리는 모든 이에게 온정을 가질 수 있으며 법도 준수하게 된다. 게다가 GNU는 공유의 표본으로써 다른 이가 우리와 함께 공유에 동참하도록 고무하는 깃발 노릇도 한다. 이것은 또한 우리에게 자유롭지 못한 프로그램을 쓸 때는 느낄 수 없는 조화로운 느낌을 갖게 해준다. 나와 대화한 프로그래머들 중 거의 절반 정도는 이것이 돈으로 바꿀 수 없는 중요한 행복이라는데 공감했다."},{"type":"level","id":"s6108","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"당신이 공헌할 수 있는 방법","description":"","text":"나는 컴퓨터 제조업자에게는 기계와 돈을, 개인에게는 프로그램과 노동을 지원해 줄 것을 요청한다.↩컴퓨터를 기증해서 기대할 수 있는 것 중 하나는 GNU가 머지않아 그 기계에서 작동할 것이라는 점이다. 기증될 컴퓨터는 즉시 사용될 수 있는 완제품으로서 주거 지역에서 사용될 수 있는 특별한 냉각 장치나 전력이 필요하지 않은 것이어야 한다.↩나는 GNU를 위해 시간제로 일하기를 열망하는 많은 프로그래머들을 찾을 수 있었다. 시간제로 이루어 지는 작업은 독립된 많은 결과물들이 분산되어 이를 통합하고 조정하는 일이 매우 어렵고 각각의 부분들이 함께 통합되면 동작하지 않기도 하기 때문에 대부분의 프로젝트에는 적합하지 않다. 그러나 유닉스를 대체하기 위한 우리의 작업에는 이러한 문제가 존재하지 않는다. 완전한 유닉스 시스템에는 개별적인 문서를 갖춘 수백 개의 유틸리티가 포함되어 있으며 대부분의 인터페이스 사양은 유닉스에 호환되도록 맞춰져 있다. 만약 각각의 프로그래머가 유닉스 시스템에서 정상적으로 작동할 수 있는 유닉스 유틸리티의 대체 프로그램을 만들었다면, 이러한 대체 유틸리티들은 함께 묶어 놓아도 올바르게 작동할 것이다. 예기치 못한 문제 발생의 가능성을 고려한다고 해도 전체적인 구성 요소들을 통합하는 작업은 충분히 가능할 것이다. (커널을 만드는 작업에는 세밀한 대화가 필요할 것이며, 소수의 호흡이 잘 맞는 집단이 적당할 것이다.)↩만일 내가 금전적인 지원을 얻는다면 약간의 인원을 전일제나 시간제로 고용할 수 있을 것이다. 일반적인 프로그래머의 수준보다 많은 급여를 줄 수는 없겠지만, 돈을 버는 것 만큼이나 공동체 의식을 정립하는 일도 중요한 의미를 가진다고 생각하는 사람들을 찾아 볼 것이다. 이런 사람들에게 적절한 보수를 제공하는 것은 그들이 생계에 대한 부담에서 벗어나서 보다 자유롭게 그들의 모든 역량을 GNU에 집중할 수 있도록 하는 방법이라고 나는 생각하고 있다."},{"type":"level","id":"s6109","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"모든 컴퓨터 사용자가 이득을 얻게 되는 이유","description":"","text":"일단 GNU가 만들어지면, 모든 사람들은 훌륭한 시스템 소프트웨어를 공기처럼 무료로 얻을 수 있게 될 것이다.↩이것은 모든 사람이 단지 유닉스 사용에 대한 라이선스 비용을 절약할 수 있다는 것보다 훨씬 더 많은 의미를 갖는다. 이것은 시스템 프로그래밍에 소모되는 불필요한 노력의 중복을 피할 수 있게 된다는 것을 의미하며, 절약된 노력은 기술 수준을 향상시키는데 사용될 수 있을 것이다.↩시스템에 대한 모든 원시 코드가 모든 사람에게 제공될 것이다. 따라서 시스템을 변경하고자 하는 사람은 언제든지 시스템을 직접 수정하거나 적당한 프로그래머나 회사에 이를 의뢰할 수 있게 된다. 사용자들은 더이상 프로그램의 원시 코드를 독점적으로 소유하기 때문에 이를 수정할 수 있는 유일한 위치에 있는 프로그래머나 회사에 종속되지 않아도 된다.↩학교는 모든 학생들에게 시스템 코드를 배우고 향상시키도록 장려함으로써 보다 나은 교육 환경을 제공할 수 있다. 하버드 대학의 컴퓨터 실습실은 원시 코드가 공개되지 않은 프로그램을 컴퓨터에 설치하지 못하도록 하는 정책을 갖고 있었는데, 실제로 그러한 몇몇 프로그램을 설치하지 못하게 함으로써 이 정책을 고수했다. 나는 이것에서 커다란 영감을 받게 되었다.↩마지막으로, 누가 시스템 소프트웨어를 소유하고 있으며 누구에게 사용 자격을 부여할 것인가를 결정하는 소모적인 문제들이 사라지게 될 것이다.↩복제 허가를 포함한 프로그램의 사용료를 계산할 때는 개개인이 어떤 프로그램에 대해 얼마의 돈을 지불해야 하는 가를 알아내야 하는 번잡한 방법이 필요하기 때문에 언제나 사회에 많은 비용을 야기시킨다. 그리고 오직 경찰 국가에서만 모든 사람이 이러한 방법을 따르도록 강제할 수 있다. 막대한 비용을 들여 공기를 생산하는 우주 정거장의 예를 생각한다면, 이러한 경우 공기의 요금을 리터 단위로 지불하는 것은 합당할 것이다. 그러나 호흡하는 공기의 양을 측정하기 위해서 계측기가 달린 방독면을 밤낮으로 쓰고 있어야 한다면 그런 방식은 지불 능력에 관계없이 타당한 것이 아니다. 또한 마스크를 벗고 있는 지를 TV 카메라가 언제 어디서나 항상 감시하고 있다면 이또한 옳지 않은 일이다. 따라서 이보다는 사람들에게 일정한 인두세를 부과하고 마스크를 벗어 던지는 것이 현명하다.↩프로그램의 일부나 전체를 복제하는 행위는 프로그래머에게 있어서 숨을 쉬는 것 만큼이나 자연스럽고 생산적인 일이다. 따라서 프로그램은 마땅히 자유롭게 사용될 수 있어야 한다."},{"type":"level","id":"s6110","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 1/12","description":"","text":"\"GNU가 무료라면 아무도 그것을 사용하지 않을 것이다. 왜냐하면 무료라는 것은 어떠한 지원도 기대할 수 없다는 것을 의미하기 때문이다.\"↩\"지원 서비스를 제공하기 위해서는 프로그램에 비용을 부과해야만 한다.\"↩단순히 GNU를 무료로 얻는 것보다 GNU와 이에 대한 지원 서비스를 유료로 함께 구입하는 것을 사람들이 선호한다면, GNU를 무료로 구한 사람들에게 지원 서비스만을 제공하는 것으로 수익을 얻는 업체도 생겨날 수 있을 것이다.↩지원 서비스는 실제 프로그래밍 작업이 포함된 것과 단순 지원 작업으로 구별해야 하는데, 전자는 기존의 소프트웨어 업체를 통해서 해결할 수 없는 것 중의 하나이다. 만일 여러분의 문제가 다른 사람에게도 발생하는 일반적으로 것이 아니라면, 해당 업체는 그 문제를 쉽게 해결해 주려고 하지 않을 것이다.↩만약 여러분의 사업이 다른 사람의 지원에 의존해야만 하는 것이라면, 여러분이 선택할 수 있는 유일한 방법은 필요한 모든 원시 코드와 도구들을 구비하는 것이다. 그런 연후에 문제를 해결할 수 있는 사람을 고용할 수 있다. 이것은 다른 사람의 자비를 구하는 것과는 다르다. 유닉스의 경우에는 원시 코드를 이용하기 위한 가격이 고가이기 때문에 대부분의 사업에서 이러한 방법이 고려의 대상이 될 수 없다. 그러나 GNU에서는 이것이 용이하다. 물론, 이 경우에도 유능한 사람을 구하지 못할 가능성은 여전히 존재하지만 이것을 GNU가 무료로 배포되는데 따른 문제라고 비난할 수는 없다. GNU는 이 세계의 모든 문제를 해결하는 것이 아니라 단지 그 중 일부를 해결할 수 있을 뿐이다.↩한편, 컴퓨터에 대해 전혀 모르는 사용자들은 단순 지원 서비스를 필요로 한다. 이러한 서비스는 사용자 스스로 능히 처리할 수 있는 종류의 것들이지만 사용자들이 그 방법을 모르기 때문에 서비스가 필요한 것이다.↩이런 서비스들은 단순 보수 작업이나 복구 서비스를 지원하는 회사들이 제공할 수 있다. 사용자들이 제품을 구입하고 그에 대한 서비스를 제공받는 방식을 받아들인다면, 제품을 무료로 받고 서비스에 대한 비용을 지불하는 방식에도 기꺼이 동의할 것이다. 서비스를 제공하는 회사들은 가격과 품질로 경쟁할 것이고 사용자들은 특정한 업체에 얽매이지 않아도 될 것이다. 또한, 그러한 서비스가 필요하지 않은 사람들은 서비스에 대한 비용을 들이지 않고도 프로그램들을 사용할 수 있을 것이다."},{"type":"level","id":"s6111","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 2/12","description":"","text":"\"광고를 하지 않으면 많은 사람들에게 알릴 수 없다. 따라서 프로그램을 널리 알리기 위해서는 프로그램에 광고 비용를 부과해야만 한다.\"↩\"무료로 구할 수 있는 프로그램을 광고하는 것은 무의미하다.\"↩GNU와 같은 프로그램을 무료 또는 극히 적은 비용으로 많은 컴퓨터 사용자에게 홍보할 수 있는 다양한 정보 전파 방식이 존재한다. 그러나 광고를 이용하면 보다 많은 사람들에게 프로그램을 알릴 수 있다는 점은 옳을 수 있다. 만약 이것이 정말 사실이라면 GNU를 유료로 복제하고 배송하는 서비스 사업은 광고비 혹은 그 이상의 비용을 지불하기에 충분할 만큼 성공해야 한다. 이러한 방식에서는 광고를 보고 제품을 구입하는 등의 광고로부터 이익을 얻은 사용자가 광고비를 부담한 것이 된다.↩반면에, 많은 사람들이 GNU를 그들의 친구로부터 구하고 또한 위와 같은 회사가 성공하지 못한다면 그것은 GNU가 확산되는데 광고가 반드시 필요하지 않다는 것을 의미하는 것이다. 자유 시장 옹호자들은 왜 이 문제를 자유 시장이 결정하도록 놔두지 않는 것일까?"},{"type":"level","id":"s6112","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 3/12","description":"","text":"\"내 회사는 경쟁 우위를 차지하기 위해서 독점 운영체제가 필요하다.\"↩GNU는 시스템 소프트웨어를 경쟁이라는 범주에서 제외시킬 것이다. 여러분의 회사는 이 분야에서 경쟁 우위를 점할 수 없겠지만, 그것은 여러분의 경쟁사도 모두 마찬가지가 될 것이다. 여러분과 여러분의 경쟁사는 다른 분야에서 경쟁하겠지만, 이 분야에서는 모두 이익을 얻게 될 것이다. 만약 여러분의 사업이 운영체제를 판매하는 것이라면 GNU를 좋아하지 않을 것이고 혹독한 상대가 되겠지만, 여러분의 사업이 다른 것이라면 GNU는 운영체제의 구입에 따른 막대한 비용을 절감해 줄 수 있다.↩나는 많은 업체와 사용자들이 GNU의 발전에 기여해 나감으로써 서로의 비용을 절감할 수 있기를 희망한다."},{"type":"level","id":"s6113","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 4/12","description":"","text":"\"프로그래머는 자신의 창의력에 대한 보상을 받을 자격이 있지 않은가?\"↩어떤 일이 보상받을 만한 가치가 있다면 그것은 곧 사회적 공헌을 의미한다. 창의성이란 그 결과물을 사회가 대가 없이 사용할 수 있을 때 사회적 공헌이 되는 것이다. 어떤 혁신적인 프로그램을 제작한 사람이 그에 대해 보상을 받아야만 한다면, 같은 맥락에서 그것을 자유롭게 사용하지 못하게 한다면 그때는 처벌을 받아야 할 것이다."},{"type":"level","id":"s6114","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 5/12","description":"","text":"\"그렇다면, 프로그래머는 그의 창의력에 대한 보상을 요구할 수 없단 말인가?\"↩유해한 수단을 사용하지 않는다면, 노동에 대한 보수와 자신의 소득이 극대화되기를 바라는 것은 아무 문제가 없다. 그러나 지금까지 소프트웨어 산업에서 보편화된 수단은 유해한 방법이다.↩프로그램을 사용하는 것에 제한을 둠으로써 돈을 벌어들이는 행위는 프로그램이 사용되는 범위와 방식을 제한하기 때문에 유해한 것이다. 이는 프로그램으로부터 얻을 수 있는 인간적인 풍요로움을 전체적으로 감소시키는 것이다. 프로그램의 자유로운 사용에 대한 제한은 결국, 유해한 파괴 행위라고 할 수 있다.↩선량한 시민이라면 자신이 보다 부유해지기 위해서 그러한 수단을 쓰지 않는다. 그 까닭은, 만일 모든 사람들이 그렇게 한다면 상호간의 유해한 행위로 인해 결과적으로 우리 모두는 보다 빈곤해질 것이기 때문이다. 이것은 칸트의 윤리학(네 의지의 준칙이 언제나 보편적 입법의 원리로서 타당하게 행동하라-실천이성비판)이나 황금률과 같은 분명한 것이다. 나는 모든 사람들이 자기만의 정보를 축적해 나가는 것은 바람직하지 않다고 여기기 때문에, 누군가 그런 일을 한다면 그것이 잘못된 일이라고 생각한다. 명확하게 말하면, 한 개인의 창의성을 보장받고자 하는 욕구가 일반적으로 전체의 창의성이나 혹은 그 일부분을 저하시키는 행위를 정당화시키는 것은 옳지 않다."},{"type":"level","id":"s6115","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 6/12","description":"","text":"\"프로그래머는 밥줄이 끊기지 않을까?\"↩그 누구도 프로그래머가 되도록 강요되지는 않는다고 답하고 싶다. 아마 우리들 대부분은 실직한 후에 거리로 나가 궁색한 표정을 지으며 구걸한다고 해도 한푼의 돈도 벌 수 없을 것이다. 그러나 실직했다고 해서 반드시 거리로 나가 구걸을 하고 굶주려야 하는 것은 아니다. 왜냐하면 우리는 얼마든지 다른 일을 할 수 있기 때문이다.↩그러나 이것은, 프로그래머는 소프트웨어를 소유하지 않으면 단 한푼도 벌 수 없다라는 질문자의 맹목적인 가정을 인정하고 있다는 점에서 잘못된 답변이라고 할 수 있다. 아마도 이런 생각은 극단적일 것이다.↩프로그래머가 생계에 지장을 받지 않을 것이라는 점에 대한 올바른 이유는 지금과 같은 수준의 보수는 아니겠지만 여전히 프로그래밍으로 돈을 벌 방법들이 있기 때문이다.↩프로그램의 복제를 제한하는 것이 소프트웨어 사업을 유지되기 위한 유일한 기반은 아니다. 이러한 방식이 보편화된 것은 이렇게 함으로써 가장 돈을 많이 벌 수 있기 때문이다. 만약 고객들에 의해 이런 방식이 거부되거나 금지된다고 해도, 소프트웨어 사업은 지금까지는 드물었던 새로운 방식으로 사업 구조를 재편해 나갈 수 있을 것이다. 어떠한 분야에 있어서도 사업 구조와 수익 모델을 만드는 방법은 무궁 무진한 것이다.↩새로운 기반 하에서의 프로그래밍은 지금처럼 수익성이 높은 일은 아닐 것이다. 그러나 이것이 변화에 반대하는 이유가 될 수는 없다. 판매직 사원들에게 판매 실적만큼 급여를 지불하는 현재의 방식은 정당한 것으로 받아들여진다. 그렇다면 프로그래머에게 같은 방식이 적용된다고 해도 정당하지 못할 이유가 없다. (그러나 현실적으로 볼 때, 프로그래머들은 여전히 그보다 많은 소득을 올리고 있다.)"},{"type":"level","id":"s6116","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 7/12","description":"","text":"\"창작자는 창작물의 사용을 통제할 권리를 갖고 있지 않은가?\"↩자신의 아이디어를 다른 사람이 사용하는 것을 통제한다는 것은 결국 다른 사람의 삶을 통제한다는 것이며, 이것은 타인의 삶을 위축시키기 위해서 흔히 사용되는 것이다.↩변호사와 같이 지적 소유권 문제를 연구해 온 사람들은 지적 소유물에는 본질적인 권리가 존재할 수 없다고 주의 깊게 말한다. 정부가 인정하는 가상의 지적 소유권은 특정한 목적을 위해 만들어진 특정 법률 조항으로부터 발생한 것이다.↩예를 들어, 특허 제도는 발명가로 하여금 발명품의 세부 사항을 공개하도록 장려하기 위해서 만들어진 것이다. 따라서 그 목적은 발명자를 돕기보다 사회를 돕기 위한 것이다. 시간적인 측면에서 보면, 특허가 갖는 17년간의 유효 기간은 기술의 발전 속도와 비교해 볼 때 짧은 것이다. 특허는 제조업체들 간의 문제이고 특허 사용 계약을 체결하는 것이 제품을 직접 생산하기 위해서 필요한 노력과 비용에 비해 적기 때문에 그다지 해롭게 작용하지 않는다. 또한 특허품을 사용하는 대부분의 개인에 대해서는 별다른 제한을 두지 않는다.↩고대에는 저작권 개념이 존재하지 않았으며, 당대의 작가들은 흔히 논픽션 작품 속에 다른 작가의 작품 상당량을 옮겨 넣었다. 이런 관행은 유용한 것이었으며 비록 일부분이나마 많은 작가들의 작품이 계속해서 남아 있을 수 있는 유일한 방법이었다. 저작권 제도는 특별히 저술업을 활성화시키려는 의도로 만들어진 것이다. 이 영역에 속하는 책은 인쇄기를 통해서 경제적으로 만들어질 수 있기 때문에 저작권은 그다지 해롭지 않았다. 또한 책을 읽는 대다수의 사람들을 제한하지도 않았다.↩모든 지적 소유권은 그것이 옳든 그르든 간에 그를 허용함으로써 사회 전체에 이익이 된다고 여겨져서 사회가 부여한 허가일 뿐이다. 그러나 어떤 특정 상황에서도 우리는 \"그런 허가를 내주는 것이 정말 우리에게 유익한가? 개인에게 어떤 종류의 행위를 허용하는 허가를 내줄 것인가?\"라는 질문을 해보아야만 한다.↩오늘날의 프로그램의 경우는 백여년 전의 책의 경우와 크게 다르다. 프로그램이 옆사람을 통해 가장 쉽게 복제될 수 있다는 점과 원시 코드와 목적 코드로 구분된다는 점, 단순히 읽거나 즐기기 위한 것이 아니라 특정한 용도를 위해 사용된다는 점들이 복합적인 상황을 만들게 되어 저작권을 강요하는 사람들은 사회 전체에 정신적으로나 물질적으로 해를 끼치는 상황을 만들고 있으며 법적 허용 여부에 관계없이 사용자들의 이용을 제한하고 있는 것이다."},{"type":"level","id":"s6117","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 8/12","description":"","text":"\"경쟁을 통해서 보다 나은 결과를 얻을 수 있다.\"↩경쟁의 기본 원리는 경주이다. 경주는 승자에게 상을 주는 방법으로 모두가 더욱 빨리 달리도록 장려한다. 만약 자본주의가 실제로 이런 방식을 따른다면 이는 바람직한 것이다. 그러나 자본주의의 옹호자들은 항상 이런 방식으로 움직인다고 단정짓는 잘못을 범한다. 만일, 주자들이 상이 주어지는 이유를 망각한 채 승리에만 집착한다면 그들은 다른 주자를 공격한다든지 하는 색다른 전략을 찾게될 것이다. 주자들이 먼저 싸우기부터 한다면 그들은 결국 모두 늦어질 수밖에 없는 것이다.↩독점적이고 비밀에 쌓인 소프트웨어는 먼저 싸우기부터 하는 주자들과 도덕적으로 동일하다. 슬픈 일이지만 우리의 유일한 심판은 그다지 공정해 보이지 않으며 싸움에 반대하는 것 같지도 않다. 단지, ``10 미터 마다 한번씩만 상대를 가격할 수 있다.''는 정도의 규정을 적용할 뿐이다. 공격하려는 시도만 해도 이를 저지하고 벌칙을 주어야 하는데도 말이다."},{"type":"level","id":"s6118","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 9/12","description":"","text":"\"금전적인 특혜가 없다면 아무도 프로그래밍을 하지 않을 것이다.\"↩실제로 많은 사람들은 어떠한 금전적 보상 없이도 프로그래밍을 계속 할 것이다. 프로그래밍은 어떤 사람들에게 있어 저항할 수 없는 매력이며 이는 프로그래밍에 능숙한 사람일수록 더욱 그렇다. 생계를 유지할 희망이 보이지 않더라도 꾸준히 활동을 계속하는 직업 음악인들이 많이 있듯이 말이다.↩그러나 실제로 이 질문은 비록 일반적으로 많이 제기는 것이기는 하지만 조금은 다른 관점의 문제라고 할 수 있다. 왜냐하면 프로그래머들의 소득원이 없어지는 것이 아니라 단지 수입이 줄어드는 것이기 때문이다. 따라서 올바른 질문은 ``금전적인 보상이 줄어들더라도 프로그래밍을 계속할 사람이 있을까?''일 것이다. 내 경험에 비추어 보면 그렇게 할 것이라고 생각한다.↩십년 이상 동안, 세계 정상급 프로그래머들이 MIT 인공 지능 연구소에서 근무했지만 그들이 받은 보수는 다른 어떤 곳에서 기대할 수 있는 것보다 훨씬 적은 것이었다. 그들은 사회적 존경이나 명성과 같은 다양한 종류의 비금전적인 보상을 받았다. 그리고 창조적 작업은 이미 그 자체가 자신에게 흥미와 보상을 주는 것이다.↩그러나 시간이 흐르자 이전의 작업처럼 그들이 흥미롭게 생각하는 일을 높은 보수를 받으며 할 수 있는 기회가 주어지자 그들 중 대부분은 연구소를 떠나갔다.↩이 사실에서 알 수 있는 것은, 사람들은 부유해지기 위해서보다 나름대로 어떤 이유 때문에 프로그래밍을 한다는 것이다. 그러나 동일한 일에 대해서 보다 많은 보수까지 받을 기회가 주어지면, 그것을 기대하고 원하게 된다는 점이다. 보수가 낮은 조직은 높은 보수를 받는 조직과의 경쟁에서 뒤쳐지겠지만, 만약 높은 보수를 받는 조직이 허용되지 않는다면 훌륭하게 활동할 수 있을 것이다."},{"type":"level","id":"s6119","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 11/12","description":"","text":"\"우리는 프로그래머가 절대적으로 필요하다. 만약 그들이 우리에게 이웃을 돕지 말라고 하면 우리는 따를 수밖에 없다.\"↩여러분은 결코 그런 종류의 요구에 굴복해야 할 만큼 절박하지 않다. 옳은 길을 가기 위해서는 결코 타협해서는 안된다는 사실을 명심하라."},{"type":"level","id":"s6120","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"GNU 선언문 (송창훈 번역)","subtitle":"쉽게 반박될 수 있는 GNU의 목표에 대한 몇가지 반대 의견 12/12","description":"","text":"\"프로그래머들도 어떤 식으로든 그들의 생계를 꾸려 나가야 하지 않은가?\"↩요컨대 이것은 진실이다. 그러나 프로그램의 사용 권리를 파는 것 이외에도 프로그래머로서 생계를 꾸려갈 수 있는 방법은 많이 있다. 이러한 방법이 관례적으로 사용되고 있는 이유는 프로그래머나 사업가들이 보다 많은 돈을 벌 수 있기 때문이지 결코 이것이 생계를 유지할 수 있는 유일한 방법이기 때문은 아니다. 다른 방법을 찾고자 한다면 얼마든지 가능할 것이다. 여기 여러 가지 예들이 있다.↩새로운 컴퓨터를 내놓는 제조업자는 새 기계에 운영체제를 이식하기 위한 비용을 지불할 것이다.↩교육이나 단순 관리 작업, 유지 보수 서비스를 제공하는 회사에서도 역시 프로그래머를 고용할 것이다.↩프리웨어라는 이름으로 프로그램을 배포한 뒤에 사용자가 제품에 만족한다면 이에 대한 기부금을 요청하거나 지원 서비스를 판매하는 방식의 새로운 아이디어를 갖고 있는 사람들도 있다. 나는 이미 이러한 방법으로 성공한 사람들을 알고 있다.↩비슷한 요구를 가진 사용자들은 사용자 모임을 결성하고 회비를 조성할 수 있을 것이다. 사용자 모임은 프로그래밍 회사와 계약을 맺고 회원들이 원하는 프로그램을 주문 제작할 수 있을 것이다.↩모든 종류의 개발에 필요한 기금은 소프트웨어에 대한 다음과 같은 세금으로 조성될 수 있다.↩소프트웨어 세금이 모든 컴퓨터의 판매 가격에 부과된다면 정부는 이 세금을 국립과학재단 같은 기관으로 위임하여 소프트웨어 개발을 위해서 사용되도록 할 수 있을 것이다.↩그러나 컴퓨터를 구입하는 사람이 소프트웨어 개발에 직접 기부하고자 할 때에는 기부금이 세금을 대신할 수 있으며, 기부액은 세금의 범위 안에서 얼마든지 대신될 수 있다. 기부자들은 때때로 그 결과물을 자신이 쓸 수 있을 것이라는 기대를 갖고 기부할 프로젝트를 선택할 수 있을 것이다.↩전체적인 세율은 납세자들의 투표를 통해 결정할 수 있으며 구입액에 따른 누진율을 적용할 수도 있을 것이다.↩이러한 결과는 다음과 같다.↩-컴퓨터 사용자 공동체는 소프트웨어의 개발을 지원한다.↩-어느 정도의 지원이 필요한가는 이 공동체가 결정한다.↩-자신의 돈이 어떤 프로젝트에 지원되는가에 관심이 있는 개인은 이를 직접 결정할 수 있다.↩프로그램을 자유롭게 만든다는 것은 결국, 더이상 생계를 위해 고되게 일할 필요가 없는 풍요로운 세계로 가는 한 단계인 것이다. 사람들은 법률 제정이나 가정 상담, 로보트 수리, 소행성 채굴 등과 같은 주당 열 시간 정도의 근무 시간을 마친 후에는 프로그래밍과 같은 흥미를 가질 수 있는 일에 자신을 몰입할 수 있는 자유를 갖게 될 것이다. 더이상 프로그래밍을 생계의 수단으로 삼을 필요가 없게 될 것이다.↩우리가 이미 실질적인 생산을 위해 사회 전체가 수행해야 할 작업량의 상당 부분을 줄여왔음에도 불구하고 노동자들을 위한 여가 시간이 아직 충분히 보장되지 않고 있는 이유는, 주로 자유 경쟁에 반하는 관료 제도와 저항들에 의해서 생산적인 활동에 많은 비생산적 요소들이 개입되기 때문이다. 자유 소프트웨어는 소프트웨어 생산 분야에서 이러한 소모적인 요소들을 대폭적으로 줄일 수 있을 것이다. 또한 그렇게 해야만 소프트웨어 생산에 대한 기술적 성과들이 우리들 자신의 노동량을 감소시키도록 할 수 있을 것이다."},{"type":"level","id":"s6121","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"어린이 헌장","subtitle":"1957년 발표당시 전문과 본문","description":"","text":"어린이는 나라와 겨레의 앞날을 이어나갈 새 사람이므로 그들의 몸과 마음을 귀히 여겨 옳고 아름답고 씩씩하게 자라도록 힘써야 한다↩1. 어린이는 인간으로서 존중하여야 하며 사회의 한 사람으로서 올바르게 키워야 한다.↩2. 어린이는 튼튼하게 낳아 가정과 사회에서 참된 애정으로 교육하여야 한다.↩3. 어린이에게는 마음껏 놀고 공부할 수 있는 시설과 환경을 마련해주어야 한다.↩4. 어린이는 공부나 일이 몸과 마음에 짐이 되지 않아야 한다.↩5. 어린이는 위험한 때 맨 먼저 구출하여야 한다.↩6. 어린이는 어떠한 경우에라도 악용의 대상이 되어서는 아니 된다.↩7. 굶주린 어린이는 먹여야 한다. 병든 어린이는 치료해주어야 하고, 신체와 정신에 결함이 있는 어린이는 도와주어야 한다. 불량아는 교화하여야 하고 고아나 부량아는 구호하여야 한다.↩8. 어린이는 자연과 예술을 사랑하고 과학을 탐구하며 도의를 존중하도록 이끌어야 한다.↩9. 어린이는 좋은 국민으로서 인류의 자유와 평화와 문화발전에 공헌할 수 있도록 키워야 한다."},{"type":"level","id":"s6122","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"어린이 헌장","subtitle":"1988년 재개정판","description":"","text":"대한민국 어린이헌장은 어린이날의 참뜻을 바탕으로 하여 모든 어린이가 차별 없이 인간으로서의 존엄성을 지니고 나라의 앞날을 이어나갈 새 사람으로 존중되며 아름답고 씩씩하게 자라도록 함을 길잡이로 삼는다.↩1. 어린이는 건전하게 태어나 따뜻한 가정에서 사랑 속에 자라야 한다.↩2. 어린이는 고른 영양을 취하고, 질병의 예방과 치료를 받으며, 맑고 깨끗한 환경에서 살아야 한다.↩3. 어린이는 좋은 교육시설에서 개인의 능력과 소질에 따라 교육을 받아야 한다.↩4. 어린이는 빛나는 우리 문화를 이어받아, 새롭게 창조하고 널리 펴나가는 힘을 길러야 한다.↩5. 어린이는 즐겁고 유익한 놀이와 오락을 위한 시설과 공간을 제공받아야 한다.↩6. 어린이는 예의와 질서를 지키며, 한겨레로서 서로 돕고, 스스로를 이기며 책임을 다하는 민주 시민으로 자라야 한다.↩7. 어린이는 자연과 예술을 사랑하고 과학을 탐구하는 마음과 태도를 길러야 한다.↩8. 어린이는 해로운 사회환경과 위험으로부터 먼저 보호되어야 한다.↩9. 어린이는 학대를 받거나 버림을 당해서는 안 되고, 나쁜 일과 힘겨운 노동에 이용되지 말아야 한다.↩10. 몸이나 마음에 장애를 가진 어린이는 필요한 교육과 치료를 받아야 하고, 빗나간 어린이는 선도되어야 한다.↩어린이는 우리의 내일이며 소망이다. 나라의 앞날을 짊어질 한국인으로, 인류의 평화에 이바지 할 수 있는 세계인으로 자라야 한다."},{"type":"level","id":"s6123","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"애자일 소프트웨어 개발 선언","subtitle":"","description":"","text":"우리는 소프트웨어를 개발하고, 또 다른 사람의 개발을 도와주면서 소프트웨어 개발의 더 나은 방법들을 찾아가고 있다. 이 작업을 통해 우리는 다음을 가치 있게 여기게 되었다:↩공정과 도구보다 개인과 상호작용을↩포괄적인 문서보다 작동하는 소프트웨어를↩계약 협상보다 고객과의 협력을↩계획을 따르기보다 변화에 대응하기를↩가치 있게 여긴다. 이 말은, 왼쪽에 있는 것들도 가치가 있지만,↩우리는 오른쪽에 있는 것들에 더 높은 가치를 둔다는 것이다."},{"type":"level","id":"s6124","grade":10,"difficulty":6,"form":"sentence","language":"kr","title":"훈민정음","subtitle":"위키 한국어판","description":"","text":"세종어제 훈민정음↩나라의 말이 중국과 달라↩한자와는 서로 맞지 아니할새↩이런 까닭으로 어리석은 백성이↩이르고자 하는 바 있어도↩마침내 제 뜻을↩능히 펴지 못할 사람이 많으니라↩내 이를 위하여, 가엾게 여겨↩새로 스물여덟 자를 만드나니↩사람마다 하여금 쉽게 익혀↩날마다 씀에↩편안케 하고자 할 따름이니라"}]
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3002,7 +2853,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })();
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3079,7 +2930,7 @@ function resolvePathname(to) {
 /* harmony default export */ __webpack_exports__["default"] = (resolvePathname);
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3124,7 +2975,7 @@ function valueEqual(a, b) {
 /* harmony default export */ __webpack_exports__["default"] = (valueEqual);
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3185,7 +3036,7 @@ var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isE
 };
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3295,188 +3146,32 @@ Link.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Link);
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(15);
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-/**
- * The public API for a <Router> that stores location in memory.
- */
-
-var MemoryRouter = function (_React$Component) {
-  _inherits(MemoryRouter, _React$Component);
-
-  function MemoryRouter() {
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, MemoryRouter);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.history = __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default()(_this.props), _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  MemoryRouter.prototype.componentWillMount = function componentWillMount() {
-    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!this.props.history, '<MemoryRouter> ignores the history prop. To use a custom history, ' + 'use `import { Router }` instead of `import { MemoryRouter as Router }`.');
-  };
-
-  MemoryRouter.prototype.render = function render() {
-    return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Router__["a" /* default */], { history: this.history, children: this.props.children });
-  };
-
-  return MemoryRouter;
-}(__WEBPACK_IMPORTED_MODULE_1_react___default.a.Component);
-
-MemoryRouter.propTypes = {
-  initialEntries: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.array,
-  initialIndex: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.number,
-  getUserConfirmation: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.func,
-  keyLength: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.number,
-  children: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.node
-};
-
-
-/* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
-
-/***/ }),
-/* 40 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__ = __webpack_require__(39);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__["a" /* default */]);
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(24);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-/**
- * The public API for prompting the user before navigating away
- * from a screen with a component.
- */
-
-var Prompt = function (_React$Component) {
-  _inherits(Prompt, _React$Component);
-
-  function Prompt() {
-    _classCallCheck(this, Prompt);
-
-    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
-  }
-
-  Prompt.prototype.enable = function enable(message) {
-    if (this.unblock) this.unblock();
-
-    this.unblock = this.context.router.history.block(message);
-  };
-
-  Prompt.prototype.disable = function disable() {
-    if (this.unblock) {
-      this.unblock();
-      this.unblock = null;
-    }
-  };
-
-  Prompt.prototype.componentWillMount = function componentWillMount() {
-    __WEBPACK_IMPORTED_MODULE_2_invariant___default()(this.context.router, 'You should not use <Prompt> outside a <Router>');
-
-    if (this.props.when) this.enable(this.props.message);
-  };
-
-  Prompt.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-    if (nextProps.when) {
-      if (!this.props.when || this.props.message !== nextProps.message) this.enable(nextProps.message);
-    } else {
-      this.disable();
-    }
-  };
-
-  Prompt.prototype.componentWillUnmount = function componentWillUnmount() {
-    this.disable();
-  };
-
-  Prompt.prototype.render = function render() {
-    return null;
-  };
-
-  return Prompt;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
-Prompt.propTypes = {
-  when: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-  message: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func, __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string]).isRequired
-};
-Prompt.defaultProps = {
-  when: true
-};
-Prompt.contextTypes = {
-  router: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
-    history: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
-      block: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired
-    }).isRequired
-  }).isRequired
-};
-
-
-/* harmony default export */ __webpack_exports__["a"] = (Prompt);
-
-/***/ }),
-/* 42 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(78);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -3489,90 +3184,129 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+var isEmptyChildren = function isEmptyChildren(children) {
+  return __WEBPACK_IMPORTED_MODULE_2_react___default.a.Children.count(children) === 0;
+};
+
 /**
- * The public API for updating the location programmatically
- * with a component.
+ * The public API for matching a single path and rendering.
  */
 
-var Redirect = function (_React$Component) {
-  _inherits(Redirect, _React$Component);
+var Route = function (_React$Component) {
+  _inherits(Route, _React$Component);
 
-  function Redirect() {
-    _classCallCheck(this, Redirect);
+  function Route() {
+    var _temp, _this, _ret;
 
-    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
-  }
+    _classCallCheck(this, Route);
 
-  Redirect.prototype.isStatic = function isStatic() {
-    return this.context.router && this.context.router.staticContext;
-  };
-
-  Redirect.prototype.componentWillMount = function componentWillMount() {
-    __WEBPACK_IMPORTED_MODULE_3_invariant___default()(this.context.router, 'You should not use <Redirect> outside a <Router>');
-
-    if (this.isStatic()) this.perform();
-  };
-
-  Redirect.prototype.componentDidMount = function componentDidMount() {
-    if (!this.isStatic()) this.perform();
-  };
-
-  Redirect.prototype.componentDidUpdate = function componentDidUpdate(prevProps) {
-    var prevTo = Object(__WEBPACK_IMPORTED_MODULE_4_history__["a" /* createLocation */])(prevProps.to);
-    var nextTo = Object(__WEBPACK_IMPORTED_MODULE_4_history__["a" /* createLocation */])(this.props.to);
-
-    if (Object(__WEBPACK_IMPORTED_MODULE_4_history__["b" /* locationsAreEqual */])(prevTo, nextTo)) {
-      __WEBPACK_IMPORTED_MODULE_2_warning___default()(false, 'You tried to redirect to the same route you\'re currently on: ' + ('"' + nextTo.pathname + nextTo.search + '"'));
-      return;
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
 
-    this.perform();
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {
+      match: _this.computeMatch(_this.props, _this.context.router)
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  Route.prototype.getChildContext = function getChildContext() {
+    return {
+      router: _extends({}, this.context.router, {
+        route: {
+          location: this.props.location || this.context.router.route.location,
+          match: this.state.match
+        }
+      })
+    };
   };
 
-  Redirect.prototype.perform = function perform() {
-    var history = this.context.router.history;
+  Route.prototype.computeMatch = function computeMatch(_ref, router) {
+    var computedMatch = _ref.computedMatch,
+        location = _ref.location,
+        path = _ref.path,
+        strict = _ref.strict,
+        exact = _ref.exact,
+        sensitive = _ref.sensitive;
+
+    if (computedMatch) return computedMatch; // <Switch> already computed the match for us
+
+    __WEBPACK_IMPORTED_MODULE_1_invariant___default()(router, 'You should not use <Route> or withRouter() outside a <Router>');
+
+    var route = router.route;
+
+    var pathname = (location || route.location).pathname;
+
+    return path ? Object(__WEBPACK_IMPORTED_MODULE_4__matchPath__["a" /* default */])(pathname, { path: path, strict: strict, exact: exact, sensitive: sensitive }) : route.match;
+  };
+
+  Route.prototype.componentWillMount = function componentWillMount() {
+    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(this.props.component && this.props.render), 'You should not use <Route component> and <Route render> in the same route; <Route render> will be ignored');
+
+    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(this.props.component && this.props.children && !isEmptyChildren(this.props.children)), 'You should not use <Route component> and <Route children> in the same route; <Route children> will be ignored');
+
+    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(this.props.render && this.props.children && !isEmptyChildren(this.props.children)), 'You should not use <Route render> and <Route children> in the same route; <Route children> will be ignored');
+  };
+
+  Route.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps, nextContext) {
+    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(nextProps.location && !this.props.location), '<Route> elements should not change from uncontrolled to controlled (or vice versa). You initially used no "location" prop and then provided one on a subsequent render.');
+
+    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!(!nextProps.location && this.props.location), '<Route> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.');
+
+    this.setState({
+      match: this.computeMatch(nextProps, nextContext.router)
+    });
+  };
+
+  Route.prototype.render = function render() {
+    var match = this.state.match;
     var _props = this.props,
-        push = _props.push,
-        to = _props.to;
+        children = _props.children,
+        component = _props.component,
+        render = _props.render;
+    var _context$router = this.context.router,
+        history = _context$router.history,
+        route = _context$router.route,
+        staticContext = _context$router.staticContext;
 
+    var location = this.props.location || route.location;
+    var props = { match: match, location: location, history: history, staticContext: staticContext };
 
-    if (push) {
-      history.push(to);
-    } else {
-      history.replace(to);
-    }
+    return component ? // component prop gets first priority, only called if there's a match
+    match ? __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(component, props) : null : render ? // render prop is next, only called if there's a match
+    match ? render(props) : null : children ? // children come last, always called
+    typeof children === 'function' ? children(props) : !isEmptyChildren(children) ? __WEBPACK_IMPORTED_MODULE_2_react___default.a.Children.only(children) : null : null;
   };
 
-  Redirect.prototype.render = function render() {
-    return null;
-  };
+  return Route;
+}(__WEBPACK_IMPORTED_MODULE_2_react___default.a.Component);
 
-  return Redirect;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
-Redirect.propTypes = {
-  push: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-  from: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  to: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string, __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object]).isRequired
+Route.propTypes = {
+  computedMatch: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object, // private, from <Switch>
+  path: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.string,
+  exact: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
+  strict: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
+  sensitive: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
+  component: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func,
+  render: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func,
+  children: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func, __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.node]),
+  location: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object
 };
-Redirect.defaultProps = {
-  push: false
+Route.contextTypes = {
+  router: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.shape({
+    history: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired,
+    route: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired,
+    staticContext: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object
+  })
 };
-Redirect.contextTypes = {
-  router: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
-    history: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
-      push: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
-      replace: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired
-    }).isRequired,
-    staticContext: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
-  }).isRequired
+Route.childContextTypes = {
+  router: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired
 };
 
 
-/* harmony default export */ __webpack_exports__["a"] = (Redirect);
+/* harmony default export */ __webpack_exports__["a"] = (Route);
 
 /***/ }),
-/* 43 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3638,329 +3372,7 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 };
 
 /***/ }),
-/* 44 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(15);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-
-var normalizeLocation = function normalizeLocation(object) {
-  var _object$pathname = object.pathname,
-      pathname = _object$pathname === undefined ? '/' : _object$pathname,
-      _object$search = object.search,
-      search = _object$search === undefined ? '' : _object$search,
-      _object$hash = object.hash,
-      hash = _object$hash === undefined ? '' : _object$hash;
-
-
-  return {
-    pathname: pathname,
-    search: search === '?' ? '' : search,
-    hash: hash === '#' ? '' : hash
-  };
-};
-
-var addBasename = function addBasename(basename, location) {
-  if (!basename) return location;
-
-  return _extends({}, location, {
-    pathname: Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["addLeadingSlash"])(basename) + location.pathname
-  });
-};
-
-var stripBasename = function stripBasename(basename, location) {
-  if (!basename) return location;
-
-  var base = Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["addLeadingSlash"])(basename);
-
-  if (location.pathname.indexOf(base) !== 0) return location;
-
-  return _extends({}, location, {
-    pathname: location.pathname.substr(base.length)
-  });
-};
-
-var createLocation = function createLocation(location) {
-  return typeof location === 'string' ? Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["parsePath"])(location) : normalizeLocation(location);
-};
-
-var createURL = function createURL(location) {
-  return typeof location === 'string' ? location : Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["createPath"])(location);
-};
-
-var staticHandler = function staticHandler(methodName) {
-  return function () {
-    __WEBPACK_IMPORTED_MODULE_1_invariant___default()(false, 'You cannot %s with <StaticRouter>', methodName);
-  };
-};
-
-var noop = function noop() {};
-
-/**
- * The public top-level API for a "static" <Router>, so-called because it
- * can't actually change the current location. Instead, it just records
- * location changes in a context object. Useful mainly in testing and
- * server-rendering scenarios.
- */
-
-var StaticRouter = function (_React$Component) {
-  _inherits(StaticRouter, _React$Component);
-
-  function StaticRouter() {
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, StaticRouter);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.createHref = function (path) {
-      return Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["addLeadingSlash"])(_this.props.basename + createURL(path));
-    }, _this.handlePush = function (location) {
-      var _this$props = _this.props,
-          basename = _this$props.basename,
-          context = _this$props.context;
-
-      context.action = 'PUSH';
-      context.location = addBasename(basename, createLocation(location));
-      context.url = createURL(context.location);
-    }, _this.handleReplace = function (location) {
-      var _this$props2 = _this.props,
-          basename = _this$props2.basename,
-          context = _this$props2.context;
-
-      context.action = 'REPLACE';
-      context.location = addBasename(basename, createLocation(location));
-      context.url = createURL(context.location);
-    }, _this.handleListen = function () {
-      return noop;
-    }, _this.handleBlock = function () {
-      return noop;
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  StaticRouter.prototype.getChildContext = function getChildContext() {
-    return {
-      router: {
-        staticContext: this.props.context
-      }
-    };
-  };
-
-  StaticRouter.prototype.componentWillMount = function componentWillMount() {
-    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!this.props.history, '<StaticRouter> ignores the history prop. To use a custom history, ' + 'use `import { Router }` instead of `import { StaticRouter as Router }`.');
-  };
-
-  StaticRouter.prototype.render = function render() {
-    var _props = this.props,
-        basename = _props.basename,
-        context = _props.context,
-        location = _props.location,
-        props = _objectWithoutProperties(_props, ['basename', 'context', 'location']);
-
-    var history = {
-      createHref: this.createHref,
-      action: 'POP',
-      location: stripBasename(basename, createLocation(location)),
-      push: this.handlePush,
-      replace: this.handleReplace,
-      go: staticHandler('go'),
-      goBack: staticHandler('goBack'),
-      goForward: staticHandler('goForward'),
-      listen: this.handleListen,
-      block: this.handleBlock
-    };
-
-    return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Router__["a" /* default */], _extends({}, props, { history: history }));
-  };
-
-  return StaticRouter;
-}(__WEBPACK_IMPORTED_MODULE_2_react___default.a.Component);
-
-StaticRouter.propTypes = {
-  basename: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.string,
-  context: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired,
-  location: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.string, __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object])
-};
-StaticRouter.defaultProps = {
-  basename: '',
-  location: '/'
-};
-StaticRouter.childContextTypes = {
-  router: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired
-};
-
-
-/* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
-
-/***/ }),
-/* 45 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(16);
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-/**
- * The public API for rendering the first <Route> that matches.
- */
-
-var Switch = function (_React$Component) {
-  _inherits(Switch, _React$Component);
-
-  function Switch() {
-    _classCallCheck(this, Switch);
-
-    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
-  }
-
-  Switch.prototype.componentWillMount = function componentWillMount() {
-    __WEBPACK_IMPORTED_MODULE_3_invariant___default()(this.context.router, 'You should not use <Switch> outside a <Router>');
-  };
-
-  Switch.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-    __WEBPACK_IMPORTED_MODULE_2_warning___default()(!(nextProps.location && !this.props.location), '<Switch> elements should not change from uncontrolled to controlled (or vice versa). You initially used no "location" prop and then provided one on a subsequent render.');
-
-    __WEBPACK_IMPORTED_MODULE_2_warning___default()(!(!nextProps.location && this.props.location), '<Switch> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.');
-  };
-
-  Switch.prototype.render = function render() {
-    var route = this.context.router.route;
-    var children = this.props.children;
-
-    var location = this.props.location || route.location;
-
-    var match = void 0,
-        child = void 0;
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.Children.forEach(children, function (element) {
-      if (!__WEBPACK_IMPORTED_MODULE_0_react___default.a.isValidElement(element)) return;
-
-      var _element$props = element.props,
-          pathProp = _element$props.path,
-          exact = _element$props.exact,
-          strict = _element$props.strict,
-          sensitive = _element$props.sensitive,
-          from = _element$props.from;
-
-      var path = pathProp || from;
-
-      if (match == null) {
-        child = element;
-        match = path ? Object(__WEBPACK_IMPORTED_MODULE_4__matchPath__["a" /* default */])(location.pathname, { path: path, exact: exact, strict: strict, sensitive: sensitive }) : route.match;
-      }
-    });
-
-    return match ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.cloneElement(child, { location: location, computedMatch: match }) : null;
-  };
-
-  return Switch;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
-Switch.contextTypes = {
-  router: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
-    route: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
-  }).isRequired
-};
-Switch.propTypes = {
-  children: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.node,
-  location: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
-};
-
-
-/* harmony default export */ __webpack_exports__["a"] = (Switch);
-
-/***/ }),
-/* 46 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(25);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-
-
-
-
-
-/**
- * A public higher-order component to access the imperative API
- */
-var withRouter = function withRouter(Component) {
-  var C = function C(props) {
-    var wrappedComponentRef = props.wrappedComponentRef,
-        remainingProps = _objectWithoutProperties(props, ['wrappedComponentRef']);
-
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Route__["a" /* default */], { render: function render(routeComponentProps) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({}, remainingProps, routeComponentProps, { ref: wrappedComponentRef }));
-      } });
-  };
-
-  C.displayName = 'withRouter(' + (Component.displayName || Component.name) + ')';
-  C.WrappedComponent = Component;
-  C.propTypes = {
-    wrappedComponentRef: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func
-  };
-
-  return __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default()(C, Component);
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (withRouter);
-
-/***/ }),
-/* 47 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4032,7 +3444,7 @@ var Information = function (_React$Component) {
 exports.default = Information;
 
 /***/ }),
-/* 48 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4042,29 +3454,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(20);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(59);
+var _App = __webpack_require__(53);
 
 var _App2 = _interopRequireDefault(_App);
-
-var _reactRouterDom = __webpack_require__(5);
-
-var _reactRouter = __webpack_require__(104);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootElement = document.getElementById('root');
-_reactDom2.default.render(_react2.default.createElement(
-	_reactRouterDom.HashRouter,
-	{ history: _reactRouter.browserHistory },
-	_react2.default.createElement(_reactRouterDom.Route, { component: _App2.default })
-), rootElement);
+_reactDom2.default.render(_react2.default.createElement(_App2.default, null), rootElement);
 
 /***/ }),
-/* 49 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4092,7 +3496,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 50 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4118,7 +3522,7 @@ var emptyObject = __webpack_require__(12);
 var invariant = __webpack_require__(9);
 var warning = __webpack_require__(13);
 var emptyFunction = __webpack_require__(6);
-var checkPropTypes = __webpack_require__(18);
+var checkPropTypes = __webpack_require__(16);
 
 // TODO: this is special because it gets imported during build.
 
@@ -5457,7 +4861,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 51 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5473,7 +4877,7 @@ module.exports = react;
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),l=__webpack_require__(27),B=__webpack_require__(8),C=__webpack_require__(6),ba=__webpack_require__(28),da=__webpack_require__(29),ea=__webpack_require__(30),fa=__webpack_require__(31),ia=__webpack_require__(32),D=__webpack_require__(12);
+var aa=__webpack_require__(0),l=__webpack_require__(26),B=__webpack_require__(8),C=__webpack_require__(6),ba=__webpack_require__(27),da=__webpack_require__(28),ea=__webpack_require__(29),fa=__webpack_require__(30),ia=__webpack_require__(31),D=__webpack_require__(12);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -5693,7 +5097,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 52 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5708,7 +5112,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(53);
+var isNode = __webpack_require__(47);
 
 /**
  * @param {*} object The object to check.
@@ -5721,7 +5125,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 53 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5749,7 +5153,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 54 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5773,18 +5177,18 @@ if (process.env.NODE_ENV !== "production") {
 var React = __webpack_require__(0);
 var invariant = __webpack_require__(9);
 var warning = __webpack_require__(13);
-var ExecutionEnvironment = __webpack_require__(27);
+var ExecutionEnvironment = __webpack_require__(26);
 var _assign = __webpack_require__(8);
 var emptyFunction = __webpack_require__(6);
-var EventListener = __webpack_require__(28);
-var getActiveElement = __webpack_require__(29);
-var shallowEqual = __webpack_require__(30);
-var containsNode = __webpack_require__(31);
-var focusNode = __webpack_require__(32);
+var EventListener = __webpack_require__(27);
+var getActiveElement = __webpack_require__(28);
+var shallowEqual = __webpack_require__(29);
+var containsNode = __webpack_require__(30);
+var focusNode = __webpack_require__(31);
 var emptyObject = __webpack_require__(12);
-var checkPropTypes = __webpack_require__(18);
-var hyphenateStyleName = __webpack_require__(55);
-var camelizeStyleName = __webpack_require__(57);
+var checkPropTypes = __webpack_require__(16);
+var hyphenateStyleName = __webpack_require__(49);
+var camelizeStyleName = __webpack_require__(51);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -21151,7 +20555,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 55 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21166,7 +20570,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(56);
+var hyphenate = __webpack_require__(50);
 
 var msPattern = /^ms-/;
 
@@ -21193,7 +20597,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 56 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21229,7 +20633,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 57 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21244,7 +20648,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(58);
+var camelize = __webpack_require__(52);
 
 var msPattern = /^-ms-/;
 
@@ -21272,7 +20676,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 58 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21307,7 +20711,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 59 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21323,7 +20727,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Header = __webpack_require__(60);
+var _Header = __webpack_require__(54);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -21416,7 +20820,7 @@ var App = function (_React$Component) {
 exports.default = App;
 
 /***/ }),
-/* 60 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21432,7 +20836,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Profile = __webpack_require__(61);
+var _Profile = __webpack_require__(55);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -21486,7 +20890,7 @@ var Header = function (_React$Component) {
 exports.default = Header;
 
 /***/ }),
-/* 61 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21502,7 +20906,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _UserList = __webpack_require__(62);
+var _UserList = __webpack_require__(56);
 
 var _UserList2 = _interopRequireDefault(_UserList);
 
@@ -21811,7 +21215,7 @@ var Profile = function (_React$Component) {
 exports.default = Profile;
 
 /***/ }),
-/* 62 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21934,7 +21338,7 @@ var UserList = function (_React$Component) {
 exports.default = UserList;
 
 /***/ }),
-/* 63 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22050,7 +21454,7 @@ var UserInfo = function () {
 exports.default = UserInfo;
 
 /***/ }),
-/* 64 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22062,7 +21466,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _hangul = __webpack_require__(34);
+var _hangul = __webpack_require__(33);
 
 var _hangul2 = _interopRequireDefault(_hangul);
 
@@ -22133,7 +21537,7 @@ var Reporter = function () {
 exports.default = Reporter;
 
 /***/ }),
-/* 65 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22143,9 +21547,9 @@ exports.default = Reporter;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(22);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -22200,7 +21604,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 66 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22218,8 +21622,8 @@ var invariant = __webpack_require__(9);
 var warning = __webpack_require__(13);
 var assign = __webpack_require__(8);
 
-var ReactPropTypesSecret = __webpack_require__(19);
-var checkPropTypes = __webpack_require__(18);
+var ReactPropTypesSecret = __webpack_require__(17);
+var checkPropTypes = __webpack_require__(16);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -22750,7 +22154,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 67 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22765,7 +22169,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 var emptyFunction = __webpack_require__(6);
 var invariant = __webpack_require__(9);
-var ReactPropTypesSecret = __webpack_require__(19);
+var ReactPropTypesSecret = __webpack_require__(17);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -22815,7 +22219,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 68 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22835,15 +22239,15 @@ var _invariant = __webpack_require__(4);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(22);
+var _LocationUtils = __webpack_require__(20);
 
 var _PathUtils = __webpack_require__(10);
 
-var _createTransitionManager = __webpack_require__(23);
+var _createTransitionManager = __webpack_require__(21);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _DOMUtils = __webpack_require__(37);
+var _DOMUtils = __webpack_require__(36);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23128,7 +22532,7 @@ var createBrowserHistory = function createBrowserHistory() {
 exports.default = createBrowserHistory;
 
 /***/ }),
-/* 69 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23138,9 +22542,9 @@ exports.default = createBrowserHistory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(22);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -23194,7 +22598,7 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 70 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23212,15 +22616,15 @@ var _invariant = __webpack_require__(4);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(22);
+var _LocationUtils = __webpack_require__(20);
 
 var _PathUtils = __webpack_require__(10);
 
-var _createTransitionManager = __webpack_require__(23);
+var _createTransitionManager = __webpack_require__(21);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _DOMUtils = __webpack_require__(37);
+var _DOMUtils = __webpack_require__(36);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23524,18 +22928,85 @@ var createHashHistory = function createHashHistory() {
 exports.default = createHashHistory;
 
 /***/ }),
-/* 71 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(66);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 72 */
+/* 66 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(23);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+/**
+ * The public API for a <Router> that stores location in memory.
+ */
+
+var MemoryRouter = function (_React$Component) {
+  _inherits(MemoryRouter, _React$Component);
+
+  function MemoryRouter() {
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, MemoryRouter);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.history = __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default()(_this.props), _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  MemoryRouter.prototype.componentWillMount = function componentWillMount() {
+    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!this.props.history, '<MemoryRouter> ignores the history prop. To use a custom history, ' + 'use `import { Router }` instead of `import { MemoryRouter as Router }`.');
+  };
+
+  MemoryRouter.prototype.render = function render() {
+    return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Router__["a" /* default */], { history: this.history, children: this.props.children });
+  };
+
+  return MemoryRouter;
+}(__WEBPACK_IMPORTED_MODULE_1_react___default.a.Component);
+
+MemoryRouter.propTypes = {
+  initialEntries: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.array,
+  initialIndex: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.number,
+  getUserConfirmation: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.func,
+  keyLength: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.number,
+  children: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.node
+};
+
+
+/* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
+
+/***/ }),
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23553,9 +23024,9 @@ var _warning2 = _interopRequireDefault(_warning);
 
 var _PathUtils = __webpack_require__(10);
 
-var _LocationUtils = __webpack_require__(22);
+var _LocationUtils = __webpack_require__(20);
 
-var _createTransitionManager = __webpack_require__(23);
+var _createTransitionManager = __webpack_require__(21);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -23711,7 +23182,7 @@ var createMemoryHistory = function createMemoryHistory() {
 exports.default = createMemoryHistory;
 
 /***/ }),
-/* 73 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23719,8 +23190,8 @@ exports.default = createMemoryHistory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(37);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -23792,10 +23263,10 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 74 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(75)
+var isarray = __webpack_require__(70)
 
 /**
  * Expose `pathToRegexp`.
@@ -24224,7 +23695,7 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 75 */
+/* 70 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -24233,39 +23704,238 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 76 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(72);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 77 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+/**
+ * The public API for prompting the user before navigating away
+ * from a screen with a component.
+ */
+
+var Prompt = function (_React$Component) {
+  _inherits(Prompt, _React$Component);
+
+  function Prompt() {
+    _classCallCheck(this, Prompt);
+
+    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
+  }
+
+  Prompt.prototype.enable = function enable(message) {
+    if (this.unblock) this.unblock();
+
+    this.unblock = this.context.router.history.block(message);
+  };
+
+  Prompt.prototype.disable = function disable() {
+    if (this.unblock) {
+      this.unblock();
+      this.unblock = null;
+    }
+  };
+
+  Prompt.prototype.componentWillMount = function componentWillMount() {
+    __WEBPACK_IMPORTED_MODULE_2_invariant___default()(this.context.router, 'You should not use <Prompt> outside a <Router>');
+
+    if (this.props.when) this.enable(this.props.message);
+  };
+
+  Prompt.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+    if (nextProps.when) {
+      if (!this.props.when || this.props.message !== nextProps.message) this.enable(nextProps.message);
+    } else {
+      this.disable();
+    }
+  };
+
+  Prompt.prototype.componentWillUnmount = function componentWillUnmount() {
+    this.disable();
+  };
+
+  Prompt.prototype.render = function render() {
+    return null;
+  };
+
+  return Prompt;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+Prompt.propTypes = {
+  when: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
+  message: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func, __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string]).isRequired
+};
+Prompt.defaultProps = {
+  when: true
+};
+Prompt.contextTypes = {
+  router: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
+    history: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
+      block: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired
+    }).isRequired
+  }).isRequired
+};
+
+
+/* harmony default export */ __webpack_exports__["a"] = (Prompt);
+
+/***/ }),
+/* 73 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(74);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 78 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(75);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+/**
+ * The public API for updating the location programmatically
+ * with a component.
+ */
+
+var Redirect = function (_React$Component) {
+  _inherits(Redirect, _React$Component);
+
+  function Redirect() {
+    _classCallCheck(this, Redirect);
+
+    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
+  }
+
+  Redirect.prototype.isStatic = function isStatic() {
+    return this.context.router && this.context.router.staticContext;
+  };
+
+  Redirect.prototype.componentWillMount = function componentWillMount() {
+    __WEBPACK_IMPORTED_MODULE_3_invariant___default()(this.context.router, 'You should not use <Redirect> outside a <Router>');
+
+    if (this.isStatic()) this.perform();
+  };
+
+  Redirect.prototype.componentDidMount = function componentDidMount() {
+    if (!this.isStatic()) this.perform();
+  };
+
+  Redirect.prototype.componentDidUpdate = function componentDidUpdate(prevProps) {
+    var prevTo = Object(__WEBPACK_IMPORTED_MODULE_4_history__["a" /* createLocation */])(prevProps.to);
+    var nextTo = Object(__WEBPACK_IMPORTED_MODULE_4_history__["a" /* createLocation */])(this.props.to);
+
+    if (Object(__WEBPACK_IMPORTED_MODULE_4_history__["b" /* locationsAreEqual */])(prevTo, nextTo)) {
+      __WEBPACK_IMPORTED_MODULE_2_warning___default()(false, 'You tried to redirect to the same route you\'re currently on: ' + ('"' + nextTo.pathname + nextTo.search + '"'));
+      return;
+    }
+
+    this.perform();
+  };
+
+  Redirect.prototype.perform = function perform() {
+    var history = this.context.router.history;
+    var _props = this.props,
+        push = _props.push,
+        to = _props.to;
+
+
+    if (push) {
+      history.push(to);
+    } else {
+      history.replace(to);
+    }
+  };
+
+  Redirect.prototype.render = function render() {
+    return null;
+  };
+
+  return Redirect;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+Redirect.propTypes = {
+  push: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
+  from: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+  to: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string, __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object]).isRequired
+};
+Redirect.defaultProps = {
+  push: false
+};
+Redirect.contextTypes = {
+  router: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
+    history: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
+      push: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
+      replace: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired
+    }).isRequired,
+    staticContext: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
+  }).isRequired
+};
+
+
+/* harmony default export */ __webpack_exports__["a"] = (Redirect);
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(76);
 /* unused harmony reexport createBrowserHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(77);
 /* unused harmony reexport createHashHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(78);
 /* unused harmony reexport createMemoryHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(15);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(11);
@@ -24282,7 +23952,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 79 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24290,10 +23960,10 @@ module.exports = Array.isArray || function (arr) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(40);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -24586,7 +24256,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createBrowserHistory);
 
 /***/ }),
-/* 80 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24594,10 +24264,10 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(40);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -24907,15 +24577,15 @@ var createHashHistory = function createHashHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createHashHistory);
 
 /***/ }),
-/* 81 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(25);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -25075,48 +24745,370 @@ var createMemoryHistory = function createMemoryHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createMemoryHistory);
 
 /***/ }),
-/* 82 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(80);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 83 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(23);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+
+var normalizeLocation = function normalizeLocation(object) {
+  var _object$pathname = object.pathname,
+      pathname = _object$pathname === undefined ? '/' : _object$pathname,
+      _object$search = object.search,
+      search = _object$search === undefined ? '' : _object$search,
+      _object$hash = object.hash,
+      hash = _object$hash === undefined ? '' : _object$hash;
+
+
+  return {
+    pathname: pathname,
+    search: search === '?' ? '' : search,
+    hash: hash === '#' ? '' : hash
+  };
+};
+
+var addBasename = function addBasename(basename, location) {
+  if (!basename) return location;
+
+  return _extends({}, location, {
+    pathname: Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["addLeadingSlash"])(basename) + location.pathname
+  });
+};
+
+var stripBasename = function stripBasename(basename, location) {
+  if (!basename) return location;
+
+  var base = Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["addLeadingSlash"])(basename);
+
+  if (location.pathname.indexOf(base) !== 0) return location;
+
+  return _extends({}, location, {
+    pathname: location.pathname.substr(base.length)
+  });
+};
+
+var createLocation = function createLocation(location) {
+  return typeof location === 'string' ? Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["parsePath"])(location) : normalizeLocation(location);
+};
+
+var createURL = function createURL(location) {
+  return typeof location === 'string' ? location : Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["createPath"])(location);
+};
+
+var staticHandler = function staticHandler(methodName) {
+  return function () {
+    __WEBPACK_IMPORTED_MODULE_1_invariant___default()(false, 'You cannot %s with <StaticRouter>', methodName);
+  };
+};
+
+var noop = function noop() {};
+
+/**
+ * The public top-level API for a "static" <Router>, so-called because it
+ * can't actually change the current location. Instead, it just records
+ * location changes in a context object. Useful mainly in testing and
+ * server-rendering scenarios.
+ */
+
+var StaticRouter = function (_React$Component) {
+  _inherits(StaticRouter, _React$Component);
+
+  function StaticRouter() {
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, StaticRouter);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.createHref = function (path) {
+      return Object(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__["addLeadingSlash"])(_this.props.basename + createURL(path));
+    }, _this.handlePush = function (location) {
+      var _this$props = _this.props,
+          basename = _this$props.basename,
+          context = _this$props.context;
+
+      context.action = 'PUSH';
+      context.location = addBasename(basename, createLocation(location));
+      context.url = createURL(context.location);
+    }, _this.handleReplace = function (location) {
+      var _this$props2 = _this.props,
+          basename = _this$props2.basename,
+          context = _this$props2.context;
+
+      context.action = 'REPLACE';
+      context.location = addBasename(basename, createLocation(location));
+      context.url = createURL(context.location);
+    }, _this.handleListen = function () {
+      return noop;
+    }, _this.handleBlock = function () {
+      return noop;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  StaticRouter.prototype.getChildContext = function getChildContext() {
+    return {
+      router: {
+        staticContext: this.props.context
+      }
+    };
+  };
+
+  StaticRouter.prototype.componentWillMount = function componentWillMount() {
+    __WEBPACK_IMPORTED_MODULE_0_warning___default()(!this.props.history, '<StaticRouter> ignores the history prop. To use a custom history, ' + 'use `import { Router }` instead of `import { StaticRouter as Router }`.');
+  };
+
+  StaticRouter.prototype.render = function render() {
+    var _props = this.props,
+        basename = _props.basename,
+        context = _props.context,
+        location = _props.location,
+        props = _objectWithoutProperties(_props, ['basename', 'context', 'location']);
+
+    var history = {
+      createHref: this.createHref,
+      action: 'POP',
+      location: stripBasename(basename, createLocation(location)),
+      push: this.handlePush,
+      replace: this.handleReplace,
+      go: staticHandler('go'),
+      goBack: staticHandler('goBack'),
+      goForward: staticHandler('goForward'),
+      listen: this.handleListen,
+      block: this.handleBlock
+    };
+
+    return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Router__["a" /* default */], _extends({}, props, { history: history }));
+  };
+
+  return StaticRouter;
+}(__WEBPACK_IMPORTED_MODULE_2_react___default.a.Component);
+
+StaticRouter.propTypes = {
+  basename: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.string,
+  context: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired,
+  location: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.string, __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object])
+};
+StaticRouter.defaultProps = {
+  basename: '',
+  location: '/'
+};
+StaticRouter.childContextTypes = {
+  router: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired
+};
+
+
+/* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
+
+/***/ }),
+/* 81 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(82);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 84 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(24);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+/**
+ * The public API for rendering the first <Route> that matches.
+ */
+
+var Switch = function (_React$Component) {
+  _inherits(Switch, _React$Component);
+
+  function Switch() {
+    _classCallCheck(this, Switch);
+
+    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
+  }
+
+  Switch.prototype.componentWillMount = function componentWillMount() {
+    __WEBPACK_IMPORTED_MODULE_3_invariant___default()(this.context.router, 'You should not use <Switch> outside a <Router>');
+  };
+
+  Switch.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+    __WEBPACK_IMPORTED_MODULE_2_warning___default()(!(nextProps.location && !this.props.location), '<Switch> elements should not change from uncontrolled to controlled (or vice versa). You initially used no "location" prop and then provided one on a subsequent render.');
+
+    __WEBPACK_IMPORTED_MODULE_2_warning___default()(!(!nextProps.location && this.props.location), '<Switch> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.');
+  };
+
+  Switch.prototype.render = function render() {
+    var route = this.context.router.route;
+    var children = this.props.children;
+
+    var location = this.props.location || route.location;
+
+    var match = void 0,
+        child = void 0;
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.Children.forEach(children, function (element) {
+      if (!__WEBPACK_IMPORTED_MODULE_0_react___default.a.isValidElement(element)) return;
+
+      var _element$props = element.props,
+          pathProp = _element$props.path,
+          exact = _element$props.exact,
+          strict = _element$props.strict,
+          sensitive = _element$props.sensitive,
+          from = _element$props.from;
+
+      var path = pathProp || from;
+
+      if (match == null) {
+        child = element;
+        match = path ? Object(__WEBPACK_IMPORTED_MODULE_4__matchPath__["a" /* default */])(location.pathname, { path: path, exact: exact, strict: strict, sensitive: sensitive }) : route.match;
+      }
+    });
+
+    return match ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.cloneElement(child, { location: location, computedMatch: match }) : null;
+  };
+
+  return Switch;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+Switch.contextTypes = {
+  router: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
+    route: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
+  }).isRequired
+};
+Switch.propTypes = {
+  children: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.node,
+  location: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
+};
+
+
+/* harmony default export */ __webpack_exports__["a"] = (Switch);
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(24);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(85);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
+
+/***/ }),
+/* 85 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(39);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+
+
+
+
+
+/**
+ * A public higher-order component to access the imperative API
+ */
+var withRouter = function withRouter(Component) {
+  var C = function C(props) {
+    var wrappedComponentRef = props.wrappedComponentRef,
+        remainingProps = _objectWithoutProperties(props, ['wrappedComponentRef']);
+
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Route__["a" /* default */], { render: function render(routeComponentProps) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({}, remainingProps, routeComponentProps, { ref: wrappedComponentRef }));
+      } });
+  };
+
+  C.displayName = 'withRouter(' + (Component.displayName || Component.name) + ')';
+  C.WrappedComponent = Component;
+  C.propTypes = {
+    wrappedComponentRef: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func
+  };
+
+  return __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default()(C, Component);
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
 /* 86 */
@@ -25217,7 +25209,7 @@ var _UserManager = __webpack_require__(7);
 
 var _UserManager2 = _interopRequireDefault(_UserManager);
 
-var _Information = __webpack_require__(47);
+var _Information = __webpack_require__(41);
 
 var _Information2 = _interopRequireDefault(_Information);
 
@@ -25453,7 +25445,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Level = __webpack_require__(21);
+var _Level = __webpack_require__(19);
 
 var _Level2 = _interopRequireDefault(_Level);
 
@@ -25461,7 +25453,7 @@ var _LevelItem = __webpack_require__(90);
 
 var _LevelItem2 = _interopRequireDefault(_LevelItem);
 
-var _levelData = __webpack_require__(33);
+var _levelData = __webpack_require__(32);
 
 var _levelData2 = _interopRequireDefault(_levelData);
 
@@ -26120,7 +26112,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(20);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -26132,11 +26124,11 @@ var _keymap = __webpack_require__(96);
 
 var _keymap2 = _interopRequireDefault(_keymap);
 
-var _Level = __webpack_require__(21);
+var _Level = __webpack_require__(19);
 
 var _Level2 = _interopRequireDefault(_Level);
 
-var _hangul = __webpack_require__(34);
+var _hangul = __webpack_require__(33);
 
 var _hangul2 = _interopRequireDefault(_hangul);
 
@@ -26557,7 +26549,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(20);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -27373,7 +27365,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Information = __webpack_require__(47);
+var _Information = __webpack_require__(41);
 
 var _Information2 = _interopRequireDefault(_Information);
 
@@ -27480,49 +27472,6 @@ var About = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = About;
-
-/***/ }),
-/* 104 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__ = __webpack_require__(39);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Prompt__ = __webpack_require__(41);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_1__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Redirect__ = __webpack_require__(42);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_2__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(25);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_3__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(15);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_4__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(44);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_5__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Switch__ = __webpack_require__(45);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_6__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__matchPath__ = __webpack_require__(16);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_7__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__withRouter__ = __webpack_require__(46);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_8__withRouter__["a"]; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /***/ })
 /******/ ]);
