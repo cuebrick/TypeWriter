@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "webpack-dev-server",
-    "build": "babel build --out-dir build && webpack"
+    "build": "babel dist --out-dir dist && webpack"
   },
   "author": "cuebrick",
   "license": "ISC",
