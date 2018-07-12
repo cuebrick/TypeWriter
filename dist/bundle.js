@@ -27346,7 +27346,7 @@ exports.default = AppInfo;
 /* 102 */
 /***/ (function(module, exports) {
 
-module.exports = {"name":"typingplay","version":"1.0.0","description":"","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1","dev-server":"webpack-dev-server","build":"babel build --out-dir build && webpack"},"author":"cuebrick","license":"ISC","dependencies":{"react":"^16.2.0","react-dom":"^16.2.0","react-router":"^4.2.0","react-router-dom":"^4.2.2"},"devDependencies":{"babel-cli":"^6.26.0","babel-core":"^6.26.0","babel-loader":"^7.1.2","babel-preset-es2015":"^6.24.1","babel-preset-react":"^6.24.1","react-hot-loader":"^3.1.3","svg-react-loader":"^0.4.5","webpack":"^3.10.0","webpack-dev-server":"^2.9.7"}}
+module.exports = {"name":"typingplay","version":"1.0.0","description":"","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1","dev-server":"webpack-dev-server","build":"babel dist --out-dir dist && webpack"},"author":"cuebrick","license":"ISC","dependencies":{"react":"^16.2.0","react-dom":"^16.2.0","react-router":"^4.2.0","react-router-dom":"^4.2.2"},"devDependencies":{"babel-cli":"^6.26.0","babel-core":"^6.26.0","babel-loader":"^7.1.2","babel-preset-es2015":"^6.24.1","babel-preset-react":"^6.24.1","react-hot-loader":"^3.1.3","svg-react-loader":"^0.4.5","webpack":"^3.10.0","webpack-dev-server":"^2.9.7"}}
 
 /***/ }),
 /* 103 */
