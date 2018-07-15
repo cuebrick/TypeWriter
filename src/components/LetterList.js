@@ -196,8 +196,17 @@ class LetterList extends React.Component{
 
 		function getCode(character) {
 			let lang = level.language;
+			let shifted = "n";
+			switch (character) {
+				case "ㅃ":
+				case "ㅉ":
+				case "ㄸ":
+				case "ㄲ":
+				case "ㅆ":
+					shifted = "s";
+			}
 			for(let key in Keymap){
-				if(Keymap[key][lang+'n'] === character.toLowerCase()){
+				if(Keymap[key][lang+shifted] === character.toLowerCase()){
 					return Keymap[key].code;
 				}
 			}
