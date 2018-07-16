@@ -25697,6 +25697,7 @@ var Typing = function (_React$Component) {
 
 		_this.typingFinished = _this.typingFinished.bind(_this);
 		_this.nextCode = _this.nextCode.bind(_this);
+		_this.isShiftKey = _this.isShiftKey.bind(_this);
 		_this.onKeydown = _this.onKeydown.bind(_this);
 		_this.addKeyboardEvent = _this.addKeyboardEvent.bind(_this);
 		_this.removeKeyboardEvent = _this.removeKeyboardEvent.bind(_this);
@@ -25712,6 +25713,7 @@ var Typing = function (_React$Component) {
 			level: level,
 			nextLevel: null,
 			nextCode: null,
+			isShiftKey: false,
 			isFinished: false
 		};
 		return _this;
@@ -25731,6 +25733,11 @@ var Typing = function (_React$Component) {
 		key: 'nextCode',
 		value: function nextCode(code) {
 			this.setState({ nextCode: code });
+		}
+	}, {
+		key: 'isShiftKey',
+		value: function isShiftKey(bool) {
+			this.setState({ isShiftKey: bool });
 		}
 	}, {
 		key: 'typingFinished',
@@ -25789,7 +25796,7 @@ var Typing = function (_React$Component) {
 					null,
 					this.state.level.title
 				),
-				_react2.default.createElement(_LetterList2.default, { level: this.state.level, nextCode: this.nextCode, typingFinished: this.typingFinished }),
+				_react2.default.createElement(_LetterList2.default, { level: this.state.level, nextCode: this.nextCode, isShiftKey: this.isShiftKey, typingFinished: this.typingFinished }),
 				_react2.default.createElement(
 					'div',
 					{ className: 'button-ui' },
@@ -25812,7 +25819,7 @@ var Typing = function (_React$Component) {
 						)
 					)
 				),
-				_react2.default.createElement(_KeyboardLayout2.default, { nextCode: this.state.nextCode }),
+				_react2.default.createElement(_KeyboardLayout2.default, { nextCode: this.state.nextCode, isShiftKey: this.state.isShiftKey }),
 				this.state.isFinished && _react2.default.createElement(_ReportView2.default, { level: this.state.level })
 			);
 		}
@@ -25919,6 +25926,7 @@ var KeyboardLayout = function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
+			console.log(this.props.nextCode);
 			// 영문 키캡의 경우 기호들과는 다르게 쉬프트 된 문자(대문자) 가 표시되어 있음.
 			// Keycap 에 주어진 props 들은 실제 프로그래밍적으로 의미가 있는 것은 아니고 화면 표시용으로만 사용.
 			return _react2.default.createElement(
@@ -25980,7 +25988,7 @@ var KeyboardLayout = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ className: 'row' },
-					_react2.default.createElement(_Keycap2.default, { keyCode: 16, enn: "shift", keyType: "type5", nextCode: this.props.nextCode }),
+					_react2.default.createElement(_Keycap2.default, { keyCode: 16, enn: "shift", keyType: "type5", nextCode: this.props.nextCode, isShiftKey: this.props.isShiftKey }),
 					_react2.default.createElement(_Keycap2.default, { keyCode: 90, ens: "Z", krn: "ㅋ", nextCode: this.props.nextCode, isShifting: this.state.isShifting }),
 					_react2.default.createElement(_Keycap2.default, { keyCode: 88, ens: "X", krn: "ㅌ", nextCode: this.props.nextCode, isShifting: this.state.isShifting }),
 					_react2.default.createElement(_Keycap2.default, { keyCode: 67, ens: "C", krn: "ㅊ", nextCode: this.props.nextCode, isShifting: this.state.isShifting }),
@@ -25991,7 +25999,7 @@ var KeyboardLayout = function (_React$Component) {
 					_react2.default.createElement(_Keycap2.default, { keyCode: 188, enn: ",", ens: "<", nextCode: this.props.nextCode, isShifting: this.state.isShifting }),
 					_react2.default.createElement(_Keycap2.default, { keyCode: 190, enn: ".", ens: ">", nextCode: this.props.nextCode, isShifting: this.state.isShifting }),
 					_react2.default.createElement(_Keycap2.default, { keyCode: 191, enn: "/", ens: "?", nextCode: this.props.nextCode, isShifting: this.state.isShifting }),
-					_react2.default.createElement(_Keycap2.default, { keyCode: 16, enn: "shift", keyType: "type6", nextCode: this.props.nextCode })
+					_react2.default.createElement(_Keycap2.default, { keyCode: 16, enn: "shift", keyType: "type6", nextCode: this.props.nextCode, isShiftKey: this.props.isShiftKey })
 				),
 				_react2.default.createElement(
 					'div',
@@ -26051,7 +26059,7 @@ var Keycap = function (_React$Component) {
 	_createClass(Keycap, [{
 		key: 'render',
 		value: function render() {
-			var nextCodeClassName = this.props.nextCode === this.props.keyCode ? 'next-code' : '';
+			var nextCodeClassName = this.props.nextCode === this.props.keyCode || this.props.isShiftKey ? 'next-code' : '';
 			var keyTypeClassName = this.props.keyType ? ' ' + this.props.keyType : '';
 			var shiftingClassName = this.props.isShifting ? ' shifted' : '';
 
@@ -26332,6 +26340,7 @@ var LetterList = function (_React$Component) {
 			var level = this.props.level;
 			var nextItem = this.getNextItem();
 			var text = currentItem.getData().text;
+			var isShiftKey = false;
 
 			text += nextItem ? nextItem.getData().text : '';
 
@@ -26340,13 +26349,30 @@ var LetterList = function (_React$Component) {
 			} else {
 				var len = this.props.level.buffer.length;
 				var char = _hangul2.default.d(text)[len];
+
+				switch (char) {
+					case "ㅃ":
+					case "ㅉ":
+					case "ㄸ":
+					case "ㄲ":
+					case "ㅆ":
+					case "ㅒ":
+					case "ㅖ":
+						isShiftKey = true;
+						break;
+					default:
+						isShiftKey = false;
+				}
+
 				code = getCode(char);
 			}
 
 			function getCode(character) {
 				var lang = level.language;
+				var shifted = isShiftKey ? "s" : "n";
+
 				for (var key in _keymap2.default) {
-					if (_keymap2.default[key][lang + 'n'] === character.toLowerCase()) {
+					if (_keymap2.default[key][lang + shifted] === character.toLowerCase()) {
 						return _keymap2.default[key].code;
 					}
 				}
@@ -26354,6 +26380,7 @@ var LetterList = function (_React$Component) {
 			}
 
 			this.props.nextCode(code);
+			this.props.isShiftKey(isShiftKey);
 		}
 	}, {
 		key: 'recordKey',
@@ -27346,7 +27373,7 @@ exports.default = AppInfo;
 /* 102 */
 /***/ (function(module, exports) {
 
-module.exports = {"name":"typingplay","version":"1.0.0","description":"","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1","dev-server":"webpack-dev-server","build":"babel dist --out-dir dist && webpack"},"author":"cuebrick","license":"ISC","dependencies":{"react":"^16.2.0","react-dom":"^16.2.0","react-router":"^4.2.0","react-router-dom":"^4.2.2"},"devDependencies":{"babel-cli":"^6.26.0","babel-core":"^6.26.0","babel-loader":"^7.1.2","babel-preset-es2015":"^6.24.1","babel-preset-react":"^6.24.1","react-hot-loader":"^3.1.3","svg-react-loader":"^0.4.5","webpack":"^3.10.0","webpack-dev-server":"^2.9.7"}}
+module.exports = {"name":"typingplay","version":"1.0.0","description":"","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1","dev-server":"webpack-dev-server","build":"babel dist --out-dir dist && webpack","electron":"electron ./electron_app/index.js","electron-watch":"babel --watch --out-dir .tmp src && electron_app"},"author":"cuebrick","license":"ISC","dependencies":{"react":"^16.2.0","react-dom":"^16.2.0","react-router":"^4.2.0","react-router-dom":"^4.2.2","electron":"^2.0.5"},"devDependencies":{"babel-cli":"^6.26.0","babel-core":"^6.26.0","babel-loader":"^7.1.2","babel-preset-es2015":"^6.24.1","babel-preset-react":"^6.24.1","electron":"^2.0.5","react-hot-loader":"^3.1.3","svg-react-loader":"^0.4.5","webpack":"^3.10.0","webpack-dev-server":"^2.9.7"}}
 
 /***/ }),
 /* 103 */
