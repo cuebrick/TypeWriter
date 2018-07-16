@@ -54,6 +54,7 @@ class KeyboardLayout extends React.Component{
 	}
 
 	render(){
+		console.log(this.props.nextCode);
 		// 영문 키캡의 경우 기호들과는 다르게 쉬프트 된 문자(대문자) 가 표시되어 있음.
 		// Keycap 에 주어진 props 들은 실제 프로그래밍적으로 의미가 있는 것은 아니고 화면 표시용으로만 사용.
 		return(
@@ -106,7 +107,7 @@ class KeyboardLayout extends React.Component{
 					<Keycap keyCode={13} enn={"enter"} keyType={"type5"} nextCode={this.props.nextCode}/>
 				</div>
 				<div className="row">
-					<Keycap keyCode={16} enn={"shift"} keyType={"type5"} nextCode={this.props.nextCode}/>
+					<Keycap keyCode={16} enn={"shift"} keyType={"type5"} nextCode={this.props.nextCode} isShiftKey={this.props.isShiftKey}/>
 					<Keycap keyCode={90} ens={"Z"} krn={"ㅋ"} nextCode={this.props.nextCode} isShifting={this.state.isShifting}/>
 					<Keycap keyCode={88} ens={"X"} krn={"ㅌ"} nextCode={this.props.nextCode} isShifting={this.state.isShifting}/>
 					<Keycap keyCode={67} ens={"C"} krn={"ㅊ"} nextCode={this.props.nextCode} isShifting={this.state.isShifting}/>
@@ -117,7 +118,7 @@ class KeyboardLayout extends React.Component{
 					<Keycap keyCode={188} enn={","} ens={"<"} nextCode={this.props.nextCode} isShifting={this.state.isShifting}/>
 					<Keycap keyCode={190} enn={"."} ens={">"} nextCode={this.props.nextCode} isShifting={this.state.isShifting}/>
 					<Keycap keyCode={191} enn={"/"} ens={"?"} nextCode={this.props.nextCode} isShifting={this.state.isShifting}/>
-					<Keycap keyCode={16} enn={"shift"} keyType={"type6"} nextCode={this.props.nextCode}/>
+					<Keycap keyCode={16} enn={"shift"} keyType={"type6"} nextCode={this.props.nextCode} isShiftKey={this.props.isShiftKey}/>
 				</div>
 				<div className="row">
 					<Keycap keyCode={17} enn={"ctrl"} keyType={"type1 disable"}/>

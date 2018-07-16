@@ -183,6 +183,7 @@ class LetterList extends React.Component{
 		let level = this.props.level;
 		let nextItem = this.getNextItem();
 		let text = currentItem.getData().text;
+		let isShiftKey = false;
 
 		text += (nextItem) ? nextItem.getData().text : '';
 
@@ -191,20 +192,28 @@ class LetterList extends React.Component{
 		}else{
 			let len = this.props.level.buffer.length;
 			let char = Hangul.d(text)[len];
-			code = getCode(char);
-		}
 
-		function getCode(character) {
-			let lang = level.language;
-			let shifted = "n";
-			switch (character) {
+			switch (char) {
 				case "ㅃ":
 				case "ㅉ":
 				case "ㄸ":
 				case "ㄲ":
 				case "ㅆ":
-					shifted = "s";
+				case "ㅒ":
+				case "ㅖ":
+					isShiftKey = true;
+					break;
+				default:
+					isShiftKey = false;
 			}
+
+			code = getCode(char);
+		}
+
+		function getCode(character) {
+			let lang = level.language;
+			let shifted = (isShiftKey) ? "s" : "n";
+
 			for(let key in Keymap){
 				if(Keymap[key][lang+shifted] === character.toLowerCase()){
 					return Keymap[key].code;
@@ -214,6 +223,7 @@ class LetterList extends React.Component{
 		}
 
 		this.props.nextCode(code);
+		this.props.isShiftKey(isShiftKey);
 	}
 
 	recordKey(e){

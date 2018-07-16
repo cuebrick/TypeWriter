@@ -16,6 +16,7 @@ class Typing extends React.Component{
 
 		this.typingFinished = this.typingFinished.bind(this);
 		this.nextCode = this.nextCode.bind(this);
+		this.isShiftKey = this.isShiftKey.bind(this);
 		this.onKeydown = this.onKeydown.bind(this);
 		this.addKeyboardEvent = this.addKeyboardEvent.bind(this);
 		this.removeKeyboardEvent = this.removeKeyboardEvent.bind(this);
@@ -31,6 +32,7 @@ class Typing extends React.Component{
 			level: level,
 			nextLevel: null,
 			nextCode: null,
+			isShiftKey: false,
 			isFinished: false
 		}
 	}
@@ -46,6 +48,10 @@ class Typing extends React.Component{
 
 	nextCode(code){
 		this.setState({nextCode: code})
+	}
+
+	isShiftKey(bool){
+		this.setState({isShiftKey: bool})
 	}
 
 	typingFinished(typingData){
@@ -95,7 +101,7 @@ class Typing extends React.Component{
 			<div className="container">
 				<h3>{this.state.level.title}</h3>
 
-				<LetterList level={this.state.level} nextCode={this.nextCode} typingFinished={this.typingFinished}/>
+				<LetterList level={this.state.level} nextCode={this.nextCode} isShiftKey={this.isShiftKey} typingFinished={this.typingFinished}/>
 
 				<div className="button-ui">
 					<Link to={"/levels?lv=" + this.state.level.id}><button className="list-btn">목록으로(esc)</button></Link>
@@ -105,7 +111,7 @@ class Typing extends React.Component{
 					}
 				</div>
 
-				<KeyboardLayout nextCode={this.state.nextCode}/>
+				<KeyboardLayout nextCode={this.state.nextCode} isShiftKey={this.state.isShiftKey} />
 				{
 					this.state.isFinished &&
 					<ReportView level={this.state.level}/>

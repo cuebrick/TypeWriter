@@ -2,7 +2,7 @@ import React from 'react';
 
 class Keycap extends React.Component{
 	render(){
-		let nextCodeClassName = (this.props.nextCode === this.props.keyCode) ? 'next-code' : '';
+		let nextCodeClassName = (this.props.nextCode === this.props.keyCode || this.props.isShiftKey) ? 'next-code' : '';
 		let keyTypeClassName = (this.props.keyType) ? ' ' + this.props.keyType : '';
 		let shiftingClassName = (this.props.isShifting) ? ' shifted' : '';
 
