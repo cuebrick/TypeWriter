@@ -27,7 +27,10 @@ class App extends React.Component{
 							<Switch>
 								<Route exact path="/" component={Main}/>
 								<Route path="/levels" component={Levels}/>
-								<Route path="/typing/:id" component={Typing}/>
+								<Switch>
+									<Route path="/typing/:id" exact component={Typing}/>
+									<Route component={NotFound}/>
+								</Switch>
 								<Route path="/settings" component={Settings}/>
 								<Route path="/appInfo" component={AppInfo}/>
 								<Route path="/about" component={About}/>
