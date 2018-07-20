@@ -925,3 +925,11 @@ input[type=text]{
 .main-img{
 	text-align: center;
 }
+
+/*Error page*/
+.error-msg-box{
+	max-width: 800px;
+	margin: 10% auto 0 auto;
+	padding: 30px;
+	background-color: rgba(39, 21, 45, 0.85);
+}
