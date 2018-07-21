@@ -125,6 +125,10 @@ h3{
 	color: #b6e9ee;
 	padding: 0.4em 0;
 }
+h3 > span{
+	font-size: 0.7em;
+	color: #8d9ea6;
+}
 header{
 	position: fixed;
 	z-index: 9999;

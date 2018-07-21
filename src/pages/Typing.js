@@ -99,7 +99,10 @@ class Typing extends React.Component{
 
 		return(
 			<div className="container">
-				<h3>{this.state.level.title}</h3>
+				<h3>
+					{this.state.level.title}
+					<span> - {this.state.level.subtitle}</span>
+				</h3>
 
 				<LetterList level={this.state.level} nextCode={this.nextCode} isShiftKey={this.isShiftKey} typingFinished={this.typingFinished}/>
 
