@@ -34,6 +34,7 @@ class PlayManager {
 	 * instance method
 	 ****************************************************/
 	constructor() {
+		this.setMainMode = this.setMainMode.bind(this);
 		if (!PlayManager._instance) {
 			PlayManager._instance = this;
 		} else {
@@ -52,6 +53,10 @@ class PlayManager {
 	/****************************************************
 	 * SET methods
 	 ****************************************************/
+	setMainMode(){
+		this._profile.toggleTypingMode(false);
+	}
+
 	setLevels(levels){
 		this._levels = levels;
 		this._profile.toggleTypingMode(false);
