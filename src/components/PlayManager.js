@@ -75,7 +75,12 @@ class PlayManager {
 	 * GET methods
 	 ****************************************************/
 	getLevelObject(id){
-		return new Level(this.getLevelDataById(id));
+		let levelData = this.getLevelDataById(id);
+		if(levelData){
+			return new Level(this.getLevelDataById(id));
+		}else{
+			return null;
+		}
 	}
 
 	getLevelDataById(id){
