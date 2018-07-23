@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "webpack-dev-server",
-    "build": "babel dist --out-dir dist && webpack"
+    "build": "babel dist --out-dir dist && webpack",
+    "electron": "electron ./.tmp/electron_app/electron.index.js",
+    "electron-watch": "babel --watch --out-dir .tmp src && electron_app"
   },
   "author": "cuebrick",
   "license": "ISC",
@@ -14,7 +16,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "electron": "^2.0.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
