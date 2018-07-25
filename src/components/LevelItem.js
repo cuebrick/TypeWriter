@@ -26,7 +26,7 @@ class LevelItem extends React.Component{
 				<div className={"status" + statusClassName}> </div>
 				<div className="count">{this.props.count}</div>
 				<div className="level-grade">
-					<img src={"/images/grades/grade-icon-" + level.grade + ".svg"}/>
+					<img src={"./images/grades/grade-icon-" + level.grade + ".svg"}/>
 				</div>
 				<div className="star-rating stars">
 					{stars}

@@ -155,7 +155,7 @@ class Profile extends React.Component{
 						this.state.isShowAddUserView ?
 						<div className="user-description">
 							<div className="profile-image" onClick={this.toggleProfileIcon}>
-								<img src={"/images/icon/profile-icon-" + this.state.selectIconIndex + ".svg"}/>
+								<img src={"./images/icon/profile-icon-" + this.state.selectIconIndex + ".svg"}/>
 							</div>
 							<div className="user-grade">새로운 수련생 등록</div>
 							<div className="user-name">
@@ -166,7 +166,7 @@ class Profile extends React.Component{
 								this.state.isShowProfileIconSelector &&
 								<div className="icon-selector">
 									{[...Array(10)].map((x, i) =>
-										<img key={i} src={"/images/icon/profile-icon-" + i + ".svg"} onClick={() => this.handleIconSelect(i)}/>
+										<img key={i} src={"./images/icon/profile-icon-" + i + ".svg"} onClick={() => this.handleIconSelect(i)}/>
 									)}
 								</div>
 							}
@@ -176,7 +176,7 @@ class Profile extends React.Component{
 
 							<div className="current-user-profile">
 								<div className="profile-image">
-									<img src={"/images/icon/profile-icon-" + this.state.info.icon + ".svg"}/>
+									<img src={"./images/icon/profile-icon-" + this.state.info.icon + ".svg"}/>
 								</div>
 								<div className="user-grade">{this.state.info.grade}</div>
 								<div className="user-name">{this.state.info.name}</div>
@@ -184,7 +184,7 @@ class Profile extends React.Component{
 							{
 								this.state.isShowUserLayer &&
 								<div className="setting-button">
-									<Link to="/settings"><img src={"/images/settings.svg"} width="15" height="15"/></Link>
+									<Link to="/settings"><img src={"./images/settings.svg"} width="15" height="15"/></Link>
 								</div>
 							}
 						</div>

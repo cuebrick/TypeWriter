@@ -13,7 +13,7 @@ class NotFound extends React.Component{
 					</p>
 					<div className="button-ui">
 						<Link to="/">
-							<button className="home-btn"><img src="/images/home.svg" width="15" height="15"/> 첫 화면으로 이동</button>
+							<button className="home-btn"><img src={"./images/home.svg"} width="15" height="15"/> 첫 화면으로 이동</button>
 						</Link>
 						<Link to="/levels">
 							<button>단계 목록으로 이동</button>

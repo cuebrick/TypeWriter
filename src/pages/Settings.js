@@ -59,7 +59,7 @@ class Settings extends React.Component{
 				<ul className="setting-list">
 					<li>
 						<div className="icon-view">
-							<img src={"/images/icon/profile-icon-" + this.state.info.icon + ".svg"}/>
+							<img src={"./images/icon/profile-icon-" + this.state.info.icon + ".svg"}/>
 						</div>
 						<div className="username-view">{this.state.info.name}</div>
 					</li>
@@ -80,7 +80,7 @@ class Settings extends React.Component{
 					<li>
 						<div className="title">사용자 삭제</div>
 						<div className="ui"> </div>
-						<div className="desc">사용자를 삭제하려면 오른쪽 위의 사용자 아이콘을 선택한 후 삭제하려고 하는 사용자 이름에 있는 <img src="/images/delete.svg" className="delete" width="15" /> 아이콘을 선택하세요.</div>
+						<div className="desc">사용자를 삭제하려면 오른쪽 위의 사용자 아이콘을 선택한 후 삭제하려고 하는 사용자 이름에 있는 <img src={"./images/delete.svg"} className="delete" width="15" /> 아이콘을 선택하세요.</div>
 					</li>
 					{/*
 					<li>
@@ -94,7 +94,7 @@ class Settings extends React.Component{
 				</ul>
 				<div className="button-ui">
 					<Link to="/">
-						<button className="home-btn"><img src="/images/home.svg" width="15" height="15"/></button>
+						<button className="home-btn"><img src={"./images/home.svg"} width="15" height="15"/></button>
 					</Link>
 					<Link to="/levels"><button>단계 목록으로 이동</button></Link>
 					<Link to="/about"><button>Typing Play 일반 정보</button></Link>
