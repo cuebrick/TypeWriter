@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "webpack-dev-server",
     "build": "babel dist --out-dir dist && webpack",
-    "electron": "electron ./.tmp/electron_app/electron.index.js",
-    "electron-watch": "babel --watch --out-dir .tmp src && electron_app"
+    "electron": "electron ./dist/electron_app/electron.index.js",
+    "electron-watch": "babel --watch --out-dir dist/electron_app src/electron_app"
   },
   "author": "cuebrick",
   "license": "ISC",
