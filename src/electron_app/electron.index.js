@@ -4,6 +4,7 @@ import createWindow from './createWindow';
 
 app.on('ready', () => {
 	// setAppMenu()
+	console.log('app.getAppPath():', app.getAppPath());
 	createWindow();
 });
 
